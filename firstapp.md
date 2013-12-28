@@ -1,4 +1,4 @@
-# La Nostra App {#firstapp}
+# La Nostra Prima App {#firstapp}
 
 ![Memos, un blocco note minimal](images/originals/memos-app.png)
 

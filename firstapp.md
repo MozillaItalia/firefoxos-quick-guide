@@ -1,58 +1,58 @@
-# Our First App {#firstapp}
+# La Nostra App {#firstapp}
 
-![Memos, a minimalist notepad app](images/originals/memos-app.png)
+![Memos, un blocco note minimal](images/originals/memos-app.png)
 
-In this chapter we're going to build a simple **Memos** application, which is an application for taking notes. Before coding, lets review how this app works. 
+In questo capitolo vedremo come realizzare un semplice **Notepad**, che è un'applicazione per prendere appunti. Prima di programmare vediamo di studiare il funzionamento di questa applicazione. 
 
-The app has three screens. The first one is the main screen and has a list of your stored notes by title. When you click a note (or add a new one) you're moved to the detail screen that allows you to edit the content and title of the given note. This is shown in the figure below. 
+Quest'applicazione ha tre schermate. La prima è la schermata principale ed è una lista delle varie note con i titoli. Quando clicchi una nota (o ne aggiungi una) si viene portati sulla schermata con i dettagli che permettono di modificare il contenuto ed il titolo della nota scelta. Possiamo vedere queste schermate qui sotto.
 
-![Memos, editing screen](images/originals/memos-editing-screen.png)
+![Memos, schermata di modifica](images/originals/memos-editing-screen.png)
 
-On the screen shown above the user can choose to delete the selected note by clicking on the trash icon. This will cause a confirmation dialog to be shown.
+Nella schermata superiore l'utente può scegliere di cancellare la nota selezionata cliccando sul cestino. Questa azione aprirà una finestra di conferma.
 
-![Memos, note removal confirmation screen](images/originals/memos-delete-screen.png)
+![Memos, finestra di conferma della cancellazione](images/originals/memos-delete-screen.png)
 
-The source code for Memos is available at [the Memos Github Repo](https://github.com/soapdog/memos-for-firefoxos) (also available as a [.zip](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip) file). I recommend you download the files, so it's easier to follow along. Another copy of the source code is available on the **code** folder inside the [github repository for this book](https://github.com/soapdog/firefoxos-quick-guide).
+Il codice sorgente per Memos è disponibile nel [Repo su Github](https://github.com/soapdog/memos-for-firefoxos) (disponibile come file [.zip](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip) ). Consiglio di scaricare i file così sarà più semplice seguire la guida. Un'altra copia del codice sorgente è disponibile nella cartella dentro il [repository github repository di questo libro](https://github.com/soapdog/firefoxos-quick-guide).
 
-Memos uses [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) to store the notes and the [Gaia Building Blocks](http://buildingfirefoxos.com/building-blocks) to build the interface. In a future update to this book I will talk more about the Gaia Building Blocks, but in this first version I am just going to use them. You can check the link above to learn more about them and what user interface tools they provide.
+Memos usa [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) per salvare le note e [Gaia Building Blocks](http://buildingfirefoxos.com/building-blocks) per costruire le interfacce. In un'aggiornamento futuro il libro conterrà molte informazioni su Gaia Building Blocks, ma in questa prima versione lo userò soltanto. Puoi vedere il link qui sopra per saperne di più sull'argomento vai al link precedente.
 
-The first step is to create a folder for the application, lets call this folder **memos**.
+Il primo passaggio è creare una cartella per l'applicazione, chiameremo questa cartella **memos**.
 
-## Creating the app manifest
+## Creare un app manifest
 
-Memos manifest is pretty straight forward. Create a file named **manifest.webapp** on the **memos** folder. Manifests are [JSON](http://json.org) files that describes an application. In this file we place things such as the name of the app, who the developer is, what icons are used, what file is used to launch the app, what privileged APIs it would like to use, and more.
+Il manifest di Memos è molto semplice. Crea un file chiamato **manifest.webapp** nella cartella **memos**. I manifest sono dei file [JSON](http://json.org) che descrivono un'applicazione. In questo filepossiamo trovare il nome dell'app, chi è lo sviluppatore, che icone usa, qual'è il file da lanciare per l'app, quali API privilegiate sono usate e molto altro.
 
-Below we can see the contents of the Memos app manifest. Attention when copying this data because its very easy to place a comma on the wrong place and create an invalid JSON. There are many tools that you can use to validate JSON files but there is a special one that is built specifically for validating app manifests. You can check out this online tool at [http://appmanifest.org/](http://appmanifest.org/). To learn more about app manifests read [this page on MDN about them](https://developer.mozilla.org/docs/Apps/Manifest).
+Qui di seguito puoi vedere il contenuto del manifest di Memos. Attenzione con il copia ed incolla, perchè è molto facile mettere una virgola nel posto sbagliato e creare un JSON sbagliato. Ci sono molti strumenti per validare un file JSON ma c'è nè uno costruito apposta per i manifest. Puoi usare il tool online su [http://appmanifest.org/](http://appmanifest.org/). Per scoprire altro su questi file [vai alla pagina su MDN ](https://developer.mozilla.org/docs/Apps/Manifest).
 
-<<[Memos manifest file (*manifest.webapp*)](code/memos/manifest.webapp)
+<<[Memos manifest (*manifest.webapp*)](code/memos/manifest.webapp)
 
-Lets review the fields from the manifest above.
+Vediamo i campi di questo manifest:
 
-|Field		|Description                                                                        |
+|Campi		|Descrizion                                                                        |e
 |-----------|-----------------------------------------------------------------------------------|
-|name		|This is the name of the application.		                                                |
-|version	|This is the current version of the app. 										    |
-|launch_path|What file is used to launch your application.					                    |
-|permissions|What API permissions your app requests. More information about this below.				|
-|developer  |Who developed this application 													|
-|icons		|The icons used by the app in many different sizes.									|
+|name		|Il nome dell'applicazione  		                                                |
+|version	|La versione attuale dell'applicazione  										    |
+|launch_path|Il file usato per lanciare un'applicazione 					                    |
+|permissions|L permessi API richiesti, con molte informazioni		                     		|
+|developer  |Lo sviluppatore                    												|
+|icons		|L'icona usata in diversi formati                   								|
 
-The most interesting part of this manifest is the permissions field where we ask for the *storage* permission that allows us to use IndexedDB without size restrictions[^storage-permission] (thanks to that permission we can store as many notes as we want - though we sould be mindful not to use too much of the user's disk space!).
+La parte più interessanti di questo manifest è la richiesta dei permessi di *storage* che permettono di usare IndexedDB senza restrizioni di dimensioni[^storage-permission] (con questi permessi possiamo salvare le note che vogliamo - anche se dobbiamo fare attenzione a non usare troppo spazio sul disco dell'utente!).
 
-[^storage-permission]: To learn more about permissions read [the page on MDN about app permissions](https://developer.mozilla.org/en-US/docs/Web/Apps/App_permissions).
+[^storage-permission]: Per saperne di più su questa autorizzazione leggi [la pagina MDN sui permessi](https://developer.mozilla.org/en-US/docs/Web/Apps/App_permissions).
 
-Now that the manifest is ready lets move on to the HTML.
+Ora che il manifest è pronto passiamo al codice HTML.
 
-## Building the HTML
+## Scriviamo il codice HTML
 
-Before we start working on the HTML, lets take a brief detour to talk quickly about the [Gaia Building Blocks](http://buildingfirefoxos.com/building-blocks), which are a collection of reusable CSS and JS with the *look and feel* of Firefox OS that we can use on our own apps.
+Prima di iniziare a lavorare sul codice HTML, facciamo una piccola introduzione su [Gaia Building Blocks](http://buildingfirefoxos.com/building-blocks), che è un'insieme di codice CSS e JavaScript con il *look and feel* di Firefox OS che possiamo usare nelle nostre applicazioni.
 
-Just like on the Web, you're not required to use the *look and feel* of Firefox OS in your own app. Using or not using the Gaia Building Blocks is a personal decision - and a good applications should have it's own distinctive style and user experience. The important thing to understand is that your app will not suffer any type of prejudice or penalty on the Firefox Marketplace by not using the Gaia look and feel. I am using it here because I am not a good designer so ready made UI toolkits appeal to me (its either that or hiring a designer).
+Come nelle pagine web, non è richiesto di usare il *look and feel* di Firefox OS nella propria applicazione. Usare o non usare Gaia Building Blocks è una scelta personale - e le buone applicaizone possono usare uno stile distintivo ed'una esperienza utente. La cosa importante da capire è che la tua applicazione non subirà alcun tipo di pregiudizio o penalità nel Marketplace Firefox non usando il look di Gaia. Io lo uso perchè non sono un bravo designer e dei UI toolkit pronti mi piacciono.
 
-The HTML structure that we use in this application was built following the patterns adopted by the Gaia Building Blocks where each screen is a `<section>` and the elements follow a predefined format. If you haven't already, download the source code from the [memos repository]
-(https://github.com/soapdog/memos-for-firefoxos) so that you have the files (including the Building Blocks) to use. For those not confident with git and GitHub, the files are also available as a [.zip file](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip). 
+La struttura HTML che usiamo nelle applicazioni seguirà gli schemi adottati da Gaia Building Blocks dove ogni schermata `<section>` e gli elementi seguono un formato definito. Se non hai ancora scaricato il codice sorgente dal [repository memos]
+(https://github.com/soapdog/memos-for-firefoxos) fallo perchè contiene i Building Blocks necessari. per chi non ha confidenza con git e GitHub, ecco il [file .zip](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip). 
 
-W> Warning: The version of the Gaia Building Blocks I used for this app is not the most up-to-date available from Mozilla. Trying to update to the current version will, unfortunately, break the Memos app. In your own projects, however, always use the latest version of the Gaia Building Blocks.
+W> Attenzione: la versione usata di Gaia Building Blocks non è la più recente. Aggiornare l'applicazione alla nuova versione renderà il codice compatibile in quest'applicazione. Nei tuoi progetti usa sempre l'ultima versione di Gaia Building Blocks.
 
 ### Including the Building Blocks
 

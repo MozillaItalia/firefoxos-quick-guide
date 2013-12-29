@@ -28,14 +28,14 @@ Qui di seguito puoi vedere il contenuto del manifest di Memos. Attenzione con il
 
 Vediamo i campi di questo manifest:
 
-|Campi		|Descrizion                                                                        |e
-|-----------|-----------------------------------------------------------------------------------|
-|name		|Il nome dell'applicazione  		                                                |
-|version	|La versione attuale dell'applicazione  										    |
-|launch_path|Il file usato per lanciare un'applicazione 					                    |
-|permissions|L permessi API richiesti, con molte informazioni		                     		|
-|developer  |Lo sviluppatore                    												|
-|icons		|L'icona usata in diversi formati                   								|
+|Campi		|Descrizione                                                                        |  
+|-----------|-----------------------------------------------------------------------------------|  
+|name		|Il nome dell'applicazione  		                                                |  
+|version	|La versione attuale dell'applicazione  										    |  
+|launch_path|Il file usato per lanciare un'applicazione 					                    |  
+|permissions|I permessi API richiesti, con molte informazioni		                     		|  
+|developer  |Lo sviluppatore                    												|  
+|icons		|L'icona usata in diversi formati                   								|  
 
 La parte più interessanti di questo manifest è la richiesta dei permessi di *storage* che permettono di usare IndexedDB senza restrizioni di dimensioni[^storage-permission] (con questi permessi possiamo salvare le note che vogliamo - anche se dobbiamo fare attenzione a non usare troppo spazio sul disco dell'utente!).
 
@@ -54,11 +54,11 @@ La struttura HTML che usiamo nelle applicazioni seguirà gli schemi adottati da 
 
 W> Attenzione: la versione usata di Gaia Building Blocks non è la più recente. Aggiornare l'applicazione alla nuova versione renderà il codice compatibile in quest'applicazione. Nei tuoi progetti usa sempre l'ultima versione di Gaia Building Blocks.
 
-### Including the Building Blocks
+### Includere Building Blocks
 
-Before doing anything else copy the **shared** and the **styles** folders that you obtained by downloading the Memos repository to the **memos** folder you created. This will allow use to use the Gaia Building Blocks in our app. 
+Prima di fare qualsiasi altra cosa copiare le cartelle **shared** e **styles** che trovi scaricando il repository Memos nella cartella **memos** che hai creato. Questo ti permetterà di usare Gaia Building Blocks nella tua applicazione. 
 
-Lets begin our **index.html** files by including the needed bits.
+Prendiamo il file **index.html** inserendo il codice necessario.
 
 ~~~~~~~~
 <!DOCTYPE html>
@@ -77,11 +77,11 @@ Lets begin our **index.html** files by including the needed bits.
 </head>
 ~~~~~~~~
 
-On *line 01* we declare the DOCTYPE as HTML5. From *line 05 up to 15* we include the CSS from the various components that we're going to use in our app such as headers, lists, text entry fields and more.
+Nella *linea 1* dichiariamo il DOCTYPE come HTML5. Dalla *linea 5 alla 15* includiamo i file CSS dei vari componenti da usare nelle app testata, liste, campi testuali e molto altro.
 
-### Building the main screen
+### Costruiamo la schermata principale
 
-Now we can start building the various screens. As mentioned earlier, each screen used by our app is a `<section>` inside the HTML `<body>`. The body tag must have an attribute *role* with its value equal to *application* because that is used by the CSS selectors to build the interface, so our body tag will be `<body role="application">`. Lets build the first screen and declare our body tag as well.
+Iniziamo a costruire le varie schermate. Come menzionato sopra ogni schermata è una `<section>` dentro `<body>` nel codice HTML. Il tag body deve avere un attributo *role* con un valore uguale ad *application* perchè è usato dai selettori CSS per creare l'interfaccia, quindi il tag sarà `<body role="application">`. Creiamo la prima schermata e dichiariamo il tag body come abbiamo detto.
 
 ~~~~~~~~
 <body role="application">
@@ -97,11 +97,11 @@ Now we can start building the various screens. As mentioned earlier, each screen
 </section>
 ~~~~~~~~
 
-Our screen has a `<header>` containing a button to add new notes and the application name. The screen also has an `<article>` which will be used to hold the list of stored notes. We're going to use the button and the article IDs to capture events when we reach the JavaScript implementation part.
+La schermata contiene un `<header>` con un pulsante che permette di aggiungere nuove note ed il nome dell'applicazione stessa. La schermata include un `<article>` che è usato per mostrare il contenuto della nota. Useremo il pulsante e l'ID dell'articolo per catturare gli eventi nella parte JavaScript.
 
-Be aware that each screen is a fairly straight forward HTML chunk. Building these same screens in many languages usually requires a lot more work. All we're doing is declaring our containers and giving them IDs when we need to reference them later.
+Sottolineo il fatto che ogni schermata è un semplice pezzo di codice HTML. Costruire queste schermate in multilingua su altri sistemi richiede molto lavoro. Tutto quello che faremo è dare ad ogni contenitore un ID specifico che richiameremo successivamente.
 
-Now that the main screen is done, lets build the editing screen.
+La prima schermata è finita adesso vediamo la schermata di modifica.
 
 ### Building the editing screen
 

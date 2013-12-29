@@ -1,48 +1,48 @@
-# Developer Tools {#developertools}
+# Strumenti per sviluppatori {#developertools}
 
-Firefox has many tools to help web developers do their job. Many people are still using [FireBug](https://addons.mozilla.org/pt-BR/firefox/addon/firebug/) and haven't realize that Firefox now has its own built-in tools. In this chapter we're going to review the tools that are most useful for developing apps for Firefox OS.
+Firefox mette a disposizione molti strumenti per consentire agli sviluppatori di fare il proprio lavoro al meglio. Molte persone continuano a usare [FireBug](https://addons.mozilla.org/it/firefox/addon/firebug/) senza aver realizzato che ora Firefox ha degli strumenti di sviluppo nativi. In questo capitolo andremo ad analizzare gli strumenti più utili per sviluppare app per Firefox OS.
 
-If you're interested in learning more about these tools, and what other dev tools goodness is about to land in Firefox, check out the [developer tools](https://developer.mozilla.org/en-US/docs/Tools) page on Mozilla's Developer Network (really, go check that link! I will wait).
+Se sei interessato a saperne di più su questi strumenti e conoscere quali straordinari nuovi strumenti sono in fase di sviluppo nelle prossime versioni di Firefox, consulta la pagina [developer tools](https://developer.mozilla.org/en-US/docs/Tools) su Mozilla Developer Network (Ci conto, apri davvero questo link. Ti aspetto).
  
-## Introducing the Responsive Design View
+## Introduzione alla Visualizzazione flessibile
 
-A common workflow in Web development is changing a HTML file and then reloading the page in the browser to see what's changed. Unless you are using something like Grunt or Volo, generally there won't be the need for a compilation step or similar. Even though the Firefox OS Simulator permits you to use that same workflow, the emulator is currently restricted to one resolution (480x320). This is less than ideal if you are also designing your application to work on tablets, phablets, giant TVs, or anything in between.  
+Un'attività molto comune durante lo sviluppo web è quella di modificare il sorgente HTML di una pagina e poi ricaricarla per vedere le modifiche effettuate all'opera nel browser. A meno che non si stiano utilizzando strumenti quali *Grunt* o *Volo*, di solito, non sarà necessario effettuare un'operazione intermedia come la compilazzione del sorgente, o per lo meno qualcosa che le assomiglia. Anche se il Firefox OS Simulator consente di effettuare questa attività, attualmente, il simulatore è in grado di utilizzare un'unica risoluzione schermo di 480x320 pixell. Questo non è certo l'ideale mentre si sta cercando di sviluppare un'app che debba funzionare su tablet, phablet, grandi schermi TV o qualunque altro dispositivo con una diversa risoluzione.
 
-To check how your app will look on any screen resolution, you can use Firefox's **Responsive Design View** tool to change the screen (and viewport). It can be enabled by going to the **Tools menu -> Web Developer -> Responsive Design View** as shown in the image below. When you activate this tool, the window will change so that you can alter the viewport size using the drag corners or the selection box.
+Per controllare l'aspetto della tua app con qualunque tipo di risoluzione, puoi utilizzare lo strumento **Visualizzazione flessibile** di Firefox per cambiare lo schermo e il riquadro di visualizzazione. Può essere attivata dal menu **Strumenti -> Sviluppo web -> Visualizzazione flessibile** come mostrato nell'immagine qui di seguito. All'attivazione della modalità di visualizzazione flessibile, la finestra diventerà “ridimensionabile“ in modo da permetterti di ridimensionarla, trascinando gli angoli o impostandone le dimensioni nelle apposite caselle.
 
-![Activating Responsive Design View](images/originals/responsive-design-view.png)
+![Attivazione della visualizzazione flessibile](images/originals/responsive-design-view.png)
 
-Using the responsive design view is specially useful for testing out [**media queries**](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries), as it allows you to resize the screen and see how your site responds to changes in layout in real time. Another great feature of the Responsive Design View is that you can save predefined sizes. If you know what viewport sizes you are targetting, then your can quickly check different viewport sizes without needing to resize the actual browser window. 
+L'utilizzo della *Visualizzazione flessibile* è particolarmente utile al fine di testare le [**media queries**](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries), in quanto ti permette di ridimensionare lo schermo e visualizzare la reazione del layout del tuo sito in tempo reale. Un'altra utile caratteristica della **Visualizzazione flessibile**è la possibilità di memorizzare delle dimensioni schermo predefinite. Se conosci già le dimensioni schermo che vuoi testare, potrai farlo velocemente senza dover ogni volta ridimensionare la finestra.
 
-![Responsive Design View Sample](images/originals/responsive-view-sample.png)
+![Esempio di visualizzazione flessibile](images/originals/responsive-view-sample.png)
 
-At the time of writing, most of the Firefox OS phones that are on the market are running on a 480x320 resolution - and at a pixel density of about 96 pixels-per-inch. However, you should expect this to change as new Firefox OS hardware becomes available as time goes on: screens will likely pack more pixels and have higher pixel densities (just like Apple's retina displays). 
+Al momento della stesura di questo libro, la maggior parte degli smartphone Firefox OS in commercio utilizzano schermi di 480x320 pixel con una densità punto di 96 dpi. Tuttavia, c'è da aspettarsi che questo cambi nel tempo: gli schermi avranno dimensioni maggiori e maggiori densità punto (come gli schermi Retina di Apple).
 
-To future proof your app, don't hard-code your CSS to any resolution or pixel density. Instead, you should use media queries and the responsive design methodology to create apps that adapt to any screen size. To learn more about responsive design, I recommend the following books [Responsive Web Design](http://www.abookapart.com/products/responsive-web-design) e o [Mobile First](http://www.abookapart.com/products/mobile-first).
+Nell'eventualità di future verifiche della tua app, segui questo consiglio: non basare mai i tuoi CSS su una specifica risoluzione schermo o densità punto. Piuttosto, dovresti utilizzare le *media query* e una metodologia di design responsivo, per permettere alla tua app di adattarsi alle varie risoluzioni schermo. Per saperne di più sul design responsivo, ti consiglio la lettura di uno o entrambi questi libri: [Responsive Web Design](http://www.abookapart.com/products/responsive-web-design) e [Mobile First](http://www.abookapart.com/products/mobile-first).
 
-In summary, the responsive design view allows us to test our web applications using many different screen sizes without the need to resize the Firefox browser window itself. In my humble opinion this is one of the most useful web developer tools available - but it has one big limitation: it does not currently allow you to test different pixel densities (i.e., to see what your site would look like on a "retina" display or better).
+Riepilogando, la **Visualizzazione flessibile** ci permette di testare la nostra app su varie risoluzioni schermo senza dover ridimensionare la finestra di Firefox. A mio modesto avviso, la *Visualizzazione flessibile* è uno degli strumenti di sviluppo più utili a disposizione - purtroppo ha un grande limite: attualmente non consente di testare differenti configurazioni di densità punto.
 
-## Developer tools
+## Strumenti di sviluppo
 
-Firefox's developer tools are similar to FireBug and the tools available in other modern browsers. Using these tools you can execute and debug your JavaScript using [the console](https://developer.mozilla.org/en-US/docs/Web/API/console), and manipulate both the DOM and the CSS on the current page.  
+Gli strumenti di sviluppo di Firefox sono simili a quelli disponibili con l'estensione Firebug o in altri browser di nuova generazione. Utilizzando questi strumenti è possibile eseguire ed effettuare il debug del codice JavaScript utilizzando la [*console*](https://developer.mozilla.org/en-US/docs/Web/API/console) e manipolare sia il DOM che i fogli di stile CSS della pagina. 
 
-To bring up the console, you can either:
+Esistono diversi modi per invocare la Console:
 
-	* Go to "Tools menu > Web Developer > Web Console". 
-  * right-click on the page you want to debug, and select "Inspect Element", then click on "Console" tab. 
+	* Dal menu Strumenti -> Sviluppo web -> Console web
+ * Facendo clic col tasto destro nella pagina da analizzare e scegliendo "Ispeziona elemento" e quindi selezionando la scheda Console.
 
-![JavaScript Console](images/originals/console-open.png) 
+![Console JavaScript](images/originals/console-open.png) 
 
-Besides the *JavaScript Console* there are many other tools available such as [*the style editor*](https://developer.mozilla.org/en-US/docs/Tools/Style_Editor), [*the network monitor*](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor), [*the JavaScript profiler*](https://developer.mozilla.org/en-US/docs/Tools/Profiler), [*the JavaScript debugger*](https://developer.mozilla.org/en-US/docs/Tools/Debugger), [*the page inspector*](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector) and many others.
+Oltre alla *Console JavaScript* sono disponibili molti altri strumenti come [*l'Editor stili*](https://developer.mozilla.org/en-US/docs/Tools/Style_Editor), [*il Monitor di rete*](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor), [*il Profiler JavaScriptr*](https://developer.mozilla.org/en-US/docs/Tools/Profiler), [*il Debugger JavaScript*](https://developer.mozilla.org/en-US/docs/Tools/Debugger), [*lo strumento Analisi pagina*](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector) e molti altri.
 
-In the application we've built in the previous chapter, we used the console to check the progress of our application. This is a pretty powerful way to debug our apps - but some developers are still  using `alert()` all over their JavaScript code as their "debug tool". 
+Nell'applicazione che abbiamo creato nel precedente capitolo abbiamo utilizzato la Console web per verificare lo stato di avanzamento del nostro progetto. Questo è un modo elegante e molto efficace di effettuare il debug delle nostre app - anche se alcuni sviluppatori continuano a utilizzare l'istruzione `alert()` all'interno di tutti i loro sorgenti JavaScript come loro “strumento di debugging”.
 
-Using `alert()` is really bad because if one forgets to remove any `alert()`s, it's the user's who will ultimately pay the price. Using the console avoids this problem as it harmlessly (and silently!) routes all messages to a place that user's don't normally access - so it doesn't disrupt the user experience. Using the console also means you don't need to remove your console messages from your code, unless you really want to. This can help with code maintenance and debugging if things do go wrong (as they generally do with any software!).   
+L'utilizzo dell'istruzione `alert()` è davvero un metodo deprecabile, in quanto se ci si dimentica di rimuovere tutti gli `alert()` dal sorgente prima di rilasciare l'app, sarà l'utente a pagarne le conseguenze. L'utilizzo della Console permette di evitare questo tipo di problemi, la Console, infatti, consente di instradare, in maniera semplice e innoqua, questi messaggi in un luogo al quale di solito un utente non accede, non disturbando così l'esperienza utente. L'utilizzo della Console inoltre, evita di dover rimuovere le istruzioni che generano i messaggi di log dal codice sorgente, a meno che tu non lo voglia davvero fare, ovviamente. Questo ti aiuterà nelle operazioni di manutenzione e di debugging del codice sorgente nel caso che lci fossero dei bug non previsti (come accade solitamente con qualunque codice sorgente).
 
-Learning how to properly use the developer tools bundled with Firefox (or whatever browser you're using) is an important step in becoming a better developer. Thats why I advise everyone to check the links above and get more familiar with the various tools available in Firefox. 
+Imparare a utilizzare in modo appropriato gli strumenti di sviluppo inclusi in Firefox (o in qualunque altro browser in uso) è un importante passo nel processo di diventare uno sviluppatore migliore. È per questo che consiglio a tutti di consultare i link riportati qui sopra e approfondire la propria conoscenza degli strumenti di sviluppo inclusi in Firefox.
 
-One special tool that was not mentioned above is the [*remote debugger*](https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging). That tool allows us to connect to a phone running Android or Firefox OS, and use the developer tools to debug the code that is running on the device in real time. 
+Uno speciale strumento che non è stato sin qui menzionato è il [*Debugger remoto*](https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging). Questo strumento consente di connettersi a un smartphone Android o Firefox OS e utilizzare gli altri strumenti di sviluppo per effettuare il debug in tempo reale del codice sorgente in esecuzione su questi dispositvi.
 
-## Summary
+## Sommario
 
-This chapter provided a brief tour of the developer tools that come bundled with Firefox. Using these tools will make your development process easier, specially when you use them together with the Firefox OS simulator. They are an indispensable combination for putting together an application. In the next chapter we're going to learn more about the simulator and how to make the best use of it.
+In questo capitolo sono stati descritti in maniera sintetica gli strumenti di sviluppo inclusi in Firefox. L'utilizzo di questi strumenti renderà il processo di sviluppo più semplice, specialmente quando si utilizzano insieme al Firefox OS Simulator. Rappresentano una combinazione indispensabile per permetterci di sviluppare un'app. Nel prossimo capitolo andremo a conoscere più da vicino il simulatore e impareremo a farne un buon uso.

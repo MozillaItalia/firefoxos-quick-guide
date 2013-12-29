@@ -103,9 +103,9 @@ Sottolineo il fatto che ogni schermata è un semplice pezzo di codice HTML. Cost
 
 La prima schermata è finita adesso vediamo la schermata di modifica.
 
-### Building the editing screen
+### Costruire la schermata di modifica
 
-The editing screen is a bit more complex because it also holds the dialog box used when the user tries to delete a note.
+La schermata di modifica è un'pò complessa perchè contiene la finestra di dialogo di eliminazione delle note.
 
 ~~~~~~~~
 <section role="region" id="memo-detail" class="skin-dark hidden">
@@ -144,17 +144,17 @@ The editing screen is a bit more complex because it also holds the dialog box us
 </section>
 ~~~~~~~~
 
-At the top of the screen, represented by the `<header>` element, we have: 
+Nella parte superiore dello schermo, rappresentato dall'elemento `<header>`: 
 
- * a back button to return to the main screen, 
- * a text entry field that is used to hold the title of the given note, 
- * and a button that is used to share the note over email.
+ * un pulsante per tornare indietro alla schermata principale, 
+ * un campo di testo per modificare il titolo della nota, 
+ * un pulsante per condividere la nota via.
 
-Below the top toolbar, we have a paragraph holding a `<textarea>` that holds the content of the note and then another toolbar with a trashcan button used to delete the current viewed note.
+Sotto questa barra abbiamo una `<textarea>` che contiene il contenuto della notae sotto ha un'altra barra con il cestino per cancellare la nota che si sta visualizzando.
 
-These three elements and their child nodes are the editing screen. After them we have a `<form>` that is used as a dialog box containing the confirmation screen that is presented to the user when he or she tries to delete a note. This dialog box is pretty simple, it only contains the text of the confirmation prompt and two buttons; one for deleting the note and another for canceling the action.
+Questi tre elementi e il loro contenuto sono la schermata di modifica. Dopo questo abbiamo un `<form>` che è usato per una finestra di conferma che verrà mostrata all'utente quando per cancellare una nota. Questa finestra è molto semplice, contiene un testo ed una finestra di conferma con due pulsanti, uno per cancellare la nota ed uno per annullare l'azione.
 
-Now that we're closing this `<section>` we have all our screens implemented and the remaining HTML code is only there to include the JavaScript files and close the html file.
+A questo punto chiudiamo il tag `<section>` avendo tutte le schermate necessarie, il codice HTML rimasto include i file JavaScript e chiude il file.
 
 ~~~~~~~~
 <script src="/js/model.js"></script>
@@ -163,18 +163,18 @@ Now that we're closing this `<section>` we have all our screens implemented and 
 </html>
 ~~~~~~~~
 
-## Crafting the JavaScript code
+## Manipoliamo il codice JavaScript
 
-Now we're going to breathe life into our app by adding JavaScript. To better organize this code, I've divided the JavaScript code into two files:
+Adesso ci divertiremo a dare vita alla nostra applicazione usando JavaScript. per organizzare meglio questo codice lo ho diviso in due file:
 
-* **model.js:** contains the routines to deal with storage and retrieval of notes but does not contain any app logic or anything related to the interface or data entry. In theory, we could reuse this same file in other apps that required text notes.
-* **app.js:** attaches the HTML elements with their event handlers and contains the app logic.
+* **model.js:** contiene le routine per la memorizzazione e restituzione delle note ma non contiene codice della logica, materiali dell'interfaccia o immissione dati. In teoria potremmo utilizzare questo file in altre applicazioni che richiedono note.
+* **app.js:** collega gli eventi agli elementi HTML e contiene la logica dell'applicazione.
 
-Both files should be placed inside a **js** folder next to the **style** and **shared** folders.
+Entrambi i file devono essere posizionati nella cartella **js** vicino a quella **style** e **shared**.
 
 ### model.js
 
-We're going to use [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) to store our notes. Since we asked the *storage* permission on the app manifest we can store as many notes as we want - however, we should not abuse this! Firefox OS devices generally have very limited storage space, so you always need to be mindful of what data you store (users will delete and down-rate your app if it uses too much storage space!). And storing excessive amounts of data will have a performance penalty, which will make your app feel sluggish. Please also note that when you submit an application to the FireFox OS marketplace, reviewers will ask you why you need unlimited storage space - if you can't justify why, your application will be rejected.  
+Utilizzeremo [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) per salvare le note. Avendo chiesto i permessi per lo *storage* nel manifest possiamo salvare quante note vogliamo - ma non abusarne! I dispositivi Firefox OS solitamente non hanno molto spazio, è sempre meglio essere consapevoli di quali dati vengono memorizzati (gli utenti daranno un voto negativo alla tua applicazione se userà troppo spazio!). Memorizzare troppo materiale creerà problemi di performance creando problemi di performance. Aggiungi nelle note di invio delle applicazione nel marketplace FireFox OS perchè hai bisogno di spazio illimitato altrimenti i revisori te lo chiederanno - se non lo puoi giustificare l'applicazione verrà rifiutata.  
 
 The part of the code from *model.js* that is shown below is responsible for opening the connection and creating the storage.
 

@@ -176,9 +176,9 @@ Entrambi i file devono essere posizionati nella cartella **js** vicino a quella 
 
 Utilizzeremo [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) per salvare le note. Avendo chiesto i permessi per lo *storage* nel manifest possiamo salvare quante note vogliamo - ma non abusarne! I dispositivi Firefox OS solitamente non hanno molto spazio, è sempre meglio essere consapevoli di quali dati vengono memorizzati (gli utenti daranno un voto negativo alla tua applicazione se userà troppo spazio!). Memorizzare troppo materiale creerà problemi di performance creando problemi di performance. Aggiungi nelle note di invio delle applicazione nel marketplace FireFox OS perchè hai bisogno di spazio illimitato altrimenti i revisori te lo chiederanno - se non lo puoi giustificare l'applicazione verrà rifiutata.  
 
-The part of the code from *model.js* that is shown below is responsible for opening the connection and creating the storage.
+La parte di codice di *model.js* mostrato qui sotto si occupa del collegamento e creazione dello storage.
 
-A> Important: This code was written to be understood easily and does not represent the best practices for JS programming. Some global variables are used (I'm so going to hell for this) among other tidbits. The error handling code is basically non-existant. The main objective of this book is to teach the *workflow* of developing apps for Firefox OS and not teaching best JS patterns. That being said, depending on feedback, I will update the code in this book to better reflect best practices if enough people think it will not impact the beginners.
+A> Importante: Questo codice è scritto per essere capito velocemente e non rappresenta le migliori pratiche di programmazione JavaScript. Nel codice sono presenti delle variabili globali (andrò all'inferno per questo lo so) tra le altre chicche. La gestione degli errori è praticamente inesistente. Lo scopo principale di questo libro è insegnare il *workflow* di sviluppo di applicazioni per Firefox OS e non insegnare pattern JS. Quindi a seconda dei commenti migliorerò il codice sempre che non abbia un brutto impatto ai principianti.  
 
 ~~~~~~~
 var dbName = "memos";
@@ -223,13 +223,13 @@ request.onupgradeneeded = function (event) {
 }
 ~~~~~~~
 
-A> Important: Forgive me again for the globals, this is an educational resource only. Another detail is that I removed the comments from the source code to save space in the book. If you pick the source from GitHub you will get all the comments.
+A> Importante: Dimentica ancora le variabili globali, questo è solo materiale di riferimento. Inoltre ho rimosso i commenti dal codice per risparmiare spazio nel libro. Su Github il codice è completo di commenti.
 
-The code above creates a *db* object and a *request* object. The *db* object is used by other functions in the source to manipulate the notes storage.
+Il codice appena vista crea un oggetto *db* ed un'oggetto *request*. L'oggetto *db* è usato in altre funzioni nel codice per manipolare le note memorizzare.
 
-On the implementation of the `request.onupgradeneeded` function we also create a welcome note. This function is executed when the application runs for the first time (or when the database version changes). This way once the application launches for the first time, the database is initialized with a single welcome note.
+Nella implementazione della funzione `request.onupgradeneeded` creiamo una nota di benvenuto. Questa funzione è eseguita quando l'applicazione viene lanciata per la prima volta (o quando la versione del database cambia). In questo modo al primo avvio dell'applicazione il database contiene una nota di esempio.  
 
-With our connection open and the storage initialized its time to implement the basic functions for note manipulation.
+Apriamo la connessione e prepariamo le funzioni base di manipolazione delle note.
 
 ~~~~~~~~
 function Memo() {
@@ -292,15 +292,15 @@ function deleteMemo(inId, inCallback) {
 }
 ~~~~~~~~
 
-On the piece of code above we create a constructor function that creates new Memos with some fields already initialized. After that we implement functions for listing, saving and removing notes. Many of these functions receive a callback parameter called `inCallback` which is a function to be called after the function does its thing. This is needed due to the asynchronous nature of IndexedDB. All callbacks have the same signature which is `callback(error, value)` where one of the values is null depending on the outcome of the previous function.
+In questo pezzo di codice abbiamo creato una funzione che crea nuove note con alcuni campi già pronti. Dopo la creazione delle funzioni per la creazione delle liste, salvataggio e cancellazione delle note. Molte di queste funzioni hanno un parametro chiamato `inCallback` questa funzione verrà invocata alla fine della funzione. Questo è necessario per la natura asincrona di IndexedDB. Tutte le callback hanno la stessa firma con `callback(error, value)` dove uno di questi valori è nullo a seconda del risultato della funzione precedente.
 
-A> Since this is a beginner book I've opted not to use [*Promises*](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise) since many beginners are not familiar with the concept. I recommend using such concepts to create easier to maintain code that is more pleasant to read.
+A> Siccome è un libro per principianti ho scelto di non usare [*Promises*](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise) perchè non tutti i principianti potrebbero capirlo. Consiglio di usare questi concetti per avere un codice più pulito e facile da mantenere.
 
-Now that our note storage and manipulation functions are ready, let's implement our app logic in a file called **app.js**.
+Ora che abbiamo la memorizzazione delle note funzionante, lavoriamo alla logica dell'applicazione nel file **app.js**.
 
 ### app.js
 
-This file will contain our app logic. Since the source code is too large for me to place it all at once on the book, I will break it in parts and explain each part piece by piece.
+Questo file contiene la logica dell'applicaizone. Il codice sorgente è troppo lungo da mostrare nel libro quindi verrà diviso in parti per studiarlo meglio.
 
 ~~~~~~~~
 var listView, detailView, currentMemo, deleteMemoDialog;
@@ -350,13 +350,13 @@ function newMemo() {
 }
 ~~~~~~~~
 
-At the beginning we declare some global variables (yuck!!!) to hold references to some DOM Elements that we want to use later inside some functions. The most interesting global is `currentMemo` which is an object that holds the current note that the user is reading.
+All'inizio dichiariamo alcune variabili globali (yuck!!!) per avere dei riferimenti del DOM che useremo in alcune funzioni. La parte più interessante è  `currentMemo` che è un'oggetto che contiene la nota attuale che l'utente sta vedendo.
 
-The `showMemoDetail()` and `displayMemo()` functions work together. The first one loads the selected note into the `currentMemo` and manipulates the CSS of the elements so that the editing screen is shown. The second one picks the content from the `currentMemo` variable and places it on the screen. We could do both things on the same function but having them separate makes it easier to experiment with new implementations.
+Le funzioni `showMemoDetail()` e `displayMemo()` lavorano insieme. La prima carica la nota selezionata in `currentMemo` e modifica il CSS degli elementi mostrati nella schermata di modifica. La seconda prende il contenuto della variabile `currentMemo` e mostra la nota a schermo. Potremmo mettere il codice nella stessa funzione ma averlo separato permette di divertirci di più con nuove implementazioni.
 
-The `shareMemo()` function uses a [WebActivity](https://hacks.mozilla.org/2013/01/introducing-web-activities/) to open the email application with a new message pre-filled with the selected notes content. 
+La funzione `shareMemo()` usa [WebActivity](https://hacks.mozilla.org/2013/01/introducing-web-activities/) per aprire l'applicazione dell'email con un nuovo messaggio preconfezionato con il contenuto della nota selezionato. 
 
-The `textChanged()` function picks the data from the entry fields and place them into the `currentMemo` object and then saves the note. This is done because the application is an `auto-save` app where your content is always saved. All alterations on the content or title of the note will trigger this function and the note will always be saved on the IndexedDB storage.
+la funzione `textChanged()` prende il contenuto dei campi e lo inserisce nell'oggetto `currentMemo` che salva la nota. Questo perchè avremo un'applicazione con auto salvataggio. Tutte le modifiche al contenuto o al titolo invocheranno la funzione che salverà in IndexedDB.
 
 The `newMemo()` function creates a new note and opens the editing screen with it.
 
@@ -387,11 +387,11 @@ function showMemoList() {
 }
 ~~~~~~~~
 
-The `requestDeleteConfirmation()` function is responsible for showing the note removal confirmation dialog.
+La funzione `requestDeleteConfirmation()` mostra la richiesta di conferma di rimozione della nota.
 
-The `closeDeleteMemoDialog()` and `deleteCurrentMemo()` are triggered by the buttons on the removal confirmation dialog.
+La funzione `closeDeleteMemoDialog()` e `deleteCurrentMemo()` sono invocate dai pulsanti nella finestra di conferma.
 
-The `showMemoList()` function does some clean up before showing the list of stored notes. For example, it cleans the content of `currentMemo` since we're not reading any memo yet.
+La funzione `showMemoList()` fà una pulizia e mostra l'elenco delle note presenti. Per esempio, svuota il contenuto di `currentMemo` se non stiamo leggendo una nota.
 
 ~~~~~~~~
 function refreshMemoList() {
@@ -437,9 +437,9 @@ function refreshMemoList() {
 }
 ~~~~~~~~
 
-The `refreshMemoList()` function modifies the DOM by building element by element the list of notes that is displayed on the screen. It would be a lot easier to use some templating aid such as [handlebars](http://handlebarsjs.com/) or [underscore](http://underscorejs.org/) but since this app is built using nothing but *vanilla javascript* we're doing everything by hand. This function is called by `showMemoList()` that was shown above.
+La funzione `refreshMemoList()` modifica il DOM aggiornando l'elenco delle note. Sarebbe più facile alcuni sistemi di template come [handlebars](http://handlebarsjs.com/) o [underscore](http://underscorejs.org/) ma quest'applicazione contiene solo *vanilla javascript* quindi faremo tutto a manina. Questa funzione è chiamata `showMemoList()` mostrata sopra.
 
-These are all the functions used by our app. The only part of the code that is missing is the initialization of the event handlers and the initial call of `refreshMemoList()`.
+Queste sono tutte le funzioni usate dall'applicazione. L'unica parte mancante è il gestore eventi e la chiamata iniziale di `refreshMemoList()`.
 
 ~~~~~~~
 window.onload = function () {
@@ -464,35 +464,34 @@ window.onload = function () {
 };
 ~~~~~~~
 
-Now all files are ready and we can begin trying our application on the simulator.
+Ora che tutti i file sono pronti proviamo l'applicazione nel simulatore.
 
-## Testing the app on the simulator
+## Prova l'applicazione sul simulatore
 
-Before we try our application on the simulator we'd better check out if the files are in the correct place. Your memos folder should look like this one:
+Priam di provare la nostra applicazione verifichiamo che i file sono al posto giusto. La cartella memos dovrebbe essere così:
 
-![List of files used by Memos](images/originals/memos-file-list.png)
+![Lista dei file usati da Memos](images/originals/memos-file-list.png)
 
-If you have a hunch that you wrote something wrong, just compare your version with the one on [the memos github repository](https://github.com/soapdog/memos-for-firefoxos) (There is also a copy of the source code in a folder called **code** on the [book repository](https://github.com/soapdog/guia-rapido-firefox-os) ).
+Se hai scritto qualcosa di sbagliato controlla [il repository memos su github](https://github.com/soapdog/memos-for-firefoxos) (C'è anche una copia del codice sorgente nella cartella **code** nel [repo del libro](https://github.com/soapdog/guia-rapido-firefox-os) ).
 
-To open the *Simulator Dashboard* go to the menu for **Tools -> Web Developer -> Firefox OS Simulator**.
+Apri la *Dashboard del Simulatore* vai al menu **Tools -> Web Developer -> Firefox OS Simulator**.
 
-![How to open simulator dashboard](images/originals/tools-web-developer-simulator.png)
+![Apri la dashboard del simulatore](images/originals/tools-web-developer-simulator.png)
 
-With the dashboard open, click the **Add Directory** button and browse to where you placed the memos files and select the app manifest.
+Con la dashboard aperta, clicca il pulsante **Crea una cartella** e trova il file manifest dell'applicazione.
 
-![Adding a new app](images/originals/simulator-add-directory.png)
+![Crea una nuova applicazione](images/originals/simulator-add-directory.png)
 
-If everything works as expected you will see the Memos app on the list of apps.
+Se tutta funziona come immaginato vedrai l'applicazione Memos nella lista delle applicazioni.
 
-![Memos showing on the dashboard](images/originals/memos-on-dashboard-display.png)
+![Memos mostrata nella dashboard](images/originals/memos-on-dashboard-display.png)
 
-When you add a new application, the simulator will launch with your new app running - allowing you to test it. Now you can test all the features for Memos. 
+Quando aggiungerai una nuova applicazione, il simulatore lanciato si aprirà con l'applicazione aperta - così potrai testarla. ora proviamo le varie funzionalità di Memos. 
 
-Congratulations! you created and tested your first app. Its not a complex or revolutionary app - but I hope it helped you understand the development workflow of FireFox OS. As you can see, it's not very different from standard Web development.  
+Congratulazioni! hai creato e provato la tua prima applicazione. Non è un'applicazione complessa o rivoluzionara - ma spero sia utile per capire il workflow di sviluppo di FireFox OS. Come hai potuto vedere non è molto diverso dallo sviluppo web classico.  
 
-Remember that whenever you alter some of the source files you need to press the **Refresh** button to update the copy of the app that is stored on the simulator.
+Ricordati che ogni volta che modifichi il codice sorgente devi premere il pulsante **Aggiorna** per aggiornare il contenuto dell'applicazione presente nel simulatore.
 
-## Summary
+## Riassunto
 
-In this chapter we built our first application for Firefox OS and saw it running on the simulator. In the next chapter we're going to check out the developer tools that comes bundled with Firefox, they will make your life a lot easier when developing applications.
-
+In questo capitolo abbiamo costruito la nostra prima applicazione per Firefox OS e l'abbiamo lanciata nel simulatore.Nel prossimo capitolo vedremo gli strumenti da sviluppatore presenti in Firefox, che semplificano il lavoro di sviluppo.

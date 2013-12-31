@@ -1,33 +1,32 @@
-# Distributing Your Apps {#distribution}
+# Distribuire le app {#distribution}
 
-Now that our application is ready we need to figure out a way to get it to our users. In the [introduction chapter](#introduction) I mentioned that, unlike Apple, Mozilla does not force you to use their distribution channels - we're free to spread our creations as we wish. In this chapter we're going to learn how to distribute our app **outside the [Firefox Marketplace](http://marketplace.firefox.com)**. 
+Ora che la nostra applicazione è pronta, abbiamo bisogno di trovare un modo per renderla disponibile ai nostri utenti. Nel [capitolo introduttivo](#introduction) avevo accennato che, diversamente da Apple, Mozilla non obbliga a utilizzare il proprio canale di distribuzione - lasciando ognuno libero di esprimere la propria creatività. In questo capitolo impareremo come distribuire la nostra app **al di fuori del canale ufficiale di [Firefox Marketplace](http://marketplace.firefox.com)**. 
 
-In my humble opinion, distributing your application outside the Mozilla Marketplace makes sense in the following two situations. 
+A mio modesto avviso, non utilizzare il canale ufficiale Mozilla per distribuire un'app è conveniente in questi due casi:
 
- 1. You're developing an application for internal use within your company, or to a restricted/limited group of users. If you ship it to the marketplace then it will be available to anyone and if you want to restrict the usage of the app to a group of people then you will need some kind of authentication scheme with a server backend or something similar. For example, when the *Evernote* application is launched for the first time, it asks the user to log in their servers.   
+ 1. Si sta sviluppando un'app per uso interno aziendale o per una ristretta cerchia di utenti. Pubblicandola su Firefox Marketplace, renderà l'app disponibile a chiunque e renderà necessario implementare un sistema di autenticazione, tramite, ad esempio, un back end su server remoto, per consentire il suo utilizzo solo agli utenti autorizzati. Ad esempio, nelle prime versioni dell'app *Evernote* era richiesta l'identificazione sui loro server prima di poterla utilizzare.
+ 2. Si dispone già di un grosso bacino d'utenza che è possibile sfruttare per distribuire l'app. Un esempio potrebbe essere un giornale, come il *Financial Times*, che può limitarsi a rendere disponibile l'app sul proprio sito per raggiungere la quasi totalità dei propri utenti. È bene ricordare che è possibile distribuire l'app sia su Firefox Marketplace, sia su un canale esterno, in questo modo sarà possibile sfruttare il canale di marketing preesistente e utilizzare Firefox Marketplace per raggiungere nuovi utenti.
 
- 2. You already have a huge user-base that you can tap into for your app distribution. An example of this would be a news paper, like the *Financial Times*, which can simply distribute their app on their own website and reach most of their users. Remember that you can distribute your application outside the marketplace and in the marketplace at the same time, so if you already have your own marketing channel you can leverage that while still using the marketplace for reaching new users outside your own channel.
+Il processo di distribuzione delle app pacchettizzate e delle app ospitate è simile, anche se utilizzano delle funzioni differenti. Ecco perché tratterò i due casi separatamente. Indipendentemente dal fatto che l'app sia pacchettizzata o ospitata, il procedimento è più o meno lo stesso: sarà necessario rendere disponibile un pulsante o un link nella pagina, denominato **Fai clic per installare l'app**, o utilizzare un particolare URL che quando aperto attiva l'esecuzione della routine di installazione. In entrambi i casi, all'utente finale verrà presentata una finestra di dialogo in cui gli verrà chiesto di confermare l'installazione.
 
-The distribution process for hosted and packaged apps is similar, but it uses different functions. Thats why I'm discussing them separately. Regardless if your app is hosted or packaged, the workflow is usually the same: you provide a button or link on your own home page that says something similar to **Click to Install Our App**,  or you use a special URL that when launched causes the installation routine to run. In both cases, a dialog is presented to the user asking him or her to confirm that they want to install the given app.
-
-## Hosted Apps 
+## App ospitate
 
 <<[Code for hosted app installation](code/distribution/hosted_apps_distribution.js)
 
-In the sample above `manifestURL` contains the address for the manifest file. When this code runs, the system asks the user to confirm his desire to install the given application and depending on the choice of the user it runs the success or the error callback. 
+Nell'esempio riportato qui sopra `manifestURL` riporta l'indirizzo del file manifesto. All'esecuzione di questo codice, il sistema chiederà all'utente se desidera installare l'app e, a seconda della risposta dell'utente, richiamerà la callback appropriata: `success` in caso di risposta affermativa e `error` in caso contrario.
 
-To learn more about this API check [the MDN page about application installation](https://developer.mozilla.org/docs/Apps/JavaScript_API).
+Per ulteriori informazioni su questa API consulta [la pagina su MDN sull'installazione delle app](https://developer.mozilla.org/docs/Apps/JavaScript_API).
 
-## Packaged Apps
+## App pacchettizzate
 
-Packaged app installation is similar but instead of calling `mozApps.install()` we call `mozApps.installPackage()` as shown in the sample code below.
+L'installazione di app pacchettizzate funziona in modo analogo, però in questo caso anziché utilizzare la funzione `mozApps.install()` useremo `mozApps.installPackage()` come mostrato nel codice d'esempio riportato qui di seguito.
 
 <<[Code for packaged app installation](code/distribution/packaged_apps_distribution.js)
 
-W> Warning: I have the impression that packaged app installation outside of the marketplace is not possible on Firefox OS version 1.0.1. Even though the API is documented, I have never tried it. Please if you try it, send me feedback so that I can update this book.
+W> Nota: ho il sospetto che l'installazione di app pacchettizzate da siti diversi da Firefox Marketplace non sia consentita nella versione 1.0.1 di Firefox OS. Nonostante l'API sia documentata, non ho mai provato di persona, quindi se hai l'oppurtunità di verificare questa mia supposizione, ti prego di contattarmi affinché passa aggiornare questo libro.
 
-## Summary
+## Riassunto
 
-This chapter discussed options for distributing applications outside of the Firefox Marketplace by using the installation and management APIs for *Open Web Apps*. There are many other routines available to do things such as checking if your application is installed (so that you can hide that *Click Here To Install* button). To learn more about those APIs check out the [MDN page about application installation](https://developer.mozilla.org/docs/Apps/JavaScript_API) (yes, gave you this link before - this time, click it! there is important stuff there).
+In questo capitolo sono stati trattati i metodi di distribuzione delle app alternativi al sito Firefox Marketplace grazie all'utilizzo della API di *Installazione e gestione* delle *app web aperte*. Esistono molte altre routine disponibili, ad esempio per controllare se l'applicazione è installata (in questo modo ti sarà possibile nascondere il pulsante **Fai clic qui per installare**). Per ulteriori informazioni su queste API consulta [la pagina di MDN dedicata all'installazione delle app](https://developer.mozilla.org/docs/Apps/JavaScript_API) (si, hai ragione, questo link non è nuovo, però ci sono informazioni importanti che devi assolutamente conoscere).
 
-In the next chapter we're going to learn how to distribute our apps through the Firefox Marketplace.
+Nel prossimo capitolo impareremo come distribuire la nostra app attraverso il sito Firefox Marketplace.

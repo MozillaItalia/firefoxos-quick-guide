@@ -1,6 +1,6 @@
 # Il Simulatore Firefox OS {#simulator}
 
-![Firefox OS Simulator Dashboard](images/originals/simulator-dashboard.png)a
+![Firefox OS Simulator Dashboard](images/originals/simulator-dashboard.png)
 
 Abbiamo installato il Simulatore Firefox OS nel [capitolo sulla preparazione dell'ambiente di sviluppo](#setup) e lo abbiamo utilizzato nel [capitolo in cui abbiamo creato la prima app](#firstapp). È giunta l'ora di approfondire la conoscenza del simulatore e imparare come effettuare le operazioni più comuni.
 
@@ -17,7 +17,6 @@ Per ulteriori informazioni fare riferimento alla [documentazione di Firefox OS S
 Per aggiungere una nuova applicazione *packaged* fare clic sul pulsante **Aggiungi Directory** nella **Dashboard del Simulatore** come è possibile vedere nella schermata sottostante. Se non ci sono errori nel file manifesto e nel file che avvia l'app, essa verà avviata nel simulatore. Se il file manifesto contiene degli errori o se viene rilevato qualche altro errore, essi verranno riportati nella Dashboard del simulatore. 
 
 ![Ecco il pulsante *Aggiungi Cartella* che aggiunge l'applicazione al simulatore](images/originals/simulator-add-directory.png)
-
 
 
 ![Esempio di un file manifesto non valido](images/originals/simulator-invalid-manifest.png)
@@ -38,7 +37,7 @@ Dopo aver cliccato il pulsante **Aggiungi URL**, il simulatore verificherà il f
 
 Come per le *app packaged*, ogni volta che l'app verrà aggiornata sarà necessario fare clic sul pulsante **Aggiorna** per aggiornare la versione in esecuzione nel simulatore (è anche possibile utilizzare la scorciatoia da tastiera CMD/CTRL+R dalla finestra del simulatore).
 
-## Debugg
+## Debug
 
 Una volta che l'app è stata aggiunta al simulatore, sarà possibile effettuarne il debug facendo clic sul pulsante **Connetti** posto accanto al nome dell'app nell'elenco delle app in esecuzione sul simulatore. A questo punto, si aprirà un'istanza della **Console JavaScript** connessa all'app in esecuzione nel simulatore.
 
@@ -59,10 +58,9 @@ Niente può sostituire il testing su un dispositivo reale. Nel simulatore i test
 Per sottolineare l'importanza di effettuare dei test su un dispositivo reale, racconterà un fatto personale: Alcuni anni fà Raphael Eckhardt  (il designer della copertina di questo libro) ed io stavamo realizzando un puzzle game simile a  Bejeweled. Il nostro gioco consisteva nel trascinare e posizionare dei pezzi su una tavola e funzionava abbastanza bene sul simulatore. 
 
 Quando abbiamo testato il gioco su un telefono reale ci siamo resi conto che i componenti del gioco non erano ottimizzati per la piattaforma *mobile*: quando posizionavamo la mano sullo schermo tutto scompariva dietro la mano. Inoltre i componenti di gioco erano troppo piccoli per le dita degli utenti quindi gli utenti non potevano cosa succedeva, in poche parole l'interfaccia non era un granchè. Il problema era che noi abbiamo testato con il mouse che ha un cursore piccolo. Quando abbiamo provato con le nostre dita ciccione ci siamo resi conto che dovevamo rielaborare l'interfaccia.  
-
 Per evitare dei problemi dopo il rilascio provate sempre su un dispositivo reale... o due. Testate spesso con dei prototipi per risparmiare tempo e denaro senza dover rimodificare tutto ogni volta. 
 
-È possibile acquistare un developer preview phone Firefox OS dal [Geeksphone Shop](http://shop.geeksphone.com/en/). Consiglio di usare il [Geeksphone Keon](http://www.geeksphone.com/) perchè è quello con le specifiche più simili ai dispositivi lanciati dai partener di Mozilla.  
+È possibile acquistare un developer preview phone Firefox OS dal [Geeksphone Shop](http://shop.geeksphone.com/en/). Consiglio di usare il [Geeksphone Keon](http://www.geeksphone.com/) perchè è quello con le specifiche più simili ai dispositivi lanciati dai partner di Mozilla.  
 
 È sempre possibile acquistare un dispositivo per l'utente finale se abiti in un paese in cui vengono già commercializzati. Un'altra soluzione è sostituire Android con Firefox OS su alcuni dispositivi (alcuni dispositivi lo supportano!) non lo consiglio se non sei un utente avanzato e non ti piace perdere troppo tempo in hacking.  
 

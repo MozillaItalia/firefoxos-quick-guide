@@ -12,7 +12,7 @@ Dalla parte superiore dello schermo è possibile cancellare una nota prescelta f
 
 ![Memos, finestra di conferma della cancellazione](images/originals/memos-delete-screen.png)
 
-Il codice sorgente di Memos è disponibile nel [Repository su Github](https://github.com/soapdog/memos-for-firefoxos) (è possibile anche scaricarlo come cile [.zip](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip) ). Consiglio di scaricare i file così sarà più semplice seguire la guida. Un'altra copia del codice sorgente è disponibile nella cartella dentro il [repository github repository di questo libro](https://github.com/soapdog/firefoxos-quick-guide).
+Il codice sorgente di Memos è disponibile nel [Repository su Github](https://github.com/soapdog/memos-for-firefoxos) (è possibile anche scaricarlo come file [.zip](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip) ). Consiglio di scaricare i file così sarà più semplice seguire la guida. Un'altra copia del codice sorgente è disponibile nella cartella dentro il [repository github repository di questo libro](https://github.com/soapdog/firefoxos-quick-guide).
 
 Memos utilizza [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) per salvare le note e il toolkit [*Gaia Building Blocks*](http://buildingfirefoxos.com/building-blocks) per creare le interfacce. In un futuro aggiornamento il libro conterrà molte informazioni su *Gaia Building Blocks*, ma in questa prima versione mi limiterò ad utilizzarlo. Per ulteriori informazioni sull'argomento e per sapere quali interfacce vi sono integrate visitare i link appena segnalati.
 
@@ -53,7 +53,7 @@ La struttura HTML che utilizzeremo per questa applicazione seguirà gli schemi a
 
 W> Attenzione: la versione che ho utilizzato di *Gaia Building Blocks* non è la più recente. Purtroppo, ho dovuto fare questa scelta perché l'applicazione Memos non era compatibile con l'ultima versione di *Gaia Building Blocks*. Nei propri progetti è sempre meglio utilizzare l'ultima versione disponibile del toolkit.
 
-### Incorporare Gaia Building Blocks
+### Includere Gaia Building Blocks
 
 Prima di qualsiasi altra cosa copiare le cartelle **shared** e **styles** incluse nel repository che è stato scaricato, nella cartella **memos** creata in precedenza. Questo consentirà di usare il toolkit *Gaia Building Blocks* nelle proprie applicazioni.
 
@@ -80,7 +80,7 @@ La prima riga dichiara che il documento utilizza il formato HTML5. Dalla *linea 
 
 ### Costruiamo la schermata principale
 
-Iniziamo a costruire le varie schermate. Come menzionato sopra ogni schermata è una `<section>` all'interno del corpo, `<body>`, del documento HTML. All'elemento *body* deve essere associato un attributo *role* il cui valore deve essere *application*, in quanto questi valori sono utilizzati come selettore nei fogli di stile per definire l'aspetto dell'interfaccia, quindi il tag sarà `<body role="application">`. Creiamo la prima schermata e dichiariamo il tag body come abbiamo detto.
+Iniziamo a costruire le varie schermate. Come menzionato sopra ogni schermata è presente una `<section>` all'interno del corpo, `<body>`, del documento HTML. All'elemento *body* deve essere associato un attributo *role* il cui valore deve essere *application*, in quanto questi valori sono utilizzati come selettore nei fogli di stile per definire l'aspetto dell'interfaccia, quindi il tag sarà `<body role="application">`. Creiamo la prima schermata e dichiariamo il tag body come abbiamo detto.
 
 ~~~~~~~~
 <body role="application">
@@ -151,7 +151,7 @@ Nella parte superiore dello schermo, rappresentato dall'elemento `<header>` ci s
 
 Sotto questa barra c'è un paragrafo con una `<textarea>` contenente il contenuto della nota e ancora più sotto un'altra barra con il cestino per cancellare la nota che si sta visualizzando.
 
-Questi tre elementi e il loro contenuto sono la schermata di modifica. Dopo questo abbiamo un  `<form>` che è usato per una finestra di conferma che verrà mostrata all'utente per confermare la cancellazione di una nota. Questa finestra è molto semplice, contiene un testo ed una finestra di conferma con due pulsanti, uno per cancellare la nota ed uno per annullare l'azione.
+Questi tre elementi e il loro contenuto sono la schermata di modifica. Dopo questo abbiamo un `<form>` che è usato per una finestra di conferma che verrà mostrata all'utente per confermare la cancellazione di una nota. Questa finestra è molto semplice, contiene un testo ed una finestra di conferma con due pulsanti, uno per cancellare la nota ed uno per annullare l'azione.
 
 A questo punto chiudiamo il tag `<section>` avendo tutte le schermate necessarie, il codice HTML rimanente serve per includere i file JavaScript e completare il documento HTML con tutti i tag di chiusura.
 
@@ -164,16 +164,16 @@ A questo punto chiudiamo il tag `<section>` avendo tutte le schermate necessarie
 
 ## Manipoliamo il codice JavaScript
 
-Adesso ci divertiremo a dare vita alla nostra applicazione usando JavaScript. per organizzare meglio questo codice ho scelto di suddividerlo in due file:
+Adesso ci divertiremo a dare vita alla nostra applicazione usando JavaScript. Per organizzare meglio questo codice ho scelto di suddividerlo in due file:
 
-* **model.js:** contiene le routine per la memorizzazione e restituzione delle note ma non contiene codice della logica, materiali dell'interfaccia o immissione dati. In teoria potremmo utilizzare questo file in altre applicazioni che richiedono note.
+* **model.js:** contiene le routine per la memorizzazione e restituzione delle note ma non contiene il codice della logica, materiali dell'interfaccia o immissione dati. In teoria potremmo utilizzare questo file in altre applicazioni che richiedono note.
 * **app.js:** collega gli eventi agli elementi HTML e contiene la logica dell'applicazione.
 
 Entrambi i file devono essere posizionati nella cartella **js** accanto alle cartelle **style** e **shared**.
 
 ### model.js
 
-Utilizzeremo [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) per salvare le note. Avendo chiesto i permessi *storage* nel file manifesto possiamo salvare quante note vogliamo - ma non abusarne! I dispositivi Firefox OS solitamente non hanno molto spazio, è sempre meglio essere consapevoli di quali dati vengono memorizzati (gli utenti daranno un voto negativo alla tua applicazione se consumerà troppo spazio su disco). Memorizzare troppo materiale creerà problemi di prestazioni e l'app risulterà lenta e poco reattiva. Al momento del caricamento dell'app su Firefox Marketplace, sarà necessario indicare nelle note il motivo per cui l'app necessita di spazio illimitato per il suo funzionamento, in caso contrario verrà esplicitamente richiesto dai revisori - nel caso non si sia in grado di giustificare tale richiesta i revisori respingeranno l'app che non verrà pubblicata sul sito.
+Utilizzeremo [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) per salvare le note. Avendo chiesto i permessi *storage* nel file manifesto possiamo salvare quante note vogliamo - ma non abusarne! I dispositivi Firefox OS solitamente non hanno molto spazio, è sempre meglio essere consapevoli di quali dati vengono memorizzati (gli utenti daranno un voto negativo alla tua applicazione se consumerà troppo spazio su disco). Memorizzare troppo materiale creerà problemi di prestazioni e l'app risulterà lenta e poco reattiva. Al momento del caricamento dell'app sul Marketplace Firefox, sarà necessario indicare nelle note il motivo per cui l'app necessita di spazio illimitato per il suo funzionamento, in caso contrario verrà esplicitamente richiesto dai revisori - nel caso non si sia in grado di giustificare tale richiesta i revisori respingeranno l'app che non verrà pubblicata sul sito.
 
 La parte di codice di *model.js* mostrato qui sotto si occupa del collegamento e creazione dello storage.
 
@@ -436,7 +436,7 @@ function refreshMemoList() {
 }
 ~~~~~~~~
 
-La funzione `refreshMemoList()` modifica il DOM aggiornando l'elenco delle note. Sarebbe più facile alcuni sistemi di template come [handlebars](http://handlebarsjs.com/) o [underscore](http://underscorejs.org/) ma quest'applicazione contiene solo *vanilla javascript* quindi faremo tutto a manina. Questa funzione è chiamata `showMemoList()` mostrata sopra.
+La funzione `refreshMemoList()` modifica il DOM aggiornando l'elenco delle note. Sarebbe più facile usare alcuni sistemi di template come [handlebars](http://handlebarsjs.com/) o [underscore](http://underscorejs.org/) ma quest'applicazione contiene solo *vanilla javascript* quindi faremo tutto a manina. Questa funzione è chiamata `showMemoList()` mostrata sopra.
 
 Queste sono tutte le funzioni usate dall'applicazione. L'unica parte mancante è il gestore eventi e la chiamata iniziale di `refreshMemoList()`.
 
@@ -487,7 +487,7 @@ Se tutto funziona come previsto, Memos apparirà nella lista applicazioni.
 
 Quando si aggiungerà una nuova applicazione, il simulatore verrà avviato con la nuova app in esecuzione. A questo punto è possibile testare tutte le funzionalità di Memos.
 
-Congratulazioni. È stata creata e provata la propria prima applicazione. Non è un'applicazione complessa o rivoluzionaria - ma spero sia utile per capire il workflow di sviluppo di FireFox OS. Come si sarà potuto notare non è molto diverso dallo sviluppo web classico.  
+Congratulazioni. Abbiamo creato e provato la nostra prima applicazione. Non è un'applicazione complessa o rivoluzionaria - ma spero sia utile per capire il workflow di sviluppo di FireFox OS. Come si sarà potuto notare non è molto diverso dallo sviluppo web classico.  
 
 Si ricordi che ogni volta che viene modificato il codice sorgente è necessario premere il pulsante **Aggiorna** per aggiornare il contenuto dell'applicazione presente nel simulatore.
 

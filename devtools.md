@@ -8,7 +8,7 @@ Se si è interessati a saperne di più su questi strumenti e conoscere quali str
 
 Un'attività molto comune durante lo sviluppo web è quella di modificare il sorgente HTML di una pagina e poi ricaricarla per vedere le modifiche effettuate all'opera nel browser. A meno che non si stiano utilizzando strumenti quali *Grunt* o *Volo*, di solito, non sarà necessario effettuare un'operazione intermedia come la compilazzione del sorgente, o per lo meno qualcosa che le assomiglia. Anche se il Firefox OS Simulator consente di effettuare questa attività, attualmente, il simulatore è in grado di utilizzare un'unica risoluzione schermo di 480x320 pixel. Questo non è certo l'ideale mentre si sta cercando di sviluppare un'app che è destinata a funzionare su tablet, phablet, grandi schermi TV o qualunque altro dispositivo con una diversa risoluzione.
 
-Per controllare l'aspetto dell'app con qualunque tipo di risoluzione, è possibile utilizzare lo strumento **Visualizzazione flessibile** di Firefox che permette di cambiare lo schermo e il riquadro di visualizzazione. Può essere attivata dal menu **Strumenti -> Sviluppo web -> Visualizzazione flessibile** come mostrato nell'immagine qui di seguito. All'attivazione della modalità di visualizzazione flessibile, la finestra diventerà “ridimensionabile“ in modo da permettere, appunto, di ridimensionarla, trascinando gli angoli o impostandone le dimensioni nelle apposite caselle.
+Per controllare l'aspetto dell'app con qualunque tipo di risoluzione, è possibile utilizzare lo strumento **Visualizzazione flessibile o Responsive View** (Ctrl+Shift+M) di Firefox che permette di cambiare lo schermo e il riquadro di visualizzazione. Può essere attivata dal menu **Strumenti -> Sviluppo web -> Visualizzazione flessibile** come mostrato nell'immagine qui di seguito. All'attivazione della modalità di visualizzazione flessibile, la finestra diventerà “ridimensionabile“ in modo da permettere, appunto, di ridimensionarla, trascinando gli angoli o impostandone le dimensioni nelle apposite caselle.
 
 ![Attivazione della visualizzazione flessibile](images/originals/responsive-design-view.png)
 
@@ -16,12 +16,12 @@ L'utilizzo della *Visualizzazione flessibile* è particolarmente utile al fine d
 
 ![Esempio di visualizzazione flessibile](images/originals/responsive-view-sample.png)
 
-Al momento della stesura di questo libro, la maggior parte degli smartphone Firefox OS in commercio utilizzano schermi di 480x320 pixel con una densità dei punti di 96 dpi[^itdpi]. Tuttavia, c'è da aspettarsi che questo cambi nel tempo: gli schermi avranno dimensioni maggiori e maggiori densità dei punti  (come gli schermi Retina di Apple).
+Al momento della stesura di questo libro, la maggior parte degli smartphone Firefox OS in commercio utilizzano schermi di 480x320 pixel con una densità dei punti di 96 dpi[^itdpi]. Tuttavia, c'è da aspettarsi che questo cambi nel tempo: gli schermi avranno dimensioni maggiori e maggiori densità dei punti (come gli schermi Retina di Apple).
 [^itdpi]: L'acronimo dpi denota l'unità di misura della densità dei punti, in inglese dots per pixel, cioé punti per pollice (1 pollice corrisponde a 2,54 centimetri). Per ulteriori informazioni leggere [l'articolo di Wikipedia sull'argomento](http://it.wikipedia.org/wiki/Risoluzione_%28grafica%29).
 
-Nell'eventualità di future verifiche delle proprie app, si segua questo consiglio: non basare mai i propri CSS su una specifica risoluzione schermo o densità dei punti . Piuttosto, si dovrebbe utilizzare le *media query* e una metodologia di design responsivo, per permettere alla tua app di adattarsi alle varie risoluzioni schermo. Per saperne di più sul design responsivo, ti consiglio la lettura di uno o entrambi questi libri: [Responsive Web Design](http://www.abookapart.com/products/responsive-web-design) e [Mobile First](http://www.abookapart.com/products/mobile-first).
+Nell'eventualità di future verifiche delle proprie app, si segua questo consiglio: non basare mai i propri CSS su una specifica risoluzione schermo o densità dei punti. Piuttosto, si dovrebbe utilizzare le *media query* e una metodologia di design responsivo, per permettere alla tua app di adattarsi alle varie risoluzioni schermo. Per saperne di più sul design responsivo, ti consiglio la lettura di uno o entrambi questi libri: [Responsive Web Design](http://www.abookapart.com/products/responsive-web-design) e [Mobile First](http://www.abookapart.com/products/mobile-first).
 
-Riepilogando, la **Visualizzazione flessibile** ci permette di testare la nostra app su varie risoluzioni schermo senza dover ridimensionare la finestra di Firefox. A mio modesto avviso, la *Visualizzazione flessibile* è uno degli strumenti di sviluppo più utili a disposizione - purtroppo ha un grande limite: attualmente non consente di testare differenti configurazioni di densità dei punti .
+Riepilogando, la **Visualizzazione flessibile** ci permette di testare la nostra app su varie risoluzioni schermo senza dover ridimensionare la finestra di Firefox. A mio modesto avviso, la *Visualizzazione flessibile* è uno degli strumenti di sviluppo più utili a disposizione - purtroppo ha un grande limite: attualmente non consente di testare differenti configurazioni di densità dei punti.
 
 ## Strumenti di sviluppo
 
@@ -30,7 +30,7 @@ Gli strumenti di sviluppo di Firefox sono simili a quelli disponibili con l'este
 Esistono diversi modi per invocare la Console:
 
 * Dal menu Strumenti -> Sviluppo web -> Console web
- * Facendo clic col tasto destro nella pagina da analizzare e scegliendo "Ispeziona elemento" e quindi selezionando la scheda Console.
+* Facendo clic col tasto destro nella pagina da analizzare e scegliendo "Ispeziona elemento" e quindi selezionando la scheda Console.
 
 ![Console JavaScript](images/originals/console-open.png) 
 
@@ -38,7 +38,7 @@ Oltre alla *Console JavaScript* sono disponibili molti altri strumenti come [*l'
 
 Nell'applicazione che abbiamo creato nel precedente capitolo abbiamo utilizzato la Console web per verificare lo stato di avanzamento del nostro progetto. Questo è un modo elegante e molto efficace di effettuare il debug delle nostre app - anche se alcuni sviluppatori continuano a utilizzare l'istruzione `alert()` all'interno di tutti i loro sorgenti JavaScript come loro “strumento di debugging”.
 
-L'utilizzo dell'istruzione `alert()` è davvero un metodo deprecabile, in quanto se ci si dimentica di rimuovere tutti gli `alert()` dal sorgente prima di rilasciare l'app, sarà l'utente a pagarne le conseguenze. L'utilizzo della Console permette di evitare questo tipo di problemi, la Console, infatti, consente di instradare, in maniera semplice e innoqua, questi messaggi in un luogo al quale di solito un utente non accede, non disturbandone così la navigazione. L'utilizzo della Console inoltre, evita di dover rimuovere le istruzioni che generano i messaggi di log dal codice sorgente, a meno che non lo si voglia davvero fare, ovviamente. Questo ci aiuterà nelle operazioni di manutenzione e di debugging del codice sorgente nel caso che ci fossero dei bug imprevisti (come accade solitamente con qualunque codice sorgente).
+L'utilizzo dell'istruzione `alert()` è davvero un metodo deprecabile, in quanto se ci si dimentica di rimuovere tutti gli `alert()` dal sorgente prima di rilasciare l'app, sarà l'utente a pagarne le conseguenze. L'utilizzo della Console permette di evitare questo tipo di problemi, la Console, infatti, consente di inserire, in maniera semplice e innoqua, questi messaggi in un luogo al quale di solito un utente non accede, non disturbandone così la navigazione. L'utilizzo della Console inoltre, evita di dover rimuovere le istruzioni che generano i messaggi di log dal codice sorgente, a meno che non lo si voglia davvero fare, ovviamente. Questo ci aiuterà nelle operazioni di manutenzione e di debugging del codice sorgente nel caso che ci fossero dei bug imprevisti (come accade solitamente con qualunque codice sorgente).
 
 Imparare a utilizzare in modo appropriato gli strumenti di sviluppo inclusi in Firefox (o in qualunque altro browser in uso) è un importante passo nel processo di diventare uno sviluppatore migliore. È per questo che consiglio a tutti di consultare i link riportati qui sopra e approfondire la propria conoscenza degli strumenti di sviluppo inclusi in Firefox.
 

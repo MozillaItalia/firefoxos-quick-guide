@@ -18,7 +18,7 @@ Per aggiungere una nuova applicazione *packaged* fare clic sul pulsante **Aggiun
 
 ![Ecco il pulsante *Aggiungi Cartella* che aggiunge l'applicazione al simulatore](images/originals/simulator-add-directory.png)
 
-Dopo aver cliccato sul pulsante evidenziato nell'immagine,si aprirà una finestra di dialogo di selezione file. Per aggiungere l'app prescelta al simmulatore sarà sufficiente trovare e aprire il **file manifesto dell'app** dal proprio hard disk. Se non ci sono errori nel file manifesto e nel file che avvia l'app, essa verà avviata nel simulatore. Se il file manifesto contiene degli errori o se viene rilevato qualche altro errore, essi verranno riportati nella Dashboard del simulatore. 
+Dopo aver fatto clic sul pulsante evidenziato nell'immagine,si aprirà una finestra di dialogo di selezione file. Per aggiungere l'app prescelta al simulatore sarà sufficiente trovare e aprire il **file manifesto dell'app** dal proprio hard disk. Se non ci sono errori nel file manifesto e nel file che avvia l'app, essa verrà avviata nel simulatore. Se il file manifesto contiene degli errori o se viene rilevato qualche altro errore, essi verranno riportati nella Dashboard del simulatore. 
 
 ![Esempio di un file manifesto non valido](images/originals/simulator-invalid-manifest.png)
 
@@ -26,7 +26,7 @@ Ogni volta che l'app verrà aggiornata sarà necessario fare clic sul pulsante *
 
 ### Aggiungere applicazioni hosted
 
-Se si sta sviluppando un'applicazione hosted è necessario testarla utilizzando un server web. Non utilizzare il metodo descritto in precedenza con le *app hosted* in quanto alcuni errori potrebbero non essere rilevati, ad esempio un MIME Type non valido del file manifesto. Si noti che il simulatore non segnala errori, anche di una certa rilevanza, come, appunto,  un MIME Type non valido, ma è importante verificare che tutto funzioni se si vuole pubblicare l'app su Firefox Marketplace.
+Se si sta sviluppando un'applicazione hosted è necessario testarla utilizzando un server web. Non utilizzare il metodo descritto in precedenza con le *app hosted* in quanto alcuni errori potrebbero non essere rilevati, ad esempio un MIME Type non valido del file manifesto. Si noti che il simulatore non segnala errori, anche di una certa rilevanza, come, appunto, un MIME Type non valido, ma è importante verificare che tutto funzioni se si vuole pubblicare l'app su Firefox Marketplace.
 
 La maggior parte delle applicazioni *hosted* non sono realizzate specificatamente per Firefox OS, si tratta piuttosto di veri e propri siti web che sfruttano il design responsive per adattarsi a più dispositivi e risoluzioni. Solitamente queste app web funzionano grazie a un complesso back end che deve essere in esecuzione per consentire un loro corretto funzionamento ed è proprio per questo motivo che si rende necessario testarle con un vero server web per assicurarsi che tutto funzioni correttamente.
 
@@ -34,7 +34,7 @@ Per caricare un'*app hosted* nel simulatore, inserire nella casella di testo, po
 
 ![Aggiungere un'applicazione hosted al simulatore](images/originals/simulator-add-url.png)
 
-Dopo aver cliccato il pulsante **Aggiungi URL**, il simulatore verificherà il file manifesto e se non verranno rilevati errori l'app verrà eseguita all'interno del simulatore. Eventuali errori, analogamente a quanto avviene per le *app packaged*, verranno riportati nella Dashboard (ad esempio, "app submission to the Marketplace needs at least an 128 icon").
+Dopo aver fatto clic sul pulsante **Aggiungi URL**, il simulatore verificherà il file manifesto e, se non verranno rilevati errori, l'app verrà eseguita all'interno del simulatore. Eventuali errori, analogamente a quanto avviene per le *app packaged*, verranno riportati nella Dashboard (ad esempio, "app submission to the Marketplace needs at least an 128 icon").
 
 Come per le *app packaged*, ogni volta che l'app verrà aggiornata sarà necessario fare clic sul pulsante **Aggiorna** per aggiornare la versione in esecuzione nel simulatore (è anche possibile utilizzare la scorciatoia da tastiera CMD/CTRL+R dalla finestra del simulatore).
 
@@ -44,7 +44,7 @@ Una volta che l'app è stata aggiunta al simulatore, accedendo alla Dashboard sa
 
 ![Il pulsate da premere](images/originals/simulator-press-connect.png)
 
-Alla pressione del pulsante **Connetti** verrà mostrata una cosa simile a quella di questa immagine:
+Alla pressione del pulsante **Connetti** verrà mostrata una schermata simile a quella di questa immagine:
 
 ![Developer Tools connessi all'applicazione nel simulatore](images/originals/simulator-connected.png)
 
@@ -54,11 +54,11 @@ Quando l'app risulterà funzionante nel simulatore sarà tempo di testarla su un
 
 ## Testare l'applicazione su un dispositivo reale
 
-Niente può sostituire il testing su un dispositivo reale. Nel simulatore i test vengono effettuati facendo clic con un mouse su uno schermo di computer, mentre con un dispositivo reale i test si effettuano toccando uno touchscreen e premendo con le dita dei pulsanti reali.  Un'esperienza utente e sviluppatore completamente diversa.
+Niente può sostituire il testing su un dispositivo reale. Nel simulatore i test vengono effettuati facendo clic con un mouse su uno schermo di computer, mentre con un dispositivo reale i test si effettuano toccando uno touchscreen e premendo con le dita dei pulsanti reali. Un'esperienza utente e sviluppatore completamente diversa.
 
 Per sottolineare l'importanza di effettuare dei test su un dispositivo reale, racconterò un fatto personale: Alcuni anni fà Raphael Eckhardt  (il designer della copertina di questo libro) ed io stavamo realizzando un puzzle game simile a  Bejeweled. Il nostro gioco consisteva nel trascinare e posizionare dei pezzi su una tavola e funzionava abbastanza bene sul simulatore. 
 
-Quando abbiamo testato il gioco su un telefono reale ci siamo resi conto che i componenti del gioco non erano ottimizzati per la piattaforma *mobile*: quando posizionavamo la mano sullo schermo tutto scompariva dietro la mano. Inoltre i componenti di gioco erano troppo piccoli per le dita degli utenti quindi gli utenti non potevano rendersi conto di quello che stavano facendo, in poche parole l'interfaccia non era un granché. Il problema era che noi avevamo effettuato i nostri test utilizzando il mouse e il puntatore del mouse è molto piccolo. Quando abbiamo provato con le nostre dita ciccione ci siamo resi conto che dovevamo rielaborare l'interfaccia.  
+Quando abbiamo testato il gioco su un telefono reale ci siamo resi conto che i componenti del gioco non erano ottimizzati per la piattaforma *mobile*: quando posizionavamo la mano sullo schermo tutto scompariva dietro la mano. Inoltre i componenti di gioco erano troppo piccoli per le dita, quindi gli utenti non potevano rendersi conto di quello che stavano facendo, in poche parole l'interfaccia non era un granché. Il problema era che noi avevamo effettuato i nostri test utilizzando il mouse e il puntatore del mouse è molto piccolo. Quando abbiamo provato con le nostre dita ciccione ci siamo resi conto che dovevamo rielaborare l'interfaccia.  
 
 Per evitare di avere un'esperienza così frustrante è indispensabile testare sempre l'app su un dispositivo reale… O ancora meglio su qualunque dispositivo si abbia a disposizione. Effettuare dei buoni test su dei semplici prototipi è molto importante per non dover perdere tempo e denaro a rimodificare tutto ogni volta.
 
@@ -68,11 +68,11 @@ Inoltre, nel caso si risiedesse in un paese in cui i dispositivi Firefox OS sono
 
 ## Connessione con un dispositivo Firefox OS
 
-Avendo a disposizione un dispositivo Firefox OS (e se i driver sono installati), se il dispositivo è connesso al computer, è possibile fare un push delle applicazioni direttamente dal simulatore al dispositivo. Quando il simulatore riconosce che un dispositivo con Firefox OS phone è collegato, verrà mostrato un messaggio **Dispositivo Connesso**.
+Avendo a disposizione un dispositivo Firefox OS (con i driver installati) connesso al computer, è possibile fare un push delle applicazioni direttamente dal simulatore al dispositivo. Quando il simulatore riconosce che un dispositivo con Firefox OS phone è collegato, verrà mostrato un messaggio **Dispositivo Connesso**.
 
 ![Dispositivo connesso!](images/originals/simulator-device-connected.png)
 
-Se lo smartphone è connesso e riconosciuto il simulatore mostrerà un nuovo pulsante accanto ai pulsanti **Aggiorna** e **Connetti** chiamato **Push**. Premendo questo pulsante una **finestra di richiesta per i permessi** apparirà sul dispositivo chiedendo la conferma ed installando l'applicazione.
+Se lo smartphone è connesso e riconosciuto, il simulatore mostrerà un nuovo pulsante chiamato **Push** accanto ai pulsanti **Aggiorna** e **Connetti**. Premendo questo pulsante una **finestra di richiesta per i permessi** apparirà sul dispositivo chiedendo la conferma ed installando l'applicazione.
 
 ![Il pulsante da premere per fare il push delle app sul dispositivo](images/originals/simulator-press-push.png)
 
@@ -84,6 +84,6 @@ Con l'applicazione in esecuzione nel dispositivo è possibile usare il *remote d
 
 ## Riassunto
 
-Riassumendo il simulatore Firefox OS è spettacolare per creare applicazioni specifiche per FireFox OS - ma ha alcuni limiti se si vuole sviluppare un'app che funzioni su una maggior gamma di dispositivi (ad esempio al momento non è possibile emulare il comportamento di Firefox OS su un tablet). 
+Riassumendo, il simulatore Firefox OS è spettacolare per creare applicazioni specifiche per FireFox OS - ma ha alcuni limiti se si vuole sviluppare un'app che funzioni su una maggior gamma di dispositivi (ad esempio al momento non è possibile emulare il comportamento di Firefox OS su un tablet). 
 
 A questo punto del libro, oltre a una sensazione di incredibile forza, si dovrebbe, o così mi auguro, riuscire a comprendere il workflow necessario per sviluppare un'app Firefox OS. Nel prossimo capitolo vedremo come distribuire un'applicazione agli utenti.

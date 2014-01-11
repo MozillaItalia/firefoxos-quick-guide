@@ -14,7 +14,7 @@ A Google per aver realizzato *Google Summer of Code 2013*. Questo programma è s
 
 ## Questo libro è in beta perenne
 
-Il mio auspicio è di aggiornare questo libro spesso, ampliando i contenuti e e revisionandolo secondo le segnalazioni dei lettori. Poiché alcune API sono in lavorazione su Firefox OS, ci si dovrebbe assicurare di aver scaricato l'ultima versione disponibile di questo libro.
+Il mio auspicio è di aggiornare questo libro spesso, ampliandone i contenuti e revisionandolo secondo le segnalazioni dei lettori. Poiché alcune API sono in via di sviluppo su Firefox OS, è meglio assicurarsi di aver scaricato l'ultima versione disponibile di questo libro.
 
 ## Me, me stesso e io. 
 
@@ -44,7 +44,7 @@ Se si desidera migliorare il contenuto di questo libro , fare riferimento alla s
 
 ## Illustrazione della copertina
 
-La copertina è stata creata da Raphael Eckhardt, un disegnatore ed illustratore brasiliano. Puoi vedere il suo lavoro e contattarlo (è un freelancer) su [http://raphaeleckhardt.com/](http://raphaeleckhardt.com/).
+La copertina è stata creata da Raphael Eckhardt, un disegnatore ed illustratore brasiliano. È possibile osservare il suo lavoro e contattarlo (è un freelancer) su [http://raphaeleckhardt.com/](http://raphaeleckhardt.com/).
 
 ## Chi dovrebbe leggere questo libro
 
@@ -52,7 +52,7 @@ Questo libro è stato scritto per lettori con una conoscenza intermedia di HTML,
 
 ## Migliori tecniche di programmazione VS introduzione per principianti
 
-Gli sviluppatori esperti noteranno che talvolta negli esempi non seguo le migliori tecniche di programmazione. Anche se sto cercando di evitare l'uso degli *anti-pattern* nel libro, voglio altresì evitare l'uso delle *immediate function* e altre tecniche simili di programmazione. Il motivo principale di questa scelta è che questo libro è un'introduzione all'argomento.
+Gli sviluppatori esperti noteranno che talvolta negli esempi non seguo le migliori tecniche di programmazione. Anche se sto cercando di evitare l'uso degli *anti-pattern* nel libro, voglio altresì evitare l'uso delle *immediate function* e altre tecniche simili di programmazione. Il motivo principale di questa scelta è che questo libro vuole essere un'introduzione all'argomento.
 I programmatori esperti saranno in grado di modificare il codice mentre i principianti saranno in grado di comprenderlo. Il codice è, ovviamente, funzionante e mi propongo di aggiornare e migliorare le tecniche di programmazione seguendo i commenti e i suggerimenti dei lettori.
 
 Ecco qualche buon libro per chi volesse approfondire il codice JavaScript a un livello avanzato:
@@ -65,14 +65,14 @@ Ecco qualche buon libro per chi volesse approfondire il codice JavaScript a un l
 ## Commenti e Pull Requests
 
 Questo è un libro gratuito e libero e sono entusiasta di ricevere qualunque commento o suggerimento.
-Il contenuto di questo libro è su [GitHub](https://github.com/soapdog/firefoxos-quick-guide) ed è scritto in Markdown (con alcune specifiche estensioni di Leanpub). Per commenti, correzioni di bug e miglioramenti inviare una *pull request* su Github. Grazie in anticipo per i contributi.
+Il contenuto di questo libro si trova su [GitHub](https://github.com/soapdog/firefoxos-quick-guide) ed è scritto in Markdown (con alcune specifiche estensioni di Leanpub). Per commenti, correzioni di bug e miglioramenti inviare una *pull request* su Github. Grazie in anticipo per i contributi.
 
 Il repository Git di questo libro è [https://github.com/soapdog/firefoxos-quick-guide](https://github.com/soapdog/firefoxos-quick-guide).
 
 ## Traduzioni
 
-Questo libro è stato scritto inizialmente in portoghese e successivamente tradotto in Inglese da me.
-Successivamente Daniele lo ha tradotto in italiano.
+Questo libro è stato scritto inizialmente in portoghese e successivamente tradotto in inglese da me.
+In un secondo tempo Daniele lo ha tradotto in italiano.
 Entrambe le versioni sono disponibili gratuitamente su internet:
 
 * [Portuguese Version](http://leanpub.com/guiarapidofirefoxos): Guia Rapido para Desenvolvimendo para Firefox OS.
@@ -84,11 +84,11 @@ Accetto con piacere tutto l'aiuto per tradurre questo libro in lingue diverse (e
 ## Storico delle versioni
 
 ### Versione 0.2
-Libro rivisitato e corretto da Marcos Caceres membro del Mozilla WebAPI team. Il contenuto di ogni capitolo è stato controllato per correzioni tecniche e molti errori grammaticali ed errori di battitura. 
+Libro rivisitato e corretto da Marcos Caceres, membro del Mozilla WebAPI team. Il contenuto di ogni capitolo è stato controllato per correzioni tecniche e molti errori grammaticali ed errori di battitura. 
 
 ### Versione 0.1
 
-Questa è la prima versione di questo libro. Non ho ancora verificato con un editor gli errori di battitura, errori grammaticali e altre cose sbagliate. L'nglese non è la mia lingua principale quindi corregetemi per eventuali errori. Quei che il lettore sta leggendo ha avuto inizio il 20 agosto del 2013, una guida veloce distribuita alla [BrazilJS Conference](http://braziljs.com.br/) tenutasi tra il 22 e il 23 dello stesso mese. In pratica questo libro è stato scritto in soli due giorni.
+Questa è la prima versione di questo libro. Non ho ancora verificato con un editor gli errori di battitura, errori grammaticali e altre cose sbagliate. L'inglese non è la mia lingua principale quindi correggetemi per eventuali errori. La versione che il lettore sta leggendo ha avuto inizio il 20 agosto del 2013, una guida veloce distribuita alla [BrazilJS Conference](http://braziljs.com.br/) tenutasi tra il 22 e il 23 dello stesso mese. In pratica questo libro è stato scritto in soli due giorni.
 
 Sto usando [Leanpub](http://leanpub.com) per scrivere il libro. Questo sistema mi permette di scrivere velocemente e di gestire il progetto in modo facile rimanendo sano di mente. Questa versione è la traduzione letterale dell'originale in portoghese.
 

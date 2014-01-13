@@ -27,6 +27,17 @@ Si noti come le informazioni del file manifesto sono utilizzate dal sistema per 
 
 Riunendo il codice HTML, CSS, JavaScript ed un file manifesto è già possibile avere un'applicazione pronta per funzionare su Firefox OS. Continuando nell'esplorazione dei concetti base per lo sviluppo di un'app, vediamo ora quali sono i vari tipi di applicazioni possibili.
 
+Vediamo alcuni campi del file Manifest che potrebbero interessarti. Per maggiori informazioni con esempi di codice dai un'occhiata alla [pagina MDN](https://developer.mozilla.org/en-US/Apps/Developing/Manifest).
+
+* activities: (specifica di Firefox OS) specifica le activity usate nell'applicazione che sono molte e per maggiori dettagli c'è il link alla [pagina MDN](https://developer.mozilla.org/en-US/docs/WebAPI/Web_Activities).
+* chrome: (richiede Firefox OS 1.1) aggiunge un'interfaccia di navigazione in fondo alla schermata. Questa opzione è sconsigliata perchè è preferibile aggiungere i pulsanti di navigazione direttamente nell'applicazione per una esperienza utente migliore.
+* fullscreen: (specifica di Firefox OS) permette di lanciare l'applicazione a tutto schermo.
+* messages: (specifica di Firefox OS) permette di aprire una pagina specifica all'accadere di un evento specifico. Per esempio l'inserimento delle cuffie o all'arrivo di una telefonata.
+* orientation: (specifica di Firefox OS ed Android) indica le rotazioni supportate e quale sia la primaria.
+* permission: sono differenti dalle Web Activity perchè indicano i permessi necessari al funzionamento dell'applicazione. Includono la descrizione d'uso dei permessi, questa descrizione deve spiegare perchè è necessario questo permesso. Per un'elenco dei permessi c'è [la pagina su MDN](ttps://developer.mozilla.org/en-US/Apps/Developing/App_permissions).
+
+<<Important: Github fornisce tramite Github Pages il mime type giusto per il file manifest. Alcuni sviluppatori distribuiscono le proprie applicazioni hosted da Github, il vantaggio è che sono sempre aggiornate e finchè si tratta di applicazioni semplici in JavaScript è una buona soluzione hosting.
+
 ## Tipi di Applicazioni
 
 Attualmente esistono due tipi di applicazioni Firefox OS: ospitate (*hosted*) e pacchettizzate (*packaged*) - forse in futuro saranno disponibili altri tipi di applicazioni (per esempio che consentiranno di personalizzare la tastiera o di creare altri servizi di sistema).

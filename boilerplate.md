@@ -56,8 +56,27 @@ Questa sezione contiene sia codice (lo stesso file di prima) solo per Firefox OS
 Queste API sono particolari e sono disponibili solo per le app privilegiate e sono quasi tutte standard HTML5. 
 C'è il codice per verificare se l'applicazione è in uso quindi se la scheda è aperta ed accedere alle immagini sono standard HTML mentre selezionare i contatti e fare richieste XHR CrossDomain sono una peculiarità di Firefox OS.
 
+##Multilingua
+
+Nel [Boilerplate](https://github.com/robnyman/Firefox-OS-Boilerplate-App) appena visto è utilizzata una libreria javascript di nome [webL10n](https://github.com/fabi1cazenave/webL10n/tree/master). Questa libreria è utilizzata anche in Gaia solo che non contiene la parte crossbrowser ed è molto semplice da usare.  
+Il sistema riconosce in automatico la lingua utilizzata e carica la lingua in uso dell'applicazione. Al caricamento del file JavaScript della libreria viene caricato un file ini che contiene i riferimenti alle varie lingue disponibili dell'applicazione. Dopodichè la libreria carica il file della lingua utilizzata dal browser o del sistema. Diamo un'occhiata al codice prima di vedere come succede la magia della localizzazione.  
+
+`<link rel="resource" type="application/l10n" href="locales/locales.ini" />
+<script type="application/javascript" src="js/l10n.js"></script>`
+
+Con questo codice il boilerplate carica i file della lingua ma come sà dove cambiarlo? Tramite degli attributi ai tag di cui vogliamo la traduzione di questo tipo `data-l10n-id` che deve contenere il nome di riferimento della stringa da mostrare.
+
+###File della lingua
+
+* locales.ini: [un esempio](https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/locales/locales.ini) che contiene i percorsi dei vari file di lingua con il loro codice di riconoscimento.
+* manifest.properties: [un esempio](https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/locales/en-US/manifest.properties) che contiene la traduzione del manifest.
+* app.properties: [un esempio](https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/locales/en-US/app.properties) che contiene la traduzione completa del boilerplate.
+
+Come si può vedere è il classico file ini `proprietà = testo` che viene elaborato da Javascript e caricato all'interno del tag contenente nell'attributo `data-l10n-id`.
+
 ## Riassunto
 Queste WebActivity ed API hanno bisogno di essere dichiarate nel file manifest per poter essere usate. 
 Per il resto consiglio di provare questo boilerplate ed estrapolare il necessario per la tua applicazione. 
 Inoltre è interessante per provare quante cose si possono fare in Firefox OS. 
-Non dimentichiamo che è in continuo sviluppo e traduzione quindi ogni tanto ci sono aggiornamenti per aggiungere nuove funzionalità.
+Non dimentichiamo che è in continuo sviluppo e traduzione quindi ogni tanto ci sono aggiornamenti per aggiungere nuove funzionalità.  
+Il multilingua è un'aspetto importante in modo così globalizzato e non và tenuto sottogamba quindi lavoriamo in multi lingua anche per le nostre applicaizoni.

@@ -83,6 +83,9 @@ Accetto con piacere tutto l'aiuto per tradurre questo libro in lingue diverse (e
 
 ## Storico delle versioni
 
+### Versione 0.3
+Aggiunto nuovo materiale come Brick, Firefox OS BoilerPlate, ADB Helper ed il multilingua grazie a Daniele Scasciafratte.
+
 ### Versione 0.2
 Libro rivisitato e corretto da Marcos Caceres, membro del Mozilla WebAPI team. Il contenuto di ogni capitolo è stato controllato per correzioni tecniche e molti errori grammaticali ed errori di battitura. 
 

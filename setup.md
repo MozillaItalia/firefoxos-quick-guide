@@ -10,30 +10,23 @@ I browser utilizzano diversi motori di rendering per le pagine web: Google Chrom
 Per sviluppare e testare le applicazioni realizzate per Firefox OS abbiamo bisogno di:
 
  * Una versione recente di [Firefox desktop](http://getfirefox.com).
- * [Firefox OS Simulator](https://addons.mozilla.org/en-US/firefox/addon/firefox-os-simulator/). 
+ * [Firefox OS Simulator](https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/) (scegli la versione che vuoi installare anche tutte). 
  * Un editor testuale per programmare[^editor].
  
 [^editor]: esistono molti buoni editor con diversi livelli di complessità e caratteristiche. Un editor molto diffuso, che mi sento di consigliare a chi non ha ancora trovato il suo preferito, è [SublimeText](http://sublimetext.com/). Personalmente, io uso [WebStorm](http://www.jetbrains.com/webstorm/) che è un IDE completo per la realizzazione di web app.
   
 ## Installare il Simulatore di Firefox OS
 
-Dopo aver installato Firefox,  il passaggio successivo è l'installazione del simulatore di Firefox OS che può essere usato per testare le proprie applicazioni. Con Firefox installato e funzionante, andare nel menu **Strumenti** e selezionare **Componenti aggiuntivi**.
+Dopo aver installato Firefox, il passaggio successivo è l'installazione del simulatore di Firefox OS che può essere usato per testare le proprie applicazioni.  Scarica il file del simulatore, in automatico Firefox chiedere di installare il simulatore.  
 
-![*Strumenti* con *Add-ons** selezionato](images/originals/tools.png)
+![*Developer* con *Gestore App** selezionato](images/originals/tools.png)
 
-Utilizzando il campo di ricerca posto in alto a destra, cercare **Firefox OS Simulator** e installare l'estensione facendo clic sul pulsante di installazione.
-
-![Gestore degli addon con la ricerca](images/originals/addons-simulator.png)
-
-Dopo l'installazione dell'estensione, potrai accedere al simulatore andando al menu **Strumenti -> Sviluppo web -> Firefox OS Simulator**. 
-
-![Dove puoi trovare il simulatore una volta installato](images/originals/tools-web-developer-simulator.png)
+Dopo l'installazione dell'estensione, potrai accedere al simulatore andando al menu **Developer -> Gestore App**. 
 
 Altrimenti, è possibile visitare direttamente la pagina di [Firefox OS Simulator](https://addons.mozilla.org/en-US/firefox/addon/firefox-os-simulator/) e scaricare il simulatore da qui.
 
 ## Riassunto
 
 In questo capitolo abbiamo imparato che tutto ciò di cui abbiamo bisogno per sviluppare *app Firefox OS* è il browser Firefox desktop con installata l'estensione *Firefox OS Simulator* (e un buon editor di testo).
-
 
 Ora che abbiamo configurato l'ambiente di sviluppo, siamo pronti per soffermarci su qualche concetto base prima di creare la nostra prima app.

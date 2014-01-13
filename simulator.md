@@ -1,6 +1,6 @@
 # Il Simulatore Firefox OS {#simulator}
 
-![Firefox OS Simulator Dashboard](images/originals/simulator-dashboard.png)
+![Gestore App](images/originals/simulator-dashboard.png)
 
 Abbiamo installato il Simulatore Firefox OS nel capitolo [*Ambiente di sviluppo per Firefox OS*](#setup) e lo abbiamo utilizzato nel capitolo [*La prima app*](#firstapp). È giunta l'ora di approfondire la conoscenza del simulatore e imparare come effettuare le operazioni più comuni.
 
@@ -14,11 +14,11 @@ Per ulteriori informazioni fare riferimento alla [documentazione di Firefox OS S
 
 È già stata trattata l'aggiunta di un'*app packaged* nel capitolo [*La prima app*](#firstapp), ma vediamo di richiamare i concetti in modo da mostrare tutte le opzioni possibili.
 
-Per aggiungere una nuova applicazione *packaged* fare clic sul pulsante **Aggiungi Directory** nella **Dashboard del Simulatore**, come è mostrato nella schermata sottostante. 
+Per aggiungere una nuova applicazione *packaged* fare clic sul pulsante **+** nel **Gestore App**, come è mostrato nella schermata sottostante. 
 
-![Ecco il pulsante *Aggiungi Cartella* che aggiunge l'applicazione al simulatore](images/originals/simulator-add-directory.png)
+![Aggiungere un'applicazione packaged al simulatore](images/originals/simulator-add-directory.png)
 
-Dopo aver fatto clic sul pulsante evidenziato nell'immagine,si aprirà una finestra di dialogo di selezione file. Per aggiungere l'app prescelta al simulatore sarà sufficiente trovare e aprire il **file manifesto dell'app** dal proprio hard disk. Se non ci sono errori nel file manifesto e nel file che avvia l'app, essa verrà avviata nel simulatore. Se il file manifesto contiene degli errori o se viene rilevato qualche altro errore, essi verranno riportati nella Dashboard del simulatore. 
+Dopo aver fatto clic sul pulsante evidenziato nell'immagine,si aprirà una finestra di dialogo di selezione file. Per aggiungere l'app prescelta al simulatore sarà sufficiente trovare e aprire il **file manifesto dell'app** dal proprio hard disk. Se non ci sono errori nel file manifesto e nel file che avvia l'app, essa verrà avviata nel simulatore. Se il file manifesto contiene degli errori o se viene rilevato qualche altro errore, essi verranno riportati nel Gestore App. 
 
 ![Esempio di un file manifesto non valido](images/originals/simulator-invalid-manifest.png)
 
@@ -30,21 +30,21 @@ Se si sta sviluppando un'applicazione hosted è necessario testarla utilizzando 
 
 La maggior parte delle applicazioni *hosted* non sono realizzate specificatamente per Firefox OS, si tratta piuttosto di veri e propri siti web che sfruttano il design responsive per adattarsi a più dispositivi e risoluzioni. Solitamente queste app web funzionano grazie a un complesso back end che deve essere in esecuzione per consentire un loro corretto funzionamento ed è proprio per questo motivo che si rende necessario testarle con un vero server web per assicurarsi che tutto funzioni correttamente.
 
-Per caricare un'*app hosted* nel simulatore, inserire nella casella di testo, posta nella parte superiore del simulatore, l'URL completa del manifesto dell'app e fare clic su **Aggiungi URL**.
+Per caricare un'*app hosted* nel simulatore, inserire nella casella di testo, nel box in basso a sinistra, l'URL completa del manifesto dell'app e fare clic sul pulsante **+**.
 
-![Aggiungere un'applicazione hosted al simulatore](images/originals/simulator-add-url.png)
+![Aggiungere un'applicazione hosted al simulatore](images/originals/simulator-add-directory.png)
 
-Dopo aver fatto clic sul pulsante **Aggiungi URL**, il simulatore verificherà il file manifesto e, se non verranno rilevati errori, l'app verrà eseguita all'interno del simulatore. Eventuali errori, analogamente a quanto avviene per le *app packaged*, verranno riportati nella Dashboard (ad esempio, "app submission to the Marketplace needs at least an 128 icon").
+Dopo aver fatto clic sul pulsante, il simulatore verificherà il file manifesto e, se non verranno rilevati errori, l'app verrà eseguita all'interno del simulatore. Eventuali errori, analogamente a quanto avviene per le *app packaged*, verranno riportati nel Gestore (ad esempio, "app submission to the Marketplace needs at least an 128 icon").
 
 Come per le *app packaged*, ogni volta che l'app verrà aggiornata sarà necessario fare clic sul pulsante **Aggiorna** per aggiornare la versione in esecuzione nel simulatore (è anche possibile utilizzare la scorciatoia da tastiera CMD/CTRL+R dalla finestra del simulatore).
 
 ## Debug
 
-Una volta che l'app è stata aggiunta al simulatore, accedendo alla Dashboard sarà possibile effettuarne il debug facendo clic sul pulsante **Connetti** che si trova accanto al nome di ogni app in esecuzione nel simulatore. A questo punto, si aprirà un'istanza della **Console JavaScript** connessa all'app in esecuzione nel simulatore.
+Una volta che l'app è stata aggiunta al simulatore, accedendo al Gestore sarà possibile effettuarne il debug facendo clic sul pulsante **Avvia Simulatore** che si trova in basso nel gestore applicazione, al click apparirà la schermata che permette di eseguire una versione specifica del simulatore (se presente) e di installarne altri. Cliccando su **Debug** accanto ad aggiorna verrà lanciata l'applicazione sul simulatore. A questo punto, si aprirà un'istanza della **Console JavaScript** connessa all'app in esecuzione nel simulatore. In basso sarà possibile vedere il contenuto nel file manifest tramite visualizzazione ad albero.
 
 ![Il pulsate da premere](images/originals/simulator-press-connect.png)
 
-Alla pressione del pulsante **Connetti** verrà mostrata una schermata simile a quella di questa immagine:
+Alla pressione del pulsante scelto verrà mostrata una schermata simile a quella di questa immagine:
 
 ![Developer Tools connessi all'applicazione nel simulatore](images/originals/simulator-connected.png)
 
@@ -69,7 +69,7 @@ Inoltre, nel caso si risiedesse in un paese in cui i dispositivi Firefox OS sono
 ##ADB Helper
 
 Per fare debugging remoto il sistema deve riconoscere il dispositivo quindi sono necessari gli Android Tools o in parole povere `adb`. Come abbiamo accennato Firefox OS è basato su Android e quindi possiamo sfruttare alcuni dei suoi strumenti da sviluppatore come adb che permette di passare dei file e di comunicare da computer a dispositivo e viceversa.  
-Se adb non è presente nel computer Firefox non potrà rilevare alcun dispositivo connesso! 
+Se adb non è presente nel computer Firefox non potrà rilevare alcun dispositivo connesso!  
 Con l'estensione [ADB Helper](https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/) verrà installato nel sistema e si potrà debuggare da remoto con il proprio dispositivo Firefox OS. 
 
 ## Connessione con un dispositivo Firefox OS

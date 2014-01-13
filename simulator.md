@@ -66,6 +66,12 @@ Per evitare di avere un'esperienza così frustrante è indispensabile testare se
 
 Inoltre, nel caso si risiedesse in un paese in cui i dispositivi Firefox OS sono già in commercio, è possibile acquistare direttamente un dispositivo per l'utente finale. Un'altra soluzione è sostituire Android con Firefox OS su alcuni dispositivi (alcuni dispositivi lo supportano!) - ma, a meno di non essere esperti e disposti a perdere del tempo con l'hacking, non è una cosa che mi sento di consigliare.
 
+##ADB Helper
+
+Per fare debugging remoto il sistema deve riconoscere il dispositivo quindi sono necessari gli Android Tools o in parole povere `adb`. Come abbiamo accennato Firefox OS è basato su Android e quindi possiamo sfruttare alcuni dei suoi strumenti da sviluppatore come adb che permette di passare dei file e di comunicare da computer a dispositivo e viceversa.  
+Se adb non è presente nel computer Firefox non potrà rilevare alcun dispositivo connesso! 
+Con l'estensione [ADB Helper](https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/) verrà installato nel sistema e si potrà debuggare da remoto con il proprio dispositivo Firefox OS. 
+
 ## Connessione con un dispositivo Firefox OS
 
 Avendo a disposizione un dispositivo Firefox OS (con i driver installati) connesso al computer, è possibile fare un push delle applicazioni direttamente dal simulatore al dispositivo. Quando il simulatore riconosce che un dispositivo con Firefox OS phone è collegato, verrà mostrato un messaggio **Dispositivo Connesso**.

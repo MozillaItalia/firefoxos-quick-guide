@@ -8,7 +8,7 @@ Essa si compone di tre schermate. La prima è la schermata principale che mostra
 
 ![Memos, schermata di modifica](images/originals/memos-editing-screen.png)
 
-Dalla parte superiore dello schermo è possibile cancellare una nota prescelta facendo clic sul cestino. Questa azione aprirà una finestra di conferma.
+Dalla parte superiore dello schermo è possibile cancellare una nota prescelta facendo clic sul Cestino. Questa azione aprirà una finestra di conferma.
 
 ![Memos, finestra di conferma della cancellazione](images/originals/memos-delete-screen.png)
 
@@ -47,9 +47,9 @@ Ora che il file manifesto è pronto, passiamo al codice HTML.
 
 Prima di iniziare a lavorare sul codice HTML facciamo una breve digressione su [Gaia Building Blocks](http://buildingfirefoxos.com/building-blocks), una raccolta di codici CSS e JavaScript che rispettano l'aspetto degli elementi d'interfaccia nativi di Firefox OS e che possiamo riutilizzare per creare l'interfaccia della nostra applicazione.
 
-Come nelle pagine web, non è richiesto l'uso del *look and feel* di Firefox OS nella propria applicazione. Utilizzare o meno *Gaia Building Blocks* è una scelta personale - e le buone applicazioni dovrebbero sapersi distinguere per uno stile e un'esperienza utente proprie. La cosa importante da capire è che un'applicazione non subirà alcun tipo di pregiudizio o penalità su Firefox Marketplace se non utilizzano lo stile di Gaia. Personalmente, non essendo un bravo designer, preferisco ricorrere a degli *UI toolkit* già pronti piuttosto che creare uno stile personale per le app.
+Come nelle pagine web, non è richiesto l'uso del *look and feel* di Firefox OS nella propria applicazione. Utilizzare o meno *Gaia Building Blocks* è una scelta personale - e le buone applicazioni dovrebbero sapersi distinguere per uno stile e un'esperienza utente proprie. La cosa importante da capire è che un'applicazione non subirà alcun tipo di pregiudizio o penalità su Firefox Marketplace se non utilizza lo stile di Gaia. Personalmente, non essendo un bravo designer, preferisco ricorrere a degli *UI toolkit* già pronti piuttosto che creare uno stile personale per le app.
 
-La struttura HTML che utilizzeremo per questa applicazione seguirà gli schemi adottati da *Gaia Building Blocks* in cui ogni schermata è delimitata in un blocco `<section>` e gli elementi seguono un formato predefinito. Se non si è ancora scaricato il codice sorgente dal [repository memos](https://github.com/soapdog/memos-for-firefoxos), è importante farlo quanto prima perché contiene i file necessari, inclusi quelli del toolkit *Gaia Building Blocks*. Per coloro che dovessero avere poca confidenza con *git* e *Github*, i file sono disponibili anche come [file .zip](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip). 
+La struttura HTML che utilizzeremo per questa applicazione seguirà gli schemi adottati da *Gaia Building Blocks* in cui ogni schermata è delimitata in un blocco `<section>` e gli elementi seguono un formato predefinito. Se non si è ancora scaricato il codice sorgente dal [repository memos](https://github.com/soapdog/memos-for-firefoxos), è importante farlo quanto prima poiché contiene i file necessari, inclusi quelli del toolkit *Gaia Building Blocks*. Per coloro che dovessero avere poca confidenza con *git* e *Github*, i file sono disponibili anche come [file .zip](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip). 
 
 W> Attenzione: la versione di *Gaia Building Blocks* che ho utilizzato non è la più recente. Purtroppo, ho dovuto fare questa scelta perché l'applicazione Memos non era compatibile con l'ultima versione di *Gaia Building Blocks*. Nei propri progetti è sempre meglio utilizzare l'ultima versione disponibile del toolkit.
 
@@ -104,7 +104,7 @@ La prima schermata è completa adesso vediamo la schermata di modifica.
 
 ### Costruire la schermata di modifica
 
-La schermata di modifica è un pò complessa perché contiene la finestra di dialogo di eliminazione delle note.
+La schermata di modifica è un po' complessa perché contiene la finestra di dialogo di eliminazione delle note.
 
 ~~~~~~~~
 <section role="region" id="memo-detail" class="skin-dark hidden">
@@ -222,13 +222,13 @@ request.onupgradeneeded = function (event) {
 }
 ~~~~~~~
 
-A> Importante: Chiedo ancora perdono per aver utilizzato delle variabili globali, questo è solo del materiale utile all'insegnamento. Inoltre ho rimosso i commenti dal codice per risparmiare spazio nel libro. Su Github il codice è completo di commenti.
+A> Importante: chiedo ancora perdono per aver utilizzato delle variabili globali, questo è solo del materiale utile all'insegnamento. Inoltre ho rimosso i commenti dal codice per risparmiare spazio nel libro. Su Github il codice è completo di commenti.
 
-Il codice appena visto crea un oggetto *db* ed un'oggetto *request*. L'oggetto *db* è usato in altre funzioni nel codice per manipolare le note memorizzate.
+Il codice appena visto crea un oggetto *db* ed un oggetto *request*. L'oggetto *db* è usato in altre funzioni nel codice per manipolare le note memorizzate.
 
 Nell'implementazione della funzione `request.onupgradeneeded` creiamo una nota di benvenuto. Questa funzione è eseguita quando l'applicazione viene lanciata per la prima volta (o quando la versione del database cambia). In questo modo al primo avvio dell'applicazione il database contiene una nota di esempio.  
 
-Una volta aperta la connessione e inizializzato il meccanismo di archiviazione è ora di creare le funzioni basilari per manipolare le note.
+Una volta aperta la connessione e inizializzato il meccanismo di archiviazione, è ora di creare le funzioni basilari per manipolare le note.
 
 ~~~~~~~~
 function Memo() {
@@ -291,7 +291,7 @@ function deleteMemo(inId, inCallback) {
 }
 ~~~~~~~~
 
-In questo blocco di codice abbiamo creato un costruttore che crea nuove note con alcuni campi già inizializzati. Dopodiché abbiamo implementato le altre funzioni per la presentazione, il salvataggio e la cancellazione delle note. Molte di queste funzioni richiedono che sia passato un parametro chiamato `inCallback`. Questo parametro è esso stesso una funzione che  verrà invocata al termine della funzione chiamante. Questo è necessario per la natura asincrona di IndexedDB. Tutte le callback hanno la medesima struttura di chiamata `callback(error, value)`, con due parametri in ingresso, in cui uno dei due assumerà il valore `null` a seconda del risultato della funzione chiamante.
+In questo blocco di codice abbiamo creato un costruttore che produce nuove note con alcuni campi già inizializzati. Dopodiché abbiamo implementato le altre funzioni per la presentazione, il salvataggio e la cancellazione delle note. Molte di queste funzioni richiedono che sia passato un parametro chiamato `inCallback`. Questo parametro è esso stesso una funzione che  verrà invocata al termine della funzione chiamante. Questo è necessario per la natura asincrona di IndexedDB. Tutte le callback hanno la medesima struttura di chiamata `callback(error, value)`, con due parametri in ingresso, in cui uno dei due assumerà il valore `null` a seconda del risultato della funzione chiamante.
 
 A> Siccome è un libro per principianti ho scelto di non usare [*Promises*](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise) perché non tutti potrebbero capirlo. Consiglio di usare questi concetti per avere un codice più pulito e facile da mantenere.
 
@@ -355,7 +355,7 @@ Le funzioni `showMemoDetail()` e `displayMemo()` lavorano in coppia. La prima ca
 
 La funzione `shareMemo()` utilizza una [WebActivity](https://hacks.mozilla.org/2013/01/introducing-web-activities/) per aprire il programma predefinito per la posta elettronica con il contenuto della nota selezionata.
 
-la funzione `textChanged()` prende il contenuto dei campi e lo inserisce nell'oggetto `currentMemo` che salva la nota. Questo perché avremo un'applicazione con auto salvataggio. Tutte le modifiche al contenuto o al titolo invocheranno la funzione che salverà in IndexedDB.
+La funzione `textChanged()` prende il contenuto dei campi e lo inserisce nell'oggetto `currentMemo` che salva la nota. Questo perché avremo un'applicazione con auto salvataggio. Tutte le modifiche al contenuto o al titolo invocheranno la funzione che salverà in IndexedDB.
 
 La funzione `newMemo()` crea una nuova nota e apre la schermata di modifica con la nuova nota creata.
 
@@ -390,7 +390,7 @@ La funzione `requestDeleteConfirmation()` mostra la richiesta di conferma di can
 
 Le funzioni `closeDeleteMemoDialog()` e `deleteCurrentMemo()` sono invocate dai pulsanti nella finestra di conferma.
 
-La funzione `showMemoList()` fà una pulizia e mostra l'elenco delle note presenti. Per esempio, svuota il contenuto di `currentMemo` se non stiamo leggendo una nota.
+La funzione `showMemoList()` fa una pulizia e mostra l'elenco delle note presenti. Per esempio, svuota il contenuto di `currentMemo` se non stiamo leggendo una nota.
 
 ~~~~~~~~
 function refreshMemoList() {

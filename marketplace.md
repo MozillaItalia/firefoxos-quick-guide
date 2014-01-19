@@ -8,7 +8,7 @@ Per pubblicare un'app sul Marketplace è necessario effettuare l'identificazione
 
 ## Operazioni che precedono l'ideazione di un'app
 
-Tutte le applicazioni pubblicate sul Marketplace sono sottoposte a un processo di verifica e devono essere approvate dai revisori del sito (non ci si preoccupi troppo, è meno pauroso di quanto sembri). Il processo di controllo delle app web ospitate è più snello rispetto a quello delle app con privilegi, in quanto le prime utilizzano API meno sensibili. Prima di inviare un'app su Firefox Marketplace leggere attentamente [le linee guida per la revisione](https://developer.mozilla.org/en-US/docs/Web/Apps/Publishing/Marketplace_review_criteria). A mio avviso le parti più importanti sono:
+Tutte le applicazioni pubblicate sul Marketplace sono sottoposte a un processo di verifica e devono essere approvate dai revisori del sito (non ci si preoccupi troppo, è meno pauroso di quanto sembri). Il processo di controllo delle app ospitate e delle app pacchettizzate semplici è più snello rispetto a quello delle app con privilegi, in quanto le prime utilizzano API meno sensibili. Prima di inviare un'app su Firefox Marketplace leggere attentamente [le linee guida per la revisione](https://developer.mozilla.org/en-US/docs/Web/Apps/Publishing/Marketplace_review_criteria). A mio avviso le parti più importanti sono:
 
 * I dispositivi Firefox OS, contrariamente ai dispositivi Android e ai browser desktop, non hanno un pulsante **Indietro**. Nel caso in cui l'app rimandi a una pagina dalla quale non è possibile ritornare più indietro (in altre parole se l'utente nell'utilizzo dell'app arriva a un punto morto) l'app verrà rifiutata.
 * L'app deve avere un'icona di 60x60 pixel e una descrizione chiara del suo funzionamento.
@@ -21,9 +21,9 @@ Alla pagina sopraindicata vengono discussi altri criteri di validità e altri po
 
 ## Operazioni preliminari prima della pubblicazione
 
-I passaggi richiesti per la pubblicazione di un'app sul Marketplace variano a seconda che si tratti di un'app ospitata o di un'app pacchettizzata. Nel caso di app ospitata, è sufficiente che sia raggiungibile online e che il manifesto sia distribuito con il corretto *MIME type*. I file delle app pacchettizzate devono essere raccolti in un archivio compresso utilizzando il formato *zip* e richiedono qualche maggiore attenzione.
+I passaggi richiesti per la pubblicazione di un'app sul Marketplace variano a seconda che si tratti di un'*app hosted* o di un'app pacchettizzata. Nel caso di *app hosted*, è sufficiente che sia raggiungibile online e che il manifesto sia distribuito con il corretto *MIME type*. I file delle *app packaged* devono essere raccolti in un archivio compresso utilizzando il formato *zip* e richiedono qualche maggiore attenzione.
 
-Un errore comune a molti sviluppatori è quello di selezionare la cartella che contiene i file dell'app e di comprimerla. Come risultato il file *zip* contiene una cartella che a sua volta contiene l'app vera e propria. Questo non è il modo corretto per creare l'archivio *zip* di un'applicazione Firefox OS. Il modo corretto di creare l'archivio *zip* consiste nel selezionare tutti i file e le cartelle dell'app in modo che il file manifesto sia nel *primo livello* dell'archivio. Su sistemi operativi Mac e Linux è possibile aprire il terminale, navigare fino alla directory dell'app e eseguire il comando `zip -r myapp.zip *` per ottenere il risultato desiderato, come mostrato nello screenshot sottostante.
+Un errore comune a molti sviluppatori è quello di selezionare la cartella che contiene i file dell'app e di comprimerla. Come risultato il file *zip* contiene una cartella che a sua volta contiene l'app vera e propria. Questo non è il modo corretto per creare l'archivio *zip* di un'applicazione Firefox OS. Il modo corretto di creare l'archivio *zip* consiste nel selezionare tutti i file e le cartelle dell'app in modo che il file manifesto sia nel *primo livello* dell'archivio. Su sistemi operativi Mac e Linux è possibile aprire il Terminale, navigare fino alla directory dell'app e eseguire il comando `zip -r myapp.zip *` per ottenere il risultato desiderato, come mostrato nello screenshot sottostante.
 
 ![Modo corretto di comprimere i file da terminale](images/originals/marketplace-preparing-packaged-app.png)
 
@@ -35,7 +35,7 @@ Ora che l'applicazione è pronta - e con la consapevolezza che dovrà soddisfare
 
 ![Le mie app](images/originals/marketplace-my-submissions.png)
 
-Una volta nella pagina di gestione dei caricamenti, fai clic su **Invia un'app** dal menu superiore.
+Arrivati nella pagina di gestione dei caricamenti, fare clic su **Invia un'app** dal menu superiore.
 
 ![Invio di un'app](images/originals/marketplace-new-app.png)
 
@@ -45,13 +45,13 @@ Come è possibile notare dallo screenshot qui sotto, questo link aprirà il modu
 
 Da questa pagina si dovranno impostare le seguenti opzioni:
 
-* Se si tratta di un'app ospitata o di un'app pacchettizzata.
+* Se si tratta di un'*app hosted* o di un'*app packaged*.
 * Se si tratta di un'app gratuita o di un'app a pagamento (o se utilizza i *pagamenti in-app*).
 * Per quali dispositivi è disponibile (Firefox OS, Firefox Desktop, Firefox per mobile su telefonino, Firefox mobile per tablet, ecc…).
 
 Dopo aver impostato queste preferenze si verrà rimandati a un'altra pagina. In questo libro noi trattiamo esplicitamente il caso di un'app pacchettizzata, ma la procedura è analoga per un'app ospitata.
 
-Nel proseguo del capitolo faremo sempre riferimento a un'app pacchettizzata gratuita per Firefox OS.  In questo caso dobbiamo caricare il file *zip* della nostra app, di cui si è discusso nella sezione precedente.
+Nel prosieguo del capitolo faremo sempre riferimento a un'app pacchettizzata gratuita per Firefox OS.  In questo caso dobbiamo caricare il file *zip* della nostra app, di cui si è discusso nella sezione precedente.
 
 Dopo aver effettuato l'upload del file, questo subirà un processo automatico di verifica e al termine verrà mostrato un resoconto con una serie di opzioni.
 
@@ -74,9 +74,9 @@ Per ulteriori informazioni riguardo al caricamento delle app consultare [questo 
 Complimenti. La propria nuova applicazione ora è su Firefox Marketplace e ci si sta apprestando a esplorare un nuovissimo tipo di mercato.
 
 
-Spero che la lettura di questa veloce guida sia stata piacevole. Ho in mente di aggiornare e ampliare spesso questa guida, quindi consiglio di tenere gli occhi aperti e iscriversi per ricevere le notizie sul suo aggiornamento. Se si è scaricato questo libro dal sito Leanpub non ci sono problemi: si riceveranno automaticamente un'email che informerà di nuovi aggiornamenti. Se invece è stato scaricato da altri siti, il mio consiglio è quello di riscaricarlo da  [pagina ufficiale su Leanpub](http://leanpub.com/quickguidefirefoxosdevelopment) e registrare il proprio indirizzo email. Ovviamente è tutto gratuito e, no, non verranno  mai inviati messaggi di spam, promesso.
+Spero che la lettura di questa veloce guida sia stata piacevole. Ho in mente di aggiornare e ampliare spesso questa guida, quindi consiglio di tenere gli occhi aperti e iscriversi per ricevere le notizie sul suo aggiornamento. Se si è scaricato questo libro dal sito Leanpub non ci sono problemi: si riceverà automaticamente un'email che informerà di nuovi aggiornamenti. Se invece è stato scaricato da altri siti, il mio consiglio è quello di riscaricarlo da  [pagina ufficiale su Leanpub](http://leanpub.com/quickguidefirefoxosdevelopment) e registrare il proprio indirizzo email. Ovviamente è tutto gratuito e, no, non verranno  mai inviati messaggi di spam, promesso.
 
-Invito tutti i lettori ad inviarmi le proprie opinioni su questo lavoro (in inglese). Questo libro è stato scritto nelle notti precedenti una conferenza tecnica, quindi si può intuire quanto sia affezionato a questo progetto e quanto vorrei che avesse successo. È possibile inviare le proprie opinioni via Twitter al mio account [@soapdog](http://twitter.com/soapdog) o al mio indirizzo di posta elettronica [fxosquickguide@andregarzia.com](mailto:fxosquickguide@andregarzia.com).  Il mio sito web è [http://andregarzia.com](http://andregarzia.com).
+Invito tutti i lettori ad inviarmi le proprie opinioni su questo lavoro (in inglese). Questo libro è stato scritto nelle notti precedenti una conferenza tecnica, quindi si può intuire quanto io sia affezionato a questo progetto e quanto vorrei che avesse successo. È possibile inviare le proprie opinioni via Twitter al mio account [@soapdog](http://twitter.com/soapdog) o al mio indirizzo di posta elettronica [fxosquickguide@andregarzia.com](mailto:fxosquickguide@andregarzia.com).  Il mio sito web è [http://andregarzia.com](http://andregarzia.com).
 
 Ora che si è entrati a far parte del gruppo di sviluppatori di app Firefox OS, il prossimo passo è quello di unirsi al gruppo più esteso della comunità Mozilla, aiutandoci a mantenere il Web libero e creato dagli utenti per gli utenti. È possibile unirsi a noi visitando [http://www.mozilla.org/contribute/](http://www.mozilla.org/en-US/contribute/) e aiutare la crescita di Firefox OS.
 

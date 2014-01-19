@@ -1,6 +1,6 @@
 # Strumenti per sviluppatori {#developertools}
 
-Firefox mette a disposizione molti strumenti per consentire agli sviluppatori di fare il proprio lavoro al meglio. Molte persone continuano a usare l'estensione [FireBug](https://addons.mozilla.org/it/firefox/addon/firebug/) senza aver realizzato che ora Firefox ha degli strumenti di sviluppo nativi. In questo capitolo andremo ad analizzare gli strumenti più utili per sviluppare app per Firefox OS.
+Firefox mette a disposizione molti strumenti per consentire agli sviluppatori di eseguire il proprio lavoro al meglio. Molte persone continuano a usare l'estensione [FireBug](https://addons.mozilla.org/it/firefox/addon/firebug/) senza aver realizzato che ora Firefox ha degli strumenti di sviluppo nativi. In questo capitolo andremo ad analizzare gli strumenti più utili per sviluppare app per Firefox OS.
 
 Se si è interessati a saperne di più su questi strumenti e conoscere quali straordinarie novità in materia di sviluppo web saranno implementate nelle prossime versioni di Firefox, consultare la pagina [developer tools](https://developer.mozilla.org/en-US/docs/Tools) su Mozilla Developer Network (Ci conto, apri davvero questo link. Ti aspetto).
  
@@ -16,12 +16,12 @@ L'utilizzo della *Visualizzazione flessibile* è particolarmente utile al fine d
 
 ![Esempio di visualizzazione flessibile](images/originals/responsive-view-sample.png)
 
-Al momento della stesura di questo libro, la maggior parte degli smartphone Firefox OS in commercio utilizzano schermi di 480x320 pixel con una densità dei punti di 96 dpi[^itdpi]. Tuttavia, c'è da aspettarsi che questo cambi nel tempo: gli schermi avranno dimensioni maggiori e maggiori densità dei punti (come gli schermi Retina di Apple).
+Al momento della stesura di questo libro, la maggior parte degli smartphone Firefox OS in commercio utilizzano schermi di 480x320 pixel con una densità dei punti di 96 dpi[^itdpi]. Tuttavia, c'è da aspettarsi che questa situazione cambi nel tempo: gli schermi avranno dimensioni maggiori e maggiori densità dei punti (come gli schermi Retina di Apple).
 [^itdpi]: L'acronimo dpi denota l'unità di misura della densità dei punti, in inglese dots per pixel, cioè punti per pollice (1 pollice corrisponde a 2,54 centimetri). Per ulteriori informazioni leggere [l'articolo di Wikipedia sull'argomento](http://it.wikipedia.org/wiki/Risoluzione_%28grafica%29).
 
 Nell'eventualità di future verifiche delle proprie app, si segua questo consiglio: non basare mai i propri CSS su una specifica risoluzione schermo o densità dei punti. Piuttosto, si dovrebbero utilizzare le *media query* e una metodologia di design responsivo per permettere all'app di adattarsi alle varie risoluzioni schermo. Per saperne di più sul design responsivo consiglio la lettura di uno o entrambi questi libri: [Responsive Web Design](http://www.abookapart.com/products/responsive-web-design) e [Mobile First](http://www.abookapart.com/products/mobile-first).
 
-Riepilogando, la **Visualizzazione flessibile** ci permette di testare la nostra app su varie risoluzioni schermo senza dover ridimensionare la finestra di Firefox. A mio modesto avviso, la *Visualizzazione flessibile* è uno degli strumenti di sviluppo più utili a disposizione - purtroppo ha un grande limite: attualmente non consente di testare differenti configurazioni di densità dei punti.
+Riepilogando, la **Visualizzazione flessibile** ci permette di provare la nostra app su varie risoluzioni schermo senza dover ridimensionare la finestra di Firefox. A mio modesto avviso, la *Visualizzazione flessibile* è uno degli strumenti di sviluppo più utili a disposizione - purtroppo ha un grande limite: attualmente non consente di testare differenti configurazioni di densità dei punti.
 
 ## Strumenti di sviluppo
 

@@ -8,3 +8,19 @@ Tecnicamente il manifest è definito in un file chiamato *manifest.webapp* ed è
 
 ## Il nostro primo Manifest
 
+Questo è un manifest di esempio fornito dalla documentazione ufficiale del Mozilla Developer Network
+'''JSON
+{
+  "name": "My App",
+  "description": "My elevator pitch goes here",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Your name or organization",
+    "url": "http://your-homepage-here.org"
+  },
+  "default_locale": "en"
+}
+'''

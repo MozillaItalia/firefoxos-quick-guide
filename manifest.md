@@ -9,7 +9,8 @@ Tecnicamente il manifest è definito in un file chiamato *manifest.webapp* ed è
 ## Il nostro primo Manifest
 
 Questo è un manifest di esempio fornito dalla documentazione ufficiale del Mozilla Developer Network
-'''javascript
+
+''' javascript
 {
   "name": "My App",
   "description": "My elevator pitch goes here",

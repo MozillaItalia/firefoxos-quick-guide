@@ -10,7 +10,7 @@ Tecnicamente il manifest è definito in un file chiamato *manifest.webapp* ed è
 
 Questo è un manifest di esempio fornito dalla documentazione ufficiale del Mozilla Developer Network
 
-''' javascript
+```JSON
 {
   "name": "My App",
   "description": "My elevator pitch goes here",
@@ -24,4 +24,4 @@ Questo è un manifest di esempio fornito dalla documentazione ufficiale del Mozi
   },
   "default_locale": "en"
 }
-'''
+```

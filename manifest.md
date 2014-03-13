@@ -9,7 +9,6 @@ Tecnicamente il manifest è definito in un file chiamato *manifest.webapp* ed è
 ## Il nostro primo Manifest
 
 Questo è un manifest di esempio fornito dalla documentazione ufficiale del Mozilla Developer Network
-
 ```JSON
 {
   "name": "My App",
@@ -25,3 +24,12 @@ Questo è un manifest di esempio fornito dalla documentazione ufficiale del Mozi
   "default_locale": "en"
 }
 ```
+Come possiamo notare, il manifest è composto da una serie di campi chiave/valore, che descrivono le proprietà dell'applicazione.
+Il sistema richiede obbligatoriamente solo *name*, *description* e *icons*, ma è buona norma inserire anche il campo *launch_path* che indica il collegamento al file da avviare e il campo *developer* che con le sue proprietà *name* e *url* definiscono, rispettivamente, nome e url dello sviluppatore dell'applicazione (utili nel caso vogliate pubblicare la vostra app sul Mozilla Marketplace)
+
+## Le proprietà del Manifest
+
+Il manifest supporta una marea di proprietà, perciò cercerò di spiegarvi il funzionamento e l'utilità di ogni campo.
+
+prova
+-----

@@ -34,5 +34,5 @@ Il manifest supporta una marea di proprietà, perciò cercerò di spiegarvi il f
 **activities**
 la proprietà *activities* specifica quali *Web Activities* supporta la nostra applicazione, in sostanza una web activities è un task richiamato da un'altra applicazione, che si appoggia alla vostra per un determinato compito.
 Volendo fare un esempio, se voi sviluppate un applicazione che permette di condividere le vostre foto su di un sito, potreste implementare la web activities *share*, in questo modo, quando l'utente prova a condividere una foto dall'app galleria, apparirà anche la vostra applicazione tra quelle che possono svolgere questo compito.
-La sintassi di questo campo è un po' complessa, per questo vi rimando alla pagina di documentazione sull' [mdm] (https://developer.mozilla.org/en-US/docs/WebAPI/Web_Activities)
+La sintassi di questo campo è un po' complessa, per questo vi rimando alla pagina di documentazione sull' [MDN] (https://developer.mozilla.org/en-US/docs/WebAPI/Web_Activities)
 

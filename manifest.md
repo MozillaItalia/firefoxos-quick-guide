@@ -38,3 +38,11 @@ Volendo fare un esempio, se voi sviluppate un applicazione che permette di condi
 La sintassi di questo campo è un po' complessa, per questo vi rimando alla pagina di documentazione sull' [MDN] (https://developer.mozilla.org/en-US/docs/WebAPI/Web_Activities)
 
 **appcache_path**
+
+questa proprietà vi consente di specificare il percorso del manifest della cache della vostra app, dovete specificarla solo se utilizzate questa tecnologia per il mantenimento di alcune funzione dell'applicazione quando il terminale va offline.
+[documentazione] (https://developer.mozilla.org/en-US/docs/HTML/Using_the_application_cache)
+
+**chrome**
+
+il campo *chrome* indica se la vostra applicazione fa uso dei pulsanti di navigazione predefiniti dal sistema come nell'immagine
+![chrome](https://github.com/giammyjet/firefoxos-quick-guide/blob/0.3/images/new/nav-both2.png?raw=true)

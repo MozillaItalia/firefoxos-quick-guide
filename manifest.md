@@ -46,3 +46,37 @@ questa proprietà vi consente di specificare il percorso del manifest della cach
 
 il campo *chrome* indica se la vostra applicazione fa uso dei pulsanti di navigazione predefiniti dal sistema come nell'immagine
 ![chrome](https://github.com/giammyjet/firefoxos-quick-guide/blob/0.3/images/new/nav-both2.png?raw=true)
+*nota*: tieni presente che questa funzionalità va utilizzata se e solo se non si può fare altro, poichè le linee guida di user experience prevedono l'inserimento di un tasto *back* da parte dell'applicazione
+la sintassi della proprietà è la seguente:
+```JSON
+"chrome": { "navigation": true }
+```
+
+*csp*
+
+Applica una "Content Security Policy" all'applicazione.
+[Per ulteriori informazioni] (https://developer.mozilla.org/en-US/Apps/CSP)
+
+*default_locale*
+
+necessaria quando è presente la proprietà *locales*, indica qual'è la lingua predefinita dell'applicazione e quella che verrà usata se nel sistema è impostata una lingua non presente nella vostra app.
+Esempio per l'inglese
+```JSON
+"default_locale": "en"
+```
+
+*description*
+
+La descrizione dell'applicazione (massimo 1024 caratteri)
+
+*developer*
+
+Abbiamo incontrato questa proprietà nel manifest di prova, indica chi è lo sviluppatore e qual'è il suo sito web
+
+*fullscreen*
+
+Se impostata a *true*, metterà la vostra applicazione a schermo intero (utile per i giochi)
+
+*icons*
+
+Anche questa proprietà era presente nell'esempio, serve ad impostare le icone dell'applicazione

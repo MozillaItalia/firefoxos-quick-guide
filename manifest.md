@@ -52,12 +52,12 @@ la sintassi della proprietà è la seguente:
 "chrome": { "navigation": true }
 ```
 
-*csp*
+**csp**
 
 Applica una "Content Security Policy" all'applicazione.
 [Per ulteriori informazioni] (https://developer.mozilla.org/en-US/Apps/CSP)
 
-*default_locale*
+**default_locale**
 
 necessaria quando è presente la proprietà *locales*, indica qual'è la lingua predefinita dell'applicazione e quella che verrà usata se nel sistema è impostata una lingua non presente nella vostra app.
 Esempio per l'inglese
@@ -65,18 +65,71 @@ Esempio per l'inglese
 "default_locale": "en"
 ```
 
-*description*
+**description**
 
 La descrizione dell'applicazione (massimo 1024 caratteri)
 
-*developer*
+**developer**
 
 Abbiamo incontrato questa proprietà nel manifest di prova, indica chi è lo sviluppatore e qual'è il suo sito web
 
-*fullscreen*
+**fullscreen**
 
 Se impostata a *true*, metterà la vostra applicazione a schermo intero (utile per i giochi)
 
-*icons*
+**icons**
 
 Anche questa proprietà era presente nell'esempio, serve ad impostare le icone dell'applicazione
+
+**installs_allowed_from**
+
+indica una serie di siti a cui è permesso installare l'applicazione (diciamo che è inutile se pubblicate la vostra app solo nel mozilla marketplace)
+
+**launch_path**
+
+il file home della vostra applicazione
+
+**locales**
+
+indica altri dati del vostro manifest specifici per determinate lingue.
+esempio:
+```JSON
+"locales": {
+"es": {
+  "description": "¡Acción abierta emocionante del desarrollo del Web!",
+  "developer": {
+    "url": "http://es.mozillalabs.com/"
+  }
+},
+"it": {
+  "description": "Azione aperta emozionante di sviluppo di fotoricettore!",
+  "developer": {
+    "url": "http://it.mozillalabs.com/"
+  }
+}
+}
+```
+
+**messages**
+
+indica quali messaggi del sistema la vostra app può leggere
+esempio:
+```JSON
+"messages": [
+  { "telephony-new-call": "/dialer/index.html#keyboard-view" },
+  { "bluetooth-dialer-command": "/dialer/index.html#keyboard-view" },
+  { "headset-button": "/dialer/index.html#keyboard-view" },
+  { "notification": "/dialer/index.html#keyboard-view" },
+  { "alarm": "/facebook/fb_sync.html" }
+]
+```
+
+La documentazione di mozilla spiega che quando, ad esempio, avviene l'evento *telephony-new-call* si apre la pagina /dialer/index.html con *anchor* impostato a #keyboard-view
+
+**name**
+
+indovinate? il nome della vostra app 
+
+**orientation**
+
+questa proprietà

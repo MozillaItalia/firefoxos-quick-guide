@@ -132,4 +132,40 @@ indovinate? il nome della vostra app
 
 **orientation**
 
-questa proprietà
+questa proprietà imposta l'orientamento predefinito dell'applicazione, i due valori ammessi sono "landscape" e "portrait" (quello predefinito)
+
+**origin**
+
+indica un'URL che l'applicazione può utilizzare al posto dell' UUID
+
+**permissions**
+
+Proprietà importantissima, permette di chiedere all'utente il permesso di utilizzare elementi specifici del telefono, come la geolocalizzazione.
+ad esempio:
+```JSON
+"permissions": {
+  "contacts": {
+    "description": "Required for autocompletion in the share screen",
+    "access": "readcreate"
+    },
+  "alarms": {
+    "description": "Required to schedule notifications"
+  }
+}
+```
+Come potete vedere, questo manifest richiede due permessi: ovvero i contatti e la sveglia.
+Inoltre bisogna fornire due ulteriori campi, un campo *description* in cui bisogna spiegare all'utente a cosa ci serve il permesso e un campo *access* opzionale in cui specificate il grado d'accesso.
+I valori possibili sono *readonly*, *readwrite*, *readcreate* e *createonly*.
+
+**redirects**
+
+Permette di impostare un redirect da un sito esterno, per esempio per ragioni di autenticazione.
+Richiede un campo *from* di input e uno *to* di elaborazione.
+
+**type**
+
+Indica se la vostra app è *web*, *privileged* o *certified*
+
+**version**
+
+Il numero di versione della vostra app

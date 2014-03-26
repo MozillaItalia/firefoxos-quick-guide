@@ -5,6 +5,7 @@ basics.md
 firstapp.md
 boilerplate.md
 devtools.md
+manifest.md
 simulator.md
 distribution.md
 marketplace.md

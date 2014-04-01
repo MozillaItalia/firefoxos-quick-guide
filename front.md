@@ -65,9 +65,11 @@ Ecco qualche buon libro per chi volesse approfondire il codice JavaScript a un l
 ## Commenti e Pull Requests
 
 Questo è un libro gratuito e libero e sono entusiasta di ricevere qualunque commento o suggerimento.
-Il contenuto di questo libro si trova su [GitHub](https://github.com/soapdog/firefoxos-quick-guide) ed è scritto in Markdown (con alcune specifiche estensioni di Leanpub). Per commenti, correzioni di bug e miglioramenti inviare una *pull request* su Github. Grazie in anticipo per i contributi.
+Il contenuto in lingua inglese di questo libro si trova su [GitHub](https://github.com/soapdog/firefoxos-quick-guide) ed è scritto in Markdown (con alcune specifiche estensioni di Leanpub). Per commenti, correzioni di bug e miglioramenti inviare una *pull request* su Github. Grazie in anticipo per i contributi.
 
-Il repository Git di questo libro è [https://github.com/soapdog/firefoxos-quick-guide](https://github.com/soapdog/firefoxos-quick-guide).
+Il repository Git di questo libro in inglese è [https://github.com/soapdog/firefoxos-quick-guide](https://github.com/soapdog/firefoxos-quick-guide).
+
+Il repository Git di questo libro in italiano è [https://github.com/Mte90/firefoxos-quick-guide](https://github.com/Mte90/firefoxos-quick-guide).
 
 ## Traduzioni
 
@@ -84,7 +86,7 @@ Accetto con piacere tutto l'aiuto per tradurre questo libro in lingue diverse (e
 ## Storico delle versioni
 
 ### Versione 0.3
-Aggiunto nuovo materiale come Brick, Firefox OS BoilerPlate, ADB Helper ed il multilingua grazie a Daniele Scasciafratte.
+Aggiunto nuovo materiale come Brick, Firefox OS BoilerPlate, ADB Helper ed il multilingua grazie a Daniele Scasciafratte, Manifest invece è di Giammarco Di Lella.
 
 ### Versione 0.2
 Libro rivisitato e corretto da Marcos Caceres, membro del Mozilla WebAPI team. Il contenuto di ogni capitolo è stato controllato per correzioni tecniche e molti errori grammaticali ed errori di battitura. 

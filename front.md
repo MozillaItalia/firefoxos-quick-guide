@@ -22,13 +22,13 @@ In molte parti del libro esprimo le mie opinioni personali e faccio delle scelte
 
 ## Com'è nato questo libro
 
-Inizialmente, avevo cominciato a scrivere il libro nel mio tempo libero - ma grazie all'aiuto del mio mentore al Google Summer of Code (GSoC), Marcos Caceres, questo libro è diventato parte del mio progetto GSOC - che aveva lo scopo di creare risorse utili per gli *sviluppatori Firefox OS*. Quindi un grosso ringraziamento a Google che finanzia questa opera e al Mozilla Web API team per avermi accolto all'interno del loro gruppo durante l'estate.
+Inizialmente, avevo cominciato a scrivere il libro nel mio tempo libero - ma grazie all'aiuto del mio mentore al Google Summer of Code (GSoC), Marcos Caceres, questo libro è diventato parte del mio progetto GSOC - che aveva lo scopo di creare risorse utili per gli *sviluppatori Firefox OS*. Quindi un grosso ringraziamento a Google che finanzia questa opera e al Mozilla WebAPI team per avermi accolto all'interno del loro gruppo durante l'estate.
 
 ## Rimanere aggiornati
 
 Questo libro è distribuito **gratuitamente** tramite [Leanpub](http://leanpub.com). 
 
-Scaricando il libro dalla pagina ufficiale su [Leanpub](http://leanpub.com/quickguidefirefoxosdevelopment) è possibile registrarsi per ricevere gli aggiornamenti automatici. L'auspicio è di aggiornare il libro qualche volta al mese. Se si è ottenuto questo libro da un'amico o da qualche altro sito, si vada alla pagina su Leanpub per scaricare e registrarsi in modo da ricevere le notifiche sugli aggiornamenti.
+Scaricando il libro dalla pagina ufficiale su [Leanpub](http://leanpub.com/quickguidefirefoxosdevelopment) è possibile registrarsi per ricevere gli aggiornamenti automatici. L'auspicio è di aggiornare il libro qualche volta al mese. Se si è ottenuto questo libro da un amico o da qualche altro sito, si vada alla pagina su Leanpub per scaricare e registrarsi in modo da ricevere le notifiche sugli aggiornamenti.
 
 ## Donazioni
 
@@ -72,7 +72,7 @@ Il repository Git di questo libro è [https://github.com/soapdog/firefoxos-quick
 ## Traduzioni
 
 Questo libro è stato scritto inizialmente in portoghese e successivamente tradotto in inglese da me.
-In un secondo tempo Daniele lo ha tradotto in italiano.
+In un secondo tempo, Daniele lo ha tradotto in italiano. La traduzione italiana è stata aggiornata da *@gialloporpora* e controllata da *@Sara_t* e *@miki64*.
 Entrambe le versioni sono disponibili gratuitamente su internet:
 
 * [Portuguese Version](http://leanpub.com/guiarapidofirefoxos): Guia Rapido para Desenvolvimendo para Firefox OS.

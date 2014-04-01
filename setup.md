@@ -17,7 +17,7 @@ Per sviluppare e testare le applicazioni realizzate per Firefox OS abbiamo bisog
   
 ## Installare il Simulatore di Firefox OS
 
-Dopo aver installato Firefox, il passaggio successivo è l'installazione del simulatore di Firefox OS che può essere usato per testare le proprie applicazioni.  Scarica il file del simulatore, in automatico Firefox chiedere di installare il simulatore.  
+Dopo aver installato Firefox, il passaggio successivo è l'installazione del simulatore di Firefox OS che può essere usato per testare le proprie applicazioni. Scarica il file del simulatore, in automatico Firefox chiedere di installare il simulatore.  
 
 ![*Developer* con *Gestore App** selezionato](images/originals/tools.png)
 

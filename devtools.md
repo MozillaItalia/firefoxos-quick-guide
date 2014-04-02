@@ -1,6 +1,6 @@
 # Strumenti per sviluppatori {#developertools}
 
-Firefox mette a disposizione molti strumenti per consentire agli sviluppatori di eseguire il proprio lavoro al meglio. Molte persone continuano a usare l'estensione [FireBug](https://addons.mozilla.org/it/firefox/addon/firebug/) senza aver realizzato che ora Firefox ha degli strumenti di sviluppo nativi. In questo capitolo andremo ad analizzare gli strumenti più utili per sviluppare app per Firefox OS.
+Firefox mette a disposizione molti strumenti per consentire agli sviluppatori di eseguire il proprio lavoro al meglio. Molte persone continuano a usare l'estensione [Firebug](https://addons.mozilla.org/it/firefox/addon/firebug/) senza aver realizzato che ora Firefox ha degli strumenti di sviluppo nativi. In questo capitolo andremo ad analizzare gli strumenti più utili per sviluppare app per Firefox OS.
 
 Se si è interessati a saperne di più su questi strumenti e conoscere quali straordinarie novità in materia di sviluppo web saranno implementate nelle prossime versioni di Firefox, consultare la pagina [developer tools](https://developer.mozilla.org/en-US/docs/Tools) su Mozilla Developer Network (Ci conto, apri davvero questo link. Ti aspetto).
  
@@ -42,7 +42,7 @@ L'utilizzo dell'istruzione `alert()` è davvero un metodo deprecabile, in quanto
 
 Imparare a utilizzare in modo appropriato gli strumenti di sviluppo inclusi in Firefox (o in qualunque altro browser in uso) è un importante passo nel processo di diventare uno sviluppatore migliore. È per questo che consiglio a tutti di consultare i link riportati qui sopra e approfondire la propria conoscenza degli strumenti di sviluppo inclusi in Firefox.
 
-Uno speciale strumento che non è stato sin qui menzionato è il [*Debugger remoto*](https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging). Questo strumento consente di connettersi a uno smartphone Android o Firefox OS e utilizzare gli altri strumenti di sviluppo per effettuare il debug in tempo reale del codice sorgente in esecuzione su questi dispositivi.
+Uno speciale strumento che non è stato sin qui menzionato è il [*Debugger remoto*](https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging). Questo strumento consente di connettersi a uno smartphone Android o Firefox OS e utilizzare gli altri strumenti di sviluppo per effettuare il debug in tempo reale del codice sorgente in esecuzione su questi dispositivi. Non ti preoccupare lo vedremo nel prossimo capitolo con un dispositivo con Firefox OS!
 
 ## Riassunto
 

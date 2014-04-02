@@ -72,7 +72,7 @@ if (navigator.mozApps) {
                 installApp.onsuccess = function() {
                     install.style.display = "none";
                 };
-                installApp.onerror = function() {
+                installApp.onerror = function\() {
                     alert("Install failed\n\n:" + installApp.error.name);
                 };
             };

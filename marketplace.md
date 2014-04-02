@@ -49,9 +49,9 @@ Da questa pagina si dovranno impostare le seguenti opzioni:
 * Se si tratta di un'app gratuita o di un'app a pagamento (o se utilizza i *pagamenti in-app*).
 * Per quali dispositivi è disponibile (Firefox OS, Firefox Desktop, Firefox per mobile su telefonino, Firefox mobile per tablet, ecc…).
 
-Dopo aver impostato queste preferenze si verrà rimandati a un'altra pagina. In questo libro noi trattiamo esplicitamente il caso di un'app pacchettizzata, ma la procedura è analoga per un'app ospitata.
+Dopo aver impostato queste preferenze si verrà rimandati a un'altra pagina. In questo libro tratteremo esplicitamente il caso di un'app pacchettizzata, ma la procedura è analoga per un'app ospitata.
 
-Nel prosieguo del capitolo faremo sempre riferimento a un'app pacchettizzata gratuita per Firefox OS.  In questo caso dobbiamo caricare il file *zip* della nostra app, di cui si è discusso nella sezione precedente.
+Nel proseguo del capitolo faremo sempre riferimento a un'app pacchettizzata gratuita per Firefox OS.  In questo caso dobbiamo caricare il file *zip* della nostra app, di cui si è discusso nella sezione precedente.
 
 Dopo aver effettuato l'upload del file, questo subirà un processo automatico di verifica e al termine verrà mostrato un resoconto con una serie di opzioni.
 
@@ -63,15 +63,18 @@ Il passaggio successivo è denominato **Passaggio #3: dettagli** ed è quello in
 
 ![Inserimento di informazioni dettagliate](images/originals/marketplace-step-3.png)
 
-Dopo aver inserito in dettaglio le informazioni sull'app, il processo di caricamento è completo. Ora non ci resta che attendere l'approvazione da parte dei revisori del Marketplace. Complimenti, l'app ora è distribuita su Firefox Marketplace.
+Dopo aver inserito in dettaglio le informazioni sull'app, il processo di caricamento è completo.  
+Arriveremo ad un passaggio dedicato alla certificazione guidata dell'applicazione in cui ci verrà chiesto di selezionare gli argomenti trattati se sono violenti, illeciti, se è un gioco ecc. In questo modo la nostra applicazione verrà certificata per la sua comparsa sui vari paesi a saconda proprio di questo passaggio obbligatorio.  
+Ora non ci resta che attendere l'approvazione da parte dei revisori del Marketplace. Complimenti, l'app ora è distribuita su Firefox Marketplace.
 
-Dalla [pagina di gestione delle app](https://marketplace.firefox.com/developers/submissions) sarà possibile verificare lo stato delle app caricate e, se lo si desidera, modificare le informazioni dell'app.
+Dalla [pagina di gestione delle app](https://marketplace.firefox.com/developers/submissions) sarà possibile verificare lo stato delle app caricate e, se lo si desidera, modificare le informazioni dell'app.  
+Dalla pagina di gestione dell'app potremo anche vedere le statistiche di installazione, visita, supporto ecc.  
 
-Per ulteriori informazioni riguardo al caricamento delle app consultare [questo articolo del Centro di sviluppo di Firefox OS](https://marketplace.firefox.com/developers/docs/submission).
+Per ulteriori informazioni riguardo al caricamento delle app consultare [questo articolo del Centro di sviluppo di Firefox OS](https://marketplace.firefox.com/developers/docs/submission).  
 
 ## Guidelinea per il marketplace
 
-Le applicazioni quando sono inviate nel marketplace vengono controllate e testate da volontari di Mozilla. Questi volontari a loro volta sono sottoposti a dei test per verificare le loro conoscenze.  
+Le applicazioni quando sono inviate nel marketplace vengono controllate da tool automatici e testate da volontari di Mozilla. Questi volontari a loro volta sono sottoposti a dei test per verificare le loro conoscenze.  
 
 I criteri di accettazione dell'applicazione sono molteplici e passano dalla sicurezza, privacy, contenuto, funzionalità ed usabilità.  
 
@@ -79,13 +82,14 @@ Durante il processo di recensione verrà controllato il file manifest per la com
 
 Un dettaglio da non dimenticare è che i recensori non sono un team di QA, fanno dei test d'uso come un'utente normale e provano l'applicazione sui sistemi specificati nel marketplace.  
 
-Il recensore in caso di rifiuto dell'applicazione fornisce una spiegazione dei problemi riscontrati spiegando i passaggi per riprodurre i problemi dando riferimenti alla documentazione per correggere le carenze. Non commenta la grafica dell'applicazione solo come l'applicazione funziona. Lo sviluppatore avrà sempre il beneficio del dubbio potranno reinviare l'applicazione e chiedere maggiori dettagli sulle motivazioni del rifiuto. 
+Il recensore in caso di rifiuto dell'applicazione fornisce una spiegazione dei problemi riscontrati spiegando i passaggi per riprodurre i problemi dando riferimenti alla documentazione per correggere le carenze. Non commenta la grafica dell'applicazione ma solo come l'applicazione funziona. Lo sviluppatore avrà sempre il beneficio del dubbio e potrà reinviare l'applicazione e chiedere maggiori dettagli sulle motivazioni del rifiuto. 
 
 ### Sicurezza
 
 Per maggiori informazioni fate riferimento alla pagina dedicata [su MDN](https://wiki.mozilla.org/Apps/Security).  
 
 Il manifest deve essere fornito dallo stesso origin dell'applicazione quindi lo stesso dominio, deve essere fornito con il mime-type `application/x-web-app-manifest+json` e l'applicazione non deve contenere iframe.  
+Questo impedisce ad altre persone di fare applicazioni hosted il cui sito non è di loro gestione. 
 
 ## Privacy
 
@@ -101,7 +105,7 @@ Il revisore deve provare le funzionalità principali dell'applicazione, se ci so
 
 ## Usabilità
 
-Lo sviluppatore deve cercare di ottimizzare l'applicazione sia a livello di layout che di piattaforma. Dettaglio da non trascurare che Firefox OS non ha pulsanti fisici quindi deve avere dei pulsanti di navigazione. Cosa molto importante se qualcosa deve essere cliccabili/tappabile deve essere facile quindi deve avere delle dimensioni usabili.
+Lo sviluppatore deve cercare di ottimizzare l'applicazione sia a livello di layout che di piattaforma. Dettaglio da non trascurare che Firefox OS non ha pulsanti fisici quindi deve avere dei pulsanti di navigazione. Cosa molto importante se qualcosa deve essere cliccabili/tappabile deve avere delle dimensioni usabili.
 
 ## Alcuni consigli
 
@@ -114,17 +118,11 @@ Inserisci dei bei screenshot dell'applicazione che sono una vetrina del tuo lavo
 Complimenti. La propria nuova applicazione ora è su Firefox Marketplace e ci si sta apprestando a esplorare un nuovissimo tipo di mercato.
 
 
-<<<<<<< HEAD
-Spero che la lettura di questa veloce guida sia stata piacevole. Ho in mente di aggiornare e ampliare spesso questa guida, quindi consiglio di tenere gli occhi aperti e iscriversi per ricevere le notizie sul suo aggiornamento. Se si è scaricato questo libro dal sito Leanpub non ci sono problemi: si riceverà automaticamente un'email che informerà di nuovi aggiornamenti. Se invece è stato scaricato da altri siti, il mio consiglio è quello di riscaricarlo da  [pagina ufficiale su Leanpub](http://leanpub.com/quickguidefirefoxosdevelopment) e registrare il proprio indirizzo email. Ovviamente è tutto gratuito e, no, non verranno  mai inviati messaggi di spam, promesso.  
-
-Invito tutti i lettori ad inviarmi le proprie opinioni su questo lavoro (in inglese). Questo libro è stato scritto nelle notti precedenti una conferenza tecnica, quindi si può intuire quanto io sia affezionato a questo progetto e quanto vorrei che avesse successo. È possibile inviare le proprie opinioni via Twitter al mio account [@soapdog](http://twitter.com/soapdog) o al mio indirizzo di posta elettronica [fxosquickguide@andregarzia.com](mailto:fxosquickguide@andregarzia.com).  Il mio sito web è [http://andregarzia.com](http://andregarzia.com).  
-
-Abbiamo visto le linee guida per il marketplace che ci obbligano a seguire una metodologia nello sviluppo per il bene dell'utente e del nostro lavoro.  
 =======
 Spero che la lettura di questa veloce guida sia stata piacevole. Ho in mente di aggiornare e ampliare spesso questa guida, quindi consiglio di tenere gli occhi aperti e iscriversi per ricevere le notizie sul suo aggiornamento. Se si è scaricato questo libro dal sito Leanpub non ci sono problemi: si riceverà automaticamente un'email che informerà di nuovi aggiornamenti. Se invece è stato scaricato da altri siti, il mio consiglio è quello di riscaricarlo da  [pagina ufficiale su Leanpub](http://leanpub.com/quickguidefirefoxosdevelopment) e registrare il proprio indirizzo email. Ovviamente è tutto gratuito e, no, non verranno  mai inviati messaggi di spam, promesso.
 
 Invito tutti i lettori ad inviarmi le proprie opinioni su questo lavoro (in inglese). Questo libro è stato scritto nelle notti precedenti una conferenza tecnica, quindi si può intuire quanto io sia affezionato a questo progetto e quanto vorrei che avesse successo. È possibile inviare le proprie opinioni via Twitter al mio account [@soapdog](http://twitter.com/soapdog) o al mio indirizzo di posta elettronica [fxosquickguide@andregarzia.com](mailto:fxosquickguide@andregarzia.com).  Il mio sito web è [http://andregarzia.com](http://andregarzia.com).
->>>>>>> 5a38dda9f474b835593e81b3ed23b7734847d1dc
 
-Ora che si è entrati a far parte del gruppo di sviluppatori di app Firefox OS, il prossimo passo è quello di unirsi al gruppo più esteso della comunità Mozilla, aiutandoci a mantenere il Web libero e creato dagli utenti per gli utenti. È possibile unirsi a noi visitando [http://www.mozilla.org/contribute/](http://www.mozilla.org/en-US/contribute/) e aiutare la crescita di Firefox OS.
+Ora che si è entrati a far parte del gruppo di sviluppatori di app Firefox OS, il prossimo passo è quello di unirsi al gruppo più esteso della comunità Mozilla, aiutandoci a mantenere il Web libero e creato dagli utenti per gli utenti.  
+È possibile unirsi a noi visitando [http://www.mozilla.org/contribute/](http://www.mozilla.org/en-US/contribute/) e aiutare la crescita di Firefox OS.
 

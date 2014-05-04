@@ -8,7 +8,7 @@ Si trattano di nuovi elementi (i widget in poche parole) con tag HTML personaliz
 Le librerie [Polymer](http://www.polymer-project.org/) di Google e [Brick](http://mozilla.github.io/brick) di Mozilla ne includono già pronte come un calendario o la barra di stato.  
 In questa guida li introdurremo semplicemente senza andare nei dettagli (un'pò come abbiamo fatto con Gaia Building Blocks). 
 Vediamo la libreria Brick cosa permette di fare. 
-Gaia Building Blocks permette di realizzare l'interfaccia grafica mentre con Brick possiamo avere on the fly con dei costum tag che forniscono delle interfacce interattive come il calendario. 
+Gaia Building Blocks permette di realizzare l'interfaccia grafica mentre con Brick possiamo avere on the fly con dei custom tag che forniscono delle interfacce interattive come il calendario. 
 Queste interfacce sono degli oggetti che espongono dei metodi a seconda delle necessità e funzionalità dell'elemento che stiamo usando. 
 Attualmente sono disponibili: 
 
@@ -23,5 +23,6 @@ Attualmente sono disponibili:
 * [Toggle](http://mozilla.github.io/brick/demos/x-tag-toggle/index.html)
 * [Tooltip](http://mozilla.github.io/brick/demos/x-tag-tooltip/index.html)
 
+Per mostrare l'API e la facilità d'uso di alcuni di questi componenti Daniele ha realizzato un'interfaccia interattiva che mostra il codice Javascript ed HTML di nome [Brickly](http://mte90.github.io/Brickly). 
 Non è nell'interesse della guida approfondire questa libreria ma solo rendere a conoscenza di questo materiale già disponibile all'uso.
 

@@ -1,6 +1,6 @@
 ## Firefox OS Boilerplate App
 
-Il [boilerplate](https://github.com/robnyman/Firefox-OS-Boilerplate-App) che abbiamo citato poco fà è un'applicazione di esempio completa di tutti gli esempi. Contiene un'esempio per la maggior parte delle Web Activity, la questione multilingua, installazione dell'applicazione, api HTML5 e l'interfaccia grafica di Gaia realizzata con *Gaia Building BLocks*.  
+Il [boilerplate](https://github.com/robnyman/Firefox-OS-Boilerplate-App) che abbiamo citato poco fà è un'applicazione dimostrativa con molti esempi basilari. Contiene un'esempio per la maggior parte delle Web Activity, la questione multilingua, installazione dell'applicazione, api HTML5 e l'interfaccia grafica di Gaia realizzata con *Gaia Building Blocks*.  
 La parte interessante è che si trova su Github quindi c'è anche una demo sempre aggiornata che puoi trovare [qui](http://robnyman.github.io/Firefox-OS-Boilerplate-App/).  
 
 Puoi provare il boilerplate nel tuo browser preferito ma se usi Chrome vedrai che nella console apparirà "Open Web Apps not supported" che vuol dire che non supporta questo standard proposto da Mozilla. 
@@ -10,7 +10,7 @@ Dopo questo messaggio pubblicitario riprendiamo il discorso!
 I prodotti di Mozilla, che usano Gecko, supportano le Open Web Apps e in Firefox OS vediamo l'apice delle loro potenzialità. Firefox sia per android che desktop le supporta quindi andando al [marketplace](http://marketplace.firefox.com/) si possono installare le applicazioni pensate per queste interfacce (se specificate nel marketplace).  
 
 Il boilerplate è un esempio per le Open Web Apps ([template](https://github.com/mozilla/mortar)) più il supporto proprietario (al momento!) per Firefox OS.  
-NB: Le api integrate in Firefox OS sono proposte al W3C per una loro standardizzazione (come l'API per la batteria o la vibrazione). Questo a ricordare che Mozilla lavora per la standardizzazione delle sue idee non ha interesse a chiudersi. 
+NB: Le api pensate ed integrate in Firefox OS sono proposte al W3C per una loro standardizzazione (come l'API per la batteria o la vibrazione che sono uno standard). Questo a ricordare che Mozilla lavora per la standardizzazione delle sue idee non ha interesse a chiudersi. 
 
 Il boilerplate è diviso in tre sezioni ma io ne aggiungo una quarta per gli altri dettagli.
 
@@ -112,14 +112,14 @@ C'è il codice per verificare se l'applicazione ha il focus, quindi se la scheda
 
 ##Multilingua
 
-Nel [Boilerplate](https://github.com/robnyman/Firefox-OS-Boilerplate-App) appena visto è utilizzata una libreria javascript di nome [webL10n](https://github.com/fabi1cazenave/webL10n/tree/master). Questa libreria è utilizzata anche in Gaia solo che non contiene la parte crossbrowser ed è molto semplice da usare.  
+Nel [Boilerplate](https://github.com/robnyman/Firefox-OS-Boilerplate-App) appena visto è utilizzata una libreria javascript di nome [webL10n](https://github.com/fabi1cazenave/webL10n/tree/master). Questa libreria è presente in Gaia solo che è uan versione modificata (questa èa lversione presente nel boilerplate).  
 Il sistema riconosce in automatico la lingua utilizzata e carica la lingua in uso dell'applicazione. Al caricamento del file JavaScript della libreria viene caricato un file ini che contiene i riferimenti alle varie lingue disponibili dell'applicazione. Dopodichè la libreria carica il file della lingua utilizzata dal browser o del sistema. Diamo un'occhiata al codice prima di vedere come succede la magia della localizzazione.  
 
 `<link rel="resource" type="application/l10n" href="locales/locales.ini" />
 <script type="application/javascript" src="js/l10n.js"></script>`
 
-Con questo codice il boilerplate carica i file della lingua ma come sà dove cambiarlo?  
-Tramite degli attributi ai tag di cui vogliamo la traduzione di questo tipo `data-l10n-id` che deve contenere il nome di riferimento della stringa da mostrare.
+Con questo codice il boilerplate carica i file della lingua ma come sà dove agire per cambiare il testo?  
+Tramite degli attributi `data-l10n-id` ai tag di cui vogliamo la traduzione che deve contenere il nome di riferimento della stringa da mostrare.
 
 ###File della lingua
 

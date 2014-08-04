@@ -293,7 +293,7 @@ function deleteMemo(inId, inCallback) {
 
 In questo blocco di codice abbiamo creato un costruttore che produce nuove note con alcuni campi già inizializzati. Dopodiché abbiamo implementato le altre funzioni per la presentazione, il salvataggio e la cancellazione delle note. Molte di queste funzioni richiedono che sia passato un parametro chiamato `inCallback`. Questo parametro è esso stesso una funzione che  verrà invocata al termine della funzione chiamante. Questo è necessario per la natura asincrona di IndexedDB. Tutte le callback hanno la medesima struttura di chiamata `callback(error, value)`, con due parametri in ingresso, in cui uno dei due assumerà il valore `null` a seconda del risultato della funzione chiamante.
 
-A> Siccome è un libro per principianti ho scelto di non usare [*Promises*](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise) perché non tutti potrebbero capirlo. Consiglio di usare questi concetti per avere un codice più pulito e facile da mantenere.
+A> Siccome è un libro per principianti ho scelto di non usare le [*Promises*](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise) perché non tutti potrebbero capirle. Consiglio di usare questi concetti per avere un codice più pulito e facile da mantenere.
 
 Ora che l'archiviazione delle note e le funzioni di modifica sono state implementate, lavoriamo alla struttura logica dell'applicazione nel file **app.js**.
 

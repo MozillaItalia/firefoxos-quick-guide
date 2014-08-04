@@ -2,29 +2,9 @@
 
 In questo capitolo vedremo in modo veloce alcune tecnologie che ci possono essere utili nello sviluppo per Firefox OS.
 
-##Web Components
-Sono in [Working Draft](http://www.w3.org/TR/2013/WD-components-intro-20130606/) dal W3C e supportati da Chrome e Firefox (c'è una polyfill di nome [X-Tag](http://www.x-tags.org/)).  
-Si tratta di nuovi elementi (i widget in poche parole) con tag HTML personalizzati che sfruttano lo Shadow DOM per simulare nuove tag HTML.  
-Le librerie [Polymer](http://www.polymer-project.org/) di Google e [Brick](http://mozilla.github.io/brick) di Mozilla ne includono già pronte come un calendario o la barra di stato.  
-In questa guida li introdurremo semplicemente senza andare nei dettagli (un'pò come abbiamo fatto con Gaia Building Blocks).  
-Queste interfacce sono degli oggetti che espongono dei metodi a seconda delle necessità e funzionalità dell'elemento che stiamo usando.   
-Attualmente sono disponibili: 
-
-* [Barra dell'applicazione](http://mozilla.github.io/brick/demos/x-tag-appbar/index.html)
-* [Calendario](http://mozilla.github.io/brick/demos/x-tag-calendar/index.html)
-* [Deck o schermata](http://mozilla.github.io/brick/demos/x-tag-deck/index.html)
-* [FlipBox](http://mozilla.github.io/brick/demos/x-tag-flipbox/index.html)
-* [Layout (un contenitore)](http://mozilla.github.io/brick/demos/x-tag-layout/index.html)
-* [Slider](http://mozilla.github.io/brick/demos/x-tag-slider/index.html)
-* [Barra di schede](http://mozilla.github.io/brick/demos/x-tag-tabbar/index.html)
-* [Toggle](http://mozilla.github.io/brick/demos/x-tag-toggle/index.html)
-
-Per mostrare l'API e la facilità d'uso di alcuni di questi componenti Daniele ha realizzato un'interfaccia interattiva che mostra il codice Javascript ed HTML di nome [Brickly](http://mte90.github.io/Brickly).  
-Non è nell'interesse della guida approfondire questa libreria ma solo rendere a conoscenza di questo materiale già disponibile all'uso.
-
 ##Gaia Building Blocks
 
-Per chi è abituato ad utilizzare framework CSS sarà molto semplice capire l'utilità di Building Blocks. Questo framework già citato è utilizzato nel boilerplate ed in molte applicazioni presenti sul marketplace.  
+Per chi è abituato ad utilizzare i framework CSS sarà molto semplice capire l'utilità di Building Blocks. Questo framework già citato è utilizzato nel boilerplate ed in molte applicazioni presenti sul marketplace.  
 Si tratta di un framework CSS basato sulle release giornaliere di Gaia che permette di avere sempre le ultime novità.  
 Come si può vedere dal sito [http://buildingfirefoxos.com/](http://buildingfirefoxos.com/building-blocks/) ci sono moltissimi esempi riguardo:  
 
@@ -49,3 +29,24 @@ Come si può vedere dal sito [http://buildingfirefoxos.com/](http://buildingfire
 Come si può vedere ci sono molte interfacce ed opzioni possibili per avere la stessa grafica del sistema un modo semplice. Inoltre c'è una sezione dedicata alle icone tramite Font Icon.  
 Per non finire qui ci sono anche le [transizioni](http://buildingfirefoxos.com/transitions/app-invokes-app.html) e per i grafici ci sono anche i file [psd](http://buildingfirefoxos.com/downloads/).  
 
+##Web Components
+Sono in [Working Draft](http://www.w3.org/TR/2013/WD-components-intro-20130606/) dal W3C e supportati da Chrome e Firefox.  
+Si tratta di nuovi elementi (i widget in poche parole) con tag HTML personalizzati che sfruttano lo Shadow DOM per simulare nuove tag HTML.  
+La libreria [Polymer](http://www.polymer-project.org/) di Google è integrata in [Brick] 2.0(http://mozbrick.github.io/) di Mozilla e ne includono già pronte come un calendario o la barra di stato.  
+In questa guida li introdurremo semplicemente senza andare nei dettagli (un'pò come abbiamo fatto con Gaia Building Blocks).  
+Queste interfacce sono degli oggetti che espongono dei metodi a seconda delle necessità e funzionalità dell'elemento che stiamo usando.   
+Attualmente sono disponibili: 
+
+* [Barra dell'applicazione](http://mozbrick.github.io/docs/brick-appbar.html)
+* [Calendario](http://mozbrick.github.io/docs/brick-calendar.html)
+* [Deck o schermata](http://mozbrick.github.io/docs/brick-deck.html)
+* [FlipBox](http://mozbrick.github.io/docs/brick-flipbox.html)
+* [Layout (un contenitore)](http://mozbrick.github.io/docs/brick-layout.html)
+* [Action](http://mozbrick.github.io/docs/brick-action.html)
+* [Barra di schede](http://mozbrick.github.io/docs/brick-tabbar.html)
+* [Form](http://mozbrick.github.io/docs/brick-form.html)
+* [Menu](http://mozbrick.github.io/docs/brick-menu.html)
+* [Storage-IndexdDB](http://mozbrick.github.io/docs/brick-storage-indexeddb.html)
+
+Per mostrare l'API e la facilità d'uso di alcuni di questi componenti Daniele ha realizzato un'interfaccia interattiva che mostra il codice Javascript ed HTML di nome [Brickly](http://mte90.github.io/Brickly).  
+Non è nell'interesse della guida approfondire questa libreria ma solo rendere a conoscenza di questo materiale già disponibile all'uso.

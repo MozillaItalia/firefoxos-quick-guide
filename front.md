@@ -8,9 +8,9 @@ A Mozilla per aver sempre creduto in noi,  per il suo sforzo di mantenere il web
 
 Alla comunità brasiliana di Mozilla per avermi accolto e per essere così incredibili.
 
-Al mio mentore GSoC Marcos Caceres, al Mozilla WebAPI Team, al Mozilla Tech Evangelists e il Dev Engagement teams per essere così eccezionali.
+Al mio mentore GSoC Marcos Caceres, al Mozilla WebAPI Team, al Mozilla Tech Evangelist Team e il Dev Engagement Team per essere così eccezionali.
 
-A Google per aver realizzato *Google Summer of Code 2013*. Questo programma è spettacolare.
+A Google per aver ideato *Google Summer of Code 2013*. Questo programma è spettacolare.
 
 ## Questo libro è in beta perenne
 
@@ -86,7 +86,7 @@ Accetto con piacere tutto l'aiuto per tradurre questo libro in lingue diverse (e
 ## Storico delle versioni
 
 ### Versione 0.3
-Aggiunto nuovo materiale come Brick, Firefox OS BoilerPlate, ADB Helper ed il multilingua grazie a Daniele Scasciafratte, Manifest invece è di Giammarco Di Lella.
+Aggiunto nuovo materiale come Brick, Firefox OS BoilerPlate, ADB Helper ed il multilingua grazie a Daniele Scasciafratte, la sezione del Manifest invece è di Giammarco Di Lella.
 
 ### Versione 0.2
 Libro rivisitato e corretto da Marcos Caceres, membro del Mozilla WebAPI team. Il contenuto di ogni capitolo è stato controllato per correzioni tecniche e molti errori grammaticali ed errori di battitura. 

@@ -1,4 +1,4 @@
-# Guida veloce allo sviluppo per FXOS
+# Guida veloce allo sviluppo per Firefox OS
 
 Questo repository contiene la versione markdown in Italiano per il libro "Quick Guide for Firefox OS Development" di Andre Alves Garzia.
 
@@ -8,7 +8,8 @@ Ancora non pronta
 
 ## Contributi
 
-Per contribuire alla versione inglese di questo libro usa i ticket e le richieste di pull.
+Per contribuire alla versione inglese di questo libro usa i ticket e le richieste di pull.  
+Revisione da effettuare con `aspell`.
 
 ## Altre versioni
 

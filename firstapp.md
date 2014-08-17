@@ -12,7 +12,7 @@ Dalla parte superiore dello schermo è possibile cancellare una nota prescelta f
 
 ![Memos, finestra di conferma della cancellazione](images/originals/memos-delete-screen.png)
 
-Il codice sorgente di Memos è disponibile nel [Repository su Github](https://github.com/soapdog/memos-for-firefoxos) (è possibile anche scaricarlo come file [.zip](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip) ). Consiglio di scaricare i file, così sarà più semplice seguire la guida. Un'altra copia del codice sorgente è disponibile nella cartella dentro il [repository github repository di questo libro](https://github.com/soapdog/firefoxos-quick-guide).
+Il codice sorgente di Memos è disponibile nel [Repository su Github](https://github.com/soapdog/memos-for-firefoxos) (è possibile anche scaricarlo come file [.zip](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip) ). Consiglio di scaricare i file, così sarà più semplice seguire la guida. Un'altra copia del codice sorgente è disponibile nella cartella dentro il [repository Github repository di questo libro](https://github.com/soapdog/firefoxos-quick-guide).
 
 Memos utilizza [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) per salvare le note e il toolkit [*Gaia Building Blocks*](http://buildingfirefoxos.com/building-blocks) per creare le interfacce. In un futuro aggiornamento il libro conterrà molte informazioni su *Gaia Building Blocks*, ma in questa prima versione mi limiterò ad utilizzarlo. Per ulteriori informazioni sull'argomento e per sapere quali interfacce vi sono integrate visitare i link appena segnalati.
 
@@ -475,19 +475,19 @@ Se si ha il vago sospetto di aver commesso qualche errore è possibile verificar
 
 Aprire la *Dashboard del Simulatore* e andare nel menu **Tools -> Web Developer -> Firefox OS Simulator**.
 
-![Apertura della dashboard del simulatore](images/originals/tools-web-developer-simulator.png)
+![Apertura della Dashboard del simulatore](images/originals/tools-web-developer-simulator.png)
 
-Con la dashboard aperta, fare clic sul pulsante **Aggiungi directory** e selezionare il file manifesto dell'applicazione.
+Con la Dashboard aperta, fare clic sul pulsante **Aggiungi directory** e selezionare il file manifesto dell'applicazione.
 
 ![Aggiunta di una nuova applicazione](images/originals/simulator-add-directory.png)
 
 Se tutto funziona come previsto, Memos apparirà nella lista applicazioni.
 
-![Memos mostrata nella dashboard](images/originals/memos-on-dashboard-display.png)
+![Memos mostrata nella Dashboard](images/originals/memos-on-dashboard-display.png)
 
 Quando si aggiungerà una nuova applicazione, il simulatore verrà avviato con la nuova app in esecuzione. A questo punto è possibile testare tutte le funzionalità di Memos.
 
-Congratulazioni. Abbiamo creato e provato la nostra prima applicazione. Non è un'applicazione complessa o rivoluzionaria - ma spero sia utile per capire il workflow di sviluppo di FireFox OS. Come si sarà potuto notare non è molto diverso dallo sviluppo web classico.  
+Congratulazioni. Abbiamo creato e provato la nostra prima applicazione. Non è un'applicazione complessa o rivoluzionaria - ma spero sia utile per capire il workflow di sviluppo di Firefox OS. Come si sarà potuto notare non è molto diverso dallo sviluppo web classico.  
 
 Si ricordi che ogni volta che viene modificato il codice sorgente è necessario premere il pulsante **Aggiorna** per aggiornare il contenuto dell'applicazione presente nel simulatore.
 

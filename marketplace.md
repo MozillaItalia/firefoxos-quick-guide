@@ -64,7 +64,7 @@ Il passaggio successivo è denominato **Passaggio #3: dettagli** ed è quello in
 ![Inserimento di informazioni dettagliate](images/originals/marketplace-step-3.png)
 
 Dopo aver inserito in dettaglio le informazioni sull'app, il processo di caricamento è completo.  
-Arriveremo ad un passaggio dedicato alla certificazione guidata dell'applicazione in cui ci verrà chiesto di selezionare gli argomenti trattati se sono violenti, illeciti, se è un gioco ecc. In questo modo la nostra applicazione verrà certificata per la sua comparsa sui vari paesi a saconda proprio di questo passaggio obbligatorio.  
+Arriveremo ad un passaggio dedicato alla certificazione guidata dell'applicazione in cui ci verrà chiesto di selezionare gli argomenti trattati se sono violenti, illeciti, se è un gioco ecc. In questo modo la nostra applicazione verrà certificata per la sua comparsa sui vari paesi a seconda proprio di questo passaggio obbligatorio.  
 Ora non ci resta che attendere l'approvazione da parte dei revisori del Marketplace. Complimenti, l'app ora è distribuita su Firefox Marketplace.
 
 Dalla [pagina di gestione delle app](https://marketplace.firefox.com/developers/submissions) sarà possibile verificare lo stato delle app caricate e, se lo si desidera, modificare le informazioni dell'app.  
@@ -72,17 +72,17 @@ Dalla pagina di gestione dell'app potremo anche vedere le statistiche di install
 
 Per ulteriori informazioni riguardo al caricamento delle app consultare [questo articolo del Centro di sviluppo di Firefox OS](https://marketplace.firefox.com/developers/docs/submission).  
 
-## Guidelinea per il marketplace
+## Guide linea per il marketplace
 
 Le applicazioni quando sono inviate nel marketplace vengono controllate da tool automatici e testate da volontari di Mozilla. Questi volontari a loro volta sono sottoposti a dei test per verificare le loro conoscenze.  
 
 I criteri di accettazione dell'applicazione sono molteplici e passano dalla sicurezza, privacy, contenuto, funzionalità ed usabilità.  
 
-Durante il processo di recensione verrà controllato il file manifest per la completezza delle informazioni quindi è molto importante che sia completo e preciso perchè è uno dei primi motivi per cui può essere bocciata. Per esempio specificando lingue disponibili che non lo sono, permessi documentati male, screenshot mancante o descrizione incompleta.  
+Durante il processo di recensione verrà controllato il file manifest per la completezza delle informazioni quindi è molto importante che sia completo e preciso perché è uno dei primi motivi per cui può essere bocciata. Per esempio specificando lingue disponibili che non lo sono, permessi documentati male, screenshot mancante o descrizione incompleta.  
 
 Un dettaglio da non dimenticare è che i recensori non sono un team di QA, fanno dei test d'uso come un'utente normale e provano l'applicazione sui sistemi specificati nel marketplace.  
 
-Il recensore in caso di rifiuto dell'applicazione fornisce una spiegazione dei problemi riscontrati spiegando i passaggi per riprodurre i problemi dando riferimenti alla documentazione per correggere le carenze. Non commenta la grafica dell'applicazione ma solo come l'applicazione funziona. Lo sviluppatore avrà sempre il beneficio del dubbio e potrà reinviare l'applicazione e chiedere maggiori dettagli sulle motivazioni del rifiuto. 
+Il recensore in caso di rifiuto dell'applicazione fornisce una spiegazione dei problemi riscontrati spiegando i passaggi per riprodurre i problemi dando riferimenti alla documentazione per correggere le carenze. Non commenta la grafica dell'applicazione ma solo come l'applicazione funziona. Lo sviluppatore avrà sempre il beneficio del dubbio e potrà rinviare l'applicazione e chiedere maggiori dettagli sulle motivazioni del rifiuto. 
 
 ### Sicurezza
 

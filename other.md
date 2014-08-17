@@ -33,7 +33,7 @@ Per non finire qui ci sono anche le [transizioni](http://buildingfirefoxos.com/t
 Sono in [Working Draft](http://www.w3.org/TR/2013/WD-components-intro-20130606/) dal W3C e supportati da Chrome e Firefox.  
 Si tratta di nuovi elementi (i widget in poche parole) con tag HTML personalizzati che sfruttano lo Shadow DOM per simulare nuove tag HTML.  
 La libreria [Polymer](http://www.polymer-project.org/) di Google è integrata in [Brick] 2.0(http://mozbrick.github.io/) di Mozilla e ne includono già pronte come un calendario o la barra di stato.  
-In questa guida li introdurremo semplicemente senza andare nei dettagli (un'pò come abbiamo fatto con Gaia Building Blocks).  
+In questa guida li introdurremo semplicemente senza andare nei dettagli (un po come abbiamo fatto con Gaia Building Blocks).  
 Queste interfacce sono degli oggetti che espongono dei metodi a seconda delle necessità e funzionalità dell'elemento che stiamo usando.   
 Attualmente sono disponibili: 
 

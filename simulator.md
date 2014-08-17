@@ -94,10 +94,10 @@ Da questo dispositivo si possono debuggare le applicazioni installate tra cui an
 
 ![Tabella dei permessi!](images/originals/simulator-device-permission.png) 
 
-In questa tabella c'è un riassunto dei permessi utilizzabili nel manifest a seconda del tipo di applicazione che abbiamo visto qualche pagina fà.
+In questa tabella c'è un riassunto dei permessi utilizzabili nel manifest a seconda del tipo di applicazione che abbiamo visto qualche pagina fa.
 
 ## Riassunto
 
-Riassumendo, il simulatore Firefox OS è spettacolare per creare applicazioni specifiche per FireFox OS - ma ha alcuni limiti se si vuole sviluppare un'app che funzioni su una maggior gamma di dispositivi (ad esempio al momento non è possibile emulare il comportamento di Firefox OS su un tablet). 
+Riassumendo, il simulatore Firefox OS è spettacolare per creare applicazioni specifiche per Firefox OS - ma ha alcuni limiti se si vuole sviluppare un'app che funzioni su una maggior gamma di dispositivi (ad esempio al momento non è possibile emulare il comportamento di Firefox OS su un tablet). 
 
 A questo punto del libro, oltre a una sensazione di incredibile forza, si dovrebbe, o così mi auguro, riuscire a comprendere il workflow necessario per sviluppare un'app Firefox OS. Nel prossimo capitolo vedremo come distribuire un'applicazione agli utenti.

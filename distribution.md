@@ -28,7 +28,7 @@ W> Nota: ho il sospetto che l'installazione di app pacchettizzate da siti divers
 ## Riassunto
 
 In questo capitolo sono stati trattati i metodi di distribuzione delle app alternativi al sito Firefox Marketplace grazie all'utilizzo della API di *Installazione e gestione* delle *app web aperte* o *Open Web Apps*.  
-Questa parte l'avevamo accennata icon il boilerpalte ma in questo capitolo abbiamo visto le differenze ed alcuni esempi d'uso alternativi.  
+Questa parte l'avevamo accennata con il boilerplate ma in questo capitolo abbiamo visto le differenze ed alcuni esempi d'uso alternativi.  
 Esistono molte altre routine disponibili, ad esempio per controllare se l'applicazione è installata (in questo modo sarà possibile nascondere il pulsante **Fai clic qui per installare**). Per ulteriori informazioni su queste API consultare [la pagina di MDN dedicata all'installazione delle app](https://developer.mozilla.org/docs/Apps/JavaScript_API) (sì, avete ragione, questo link non è nuovo, però ci sono informazioni importanti che dovete assolutamente conoscere).
 
 Nel prossimo capitolo impareremo come distribuire la nostra app attraverso il sito Marketplace Firefox.

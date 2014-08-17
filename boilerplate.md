@@ -1,6 +1,6 @@
 ## Firefox OS Boilerplate App
 
-Il [boilerplate](https://github.com/robnyman/Firefox-OS-Boilerplate-App) che abbiamo citato poco fà è un'applicazione dimostrativa con molti esempi basilari. Contiene un'esempio per la maggior parte delle Web Activity, la questione multilingua, installazione dell'applicazione, api HTML5 e l'interfaccia grafica di Gaia realizzata con *Gaia Building Blocks*.  
+Il [boilerplate](https://github.com/robnyman/Firefox-OS-Boilerplate-App) che abbiamo citato poco fa è un'applicazione dimostrativa con molti esempi basilari. Contiene un'esempio per la maggior parte delle Web Activity, la questione multilingua, installazione dell'applicazione, api HTML5 e l'interfaccia grafica di Gaia realizzata con *Gaia Building Blocks*.  
 La parte interessante è che si trova su Github quindi c'è anche una demo sempre aggiornata che puoi trovare [qui](http://robnyman.github.io/Firefox-OS-Boilerplate-App/).  
 
 Puoi provare il boilerplate nel tuo browser preferito ma se usi Chrome vedrai che nella console apparirà "Open Web Apps not supported" che vuol dire che non supporta questo standard proposto da Mozilla. 
@@ -73,7 +73,7 @@ if (navigator.mozApps) {
                     install.style.display = "none";
                 };
                 installApp.onerror = function() {
-                    alert("Install failed\n\n:" + installApp.error.name);
+                    alert("Install failed\\n\\n:" + installApp.error.name);
                 };
             };
         }
@@ -84,11 +84,11 @@ if (navigator.mozApps) {
 ~~~~~~~~
 
 Come si può vedere il codice è molto semplice, si dà l'indirizzo del file manifest e si verifica se è stato installato. Per installare il boilerplate basta cliccare sul simbolo più in alto a destra.  
-Questo codice eseguito su Firefox OS, Firefox for Android e Firefox desktop aprirà un mini popup per l'installazione dell'applicazione
+Questo codice eseguito su Firefox OS, Firefox for Android e Firefox desktop aprirà un mini pop up per l'installazione dell'applicazione
 
 ###WebActivity
 Finalmente parliamo di una delle grandi novità per gli sviluppatori web! Finalmente potremo accedere al sistema in modo più profondo! Ho già detto finalmente?  
-Scherzi a parte in questa sezione possiamo accedere ad una parte delle azioni del sistema dal fare una telefonata a scattare una foto. Queste WebActivity purtroppo sono solo per Firefox OS e quindi il testing è solo con simulatore ma c'è chi stà lavorando ad una [polyfill](https://github.com/Mte90/moz-polyfills) per supportare le web activity anche da browser (dove possibile).  
+Scherzi a parte in questa sezione possiamo accedere ad una parte delle azioni del sistema dal fare una telefonata a scattare una foto. Queste WebActivity purtroppo sono solo per Firefox OS e quindi il testing è solo con simulatore ma c'è chi sta lavorando ad una [polyfill](https://github.com/Mte90/moz-polyfills) per supportare le web activity anche da browser (dove possibile).  
 Non vedremo il codice nel dettaglio delle varie WebActivity quindi rimando al [file webapp.js](https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/js/webapp.js) ma elenchiamo le varie WebActivity: 
 
 * Cercare file
@@ -99,26 +99,26 @@ Non vedremo il codice nel dettaglio delle varie WebActivity quindi rimando al [f
 * Condividere un sito
 * Condividere una foto con un'applicazione
 * Aprire un sito
-* Scrivere un'email (con al'applicazione di sistema)
+* Scrivere un'email (con l'applicazione di sistema)
 * Salvare un segnalibro
 * Aprire un video
 
 ###WebAPI
-Questa sezione contiene sia codice (lo stesso file di prima) solo per Firefox OS ma anche un'pò di HTML5 di fresca standardizzazione. Abbiamo le notifiche, ruotazione e accensione dello schermo che sono solo per Firefox OS mentre vibrazione, verifica connessione (ne abbiamo parlato prima), geolocazione, luce ambientale, prossimità, batteria sono API standard.
+Questa sezione contiene sia codice (lo stesso file di prima) solo per Firefox OS ma anche un po di HTML5 di fresca standardizzazione. Abbiamo le notifiche, rotazione e accensione dello schermo che sono solo per Firefox OS mentre vibrazione, verifica connessione (ne abbiamo parlato prima), geolocazione, luce ambientale, prossimità, batteria sono API standard.
 
 ###API Privilegiate
-Queste API sono particolari e sono disponibili solo per le app privilegiate e sono quasi tutte standard HTML5. 
+Queste API sono particolari e sono disponibili solo per le App privilegiate e sono quasi tutte standard HTML5. 
 C'è il codice per verificare se l'applicazione ha il focus, quindi se la scheda è aperta, ed accedere alle immagini. Questi sono standard HTML mentre selezionare i contatti e fare richieste XHR CrossDomain sono una peculiarità di Firefox OS.
 
 ##Multilingua
 
-Nel [Boilerplate](https://github.com/robnyman/Firefox-OS-Boilerplate-App) appena visto è utilizzata una libreria javascript di nome [webL10n](https://github.com/fabi1cazenave/webL10n/tree/master). Questa libreria è presente in Gaia solo che è uan versione modificata (questa èa lversione presente nel boilerplate).  
-Il sistema riconosce in automatico la lingua utilizzata e carica la lingua in uso dell'applicazione. Al caricamento del file JavaScript della libreria viene caricato un file ini che contiene i riferimenti alle varie lingue disponibili dell'applicazione. Dopodichè la libreria carica il file della lingua utilizzata dal browser o del sistema. Diamo un'occhiata al codice prima di vedere come succede la magia della localizzazione.  
+Nel [Boilerplate](https://github.com/robnyman/Firefox-OS-Boilerplate-App) appena visto è utilizzata una libreria javascript di nome [webL10n](https://github.com/fabi1cazenave/webL10n/tree/master). Questa libreria è presente in Gaia solo che è una versione modificata (questa è lversione presente nel boilerplate).  
+Il sistema riconosce in automatico la lingua utilizzata e carica la lingua in uso dell'applicazione. Al caricamento del file JavaScript della libreria viene caricato un file ini che contiene i riferimenti alle varie lingue disponibili dell'applicazione. Dopodiché la libreria carica il file della lingua utilizzata dal browser o del sistema. Diamo un'occhiata al codice prima di vedere come succede la magia della localizzazione.  
 
 `<link rel="resource" type="application/l10n" href="locales/locales.ini" />
 <script type="application/javascript" src="js/l10n.js"></script>`
 
-Con questo codice il boilerplate carica i file della lingua ma come sà dove agire per cambiare il testo?  
+Con questo codice il boilerplate carica i file della lingua ma come sa dove agire per cambiare il testo?  
 Tramite degli attributi `data-l10n-id` ai tag di cui vogliamo la traduzione che deve contenere il nome di riferimento della stringa da mostrare.
 
 ###File della lingua
@@ -132,4 +132,4 @@ Come si può vedere è il classico file ini `proprietà = testo` che viene elabo
 ## Riassunto
 Abbiamo visto molte funzionalità di Firefox OS e delle Open Web Apps tramite un semplice ma completo boilerplate.
 Una citazione da fare è che le WebActivity ed alcune API hanno bisogno di essere dichiarate nel file manifest per poter essere usate. 
-oAbbiamo visto anche la quesitone multilingua che è molto importante e di come sia semplice integrare questa soluzione nella propria app.
+abbiamo visto anche la questione multilingua che è molto importante e di come sia semplice integrare questa soluzione nella propria app.

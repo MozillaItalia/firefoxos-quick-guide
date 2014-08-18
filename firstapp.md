@@ -20,7 +20,7 @@ Il primo passaggio è creare una cartella per l'applicazione di nome **memos**.
 
 ## Creare il manifesto dell'app
 
-Il file manifesto di Memos è molto semplice. Crea un file chiamato **manifest.webapp** nella cartella **memos**. I manifesti sono dei file [JSON](http://json.org) che descrivono un'applicazione. In questo file è possibile trovare le informazioni sull'app, quali il nome dell'app, il nome dello sviluppatore, le icone utilizzate, il file che avvia l'app, quali API con privilegi sono usate e molto altro.
+Il file manifesto di Memos è molto semplice. Crea un file chiamato **manifest.webapp** nella cartella **memos**. I manifesti sono dei file [JSON](http://json.org) che descrivono un'applicazione. In questo file è possibile trovare le informazioni sull'app, quali il nome dell'app, il nome dello sviluppatore, le icone utilizzate, il file che avvia l'app, quali API con privilegi sono utilizzate e molto altro.
 
 Qui di seguito è riportato il contenuto del file manifesto di Memos. Fare attenzione con il copia e incolla, perché è molto facile mettere una virgola nel posto sbagliato e creare un file JSON non valido. Esistono molti strumenti per validare un file JSON, incluso uno creato specificatamente per validare i file manifesto delle app. È possibile utilizzare questo strumento online su [http://appmanifest.org/](http://appmanifest.org/). Per ulteriori informazioni su questi file consultare la [pagina su MDN ](https://developer.mozilla.org/docs/Apps/Manifest).
 
@@ -32,10 +32,10 @@ Analizziamo i campi di questo file manifesto:
 |-----------|-----------------------------------------------------------------------------------|  
 |name		|Il nome dell'applicazione  		                                                |  
 |version	|La versione attuale dell'applicazione  										    |  
-|launch_path|Il file usato per avviare un'applicazione 					                    |  
+|launch_path|Il file utilizzato per avviare un'applicazione 					                    |  
 |permissions|I permessi API richiesti, con molte informazioni		                     		|  
 |developer  |Lo sviluppatore                    												|  
-|icons		|L'icona usata in diversi formati                   								|  
+|icons		|L'icona utilizzata in diversi formati                   								|  
 
 La parte più interessante di questo file manifesto è la richiesta per i permessi di *storage* per poter utilizzare IndexedDB senza alcun limite di spazio disco[^storage-permission] (con questi permessi possiamo salvare le note che vogliamo - anche se dobbiamo fare attenzione a non usare troppo spazio sul disco dell'utente!).
 
@@ -96,7 +96,7 @@ Iniziamo a costruire le varie schermate. Come menzionato sopra ogni schermata è
 </section>
 ~~~~~~~~
 
-La schermata include un `<header>` con un pulsante che permette di aggiungere nuove note ed il nome dell'applicazione stessa. La schermata include un `<article>` che è usato per mostrare il contenuto della nota. Useremo il pulsante e l'ID dell'articolo per catturare gli eventi nella parte JavaScript.
+La schermata include un `<header>` con un pulsante che permette di aggiungere nuove note ed il nome dell'applicazione stessa. La schermata include un `<article>` che è utilizzato per mostrare il contenuto della nota. Useremo il pulsante e l'ID dell'articolo per catturare gli eventi nella parte JavaScript.
 
 Sottolineo il fatto che ogni schermata è un semplice blocco di codice HTML. Costruire queste schermate utilizzando diversi linguaggi su altri sistemi richiede molto lavoro. Tutto quello che faremo è dare ad ogni contenitore un ID specifico che richiameremo successivamente.
 
@@ -149,9 +149,9 @@ Nella parte superiore dello schermo, rappresentato dall'elemento `<header>` si t
  * un campo di testo per modificare il titolo della nota, 
  * un pulsante per condividere la nota via email.
 
-Sotto questa barra c'è un paragrafo con una `<textarea>` con il contenuto della nota e, ancora più sotto, un'altra barra con il cestino per cancellare la nota che si sta visualizzando.
+Sotto questa barra è presente un paragrafo con una `<textarea>` con il contenuto della nota e, ancora più sotto, un'altra barra con il cestino per cancellare la nota che si sta visualizzando.
 
-Questi tre elementi e il loro contenuto sono la schermata di modifica. Successivamente abbiamo un `<form>` usato per una finestra di conferma che verrà mostrata all'utente per confermare la cancellazione di una nota. Questa finestra è molto semplice, contiene un testo ed una finestra di conferma con due pulsanti, uno per cancellare la nota ed uno per annullare l'azione.
+Questi tre elementi e il loro contenuto sono la schermata di modifica. Successivamente abbiamo un `<form>` utilizzato per una finestra di conferma che verrà mostrata all'utente per confermare la cancellazione di una nota. Questa finestra è molto semplice, contiene un testo ed una finestra di conferma con due pulsanti, uno per cancellare la nota ed uno per annullare l'azione.
 
 A questo punto chiudiamo il tag `<section>` avendo tutte le schermate necessarie, il codice HTML rimanente serve per includere i file JavaScript e completare il documento HTML con tutti i tag di chiusura.
 
@@ -164,7 +164,7 @@ A questo punto chiudiamo il tag `<section>` avendo tutte le schermate necessarie
 
 ## Manipoliamo il codice JavaScript
 
-Adesso ci divertiremo a dare vita alla nostra applicazione usando JavaScript. Per organizzare meglio questo codice ho scelto di suddividerlo in due file:
+Adesso ci divertiremo a dare vita alla nostra applicazione utilizzando JavaScript. Per organizzare meglio questo codice ho scelto di suddividerlo in due file:
 
 * **model.js:** contiene le routine per la memorizzazione e il recupero delle note dal database, ma non il codice relativo alla struttura logica, agli elementi d'interfaccia o alla gestione dell'input utente. In teoria potremmo utilizzare questo file in altre applicazioni che richiedono note.
 * **app.js:** collega gli eventi agli elementi HTML e contiene la struttura logica dell'applicazione.
@@ -224,7 +224,7 @@ request.onupgradeneeded = function (event) {
 
 A> Importante: chiedo ancora perdono per aver utilizzato delle variabili globali, questo è solo del materiale utile all'insegnamento. Inoltre ho rimosso i commenti dal codice per risparmiare spazio nel libro. Su Github il codice è completo di commenti.
 
-Il codice appena visto crea un oggetto *db* ed un oggetto *request*. L'oggetto *db* è usato in altre funzioni nel codice per manipolare le note memorizzate.
+Il codice appena visto crea un oggetto *db* ed un oggetto *request*. L'oggetto *db* è utilizzato in altre funzioni nel codice per manipolare le note memorizzate.
 
 Nell'implementazione della funzione `request.onupgradeneeded` creiamo una nota di benvenuto. Questa funzione è eseguita quando l'applicazione viene lanciata per la prima volta (o quando la versione del database cambia). In questo modo al primo avvio dell'applicazione il database contiene una nota di esempio.  
 
@@ -438,7 +438,7 @@ function refreshMemoList() {
 
 La funzione `refreshMemoList()` modifica il DOM aggiornando l'elenco delle note. Sarebbe più facile usare alcuni sistemi di template come [handlebars](http://handlebarsjs.com/) o [underscore](http://underscorejs.org/) ma quest'applicazione contiene solo *vanilla javascript* quindi faremo tutto a manina. Questa funzione è chiamata `showMemoList()` mostrata sopra.
 
-Queste sono tutte le funzioni usate dall'applicazione. Le uniche parti mancanti sono il gestore eventi e la chiamata iniziale di `refreshMemoList()`.
+Queste sono tutte le funzioni utilizzate dall'applicazione. Le uniche parti mancanti sono il gestore eventi e la chiamata iniziale di `refreshMemoList()`.
 
 ~~~~~~~
 window.onload = function () {
@@ -469,7 +469,7 @@ Ora che tutti i file sono pronti proviamo l'applicazione nel simulatore.
 
 Prima di avviare l'applicazione nel simulatore è preferibile verificare che tutti i file siano al posto giusto. Ecco quale dovrebbe essere il contenuto della cartella memos:
 
-![Lista dei file usati da Memos](images/originals/memos-file-list.png)
+![Lista dei file utilizzati da Memos](images/originals/memos-file-list.png)
 
 Se si ha il vago sospetto di aver commesso qualche errore è possibile verificare con [il repository memos su github](https://github.com/soapdog/memos-for-firefoxos) (un'ulteriore copia del codice sorgente è disponibile  nella cartella **code** nel [repo del libro](https://github.com/soapdog/guia-rapido-firefox-os) ).
 

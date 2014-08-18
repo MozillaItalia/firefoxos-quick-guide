@@ -32,7 +32,7 @@ Scaricando il libro dalla pagina ufficiale su [Leanpub](http://leanpub.com/quick
 
 ## Donazioni
 
-Scrivere un libro richiede molto lavoro e, dopo l'esperienza del Google Summer of Code 2013, vorrei dedicare più tempo a questa attività. Quelli che pensano che questo libro sia utile (o intrigante) possono effettuare una donazione scegliendo una cifra a piacere diversa dai 0 euro sulla pagina di download su Leanpub. Per coloro che preferiscono donare usando PayPal, posso ricevere donazioni usando l'account *agarzia@mac.com*. 
+Scrivere un libro richiede molto lavoro e, dopo l'esperienza del Google Summer of Code 2013, vorrei dedicare più tempo a questa attività. Quelli che pensano che questo libro sia utile (o intrigante) possono effettuare una donazione scegliendo una cifra a piacere diversa dai 0 euro sulla pagina di download su Leanpub. Per coloro che preferiscono donare utilizzando PayPal, posso ricevere donazioni utilizzando l'account *agarzia@mac.com*. 
 
 Indipendentemente dalle donazioni, è importante inserire il proprio indirizzo email nel modulo di download per rimanere aggiornati sulle future modifiche apportate al libro.
 
@@ -95,6 +95,6 @@ Libro rivisitato e corretto da Marcos Caceres, membro del Mozilla WebAPI team. I
 
 Questa è la prima versione di questo libro. Non ho ancora verificato con un editor gli errori di battitura, errori grammaticali e altre cose sbagliate. L'inglese non è la mia lingua principale quindi correggetemi per eventuali errori. La versione che il lettore sta leggendo ha avuto inizio il 20 agosto del 2013, una guida veloce distribuita alla [BrazilJS Conference](http://braziljs.com.br/) tenutasi tra il 22 e il 23 dello stesso mese. In pratica questo libro è stato scritto in soli due giorni.
 
-Sto usando [Leanpub](http://leanpub.com) per scrivere il libro. Questo sistema mi permette di scrivere velocemente e di gestire il progetto in modo facile rimanendo sano di mente. Questa versione è la traduzione letterale dell'originale in portoghese.
+Sto utilizzando [Leanpub](http://leanpub.com) per scrivere il libro. Questo sistema mi permette di scrivere velocemente e di gestire il progetto in modo facile rimanendo sano di mente. Questa versione è la traduzione letterale dell'originale in portoghese.
 
 {mainmatter}

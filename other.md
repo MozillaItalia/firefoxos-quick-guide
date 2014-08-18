@@ -26,7 +26,7 @@ Come si può vedere dal sito [http://buildingfirefoxos.com/](http://buildingfire
 * [Toolbars](http://buildingfirefoxos.com/building-blocks/toolbars.html)
 * [Value Selector](http://buildingfirefoxos.com/building-blocks/value-selector.html)
 
-Come si può vedere ci sono molte interfacce ed opzioni possibili per avere la stessa grafica del sistema un modo semplice. Inoltre c'è una sezione dedicata alle icone tramite Font Icon.  
+Come si può vedere ci sono molte interfacce ed opzioni possibili per avere la stessa grafica del sistema un modo semplice. Inoltre è presente una sezione dedicata alle icone tramite Font Icon.  
 Per non finire qui ci sono anche le [transizioni](http://buildingfirefoxos.com/transitions/app-invokes-app.html) e per i grafici ci sono anche i file [psd](http://buildingfirefoxos.com/downloads/).  
 
 ##Web Components
@@ -34,7 +34,7 @@ Sono in [Working Draft](http://www.w3.org/TR/2013/WD-components-intro-20130606/)
 Si tratta di nuovi elementi (i widget in poche parole) con tag HTML personalizzati che sfruttano lo Shadow DOM per simulare nuove tag HTML.  
 La libreria [Polymer](http://www.polymer-project.org/) di Google è integrata in [Brick] 2.0(http://mozbrick.github.io/) di Mozilla e ne includono già pronte come un calendario o la barra di stato.  
 In questa guida li introdurremo semplicemente senza andare nei dettagli (un po come abbiamo fatto con Gaia Building Blocks).  
-Queste interfacce sono degli oggetti che espongono dei metodi a seconda delle necessità e funzionalità dell'elemento che stiamo usando.   
+Queste interfacce sono degli oggetti che espongono dei metodi a seconda delle necessità e funzionalità dell'elemento che stiamo utilizzando.   
 Attualmente sono disponibili: 
 
 * [Barra dell'applicazione](http://mozbrick.github.io/docs/brick-appbar.html)

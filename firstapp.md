@@ -485,7 +485,7 @@ Se tutto funziona come previsto, Memos apparirà nella lista applicazioni.
 
 ![Memos mostrata nella Dashboard](images/originals/memos-on-dashboard-display.png)
 
-Quando si aggiungerà una nuova applicazione, il simulatore verrà avviato con la nuova app in esecuzione. A questo punto è possibile testare tutte le funzionalità di Memos.
+Quando si aggiungerà una nuova applicazione, il simulatore verrà avviato con la nuova app in esecuzione. A questo punto è possibile provare tutte le funzionalità di Memos.
 
 Congratulazioni. Abbiamo creato e provato la nostra prima applicazione. Non è un'applicazione complessa o rivoluzionaria - ma spero sia utile per capire il workflow di sviluppo di Firefox OS. Come si sarà potuto notare non è molto diverso dallo sviluppo web classico.  
 

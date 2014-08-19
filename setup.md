@@ -7,7 +7,7 @@ I browser utilizzano diversi motori di rendering per le pagine web: Google Chrom
 
 ## Di che cosa abbiamo bisogno?
 
-Per sviluppare e testare le applicazioni realizzate per Firefox OS abbiamo bisogno di:
+Per sviluppare e provare le applicazioni realizzate per Firefox OS abbiamo bisogno di:
 
  * Una versione recente di [Firefox desktop](http://getfirefox.com).
  * [Firefox OS Simulator](https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/) (scegli la versione che vuoi installare anche tutte). 
@@ -17,7 +17,7 @@ Per sviluppare e testare le applicazioni realizzate per Firefox OS abbiamo bisog
   
 ## Installare il Simulatore di Firefox OS
 
-Dopo aver installato Firefox, il passaggio successivo è l'installazione del simulatore di Firefox OS che può essere utilizzato per testare le proprie applicazioni. Scarica il file del simulatore, in automatico Firefox chiedere di installare il simulatore.  
+Dopo aver installato Firefox, il passaggio successivo è l'installazione del simulatore di Firefox OS che può essere utilizzato per provare le proprie applicazioni. Scarica il file del simulatore, in automatico Firefox chiedere di installare il simulatore.  
 
 ![*Developer* con *Gestore App** selezionato](images/originals/tools.png)
 

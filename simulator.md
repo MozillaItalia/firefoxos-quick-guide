@@ -48,11 +48,11 @@ Alla pressione del pulsante scelto verrà mostrata una schermata simile a quella
 
 ![Developer Tools connessi all'applicazione nel simulatore](images/originals/simulator-connected.png)
 
-Con gli strumenti di sviluppo connessi all'applicazione sarà possibile verificarne il funzionamento Javascript, effettuare il debug del DOM, modificare lo stile ecc. Come amano dire i ragazzi delle startup *testare finché non è pronta*.
+Con gli strumenti di sviluppo connessi all'applicazione sarà possibile verificarne il funzionamento Javascript, effettuare il debug del DOM, modificare lo stile ecc. Come amano dire i ragazzi delle startup *provare finché non è pronta*.
 
 Quando l'app risulterà funzionante nel simulatore sarà tempo di testarla su un vero dispositivo.
 
-## Testare l'applicazione su un dispositivo reale
+## TProvare l'applicazione su un dispositivo reale
 
 Niente può sostituire il testing su un dispositivo reale. Nel simulatore i test vengono effettuati facendo clic con un mouse su uno schermo di computer, mentre con un dispositivo reale i test si effettuano toccando uno touchscreen e premendo con le dita dei pulsanti reali. Un'esperienza utente e sviluppatore completamente diversa.
 

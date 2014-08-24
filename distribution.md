@@ -19,11 +19,11 @@ Per ulteriori informazioni su questa API consultare [la pagina su MDN sull'insta
 
 ## App pacchettizzate
 
-L'installazione di app pacchettizzate funziona in modo analogo, però in questo caso anziché utilizzare la funzione `mozApps.install()` useremo `mozApps.installPackage()`, come mostrato nel codice d'esempio riportato qui di seguito.
+L'installazione di app pacchettizzate funziona in modo analogo, però in questo caso anziché utilizzare la funzione `mozApps.install()` utilizzeremo `mozApps.installPackage()`, come mostrato nel codice d'esempio riportato qui di seguito.
 
 <<[Code for packaged app installation](code/distribution/packaged_apps_distribution.js)
 
-W> Nota: ho il sospetto che l'installazione di app pacchettizzate da siti diversi da Firefox Marketplace non sia consentita nella versione 1.0.1 di Firefox OS. Nonostante l'API sia documentata, non ho mai provato di persona, quindi se qualche lettore ha l'opportunità di verificare questa mia supposizione, lo prego gentilmente di contattarmi affinché possa aggiornare questo libro.
+W> Nota: ho il sospetto che l'installazione di app pacchettizzate da siti diversi da Firefox Marketplace non sia consentita nella versione 1.0.1 di Firefox OS. Nonostante l'API sia documentata, non ho mai provato di persona, quindi se qualche lettore ha l'opportunità di verificare questa mia supposizione, lo prego gentilmente di contattarmi affinché possa aggiornare questo testo.
 
 ## Riassunto
 

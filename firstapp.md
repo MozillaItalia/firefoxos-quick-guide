@@ -12,9 +12,9 @@ Dalla parte superiore dello schermo è possibile cancellare una nota prescelta f
 
 ![Memos, finestra di conferma della cancellazione](images/originals/memos-delete-screen.png)
 
-Il codice sorgente di Memos è disponibile nel [Repository su Github](https://github.com/soapdog/memos-for-firefoxos) (è possibile anche scaricarlo come file [.zip](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip) ). Consiglio di scaricare i file, così sarà più semplice seguire la guida. Un'altra copia del codice sorgente è disponibile nella cartella dentro il [repository Github repository di questo libro](https://github.com/soapdog/firefoxos-quick-guide).
+Il codice sorgente di Memos è disponibile nel [Repository su Github](https://github.com/soapdog/memos-for-firefoxos) (è possibile anche scaricarlo come file [.zip](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip) ). Consiglio di scaricare i file, così sarà più semplice seguire la guida. Un'altra copia del codice sorgente è disponibile nella cartella dentro il [repository Github repository di questo testo](https://github.com/soapdog/firefoxos-quick-guide).
 
-Memos utilizza [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) per salvare le note e il toolkit [*Gaia Building Blocks*](http://buildingfirefoxos.com/building-blocks) per creare le interfacce. In un futuro aggiornamento il libro conterrà molte informazioni su *Gaia Building Blocks*, ma in questa prima versione mi limiterò ad utilizzarlo. Per ulteriori informazioni sull'argomento e per sapere quali interfacce vi sono integrate visitare i link appena segnalati.
+Memos utilizza [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) per salvare le note e il toolkit [*Gaia Building Blocks*](http://buildingfirefoxos.com/building-blocks) per creare le interfacce. In un futuro aggiornamento il testo conterrà molte informazioni su *Gaia Building Blocks*, ma in questa prima versione mi limiterò ad utilizzarlo. Per ulteriori informazioni sull'argomento e per sapere quali interfacce vi sono integrate visitare i link appena segnalati.
 
 Il primo passaggio è creare una cartella per l'applicazione di nome **memos**.
 
@@ -177,7 +177,7 @@ Utilizzeremo [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Usin
 
 La parte di codice di *model.js* mostrato qui sotto si occupa del collegamento e creazione dello storage.
 
-A> Importante: Questo codice è scritto per essere capito velocemente e non per illustrare le migliori tecniche di programmazione JavaScript. Nel codice sono presenti delle variabili globali (andrò all'inferno per questo, lo so) tra le altre chicche. La gestione degli errori è praticamente inesistente. Lo scopo principale di questo libro è insegnare il *workflow* di sviluppo di applicazioni per Firefox OS e non i pattern JS. Quindi a seconda dei commenti migliorerò il codice, sempre che non abbia un brutto impatto sui principianti.  
+A> Importante: Questo codice è scritto per essere capito velocemente e non per illustrare le migliori tecniche di programmazione JavaScript. Nel codice sono presenti delle variabili globali (andrò all'inferno per questo, lo so) tra le altre chicche. La gestione degli errori è praticamente inesistente. Lo scopo principale di questo testo è insegnare il *workflow* di sviluppo di applicazioni per Firefox OS e non i pattern JS. Quindi a seconda dei commenti migliorerò il codice, sempre che non abbia un brutto impatto sui principianti.  
 
 ~~~~~~~
 var dbName = "memos";
@@ -222,7 +222,7 @@ request.onupgradeneeded = function (event) {
 }
 ~~~~~~~
 
-A> Importante: chiedo ancora perdono per aver utilizzato delle variabili globali, questo è solo del materiale utile all'insegnamento. Inoltre ho rimosso i commenti dal codice per risparmiare spazio nel libro. Su Github il codice è completo di commenti.
+A> Importante: chiedo ancora perdono per aver utilizzato delle variabili globali, questo è solo del materiale utile all'insegnamento. Inoltre ho rimosso i commenti dal codice per risparmiare spazio nel testo. Su Github il codice è completo di commenti.
 
 Il codice appena visto crea un oggetto *db* ed un oggetto *request*. L'oggetto *db* è utilizzato in altre funzioni nel codice per manipolare le note memorizzate.
 
@@ -293,13 +293,13 @@ function deleteMemo(inId, inCallback) {
 
 In questo blocco di codice abbiamo creato un costruttore che produce nuove note con alcuni campi già inizializzati. Dopodiché abbiamo implementato le altre funzioni per la presentazione, il salvataggio e la cancellazione delle note. Molte di queste funzioni richiedono che sia passato un parametro chiamato `inCallback`. Questo parametro è esso stesso una funzione che  verrà invocata al termine della funzione chiamante. Questo è necessario per la natura asincrona di IndexedDB. Tutte le callback hanno la medesima struttura di chiamata `callback(error, value)`, con due parametri in ingresso, in cui uno dei due assumerà il valore `null` a seconda del risultato della funzione chiamante.
 
-A> Siccome è un libro per principianti ho scelto di non usare le [*Promises*](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise) perché non tutti potrebbero capirle. Consiglio di usare questi concetti per avere un codice più pulito e facile da mantenere.
+A> Siccome è un testo per principianti ho scelto di non usare le [*Promises*](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise) perché non tutti potrebbero capirle. Consiglio di usare questi concetti per avere un codice più pulito e facile da mantenere.
 
 Ora che l'archiviazione delle note e le funzioni di modifica sono state implementate, lavoriamo alla struttura logica dell'applicazione nel file **app.js**.
 
 ### app.js
 
-Questo file contiene la logica dell'applicazione. Il codice sorgente è troppo lungo da mostrare nel libro, quindi verrà diviso in parti per studiarlo meglio.
+Questo file contiene la logica dell'applicazione. Il codice sorgente è troppo lungo da mostrare nel testo, quindi verrà diviso in parti per studiarlo meglio.
 
 ~~~~~~~~
 var listView, detailView, currentMemo, deleteMemoDialog;
@@ -471,7 +471,7 @@ Prima di avviare l'applicazione nel simulatore è preferibile verificare che tut
 
 ![Lista dei file utilizzati da Memos](images/originals/memos-file-list.png)
 
-Se si ha il vago sospetto di aver commesso qualche errore è possibile verificare con [il repository memos su github](https://github.com/soapdog/memos-for-firefoxos) (un'ulteriore copia del codice sorgente è disponibile  nella cartella **code** nel [repo del libro](https://github.com/soapdog/guia-rapido-firefox-os) ).
+Se si ha il vago sospetto di aver commesso qualche errore è possibile verificare con [il repository memos su github](https://github.com/soapdog/memos-for-firefoxos) (un'ulteriore copia del codice sorgente è disponibile  nella cartella **code** nel [repo del testo](https://github.com/soapdog/guia-rapido-firefox-os) ).
 
 Aprire la *Dashboard del Simulatore* e andare nel menu **Tools -> Web Developer -> Firefox OS Simulator**.
 

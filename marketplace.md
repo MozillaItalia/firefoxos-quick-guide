@@ -49,7 +49,7 @@ Da questa pagina si dovranno impostare le seguenti opzioni:
 * Se si tratta di un'app gratuita o di un'app a pagamento (o se utilizza i *pagamenti in-app*).
 * Per quali dispositivi è disponibile (Firefox OS, Firefox Desktop, Firefox per mobile su telefonino, Firefox mobile per tablet, ecc…).
 
-Dopo aver impostato queste preferenze si verrà rimandati a un'altra pagina. In questo libro tratteremo esplicitamente il caso di un'app pacchettizzata, ma la procedura è analoga per un'app ospitata.
+Dopo aver impostato queste preferenze si verrà rimandati a un'altra pagina. In questo testo tratteremo esplicitamente il caso di un'app pacchettizzata, ma la procedura è analoga per un'app ospitata.
 
 Nel proseguo del capitolo faremo sempre riferimento a un'app pacchettizzata gratuita per Firefox OS.  In questo caso dobbiamo caricare il file *zip* della nostra app, di cui si è discusso nella sezione precedente.
 
@@ -119,9 +119,9 @@ Complimenti. La propria nuova applicazione ora è su Firefox Marketplace e ci si
 
 
 =======
-Spero che la lettura di questa veloce guida sia stata piacevole. Ho in mente di aggiornare e ampliare spesso questa guida, quindi consiglio di tenere gli occhi aperti e iscriversi per ricevere le notizie sul suo aggiornamento. Se si è scaricato questo libro dal sito Leanpub non ci sono problemi: si riceverà automaticamente un'email che informerà di nuovi aggiornamenti. Se invece è stato scaricato da altri siti, il mio consiglio è quello di riscaricarlo da  [pagina ufficiale su Leanpub](http://leanpub.com/quickguidefirefoxosdevelopment) e registrare il proprio indirizzo email. Ovviamente è tutto gratuito e, no, non verranno  mai inviati messaggi di spam, promesso.
+Spero che la lettura di questa veloce guida sia stata piacevole. Ho in mente di aggiornare e ampliare spesso questa guida, quindi consiglio di tenere gli occhi aperti e iscriversi per ricevere le notizie sul suo aggiornamento. Se si è scaricato questo testo dal sito Leanpub non ci sono problemi: si riceverà automaticamente un'email che informerà di nuovi aggiornamenti. Se invece è stato scaricato da altri siti, il mio consiglio è quello di riscaricarlo da  [pagina ufficiale su Leanpub](http://leanpub.com/quickguidefirefoxosdevelopment) e registrare il proprio indirizzo email. Ovviamente è tutto gratuito e, no, non verranno  mai inviati messaggi di spam, promesso.
 
-Invito tutti i lettori ad inviarmi le proprie opinioni su questo lavoro (in inglese). Questo libro è stato scritto nelle notti precedenti una conferenza tecnica, quindi si può intuire quanto io sia affezionato a questo progetto e quanto vorrei che avesse successo. È possibile inviare le proprie opinioni via Twitter al mio account [@soapdog](http://twitter.com/soapdog) o al mio indirizzo di posta elettronica [fxosquickguide@andregarzia.com](mailto:fxosquickguide@andregarzia.com).  Il mio sito web è [http://andregarzia.com](http://andregarzia.com).
+Invito tutti i lettori ad inviarmi le proprie opinioni su questo lavoro (in inglese). Questo testo è stato scritto nelle notti precedenti una conferenza tecnica, quindi si può intuire quanto io sia affezionato a questo progetto e quanto vorrei che avesse successo. È possibile inviare le proprie opinioni via Twitter al mio account [@soapdog](http://twitter.com/soapdog) o al mio indirizzo di posta elettronica [fxosquickguide@andregarzia.com](mailto:fxosquickguide@andregarzia.com).  Il mio sito web è [http://andregarzia.com](http://andregarzia.com).
 
 Ora che si è entrati a far parte del gruppo di sviluppatori di app Firefox OS, il prossimo passo è quello di unirsi al gruppo più esteso della comunità Mozilla, aiutandoci a mantenere il Web libero e creato dagli utenti per gli utenti.  
 È possibile unirsi a noi visitando [http://www.mozilla.org/contribute/](http://www.mozilla.org/en-US/contribute/) e aiutare la crescita di Firefox OS.

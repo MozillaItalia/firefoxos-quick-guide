@@ -31,7 +31,7 @@ Questo file *zip* è quello che dovremo pubblicare sul Marketplace.
 
 ## Pubblicazione dell'app sul Marketplace
 
-Ora che l'applicazione è pronta - e con la consapevolezza che dovrà soddisfare i criteri del Marketplace per essere approvata dai revisori - è tempo di pubblicarla sul Marketplace. Per farlo, andare su **Le mie app** utilizzando il pulsante a forma di ingranaggio posizionato in alto nella pagina del Marketplace.
+Ora che l'applicazione è pronta - e con la consapevolezza che dovrà soddisfare i criteri del Marketplace per essere approvata dai revisori - è tempo di pubblicarla sul Marketplace. Per farlo, ffare clic su **Le mie app** utilizzando il pulsante a forma di ingranaggio posizionato in alto nella pagina del Marketplace.
 
 ![Le mie app](images/originals/marketplace-my-submissions.png)
 

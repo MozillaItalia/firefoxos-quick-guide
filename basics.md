@@ -22,7 +22,7 @@ Sopra possiamo vedere il manifest di un'applicazione chiamata Memos[^promemoria]
 
 ![L'applicazione Memos vista su Firefox Marketplace](images/originals/memos-marketplace.png)
 
-Si noti come le informazioni del file manifesto sono utilizzate dal sistema per aggiungere le applicazioni alla schermata principale, come è possibile osservare nel seguente screenshot.
+Si noti come le informazioni del file manifesto sono utilizzate dal sistema per aggiungere le applicazioni alla schermata principale, come è possibile osservare nella seguente schermata.
 
 ![Memos nel simulatore](images/originals/memos-simulator.png)
 

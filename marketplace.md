@@ -2,7 +2,7 @@
 
 ![Firefox Marketplace](images/originals/marketplace.png)
 
-[Firefox Marketplace](http://marketplace.firefox.com) è il negozio online dal quale è possibile scaricare o acquistare applicazioni per Firefox OS, Firefox, e Firefox per Android. Questo è il principale canale di distribuzione per le app Firefox OS, tuttavia non è l'unica alternativa possibile. Se sei interessato a distribuire app esternamente al Marketplace leggi il [capitolo precedente](#distribution).
+[Firefox Marketplace](http://marketplace.firefox.com) è il negozio online dal quale è possibile scaricare o acquistare applicazioni per Firefox OS, Firefox e Firefox per Android. Questo è il principale canale di distribuzione per le app Firefox OS, tuttavia non è l'unica alternativa possibile. Se sei interessato a distribuire app esternamente al Marketplace, leggi il [capitolo precedente](#distribution).
 
 Per pubblicare un'app sul Marketplace è necessario effettuare l'identificazione tramite [Mozilla Persona](https://login.persona.org/about). Sarà sufficiente fare clic sul pulsante **Registrati** e seguire le istruzioni. Una volta effettuato l'accesso al Marketplace sarà possibile pubblicare l'app.
 
@@ -23,7 +23,7 @@ Alla pagina sopraindicata vengono discussi altri criteri di validità e altri po
 
 I passaggi richiesti per la pubblicazione di un'app sul Marketplace variano a seconda che si tratti di un'*app hosted* o di un'app pacchettizzata. Nel caso di *app hosted*, è sufficiente che sia raggiungibile online e che il manifesto sia distribuito con il corretto *MIME type*. I file delle *app packaged* devono essere raccolti in un archivio compresso utilizzando il formato *zip* e richiedono qualche maggiore attenzione.  
 
-Un errore comune a molti sviluppatori è quello di selezionare la cartella che contiene i file dell'app e di comprimerla. Come risultato il file *zip* contiene una cartella che a sua volta contiene l'app vera e propria. Questo non è il modo corretto per creare l'archivio *zip* di un'applicazione Firefox OS. Il modo corretto di creare l'archivio *zip* consiste nel selezionare tutti i file e le cartelle dell'app in modo che il file manifesto sia nel *primo livello* dell'archivio. Su sistemi operativi Mac e Linux è possibile aprire il Terminale, navigare fino alla directory dell'app e eseguire il comando `zip -r myapp.zip *` per ottenere il risultato desiderato, come mostrato nello screenshot sottostante.
+Un errore comune a molti sviluppatori è quello di selezionare la cartella che contiene i file dell'app e di comprimerla. Come risultato il file *zip* contiene una cartella che a sua volta contiene l'app vera e propria. Questo non è il modo corretto per creare l'archivio *zip* di un'applicazione Firefox OS. Il modo corretto di creare l'archivio *zip* consiste nel selezionare tutti i file e le cartelle dell'app in modo che il file manifesto sia nel *primo livello* dell'archivio. Su sistemi operativi Mac e Linux è possibile aprire il Terminale, navigare fino alla directory dell'app e eseguire il comando `zip -r myapp.zip *` per ottenere il risultato desiderato, come mostrato nella schermata sottostante.
 
 ![Modo corretto di comprimere i file da terminale](images/originals/marketplace-preparing-packaged-app.png)
 
@@ -39,15 +39,15 @@ Arrivati nella pagina di gestione dei caricamenti, fare clic su **Invia un'app**
 
 ![Invio di un'app](images/originals/marketplace-new-app.png)
 
-Come è possibile notare dallo screenshot qui sotto, questo link aprirà il modulo per l'invio di nuove app.
+Come è possibile notare dallo schermata qui sotto, questo link aprirà il modulo per l'invio di nuove app.
 
 ![Invio di nuove app](images/originals/marketplace-step-1.png)
 
 Da questa pagina si dovranno impostare le seguenti opzioni:
 
 * Se si tratta di un'*app hosted* o di un'*app packaged*.
-* Se si tratta di un'app gratuita o di un'app a pagamento (o se utilizza i *pagamenti in-app*).
-* Per quali dispositivi è disponibile (Firefox OS, Firefox Desktop, Firefox per mobile su telefonino, Firefox mobile per tablet, ecc…).
+* Se si tratta di un'app gratuita o di un'app a pagamento (o se utilizzano i *pagamenti in-app*).
+* Per quali dispositivi è disponibile (Firefox OS per smartphone e tablet, Firefox Desktop, Firefox For Android ecc…).
 
 Dopo aver impostato queste preferenze si verrà rimandati a un'altra pagina. In questo testo tratteremo esplicitamente il caso di un'app pacchettizzata, ma la procedura è analoga per un'app ospitata.
 
@@ -57,14 +57,14 @@ Dopo aver effettuato l'upload del file, questo subirà un processo automatico di
 
 ![Dopo aver caricato il file zip](images/originals/marketplace-step-1_5.png)
 
-Dallo screenshot mostrato qui sopra, è possibile notare che l'app da me caricata non  presenta errori, ma riporta 6 avvisi. Ignorando la discussione degli avvisi per non complicare eccessivamente la trattazione, concentriamoci sul significato della voce **Requisiti minimi** della nostra app. In questo specifico caso, l'ultima opzione *Smartphone-Sized Displays (qHD)* dovrebbe essere deselezionata in quanto la nostra applicazione si adatta a schermi di qualunque dimensione.
+Dalla schermata mostrata qui sopra, è possibile notare che l'app da me caricata non  presenta errori, ma riporta 6 avvisi. Ignorando la discussione degli avvisi per non complicare eccessivamente la trattazione, concentriamoci sul significato della voce **Requisiti minimi** della nostra app. In questo specifico caso, l'ultima opzione *Smartphone-Sized Displays (qHD)* dovrebbe essere deselezionata in quanto la nostra applicazione si adatta a schermi di qualunque dimensione.
 
 Il passaggio successivo è denominato **Passaggio #3: dettagli** ed è quello in cui si dovranno inserire delle informazioni dettagliate sull'app, come categoria, testo descrittivo, qualche screenshot, ecc…
 
 ![Inserimento di informazioni dettagliate](images/originals/marketplace-step-3.png)
 
 Dopo aver inserito in dettaglio le informazioni sull'app, il processo di caricamento è completo.  
-Arriveremo ad un passaggio dedicato alla certificazione guidata dell'applicazione in cui ci verrà chiesto di selezionare gli argomenti trattati se sono violenti, illeciti, se è un gioco ecc. In questo modo la nostra applicazione verrà certificata per la sua comparsa sui vari paesi a seconda proprio di questo passaggio obbligatorio.  
+Arriveremo a un passaggio dedicato alla certificazione guidata dell'applicazione, passaggio in cui ci verrà chiesto di selezionare gli argomenti trattati se sono violenti, illeciti, se è un gioco ecc. In questo modo la nostra applicazione verrà certificata per la sua comparsa sui vari paesi a seconda proprio di questo passaggio obbligatorio.  
 Ora non ci resta che attendere l'approvazione da parte dei revisori del Marketplace. Complimenti, l'app ora è distribuita su Firefox Marketplace.
 
 Dalla [pagina di gestione delle app](https://marketplace.firefox.com/developers/submissions) sarà possibile verificare lo stato delle app caricate e, se lo si desidera, modificare le informazioni dell'app.  
@@ -76,36 +76,36 @@ Per ulteriori informazioni riguardo al caricamento delle app consultare [questo 
 
 Le applicazioni quando sono inviate nel marketplace vengono controllate da tool automatici e testate da volontari di Mozilla. Questi volontari a loro volta sono sottoposti a dei test per verificare le loro conoscenze.  
 
-I criteri di accettazione dell'applicazione sono molteplici e passano dalla sicurezza, privacy, contenuto, funzionalità ed usabilità.  
+I criteri di accettazione dell'applicazione sono molteplici e passano dalla sicurezza, privacy, contenuto, funzionalità e usabilità.  
 
-Durante il processo di recensione verrà controllato il file manifest per la completezza delle informazioni quindi è molto importante che sia completo e preciso perché è uno dei primi motivi per cui può essere bocciata. Per esempio specificando lingue disponibili che non lo sono, permessi documentati male, screenshot mancante o descrizione incompleta.  
+Durante il processo di recensione verrà controllato il file manifest per la completezza delle informazioni quindi è molto importante che sia completo e preciso perché è uno dei primi motivi per cui l'app può essere bocciata. Per esempio specificando lingue disponibili che non lo sono, permessi documentati male, schermata mancante o descrizione incompleta.  
 
-Un dettaglio da non dimenticare è che i recensori non sono un team di QA, fanno dei test d'uso come un'utente normale e provano l'applicazione sui sistemi specificati nel marketplace.  
+Un dettaglio da non dimenticare è che i recensori non sono un team di QA, fanno dei test d'uso come un utente normale e provano l'applicazione sui sistemi specificati nel marketplace.  
 
-Il recensore in caso di rifiuto dell'applicazione fornisce una spiegazione dei problemi riscontrati spiegando i passaggi per riprodurre i problemi dando riferimenti alla documentazione per correggere le carenze. Non commenta la grafica dell'applicazione ma solo come l'applicazione funziona. Lo sviluppatore avrà sempre il beneficio del dubbio e potrà rinviare l'applicazione e chiedere maggiori dettagli sulle motivazioni del rifiuto. 
+Il recensore in caso di rifiuto dell'applicazione fornisce una spiegazione dei problemi riscontrati, spiegando i passaggi per riprodurre i problemi dando riferimenti alla documentazione per correggere le carenze. Non commenta la grafica dell'applicazione ma solo come l'applicazione funziona. Lo sviluppatore avrà sempre il beneficio del dubbio e potrà rinviare l'applicazione e chiedere maggiori dettagli sulle motivazioni del rifiuto. 
 
 ### Sicurezza
 
-Per maggiori informazioni fate riferimento alla pagina dedicata [su MDN](https://wiki.mozilla.org/Apps/Security).  
+Per maggiori informazioni, fate riferimento alla pagina dedicata [su MDN](https://wiki.mozilla.org/Apps/Security).  
 
 Il manifest deve essere fornito dallo stesso origin dell'applicazione quindi lo stesso dominio, deve essere fornito con il mime-type `application/x-web-app-manifest+json` e l'applicazione non deve contenere iframe.  
 Questo impedisce ad altre persone di fare applicazioni hosted il cui sito non è di loro gestione. 
 
 ## Privacy
 
-Per l'approvazione deve essere presentata una privacy policy ma non ci sono requisiti specifici sul formato o contenuto. Un [template di esempio](https://github.com/flamsmark/privacy-policy-template) con del [materiale di riferimento e consigli](https://developer.mozilla.org/en-US/Marketplace/Publishing/Privacy_policies).
+Per l'approvazione deve essere presentata una privacy policy ma non ci sono requisiti specifici sul formato o contenuto. Ecco un [template di esempio](https://github.com/flamsmark/privacy-policy-template) con del [materiale di riferimento e consigli](https://developer.mozilla.org/en-US/Marketplace/Publishing/Privacy_policies).
 
 ## Contenuto
 
-Non deve contenere materiale pornografico, codice maligno o promozione di materiale illegale/gioco d'azzardo/servizi illegali. Potremmo dire regole di buon senso!
+Non deve contenere materiale pornografico, codice maligno o promozione di materiale illegale/gioco d'azzardo/servizi illegali. Potremmo dire: regole di buon senso!
 
 ## Funzionalità
 
-Il revisore deve provare le funzionalità principali dell'applicazione, se ci sono piccoli problemi tecnici o problemi grafici potrà essere approvata. Inoltre come abbiamo già detto non deve compromettere il sistema o la sua stabilità.
+Il revisore deve provare le funzionalità principali dell'applicazione, se ci sono piccoli problemi tecnici o problemi grafici potrà essere approvata. Inoltre, come abbiamo già detto, non deve compromettere il sistema o la sua stabilità.
 
 ## Usabilità
 
-Lo sviluppatore deve cercare di ottimizzare l'applicazione sia a livello di layout che di piattaforma. Dettaglio da non trascurare che Firefox OS non ha pulsanti fisici quindi deve avere dei pulsanti di navigazione. Cosa molto importante se qualcosa deve essere cliccabili/tappabile deve avere delle dimensioni usabili.
+Lo sviluppatore deve cercare di ottimizzare l'applicazione sia a livello di layout che di piattaforma. Dettaglio da non trascurare che Firefox OS non ha pulsanti fisici quindi deve avere dei pulsanti di navigazione. Cosa molto importante se qualcosa deve essere oggetto di click/tocco deve avere delle dimensioni usabili.
 
 ## Alcuni consigli
 
@@ -115,7 +115,7 @@ Inserisci dei bei screenshot dell'applicazione che sono una vetrina del tuo lavo
 
 ## Riassunto
 
-Complimenti. La propria nuova applicazione ora è su Firefox Marketplace e ci si sta apprestando a esplorare un nuovissimo tipo di mercato.
+Complimenti! La propria nuova applicazione ora è su Firefox Marketplace e ci si sta apprestando a esplorare un nuovissimo tipo di mercato.
 
 
 =======

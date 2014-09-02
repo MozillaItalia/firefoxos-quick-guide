@@ -4,7 +4,7 @@ In questo capitolo vedremo in modo veloce alcune tecnologie che ci possono esser
 
 ##Gaia Building Blocks
 
-Per chi è abituato ad utilizzare i framework CSS sarà molto semplice capire l'utilità di Building Blocks. Questo framework già citato è utilizzato nel boilerplate ed in molte applicazioni presenti sul marketplace.  
+Per chi è abituato ad utilizzare i framework CSS sarà molto semplice capire l'utilità di Building Blocks. Questo framework già citato è utilizzato nel boilerplate e in molte applicazioni presenti sul marketplace.  
 Si tratta di un framework CSS basato sulle release giornaliere di Gaia che permette di avere sempre le ultime novità.  
 Come si può vedere dal sito [http://buildingfirefoxos.com/](http://buildingfirefoxos.com/building-blocks/) ci sono moltissimi esempi riguardo:  
 
@@ -26,7 +26,7 @@ Come si può vedere dal sito [http://buildingfirefoxos.com/](http://buildingfire
 * [Toolbars](http://buildingfirefoxos.com/building-blocks/toolbars.html)
 * [Value Selector](http://buildingfirefoxos.com/building-blocks/value-selector.html)
 
-Come si può vedere ci sono molte interfacce ed opzioni possibili per avere la stessa grafica del sistema un modo semplice. Inoltre è presente una sezione dedicata alle icone tramite Font Icon.  
+Come si può vedere ci sono molte interfacce e opzioni possibili per avere la stessa grafica del sistema un modo semplice. Inoltre è presente una sezione dedicata alle icone tramite Font Icon.  
 Per non finire qui ci sono anche le [transizioni](http://buildingfirefoxos.com/transitions/app-invokes-app.html) e per i grafici ci sono anche i file [psd](http://buildingfirefoxos.com/downloads/).  
 
 ##Web Components
@@ -48,5 +48,5 @@ Attualmente sono disponibili:
 * [Menu](http://mozbrick.github.io/docs/brick-menu.html)
 * [Storage-IndexdDB](http://mozbrick.github.io/docs/brick-storage-indexeddb.html)
 
-Per mostrare l'API e la facilità d'uso di alcuni di questi componenti Daniele ha realizzato un'interfaccia interattiva che mostra il codice Javascript ed HTML di nome [Brickly](http://mte90.github.io/Brickly).  
+Per mostrare l'API e la facilità d'uso di alcuni di questi componenti Daniele ha realizzato un'interfaccia interattiva che mostra il codice Javascript e HTML di nome [Brickly](http://mte90.github.io/Brickly).  
 Non è nell'interesse della guida approfondire questa libreria ma solo rendere a conoscenza di questo materiale già disponibile all'uso.

@@ -18,7 +18,7 @@ Per aggiungere una nuova applicazione *packaged* fare clic sul pulsante **+** ne
 
 ![Aggiungere un'applicazione packaged al simulatore](images/originals/simulator-add-directory.png)
 
-Dopo aver fatto clic sul pulsante evidenziato nell'immagine,si aprirà una finestra di dialogo di selezione file. Per aggiungere l'app prescelta al simulatore sarà sufficiente trovare la cartella dell'applicazione. Se non ci sono errori nel file manifesto e nel file che avvia l'app, essa verrà avviata nel simulatore. Se il file manifesto contiene degli errori verranno riportati nel Gestore App. 
+Dopo aver fatto clic sul pulsante evidenziato nell'immagine,si aprirà una finestra di dialogo di selezione file. Per aggiungere l'app prescelta al simulatore, sarà sufficiente trovare la cartella dell'applicazione. Se non ci sono errori nel file manifesto e nel file che avvia l'app, essa verrà avviata nel simulatore. Se il file manifesto contiene degli errori verranno riportati nel Gestore App. 
 
 ![Esempio di un file manifesto non valido](images/originals/simulator-invalid-manifest.png)
 
@@ -40,7 +40,7 @@ Come per le *app packaged*, ogni volta che l'app verrà aggiornata sarà necessa
 
 ## Debug
 
-Una volta che l'app è stata aggiunta al simulatore, accedendo al Gestore sarà possibile effettuarne il debug facendo clic sul pulsante **Avvia Simulatore** che si trova in basso nel gestore applicazione, al click apparirà la schermata che permette di eseguire una versione specifica del simulatore (se presente) e di installarne altri. Facendo clic su **Debug** accanto al pulsante **Aggiorna** verrà lanciata l'applicazione sul simulatore. A questo punto, si aprirà un'istanza della **Console JavaScript** connessa all'app in esecuzione nel simulatore. In basso sarà possibile vedere il contenuto nel file manifest tramite visualizzazione ad albero.
+Una volta che l'app è stata aggiunta al simulatore, accedendo al Gestore sarà possibile effettuarne il debug facendo clic sul pulsante **Avvia Simulatore** che si trova in basso nel gestore applicazione, al clic apparirà la schermata che permette di eseguire una versione specifica del simulatore (se presente) e di installarne altri. Facendo clic su **Debug** accanto al pulsante **Aggiorna** verrà lanciata l'applicazione sul simulatore. A questo punto, si aprirà un'istanza della **Console JavaScript** connessa all'app in esecuzione nel simulatore. In basso sarà possibile vedere il contenuto nel file manifest tramite visualizzazione ad albero.
 
 ![Il pulsate da premere](images/originals/simulator-press-connect.png)
 
@@ -48,9 +48,9 @@ Alla pressione del pulsante scelto verrà mostrata una schermata simile a quella
 
 ![Developer Tools connessi all'applicazione nel simulatore](images/originals/simulator-connected.png)
 
-Con gli strumenti di sviluppo connessi all'applicazione sarà possibile verificarne il funzionamento Javascript, effettuare il debug del DOM, modificare lo stile ecc. Come amano dire i ragazzi delle startup *provare finché non è pronta*.
+Con gli strumenti di sviluppo connessi all'applicazione sarà possibile verificarne il funzionamento Javascript, effettuare il debug del DOM, modificare lo stile ecc. Come amano dire i ragazzi delle startup *Provare finché non è pronta*.
 
-Quando l'app risulterà funzionante nel simulatore sarà tempo di testarla su un vero dispositivo.
+Quando l'app risulterà funzionante nel simulatore, sarà tempo di provarla su un vero dispositivo.
 
 ## TProvare l'applicazione su un dispositivo reale
 
@@ -66,27 +66,27 @@ Inoltre, nel caso si risiedesse in un paese in cui i dispositivi Firefox OS sono
 
 ##ADB Helper
 
-Per fare debugging remoto il sistema deve riconoscere il dispositivo quindi sono necessari gli Android Tools o in parole povere `adb`. Come abbiamo accennato Firefox OS è basato su Android e quindi possiamo sfruttare alcuni dei suoi strumenti da sviluppatore come adb che permette di passare dei file e di comunicare da computer a dispositivo e viceversa.  
-Se adb non è presente nel computer Firefox non potrà rilevare alcun dispositivo connesso!  
+Per fare debugging remoto il sistema deve riconoscere il dispositivo quindi sono necessari gli Android Tools o in parole povere `adb`. Come abbiamo accennato Firefox OS è basato su Android e quindi possiamo sfruttare alcuni dei suoi strumenti da sviluppatore come adb, che permette di passare dei file e di comunicare da computer a dispositivo e viceversa.  
+Se adb non è presente nel computer, Firefox non potrà rilevare alcun dispositivo connesso!  
 Con l'estensione [ADB Helper](https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/) verrà installato su Firefox e si potrà debuggare da remoto con il proprio dispositivo Firefox OS. 
 
 ## Connessione con un dispositivo Firefox OS
 
-Avendo a disposizione un dispositivo Firefox OS (con i driver installati) connesso al computer, è possibile fare un push delle applicazioni direttamente dal simulatore al dispositivo. facendo click nella barra laterale dove è scritto **Dispositivo** si passa al gestore del dispositivo (che può essere anche il simulatore stesso). Quando il simulatore riconosce che un dispositivo con Firefox OS phone è collegato, verrà mostrato un messaggio **Dispositivo Connesso**.
+Avendo a disposizione un dispositivo Firefox OS (con i driver installati) connesso al computer, è possibile fare un push delle applicazioni direttamente dal simulatore al dispositivo. Facendo clic nella barra laterale dove è scritto **Dispositivo** si passa al gestore del dispositivo (che può essere anche il simulatore stesso). Quando il simulatore riconosce che un dispositivo con Firefox OS phone è collegato, verrà mostrato un messaggio **Dispositivo Connesso**.
 
 ![Dispositivo connesso!](images/originals/simulator-device-connected.png)
 
-Se lo smartphone è connesso e riconosciuto, il simulatore mostrerà un nuovo pulsante chiamato **Push** accanto ai pulsanti **Aggiorna** e **Connetti**. Premendo questo pulsante una **finestra di richiesta per i permessi** apparirà sul dispositivo chiedendo la conferma e installando l'applicazione.
+Se lo smartphone è connesso e riconosciuto, il simulatore mostrerà un nuovo pulsante chiamato **Push** accanto ai pulsanti **Aggiorna** e **Connetti**. Premendo questo pulsante, una **finestra di richiesta per i permessi** apparirà sul dispositivo chiedendo la conferma per poter procedere con l'installazione dell'applicazione.
 
 ![Il pulsante da premere per fare il push delle app sul dispositivo](images/originals/simulator-press-push.png)
 
-E nell'immagine sottostante è possibile vedere la finestra di richiesta permessi:
+Nell'immagine sottostante è possibile vedere la finestra di richiesta permessi:
 
 ![Non è la foto migliore del mondo ma mostra la finestra dei permessi (scusate per la faccia ma erano le 4:25 di mattina)](images/originals/simulator-remote-push.jpg)
 
 Con l'applicazione in esecuzione nel dispositivo è possibile usare il *remote debugging* per aprire un'istanza della **Console JavaScript** collegata con l'app in modo da effettuare il debug.  
 
-Nel Gestore App facendo click su **Dispositivo** si apre una schermata con le informazioni del dispositivo collegato o del simulatore.  
+Nel Gestore App, facendo clic su **Dispositivo** si apre una schermata con le informazioni del dispositivo collegato o del simulatore.  
 
 ![Applicazioni del dispositivo!](images/originals/simulator-device.png)  
 

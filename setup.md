@@ -15,15 +15,25 @@ Per sviluppare e provare le applicazioni realizzate per Firefox OS abbiamo bisog
  
 [^editor]: esistono molti buoni editor con diversi livelli di complessità e caratteristiche. Un editor molto diffuso, che mi sento di consigliare a chi non ha ancora trovato il suo preferito, è [SublimeText](http://sublimetext.com/). Personalmente, io utilizzo [WebStorm](http://www.jetbrains.com/webstorm/) che è un IDE completo per la realizzazione di web app.
   
-## Installare il Simulatore di Firefox OS
+## Configurazione dell'App Manager
 
-Dopo aver installato Firefox, il passaggio successivo è l'installazione del simulatore di Firefox OS che può essere utilizzato per provare le proprie applicazioni. Scarica il file del simulatore, in automatico Firefox chiedere di installare il simulatore.  
+Se stai usando la versione attuale di Firefox (29 o successive) l'App manager è già disponibile. L'App Manager da solo non basta, devi installare anche i simulatori nell'App Manager per fare le prove senza avere un dispositivo. Mozilla ha una [documentazione completa a riguardo](https://developer.mozilla.org/it/Firefox_OS/usare_l_app_Manager) se vuoi approfondire l'argomento.  
 
-![*Developer* con *Gestore App** selezionato](images/originals/tools.png)
+L'App Manager può gestire versioni di Firefox OS multiple quindi puoi installare le versioni 1.3, 1.4 e 2.0, ricordati che più alta è la versione più tardi sarà il rilascio pubblico della stessa.  
 
-Dopo l'installazione dell'estensione, potrai accedere al simulatore andando al menu **Developer -> Gestore App**. 
+Prendiamo l'App Manager e diamo un'occhiata, l'installazione lo vedremo successivamente. Avvia l'App Manager e vai al menu **Sviluppo -> Gestore App**.
 
-Altrimenti, è possibile visitare direttamente la pagina di [Firefox OS Simulator](https://addons.mozilla.org/en-US/firefox/addon/firefox-os-simulator/) e scaricare il simulatore da qui.
+![Dove puoi trovare l'App Manager](images/originals/locate-app-manager.png)
+
+Dopo l'apertura dell'App Manager vedrai una schermata come questa.
+
+Fai clic su **Installa il simulatore** e seleziona la versione da installare.
+
+Per fare debugging remoto il sistema deve riconoscere il dispositivo quindi sono necessari gli Android Tools o in parole povere `adb`. Come abbiamo accennato Firefox OS è basato su Android e quindi possiamo sfruttare alcuni dei suoi strumenti da sviluppatore come adb, che permette di passare dei file e di comunicare da computer a dispositivo e viceversa.  
+Se adb non è presente nel computer, Firefox non potrà rilevare alcun dispositivo connesso!  
+Con l'estensione [ADB Helper](https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/) verrà installato su Firefox e si potrà debuggare da remoto con il proprio dispositivo Firefox OS. 
+
+![Tla pagina per scaricare i Simulatori ed ADB Helper](images/originals/app-manager-add-ons.png)
 
 ## Riassunto
 

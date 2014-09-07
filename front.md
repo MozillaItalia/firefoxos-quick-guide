@@ -87,6 +87,7 @@ Accetto con piacere tutto l'aiuto per tradurre questo testo in lingue diverse (e
 
 ### Versione 0.3
 Aggiunto nuovo materiale come Brick, Firefox OS Boilerplate, ADB Helper ed il multilingua grazie a Daniele Scasciafratte, la sezione del Manifest invece è di Giammarco Di Lella.
+Include l'App Manager ed il materiale per la versione 1.1 di Firefox OS per la retrocompatibilità.
 
 ### Versione 0.2
 Testo rivisitato e corretto da Marcos Caceres, membro del Mozilla WebAPI team. Il contenuto di ogni capitolo è stato controllato per correzioni tecniche e molti errori grammaticali ed errori di battitura. 

@@ -47,7 +47,7 @@ La sintassi di questo campo è un po' complessa, per questo vi rimando alla pagi
 **appcache_path**
 
 Questa proprietà vi consente di specificare il percorso del manifest.appcache, dovete specificarla solo se utilizzate AppCache all'interno della vostra applicazione.  
-AppCache è uno standard W3C che permette di mettere in cache alcuni file e molto altro per maggiori informazioni vi rimando alla documentazione su [MDN](https://developer.mozilla.org/en-US/docs/HTML/Using_the_application_cache).
+AppCache è uno standard W3C che permette di mettere in cache alcuni file e molto altro per maggiori informazioni vi rimando alla documentazione su [MDN](https://developer.mozilla.org/it/docs/Web/HTML/utilizzare_application_cache).
 
 **chrome**
 

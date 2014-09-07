@@ -465,7 +465,7 @@ window.onload = function () {
 
 Ora che tutti i file sono pronti proviamo l'applicazione nel simulatore.
 
-## Provare l'applicazione sul simulatore
+## Provare l'applicazione sull'App manager
 
 Prima di avviare l'applicazione nel simulatore è preferibile verificare che tutti i file siano al posto giusto. Ecco quale dovrebbe essere il contenuto della cartella memos:
 
@@ -473,19 +473,21 @@ Prima di avviare l'applicazione nel simulatore è preferibile verificare che tut
 
 Se si ha il vago sospetto di aver commesso qualche errore è possibile verificarlo con [il repository memos su github](https://github.com/soapdog/memos-for-firefoxos) (un'ulteriore copia del codice sorgente è disponibile  nella cartella **code** nel [repo del testo](https://github.com/soapdog/guia-rapido-firefox-os) ).
 
-Aprire la *Dashboard del Simulatore* e fare clic nel menu **Tools -> Web Developer -> Firefox OS Simulator**.
+Aprire la *Dashboard del Simulatore* e fare clic nel menu **Sviluppo -> Gestore App**.
 
-![Apertura della Dashboard del simulatore](images/originals/tools-web-developer-simulator.png)
+![Apertura della Dashboard del simulatore](images/originals/locate-app-manager.png)
 
-Con la Dashboard aperta, fare clic sul pulsante **Aggiungi directory** e selezionare il file manifesto dell'applicazione.
+Con l'App Manager aperto, fare clic sul pulsante **Aggiungi app locale** e selezionare il file manifesto dell'applicazione.
 
-![Aggiunta di una nuova applicazione](images/originals/simulator-add-directory.png)
+![Aggiunta di una nuova applicazione](images/originals/app-manager-add-packaged-app.png)
 
 Se tutto funziona come previsto, Memos apparirà nella lista applicazioni.
 
-![Memos mostrata nella Dashboard](images/originals/memos-on-dashboard-display.png)
+![Memos mostrata nella Dashboard](images/originals/app-manager-showing-memos.png)
 
 Quando si aggiungerà una nuova applicazione, il simulatore verrà avviato con la nuova app in esecuzione. A questo punto è possibile provare tutte le funzionalità di Memos.
+
+![Memos installato nel Simulatore](images/originals/app-manager-updating-memos.png)
 
 Congratulazioni! Abbiamo creato e provato la nostra prima applicazione. Non è un'applicazione complessa o rivoluzionaria - ma spero sia utile per capire il workflow di sviluppo di Firefox OS. Come si sarà potuto notarenon è molto diverso dallo sviluppo web classico.  
 

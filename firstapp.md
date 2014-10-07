@@ -22,7 +22,7 @@ Il primo passaggio è creare una cartella per l'applicazione di nome **memos**.
 
 Il file manifesto di Memos è molto semplice. Crea un file chiamato **manifest.webapp** nella cartella **memos**. I manifesti sono dei file [JSON](http://json.org) che descrivono un'applicazione. In questo file è possibile trovare le informazioni sull'app, quali il nome dell'app, il nome dello sviluppatore, le icone utilizzate, il file che avvia l'app, quali API con privilegi sono utilizzate e molto altro.
 
-Qui di seguito è riportato il contenuto del file manifesto di Memos. Fare attenzione con il copia e incolla, perché è molto facile mettere una virgola nel posto sbagliato e creare un file JSON non valido. Esistono molti strumenti per validare un file JSON, incluso uno creato specificatamente per validare i file manifesto delle app. È possibile utilizzare questo strumento online su [http://appmanifest.org/](http://appmanifest.org/). Per ulteriori informazioni su questi file consultare la [pagina su MDN ](https://developer.mozilla.org/docs/Apps/Manifest).
+Qui di seguito è riportato il contenuto del file manifesto di Memos. Fare attenzione con il copia e incolla, perché è molto facile mettere una virgola nel posto sbagliato e creare un file JSON non valido. Esistono molti strumenti per validare un file JSON, incluso uno creato specificatamente per validare i file manifesto delle app. È possibile utilizzare questo strumento online su [http://appmanifest.org/](https://marketplace.firefox.com/developers/validator). Per ulteriori informazioni su questi file consultare la [pagina su MDN ](https://developer.mozilla.org/docs/Apps/Manifest).
 
 <<[Memos manifest (*manifest.webapp*)](code/memos/manifest.webapp)
 

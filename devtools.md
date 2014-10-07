@@ -21,7 +21,7 @@ Al momento della stesura di questo testo, la maggior parte degli smartphone Fire
 
 Nell'eventualità di future verifiche delle proprie app, si segua questo consiglio: non basare mai i propri CSS su una specifica risoluzione schermo o densità dei punti. Piuttosto, si dovrebbero utilizzare le *media query* e una metodologia di design responsivo per permettere all'app di adattarsi alle varie risoluzioni schermo. Per saperne di più sul design responsivo consiglio la lettura di uno o entrambi questi libri: [Responsive Web Design](http://www.abookapart.com/products/responsive-web-design) e [Mobile First](http://www.abookapart.com/products/mobile-first).
 
-Riepilogando, la **Visualizzazione flessibile** ci permette di provare la nostra app su varie risoluzioni schermo senza dover ridimensionare la finestra di Firefox. A mio modesto avviso, la *Visualizzazione flessibile* è uno degli strumenti di sviluppo più utili a disposizione - purtroppo ha un grande limite: attualmente non consente di provare differenti configurazioni di densità dei punti.
+Riepilogando, la **Visualizzazione flessibile** ci permette di provare la nostra app su varie risoluzioni schermo senza dover ridimensionare la finestra di Firefox. A mio modesto avviso, la **Visualizzazione flessibile** è uno degli strumenti di sviluppo più utili a disposizione - purtroppo ha un grande limite: attualmente non consente di provare differenti configurazioni di densità dei punti.
 
 ## Strumenti di sviluppo
 
@@ -29,12 +29,12 @@ Gli strumenti di sviluppo di Firefox sono simili a quelli disponibili con l'este
 
 Esistono diversi modi per invocare la Console:
 
-* Dal menu Strumenti -> Sviluppo web -> Console del browser (Ctrl+Maiusc+J)
+* Dal menu **Strumenti** -> **Sviluppo web** -> **Console del browser** (Ctrl + Maiusc + J)
 * Facendo clic col tasto destro nella pagina da analizzare e scegliendo "Ispeziona elemento" e quindi selezionando la scheda Console.
 
 ![Console JavaScript](images/originals/console-open.png) 
 
-Oltre alla *Console JavaScript* sono disponibili altri strumenti come [*l'Editor stili*](https://developer.mozilla.org/en-US/docs/Tools/Style_Editor), [*il Monitor di rete*](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor), [*il Profiler JavaScript*](https://developer.mozilla.org/en-US/docs/Tools/Profiler), [*il Debugger JavaScript*](https://developer.mozilla.org/en-US/docs/Tools/Debugger), [*lo strumento Analisi pagina*](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector) e molti altri.
+Oltre alla *Console JavaScript* sono disponibili altri strumenti come [*l'Editor stili*](https://developer.mozilla.org/en-US/docs/Tools/Style_Editor), [*il Monitor di rete*](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor), [*il Profiler JavaScript*](https://developer.mozilla.org/en-US/docs/Tools/Profiler), [*il Debugger JavaScript*](https://developer.mozilla.org/en-US/docs/Tools/Debugger), [*lo strumento Analisi pagina*](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector) e molti altri. Per scorprire tutti gli strumenti a tua disposizione accedi al pannello impostazioni cliccando l'ingranaggio e leggi la lista _Default Firefox Developers Tools_.
 
 Nell'applicazione che abbiamo creato nel precedente capitolo, abbiamo utilizzato la Console web per verificare lo stato di avanzamento del nostro progetto. Questo è un modo elegante e molto efficace di effettuare il debug delle nostre app, anche se alcuni sviluppatori continuano a utilizzare l'istruzione `alert()` all'interno di tutti i loro sorgenti JavaScript come “strumento di debugging”.
 

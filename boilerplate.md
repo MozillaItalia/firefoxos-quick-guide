@@ -51,8 +51,8 @@ appCache.onerror = function() {
 };
 ~~~~~~~~
 
-###Installazione applicazione
-Installazione applicazione vuol dire utilizzare le Open Web Apps. Vediamo come funziona il codice di installazione e di verifica installazione. Prima di tutto verifichiamo se il sistema le supporta (con `navigator.mozApps`) dopo di che inseriamo dei check di successo o fallimento dell'installazione.
+###Installare l'applicazione
+Installazione applicazione vuol dire utilizzare le Open Web Apps. Vediamo come funziona il codice di installazione e di verifica installazione. Prima di tutto verifichiamo se il sistema le supporta (con `navigator.mozApps`) dopo di che inseriamo dei test di successo o fallimento dell'installazione.
 
 File base.js#L4 - Installazione
 ~~~~~~~~
@@ -86,12 +86,12 @@ if (navigator.mozApps) {
 }
 ~~~~~~~~
 
-Come si può vedere il codice è molto semplice, si dà l'indirizzo del file manifest e si verifica se è stato installato. Per installare il boilerplate fate click sul simbolo più in alto a destra.  
+Come si può vedere il codice è molto semplice, si dà l'indirizzo del file manifest e si verifica se è stato installato. Per installare il boilerplate fate click sul simbolo più in alto a destra.
 Questo codice eseguito su Firefox OS, Firefox for Android e Firefox desktop aprirà un mini pop up per chiedere se installare l'applicazione.
 
 ###WebActivity
 Finalmente parliamo di una delle grandi novità per gli sviluppatori web! Finalmente potremo accedere al sistema in modo più profondo! Ho già detto finalmente?  
-Scherzi a parte, in questa sezione possiamo accedere ad una parte delle azioni del sistema dal fare una telefonata a scattare una foto. Queste WebActivity purtroppo sono solo per Firefox OS e quindi il testing è solo con simulatore ma c'è chi sta lavorando ad una [polyfill](https://github.com/Mte90/moz-polyfills) per supportare le web activity anche da browser (dove possibile).  
+Scherzi a parte in questa sezione possiamo accedere ad alcune delle azioni del sistema come fare una telefonata o scattare una foto. Queste WebActivity purtroppo sono solo per Firefox OS e quindi il testing è solo con simulatore ma c'è chi sta lavorando ad una [polyfill](https://github.com/Mte90/moz-polyfills) per supportare le web activity anche da browser (dove possibile).  
 Non vedremo il codice nel dettaglio delle varie WebActivity, quindi rimando al [file webapp.js](https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/js/webapp.js), ma elenchiamo le varie WebActivity: 
 
 * Cercare file
@@ -107,7 +107,7 @@ Non vedremo il codice nel dettaglio delle varie WebActivity, quindi rimando al [
 * Aprire un video
 
 ###WebAPI
-Questa sezione contiene sia codice (lo stesso file di prima) solo per Firefox OS ma anche un po' di HTML5 di fresca standardizzazione. Abbiamo le notifiche, rotazione e accensione dello schermo che sono solo per Firefox OS mentre vibrazione, verifica connessione (ne abbiamo parlato prima), geolocalizzazione, luce ambientale, prossimità, batteria sono API standard.
+Questa sezione contiene sia codice (lo stesso file di prima) solo per Firefox OS ma anche un po' di HTML5 di recente introduzione. Abbiamo le notifiche, rotazione e accensione dello schermo che sono solo per Firefox OS mentre vibrazione, verifica della connessione (ne abbiamo parlato prima), geolocalizzazione, luce ambientale, prossimità, batteria sono API standard.
 
 ###API Privilegiate
 Queste API sono particolari e sono disponibili solo per le app privilegiate e sono quasi tutte standard HTML5. 

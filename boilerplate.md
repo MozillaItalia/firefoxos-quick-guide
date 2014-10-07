@@ -30,19 +30,19 @@ Alcune di queste cose le abbiamo viste o le vedremo in questa fantastica guida. 
 Con Uso OffLine mi riferisco a del codice che permette di sapere se il dispositivo è connesso sfruttando l'oggetto `window.navigator.connection` che è descritto sulla [pagina MDN](http://mdn.beonex.com/en/DOM/window.navigator.connection.html) con i dettagli tecnici e il supporto crossbrowser. 
 Il codice è presente in due versioni:
 
-* Uno dei tanti pulsanti che usa [l'API diretta](https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/js/webapp.js#L329) fornisce due informazioni: la banda disponibile in MB (0 se è offline, infinity se sconosciuta o solitamente la linea fissa) e se la connessione è pay for use.   
+* Uno dei tanti pulsanti che usa [l'API diretta](https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/js/webapp.js#L331) fornisce due informazioni: la banda disponibile in MB (0 se è offline, _infinity_ se sconosciuta o solitamente la linea fissa) e se la connessione è a consumo.
 * Con AppCache per sapere se si utilizza l'applicazione in modalità offline, nel boilerplate è utilizzato per mostrare il pallino verde se si è online.  
 
-Vediamo un attimo questi due codici:  
+Vediamo un attimo questi due codici:
 
-File webapp.js#L321 - window.navigator.connection
+File webapp.js#L331 - window.navigator.connection
 ~~~~~~~~
 var connection = window.navigator.mozConnection,
 online = "<strong>Connected:</strong> " + (connection.bandwidth),
 metered = "<strong>Metered:</strong> " + connection.metered;
 ~~~~~~~~
 
-File offline.js#L115 - appCache
+File offline.js#L15 - appCache
 ~~~~~~~~
 var appCache = window.applicationCache;
 appCache.onerror = function() {

@@ -21,7 +21,7 @@ Al momento della stesura di questo testo, la maggior parte degli smartphone Fire
 
 Nell'eventualità di future verifiche delle proprie app, si segua questo consiglio: non basare mai i propri CSS su una specifica risoluzione schermo o densità dei punti. Piuttosto, si dovrebbero utilizzare le *media query* e una metodologia di design responsivo per permettere all'app di adattarsi alle varie risoluzioni schermo. Per saperne di più sul design responsivo consiglio la lettura di uno o entrambi questi libri: [Responsive Web Design](http://www.abookapart.com/products/responsive-web-design) e [Mobile First](http://www.abookapart.com/products/mobile-first).
 
-Riepilogando, la **Visualizzazione flessibile** ci permette di provare la nostra app su varie risoluzioni schermo senza dover ridimensionare la finestra di Firefox. A mio modesto avviso, la *Visualizzazione flessibile* è uno degli strumenti di sviluppo più utili a disposizione - purtroppo ha un grande limite: attualmente non consente di provare differenti configurazioni di densità dei punti.
+Riepilogando, la **Visualizzazione flessibile** ci permette di provare la nostra app su varie risoluzioni schermo senza dover ridimensionare la finestra di Firefox. A mio modesto avviso, la **Visualizzazione flessibile** è uno degli strumenti di sviluppo più utili a disposizione - purtroppo ha un grande limite: attualmente non consente di provare differenti configurazioni di densità dei punti.
 
 ## Strumenti di sviluppo
 
@@ -29,7 +29,7 @@ Gli strumenti di sviluppo di Firefox sono simili a quelli disponibili con l'este
 
 Esistono diversi modi per invocare la Console:
 
-* Dal menu Strumenti -> Sviluppo web -> Console del browser (Ctrl+Maiusc+J)
+* Dal menu **Strumenti** -> **Sviluppo web** -> **Console del browser** (Ctrl+Maiusc+J)
 * Facendo clic col tasto destro nella pagina da analizzare e scegliendo "Ispeziona elemento" e quindi selezionando la scheda Console.
 
 ![Console JavaScript](images/originals/console-open.png) 

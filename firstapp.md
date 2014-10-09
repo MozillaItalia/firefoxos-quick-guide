@@ -22,7 +22,7 @@ Il primo passaggio è creare una cartella per l'applicazione di nome **memos**.
 
 Il file manifesto di Memos è molto semplice. Crea un file chiamato **manifest.webapp** nella cartella **memos**. I manifesti sono dei file [JSON](http://json.org) che descrivono un'applicazione. In questo file è possibile trovare le informazioni sull'app, quali il nome dell'app, il nome dello sviluppatore, le icone utilizzate, il file che avvia l'app, quali API con privilegi sono utilizzate e molto altro.
 
-Qui di seguito è riportato il contenuto del file manifesto di Memos. Fare attenzione con il copia e incolla, perché è molto facile mettere una virgola nel posto sbagliato e creare un file JSON non valido. Esistono molti strumenti per validare un file JSON, incluso uno creato specificatamente per validare i file manifesto delle app. È possibile utilizzare questo strumento online su [http://appmanifest.org/](http://appmanifest.org/). Per ulteriori informazioni su questi file consultare la [pagina su MDN ](https://developer.mozilla.org/docs/Apps/Manifest).
+Qui di seguito è riportato il contenuto del file manifesto di Memos. Fare attenzione con il copia e incolla, perché è molto facile mettere una virgola nel posto sbagliato e creare un file JSON non valido. Esistono molti strumenti per validare un file JSON, incluso uno creato specificatamente per validare i file manifesto delle app. È possibile utilizzare questo strumento online su [https://marketplace.firefox.com/developers/validator](https://marketplace.firefox.com/developers/validator). Per ulteriori informazioni su questi file consultare la [pagina su MDN ](https://developer.mozilla.org/docs/Apps/Manifest).
 
 <<[Memos manifest (*manifest.webapp*)](code/memos/manifest.webapp)
 
@@ -436,7 +436,7 @@ function refreshMemoList() {
 }
 ~~~~~~~~
 
-La funzione `refreshMemoList()` modifica il DOM aggiornando l'elenco delle note. Sarebbe più facile usare alcuni sistemi di template come [handlebars](http://handlebarsjs.com/) o [underscore](http://underscorejs.org/) ma quest'applicazione contiene solo *vanilla javascript* quindi faremo tutto a manina. Questa funzione è chiamata `showMemoList()` mostrata sopra.
+La funzione `refreshMemoList()` modifica il DOM aggiornando l'elenco delle note. Sarebbe più facile usare alcuni sistemi di template come [handlebars](http://handlebarsjs.com/) o [underscore](http://underscorejs.org/) ma quest'applicazione contiene solo *vanilla javascript* quindi faremo tutto a mano. Questa funzione è chiamata `showMemoList()` mostrata sopra.
 
 Queste sono tutte le funzioni utilizzate dall'applicazione. Le uniche parti mancanti sono il gestore eventi e la chiamata iniziale di `refreshMemoList()`.
 
@@ -471,7 +471,7 @@ Prima di avviare l'applicazione nel simulatore è preferibile verificare che tut
 
 ![Lista dei file utilizzati da Memos](images/originals/memos-file-list.png)
 
-Se si ha il vago sospetto di aver commesso qualche errore è possibile verificarlo con [il repository memos su github](https://github.com/soapdog/memos-for-firefoxos) (un'ulteriore copia del codice sorgente è disponibile  nella cartella **code** nel [repo del testo](https://github.com/soapdog/guia-rapido-firefox-os) ).
+Se si ha il vago sospetto di aver commesso qualche errore è possibile verificarlo confrontando [il repository memos su github](https://github.com/soapdog/memos-for-firefoxos) (un'ulteriore copia del codice sorgente è disponibile  nella cartella **code** nel [repo del testo](https://github.com/soapdog/guia-rapido-firefox-os) ).
 
 Aprire la *Dashboard del Simulatore* e fare clic nel menu **Sviluppo -> Gestore App**.
 
@@ -489,7 +489,7 @@ Quando si aggiungerà una nuova applicazione, il simulatore verrà avviato con l
 
 ![Memos installato nel Simulatore](images/originals/app-manager-updating-memos.png)
 
-Congratulazioni! Abbiamo creato e provato la nostra prima applicazione. Non è un'applicazione complessa o rivoluzionaria - ma spero sia utile per capire il workflow di sviluppo di Firefox OS. Come si sarà potuto notarenon è molto diverso dallo sviluppo web classico.  
+Congratulazioni! Abbiamo creato e provato la nostra prima applicazione. Non è un'applicazione complessa o rivoluzionaria - ma spero sia utile per capire il workflow di sviluppo di Firefox OS. Come si sarà potuto notare non è molto diverso dallo sviluppo web classico.  
 
 Si ricordi che ogni volta che viene modificato il codice sorgente è necessario premere il pulsante **Aggiorna** per aggiornare il contenuto dell'applicazione presente nel simulatore.
 

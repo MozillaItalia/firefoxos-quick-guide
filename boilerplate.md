@@ -19,21 +19,21 @@ Il boilerplate è diviso in tre sezioni ma io ne aggiungo una quarta per gli alt
 Incominciamo da questi dettagli: 
 
 * AppCache
-* OffLine
+* Uso OffLine
 * Installare l'applicazione
-* Multilingua
+* Localizzazione
 * Grafica di Gaia
 
 Alcune di queste cose le abbiamo viste o le vedremo in questa fantastica guida. Quindi passiamo agli argomenti che non sono stati ancora visti o non hanno un capitolo dedicato.   
 
-###Offline 
-Con OffLine mi riferisco a del codice che permette di sapere se il dispositivo è connesso sfruttando l'oggetto `window.navigator.connection` che è descritto sulla [pagina MDN](http://mdn.beonex.com/en/DOM/window.navigator.connection.html) dedicata con i dettagli tecnici e il supporto crossbrowser. 
+###Uso Offline
+Con Uso OffLine mi riferisco a del codice che permette di sapere se il dispositivo è connesso sfruttando l'oggetto `window.navigator.connection` che è descritto sulla [pagina MDN](http://mdn.beonex.com/en/DOM/window.navigator.connection.html) con i dettagli tecnici e il supporto crossbrowser. 
 Il codice è presente in due versioni:
 
-* Uno dei tanti pulsanti che usa [l'API diretta](https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/js/webapp.js#L331) fornisce due informazioni: la banda disponibile in MB (0 se è offline, infinity se sconosciuta o solitamente la linea fissa) e se la connessione è a consumo.   
+* Uno dei tanti pulsanti che usa [l'API diretta](https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/js/webapp.js#L331) fornisce due informazioni: la banda disponibile in MB (0 se è offline, _infinity_ se sconosciuta o solitamente la linea fissa) e se la connessione è a consumo.
 * Con AppCache per sapere se si utilizza l'applicazione in modalità offline, nel boilerplate è utilizzato per mostrare il pallino verde se si è online.  
 
-Vediamo un attimo questi due codici:  
+Vediamo un attimo questi due codici:
 
 File webapp.js#L331 - window.navigator.connection
 ~~~~~~~~
@@ -86,12 +86,14 @@ if (navigator.mozApps) {
 }
 ~~~~~~~~
 
-Come si può vedere il codice è molto semplice, si dà l'indirizzo del file manifest e si verifica se è stato installato. Per installare il boilerplate fate click sul simbolo più in alto a destra.  
+Come si può vedere il codice è molto semplice, si dà l'indirizzo del file manifest e si verifica se è stato installato. Per installare il boilerplate fate click sul simbolo più in alto a destra.
 Questo codice eseguito su Firefox OS, Firefox for Android e Firefox desktop aprirà un mini pop up per chiedere se installare l'applicazione.
 
 ###WebActivity
-Finalmente parliamo di una delle grandi novità per gli sviluppatori web! Finalmente potremo accedere al sistema in modo più profondo! Ho già detto finalmente?  
-Scherzi a parte, in questa sezione possiamo accedere ad alcune delle azioni del sistema come fare una telefonata o scattare una foto. Queste WebActivity purtroppo sono solo per Firefox OS e quindi il testing è solo con simulatore ma c'è chi sta lavorando ad una [polyfill](https://github.com/Mte90/moz-polyfills) per supportare le web activity anche da browser (dove possibile).  
+Finalmente parliamo di una delle grandi novità per gli sviluppatori web! Finalmente potremo accedere al sistema in modo più profondo! Ho già detto finalmente?
+
+Scherzi a parte in questa sezione possiamo accedere ad alcune delle azioni del sistema come fare una telefonata o scattare una foto. Queste WebActivity purtroppo sono solo per Firefox OS e quindi il testing è solo con simulatore ma c'è chi sta lavorando ad una [polyfill](https://github.com/Mte90/moz-polyfills) per supportare le web activity anche da browser (dove possibile).  
+
 Non vedremo il codice nel dettaglio delle varie WebActivity, quindi rimando al [file webapp.js](https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/js/webapp.js), ma elenchiamo le varie WebActivity: 
 
 * Cercare file
@@ -107,7 +109,7 @@ Non vedremo il codice nel dettaglio delle varie WebActivity, quindi rimando al [
 * Aprire un video
 
 ###WebAPI
-Questa sezione contiene sia codice (lo stesso file di prima) solo per Firefox OS ma anche un po' di HTML5 di recente standardizzazione. Abbiamo le notifiche, rotazione e accensione dello schermo che sono solo per Firefox OS mentre vibrazione, verifica della connessione (ne abbiamo parlato prima), geolocalizzazione, luce ambientale, prossimità, batteria sono API standard.
+Questa sezione contiene sia codice (lo stesso file di prima) solo per Firefox OS ma anche un po' di HTML5 di recente introduzione. Abbiamo le notifiche, rotazione e accensione dello schermo che sono solo per Firefox OS mentre vibrazione, verifica della connessione (ne abbiamo parlato prima), geolocalizzazione, luce ambientale, prossimità, batteria sono API standard.
 
 ###API Privilegiate
 Queste API sono particolari e sono disponibili solo per le app privilegiate e sono quasi tutte standard HTML5. 

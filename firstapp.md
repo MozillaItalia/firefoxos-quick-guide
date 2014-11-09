@@ -24,7 +24,7 @@ Il file manifesto di Memos è molto semplice. Crea un file chiamato **manifest.w
 
 Qui di seguito è riportato il contenuto del file manifesto di **Memos**. Fate attenzione con il copia e incolla, perché è molto facile mettere una virgola nel posto sbagliato (o non metterla) e creare un file JSON non valido. Esistono molti strumenti per validare un file JSON, incluso uno specifico per validare i file manifesto delle app, lo puoi trovare online su [il marketplace](https://marketplace.firefox.com/developers/validator). Per ulteriori informazioni su questi file consultare la [pagina su MDN ](https://developer.mozilla.org/docs/Apps/Manifest).
 
-<<[Memos manifest (*manifest.webapp*)](code/memos/manifest.webapp)
+[Memos manifest (*manifest.webapp*)](code/memos/manifest.webapp)
 
 Analizziamo i campi di questo file manifesto:
 

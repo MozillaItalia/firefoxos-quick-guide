@@ -4,7 +4,7 @@
 
 In questo capitolo vedremo come realizzare un semplice **Notepad**, cioè un'applicazione per prendere appunti. Prima di concentrarci sul codice cerchiamo di studiare il funzionamento di questa applicazione.
 
-Essa si compone di tre schermate. La prima è la schermata principale che mostra le varie note con relativi titoli. Se si fa clic su una nota (o se ne viene aggiunta una) viene aperta la schermata con i dettagli, dalla quale è possibile modificare il contenuto e il titolo della nota scelta. Le schermate possono essere osservate qui sotto.
+Essa si compone di tre schermate. La prima è la schermata principale in cui mettiamo l'elenco delle note già sslavate. Se si fa clic su una nota (o se ne viene aggiunta una) viene aperta la schermata con i dettagli, nella quale è possibile modificare il titolo ed il testo della nota scelta. Ecco come vorremmo che si presentassero.
 
 ![Memos, schermata di modifica](images/originals/memos-editing-screen.png)
 
@@ -20,26 +20,26 @@ Il primo passaggio è creare una cartella per l'applicazione di nome **memos**.
 
 ## Creare il manifesto dell'app
 
-Il file manifesto di Memos è molto semplice. Crea un file chiamato **manifest.webapp** nella cartella **memos**. I manifesti sono dei file [JSON](http://json.org) che descrivono un'applicazione. In questo file è possibile trovare le informazioni sull'app, quali il nome dell'app, il nome dello sviluppatore, le icone utilizzate, il file che avvia l'app, quali API con privilegi sono utilizzate e molto altro.
+Il file manifesto di Memos è molto semplice. Crea un file chiamato **manifest.webapp** nella cartella **memos**. I manifesti sono dei file [JSON](http://json.org) che descrivono un'applicazione per Firefox OS. In questo file è possibile trovare le informazioni sull'app, quali il nome, il nome dello sviluppatore, le icone utilizzate, il file che avvia l'app, quali API e con privilegi sono utilizzate e molto altro.
 
-Qui di seguito è riportato il contenuto del file manifesto di Memos. Fare attenzione con il copia e incolla, perché è molto facile mettere una virgola nel posto sbagliato e creare un file JSON non valido. Esistono molti strumenti per validare un file JSON, incluso uno creato specificatamente per validare i file manifesto delle app. È possibile utilizzare questo strumento online su [https://marketplace.firefox.com/developers/validator](https://marketplace.firefox.com/developers/validator). Per ulteriori informazioni su questi file consultare la [pagina su MDN ](https://developer.mozilla.org/docs/Apps/Manifest).
+Qui di seguito è riportato il contenuto del file manifesto di **Memos**. Fate attenzione con il copia e incolla, perché è molto facile mettere una virgola nel posto sbagliato (o non metterla) e creare un file JSON non valido. Esistono molti strumenti per validare un file JSON, incluso uno specifico per validare i file manifesto delle app, lo puoi trovare online su [il marketplace](https://marketplace.firefox.com/developers/validator). Per ulteriori informazioni su questi file consultare la [pagina su MDN ](https://developer.mozilla.org/docs/Apps/Manifest).
 
 <<[Memos manifest (*manifest.webapp*)](code/memos/manifest.webapp)
 
 Analizziamo i campi di questo file manifesto:
 
-|Campi		|Descrizione                                                                        |  
-|-----------|-----------------------------------------------------------------------------------|  
-|name		|Il nome dell'applicazione  		                                                |  
-|version	|La versione attuale dell'applicazione  										    |  
-|launch_path|Il file utilizzato per avviare un'applicazione 					                    |  
-|permissions|I permessi API richiesti, con molte informazioni		                     		|  
-|developer  |Lo sviluppatore                    												|  
-|icons		|L'icona utilizzata in diversi formati                   								|  
+|Campi |Descrizione| 
+|------|-----------|  
+|name       |    Il nome dell'applicazione |  
+|version    |    La versione attuale dell'applicazione |  
+|launch_path|    Il file utilizzato per avviare un'applicazione |  
+|permissions|    I permessi API richiesti, con molte informazioni|
+|developer  |    I contatti dello sviluppatore|  
+|icons      |    L'icona utilizzata in diversi formati |  
 
-La parte più interessante di questo file manifesto è la richiesta per i permessi di *storage* per poter utilizzare IndexedDB senza alcun limite di spazio disco[^storage-permission] (con questi permessi possiamo salvare le note che vogliamo - anche se dobbiamo fare attenzione a non usare troppo spazio sul disco dell'utente!).
+La parte più interessante di questo file manifesto è la richiesta per i permessi di *storage* per poter utilizzare IndexedDB senza alcun limite di spazio disco[^storage-permission](con questi permessi possiamo salvare le note che vogliamo - anche se dobbiamo fare attenzione a non usare troppo spazio sul disco dell'utente!).
 
-[^storage-permission]: Per saperne di più su questa autorizzazione leggere [la pagina MDN sui permessi](https://developer.mozilla.org/en-US/docs/Web/Apps/App_permissions).
+[^storage-permission]: Per saperne di più su questa autorizzazione leggi [la pagina MDN sui permessi](https://developer.mozilla.org/en-US/docs/Web/Apps/App_permissions).
 
 Ora che il file manifesto è pronto, passiamo al codice HTML.
 
@@ -49,7 +49,7 @@ Prima di iniziare a lavorare sul codice HTML facciamo una breve digressione su [
 
 Come nelle pagine web, non è richiesto l'uso del *look and feel* di Firefox OS nella propria applicazione. Utilizzare o meno *Gaia Building Blocks* è una scelta personale - e le buone applicazioni dovrebbero sapersi distinguere per uno stile e un'esperienza utente proprie. La cosa importante da capire è che un'applicazione non subirà alcun tipo di pregiudizio o penalità su Firefox Marketplace se non utilizza lo stile di Gaia. Personalmente, non essendo un bravo designer, preferisco ricorrere a degli *UI toolkit* già pronti piuttosto che creare uno stile personale per le app.
 
-La struttura HTML che utilizzeremo per questa applicazione seguirà gli schemi adottati da *Gaia Building Blocks* in cui ogni schermata è delimitata in un blocco `<section>` e gli elementi seguono un formato predefinito. Se non si è ancora scaricato il codice sorgente dal [repository memos](https://github.com/soapdog/memos-for-firefoxos), è importante farlo quanto prima poiché contiene i file necessari, inclusi quelli del toolkit *Gaia Building Blocks*. Per coloro che dovessero avere poca confidenza con *git* e *Github*, i file sono disponibili anche come [file .zip](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip). 
+La struttura HTML che utilizzeremo per questa applicazione seguirà gli schemi adottati da *Gaia Building Blocks* in cui ogni schermata è racchiusa in un tag `<section>` e gli elementi seguono un formato predefinito. Se non si è ancora scaricato il codice sorgente dal [repository memos](https://github.com/soapdog/memos-for-firefoxos), è importante farlo quanto prima poiché contiene i file necessari, inclusi quelli del toolkit *Gaia Building Blocks*. Per coloro che dovessero avere poca confidenza con *git* e *Github*, i file sono disponibili anche come [file .zip](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip). 
 
 W> Attenzione: la versione di *Gaia Building Blocks* che ho utilizzato non è la più recente. Purtroppo, ho dovuto fare questa scelta perché l'applicazione Memos non era compatibile con l'ultima versione di *Gaia Building Blocks*. Nei propri progetti è sempre meglio utilizzare l'ultima versione disponibile del toolkit.
 
@@ -80,7 +80,9 @@ La prima riga dichiara che il documento utilizza il formato HTML5. Dalla *linea 
 
 ### Costruiamo la schermata principale
 
-Iniziamo a costruire le varie schermate. Come menzionato sopra ogni schermata è presente una `<section>` all'interno del corpo, `<body>`, del documento HTML. All'elemento *body* deve essere associato un attributo *role* il cui valore deve essere *application*, in quanto questi valori sono utilizzati come selettore nei fogli di stile per definire l'aspetto dell'interfaccia, quindi il tag sarà `<body role="application">`. Creiamo la prima schermata, dichiariamo il tag body come abbiamo detto.
+Adesso che abbiamo incluso i riferimenti a *Gaia Building Blocks* possiamo sfruttare il lavoro di Mozilla per creare un'applicazione a 5 stelle.
+
+Iniziamo a costruire le varie schermate. Come abbiamo detto prima, ogni schermata è racchiusa in una `<section>` all'interno del corpo (il tag `<body>`) del documento HTML. All'elemento '<body>' assegnamo un attributo *role* il cui valore deve essere *application*, in questo modo quando l'app verrà lanciata verranno utilizzati i fogli di stile di *Gaia Building Blocks* per definire l'aspetto dell'interfaccia. Scriviamo quindi `<body role="application">`. Adesso creiamo la prima schermata, quindi la prima '<section>', e dichiariamo il tag body come abbiamo detto prima.
 
 ~~~~~~~~
 <body role="application">
@@ -96,7 +98,7 @@ Iniziamo a costruire le varie schermate. Come menzionato sopra ogni schermata è
 </section>
 ~~~~~~~~
 
-La schermata include un `<header>` con un pulsante che permette di aggiungere nuove note ed il nome dell'applicazione stessa. La schermata include un `<article>` che è utilizzato per mostrare il contenuto della nota. Useremo il pulsante e l'ID dell'articolo per catturare gli eventi nella parte JavaScript.
+Nella schermata abbiamo incluso un `<header>` in cui mettiamo un pulsante che permetta di aggiungere nuove note ed il nome dell'applicazione stessa. La schermata include un tag `<article>` che è utilizzato per mostrare il contenuto della nota. Useremo il pulsante e l'ID dell'articolo per catturare gli eventi nella parte JavaScript.
 
 Sottolineo il fatto che ogni schermata è un semplice blocco di codice HTML. Costruire queste schermate utilizzando diversi linguaggi su altri sistemi richiede molto lavoro. Tutto quello che faremo è dare ad ogni contenitore un ID specifico che richiameremo successivamente.
 
@@ -143,15 +145,15 @@ La schermata di modifica è un po' complessa perché contiene la finestra di dia
 </section>
 ~~~~~~~~
 
-Nella parte superiore dello schermo, rappresentato dall'elemento `<header>` si trovano:
+Nella parte superiore dello schermo, rappresentata dall'elemento `<header>` si trovano:
 
- * un pulsante per ritornare alla schermata principale, 
- * un campo di testo per modificare il titolo della nota, 
- * un pulsante per condividere la nota via email.
+ * un pulsante per ritornare alla schermata principale
+ * un campo di testo per modificare il titolo della nota
+ * un pulsante per condividere la nota via email
 
-Sotto questa barra è presente un paragrafo con una `<textarea>` con il contenuto della nota e, ancora più sotto, un'altra barra con il cestino per cancellare la nota che si sta visualizzando.
+Sotto questa parte è presente il testo della nota racchiuso dal tag `<textarea>` , ancora più sotto  c'è una seconda barra con il pulsante per cancellare la nota attuale.
 
-Questi tre elementi e il loro contenuto sono la schermata di modifica. Successivamente abbiamo un `<form>` utilizzato per una finestra di conferma che verrà mostrata all'utente per confermare la cancellazione di una nota. Questa finestra è molto semplice, contiene un testo ed una finestra di conferma con due pulsanti, uno per cancellare la nota ed uno per annullare l'azione.
+Questi tre elementi e il loro contenuto rappresentano la schermata di modifica. Successivamente abbiamo un elemento `<form>` che verrà utilizzato per mostrare la finestra di conferma di cancellazione della nota. Questa finestra è molto semplice, contiene del testo e due pulsanti, uno per cancellare la nota ed uno per annullare l'azione.
 
 A questo punto chiudiamo il tag `<section>` avendo tutte le schermate necessarie, il codice HTML rimanente serve per includere i file JavaScript e completare il documento HTML con tutti i tag di chiusura.
 
@@ -166,18 +168,20 @@ A questo punto chiudiamo il tag `<section>` avendo tutte le schermate necessarie
 
 Adesso ci divertiremo a dare vita alla nostra applicazione utilizzando JavaScript. Per organizzare meglio questo codice ho scelto di suddividerlo in due file:
 
-* **model.js:** contiene le routine per la memorizzazione e il recupero delle note dal database, ma non il codice relativo alla struttura logica, agli elementi d'interfaccia o alla gestione dell'input utente. In teoria potremmo utilizzare questo file in altre applicazioni che richiedono note.
-* **app.js:** collega gli eventi agli elementi HTML e contiene la struttura logica dell'applicazione.
+* **model.js:** contiene le routine per salvare e recuperare le note dalla memoria del dispositivo, ma non la struttura logica, la gestione dei click sugli elementi dell'interfaccia e la gestione dell'input utente, questi sono nel secondo file, in questo modo abbiamo scritto del codice modulare. In teoria potremmo riutilizzare questo file in altre applicazioni che creano e gesticono note per l'utente.
+* **app.js:** collega gli eventi dell'interfaccia agli elementi HTML e contiene la struttura logica dell'applicazione.
 
-Entrambi i file devono essere posizionati nella cartella **js** accanto alle cartelle **style** e **shared**.
+Entrambi i file devono essere posizionati nella cartella **js** che troviamo accanto alle cartelle **style** e **shared**.
 
 ### model.js
 
-Utilizzeremo [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) per salvare le note. Avendo chiesto i permessi *storage* nel file manifesto possiamo salvare quante note vogliamo - ma senza abusarne! I dispositivi Firefox OS solitamente non hanno molto spazio, è sempre meglio essere consapevoli di quali dati vengono memorizzati (gli utenti daranno un voto negativo a un'applicazione se consumerà troppo spazio su disco). Memorizzare troppo materiale creerà problemi di prestazioni e l'app risulterà lenta e poco reattiva. Al momento del caricamento su Firefox Marketplace, sarà necessario indicare nelle note il motivo per cui l'app necessita di spazio illimitato per il suo funzionamento, in caso contrario verrà esplicitamente richiesto dai revisori. Nel caso non si sia in grado di giustificare tale richiesta, i revisori respingeranno l'app, che quindi non verrà pubblicata sul sito.
+Utilizzeremo [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) per salvare le note nel dispositivo. Avendo chiesto i permessi *storage* nel file manifesto possiamo salvare quante note vogliamo - però non dobbiamo abusarne!
 
-La parte di codice di *model.js* mostrato qui sotto si occupa del collegamento e della creazione dello storage.
+Infatti i dispositivi Firefox OS solitamente non hanno molta memoria da dedicare alle app e il loro contenuto (le note nel nostro caso) ed è sempre meglio essere consapevoli di quali dati vengono memorizzati, inoltre gli utenti daranno un voto negativo a un'applicazione se consumerà troppa memoria senza motivo. Memorizzare troppo materiale porta a problemi di prestazioni e l'app risulterà lenta e poco reattiva. Al momento del caricamento su Firefox Marketplace, sarà necessario indicare nel modulo diretto ai revisori il motivo per cui l'app necessita di accesso illimitato alla memoria per il suo funzionamento, se non lo segnalate vi verrà esplicitamente richiesto dai revisori. Nel caso non siate in grado di giustificare tale richiesta, i revisori respingeranno l'app, che quindi non verrà pubblicata sul sito.
 
-A> Importante: Questo codice è scritto per essere capito velocemente e non per illustrare le migliori tecniche di programmazione JavaScript. Nel codice sono presenti delle variabili globali (andrò all'inferno per questo, lo so) tra le altre chicche. La gestione degli errori è praticamente inesistente. Lo scopo principale di questo testo è insegnare il *workflow* di sviluppo di applicazioni per Firefox OS e non i pattern JS. Quindi a seconda dei commenti migliorerò il codice, sempre che non abbia un brutto impatto sui principianti.  
+La parte di codice in *model.js* che mostriamo qui sotto si occupa del collegamento e della creazione dello storage.
+
+A> Importante: Questo codice è scritto per essere capito velocemente e non per illustrare le migliori tecniche di programmazione JavaScript. Nel codice sono presenti delle variabili globali (andrò all'inferno per questo, lo so) tra le altre chicche. La gestione degli errori è praticamente inesistente. Lo scopo principale di questo testo è insegnare il *workflow* di sviluppo di applicazioni per Firefox OS e non i migliori pattern JS, quindi a seconda dei commenti migliorerò il codice, sempre che non abbia un brutto impatto sui principianti.  
 
 ~~~~~~~
 var dbName = "memos";
@@ -224,11 +228,11 @@ request.onupgradeneeded = function (event) {
 
 A> Importante: chiedo ancora perdono per aver utilizzato delle variabili globali, questo è solo del materiale utile all'insegnamento. Inoltre ho rimosso i commenti dal codice per risparmiare spazio nel testo. Su Github il codice è completo di commenti.
 
-Il codice appena visto crea un oggetto *db* ed un oggetto *request*. L'oggetto *db* è utilizzato in altre funzioni nel codice per manipolare le note memorizzate.
+Il codice appena visto crea un oggetto *db* ed un oggetto *request*. L'oggetto *db* è utilizzato in altre funzioni per manipolare le note memorizzate.
 
 Nell'implementazione della funzione `request.onupgradeneeded` creiamo una nota di benvenuto. Questa funzione è eseguita quando l'applicazione viene lanciata per la prima volta (o quando la versione del database cambia). In questo modo, al primo avvio dell'applicazione, il database conterrà una nota di esempio.  
 
-Una volta aperta la connessione e inizializzato il meccanismo di archiviazione, è ora di creare le funzioni basilari per manipolare le note.
+Una volta aperta la connessione al database e inizializzato il meccanismo di archiviazione, è ora di creare le funzioni basilari per manipolare le note.
 
 ~~~~~~~~
 function Memo() {
@@ -299,7 +303,7 @@ Ora che l'archiviazione delle note e le funzioni di modifica sono state implemen
 
 ### app.js
 
-Questo file contiene la logica dell'applicazione. Il codice sorgente è troppo lungo da mostrare nel testo, quindi verrà diviso in parti per studiarlo meglio.
+Questo file contiene la logica dell'applicazione. Il codice sorgente è troppo lungo da mostrare in una volta sola, quindi verrà diviso in parti per studiarlo meglio.
 
 ~~~~~~~~
 var listView, detailView, currentMemo, deleteMemoDialog;
@@ -436,9 +440,9 @@ function refreshMemoList() {
 }
 ~~~~~~~~
 
-La funzione `refreshMemoList()` modifica il DOM aggiornando l'elenco delle note. Sarebbe più facile usare alcuni sistemi di template come [handlebars](http://handlebarsjs.com/) o [underscore](http://underscorejs.org/) ma quest'applicazione contiene solo *vanilla javascript* quindi faremo tutto a mano. Questa funzione è chiamata `showMemoList()` mostrata sopra.
+La funzione `refreshMemoList()` modifica il [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction) della nostra applicazione aggiornando l'elenco delle note. Sarebbe più facile usare alcuni sistemi di _templating_ come [handlebars](http://handlebarsjs.com/) o [underscore](http://underscorejs.org/) ma quest'applicazione contiene solo *vanilla javascript* quindi faremo tutto a mano.
 
-Queste sono tutte le funzioni utilizzate dall'applicazione. Le uniche parti mancanti sono il gestore eventi e la chiamata iniziale di `refreshMemoList()`.
+Queste sono le funzioni utilizzate dall'applicazione. Le uniche che mancano sono il gestore eventi e la chiamata iniziale di `refreshMemoList()`.
 
 ~~~~~~~
 window.onload = function () {
@@ -467,17 +471,19 @@ Ora che tutti i file sono pronti proviamo l'applicazione nel simulatore.
 
 ## Provare l'applicazione sull'App manager
 
-Prima di avviare l'applicazione nel simulatore è preferibile verificare che tutti i file siano al posto giusto. Ecco quale dovrebbe essere il contenuto della cartella memos:
+Prima di avviare l'applicazione nel simulatore è preferibile verificare che tutti i file siano al posto giusto altrimenti l'applicazione non funzionerà. Ecco quale dovrebbe essere il contenuto della cartella memos:
 
 ![Lista dei file utilizzati da Memos](images/originals/memos-file-list.png)
 
 Se si ha il vago sospetto di aver commesso qualche errore è possibile verificarlo confrontando [il repository memos su github](https://github.com/soapdog/memos-for-firefoxos) (un'ulteriore copia del codice sorgente è disponibile  nella cartella **code** nel [repo del testo](https://github.com/soapdog/guia-rapido-firefox-os) ).
 
-Aprire la *Dashboard del Simulatore* e fare clic nel menu **Sviluppo -> Gestore App**.
+Tutto a posto? Bene, cominciamo.
+
+Per aprire la *Dashboard del Simulatore* fare clic nel menu **Sviluppo -> Gestore App**.
 
 ![Apertura della Dashboard del simulatore](images/originals/locate-app-manager.png)
 
-Con l'App Manager aperto, fare clic sul pulsante **Aggiungi app locale** e selezionare il file manifesto dell'applicazione.
+, fare clic sul pulsante **Aggiungi app locale** e selezionare il file manifesto dell'applicazione.
 
 ![Aggiunta di una nuova applicazione](images/originals/app-manager-add-packaged-app.png)
 
@@ -489,10 +495,10 @@ Quando si aggiungerà una nuova applicazione, il simulatore verrà avviato con l
 
 ![Memos installato nel Simulatore](images/originals/app-manager-updating-memos.png)
 
-Congratulazioni! Abbiamo creato e provato la nostra prima applicazione. Non è un'applicazione complessa o rivoluzionaria - ma spero sia utile per capire il workflow di sviluppo di Firefox OS. Come si sarà potuto notare non è molto diverso dallo sviluppo web classico.  
+Congratulazioni! Abbiamo creato e provato la nostra prima applicazione. Non è un'applicazione complessa o rivoluzionaria - ma spero sia utile per capire il workflow di sviluppo di Firefox OS. Chi ha già visto e lavorato con il web ha di sicuro potuto notare che non è molto diverso dallo sviluppo web classico.  
 
-Si ricordi che ogni volta che viene modificato il codice sorgente è necessario premere il pulsante **Aggiorna** per aggiornare il contenuto dell'applicazione presente nel simulatore.
+Sottolineiamo che ogni volta che viene modificato il codice sorgente è necessario premere il pulsante **Aggiorna** per aggiornare il contenuto dell'applicazione presente nel simulatore.
 
 ## Riassunto
 
-In questo capitolo abbiamo creato la nostra prima applicazione per Firefox OS e l'abbiamo lanciata nel simulatore. Nel prossimo capitolo vedremo gli strumenti per gli sviluppatori presenti in Firefox, che semplificano il lavoro di sviluppo.
+In questo capitolo abbiamo creato la nostra prima applicazione per Firefox OS e l'abbiamo lanciata nel simulatore. Nel prossimo capitolo vedremo uno strumento molto utile chiamato **BoilerPlate**, un insieme di codici già pronti adatto ad ogni evenienza, dal scattare una foto ad aggiungere un contatto o far vibrare il telefono.

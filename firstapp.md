@@ -4,7 +4,7 @@
 
 In questo capitolo vedremo come realizzare un semplice **Notepad**, cioè un'applicazione per prendere appunti. Prima di concentrarci sul codice cerchiamo di studiare il funzionamento di questa applicazione.
 
-Essa si compone di tre schermate. La prima è la schermata principale in cui mettiamo l'elenco delle note già sslavate. Se si fa clic su una nota (o se ne viene aggiunta una) viene aperta la schermata con i dettagli, nella quale è possibile modificare il titolo ed il testo della nota scelta. Ecco come vorremmo che si presentassero.
+Essa si compone di tre schermate. La prima è la schermata principale in cui mettiamo l'elenco delle note già salvate. Se si fa clic su una nota (o se ne viene aggiunta una) viene aperta la schermata con i dettagli, nella quale è possibile modificare il titolo ed il testo della nota scelta. Ecco come vorremmo che si presentassero.
 
 ![Memos, schermata di modifica](images/originals/memos-editing-screen.png)
 
@@ -501,4 +501,4 @@ Sottolineiamo che ogni volta che viene modificato il codice sorgente è necessar
 
 ## Riassunto
 
-In questo capitolo abbiamo creato la nostra prima applicazione per Firefox OS e l'abbiamo lanciata nel simulatore. Nel prossimo capitolo vedremo uno strumento molto utile chiamato **BoilerPlate**, un insieme di codici già pronti adatto ad ogni evenienza, dal scattare una foto ad aggiungere un contatto o far vibrare il telefono.
+In questo capitolo abbiamo creato la nostra prima applicazione per Firefox OS e l'abbiamo lanciata nel simulatore. Nel prossimo capitolo vedremo uno strumento molto utile chiamato **BoilerPlate**, un insieme di esempi che rispondono ad esigenze basilari di un'applicazione, come selezionare un contatto dalla rubrica, far vibrare il telefono o controllare la carica della batteria, tutto questo è documentato con codice già pronto e adatto ad ogni evenienza, dallo scattare una foto ad aggiungere un contatto o far vibrare il telefono.

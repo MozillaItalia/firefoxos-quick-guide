@@ -5,7 +5,7 @@ basics.md
 firstapp.md
 boilerplate.md
 devtools.md
-appmanager.md
+webide.md
 simulator.md
 distribution.md
 marketplace.md

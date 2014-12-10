@@ -40,13 +40,21 @@ Nella barra degli strumenti abbiamo il pulsante **Seleziona ...**, fai click per
 
 Fai clic su **Installa il simulatore** e seleziona la versione da installare facendo click sul bottone relativo. Hai finito!
 
-## Ultimi ritocchi
+## Usare un dispositivo Firefox OS per lo sviluppo
 
-Per fare debugging remoto il sistema deve riconoscere il dispositivo quindi sono necessari gli Android Tools o in parole povere `adb`. Come abbiamo accennato Firefox OS è basato su Android e quindi possiamo sfruttare alcuni dei suoi strumenti da sviluppatore come adb, che permette di passare dei file e di comunicare da computer a dispositivo e viceversa.  
-Se adb non è presente nel computer, Firefox non potrà rilevare alcun dispositivo connesso!  
-Con l'estensione [ADB Helper](https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/) verrà installato su Firefox e si potrà debuggare da remoto con il proprio dispositivo Firefox OS. 
+Puoi usare il tuo dispositivo con Firefox OS per effettuare il debug delle tue applicazioni. Ecco come fare:
 
-![Tla pagina per scaricare i Simulatori ed ADB Helper](images/originals/app-manager-add-ons.png)
+* Installa `adb`[^adb]
+* Installa l'addon per Firefox [ADB Helper](https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/) per far comunicare Firefox con il tuo dispositivo
+
+Se hai fatto tutto per bene e colleghi il tuo dispositivo al computer Firefox lo rileverà e verrà mostrati tra i dispositivi utilizzabili dal WebIde
+
+![Senza e con ADB helper](images/originals/adb_helper.png)
+
+[^adb]: adb è la sigla con cui indichiamo il programma *android debug bridge* uno strumento per comunicare con i dispositivi che si basano su Android
+
+Per fare debugging remoto il sistema deve riconoscere il dispositivo quindi sono necessari gli Android Tools o in parole povere `adb`. Come abbiamo accennato Firefox OS è basato su Android e quindi possiamo sfruttare alcuni dei suoi strumenti da sviluppatore come `adb`, che permette di passare dei file e di comunicare da computer a dispositivo e viceversa.  
+Se adb non è presente nel computer, Firefox non potrà rilevare alcun dispositivo connesso!
 
 ## Riassunto
 

@@ -1,22 +1,22 @@
 # Concetti Base {#concepts}
 
-Prima di sporcarci le mani con la creazione della nostra prima applicazione, vediamo di scoprire alcuni concetti base per lo sviluppo su Firefox OS. Abbiamo visto nell'[introduzione](#introduction) che le applicazioni Firefox OS, analogamente alle pagine web, sono basate su HTML5. Tuttavia, non abbiamo spiegato cosa rende le applicazioni per Firefox OS differenti dalle pagine web classiche. 
+Prima di sporcarci le mani con la nostra prima applicazione, vediamo di scoprire alcuni concetti base per lo sviluppo su Firefox OS. Nell'[introduzione](#introduction) abbiamo detto che le applicazioni Firefox OS, analogamente alle pagine web, sono basate su HTML5, tuttavia non abbiamo spiegato cosa rende le applicazioni per Firefox OS differenti dalle pagine web classiche. 
 
-Se utilizziamo la nostra conoscenza riguardo le altre piattaforme *mobile* possiamo osservare che le applicazioni native hanno:
+Se utilizziamo le nostre conoscenze riguardo le altre piattaforme *mobile* (Android, iOS) possiamo osservare che le applicazioni native hanno delle caratteristiche ben definite:
 
 * Un nome e un'icona con cui l'utente lancia l'applicazione.
-* Accesso ai servizi di sistema e funzionalità hardware. 
+* Accesso ai **servizi di sistema** (dati utente, notifiche) e **funzionalità hardware** (sensori).
 
-Osservando il quadro generale, un'applicazione Firefox OS non è altro che una pagina web con una icona e un nome, di solito è in grado di funzionare anche non in linea (questo però può dipendere dall'implementazione dell'applicazione). Tutti i dati dell'applicazione come nome, icona ecc. sono definiti nel *file manifesto dell'applicazione*, che sarà l'argomento della prossima sezione.
+Osservando il quadro generale, un'applicazione Firefox OS non è altro che una pagina web con una icona, un nome e di solito è in grado di funzionare anche non in linea (decisione che spetta allo sviluppatore). Tutti i dati dell'applicazione come nome, icona ecc. sono definiti nel *file manifesto dell'applicazione*, che sarà l'argomento della prossima sezione.
 
 ## File manifesto dell'applicazione
 
-Il [manifesto](https://developer.mozilla.org/docs/Apps/Manifest) è un file [JSON](http://json.org) poiché contiene i **metadati** dell'applicazione. Solitamente questo file è chiamato **manifest.webapp** e va posizionato accanto al classico file HTML **index.html**.  
+Il [manifesto](https://developer.mozilla.org/docs/Apps/Manifest) è un file [JSON](http://json.org) che contiene i **metadati** dell'applicazione. Questo file è chiamato **manifest.webapp** e viene posizionato accanto al classico file HTML **index.html**, nella stessa cartella.
 Questi metadati servono al sistema per sapere il nome dello sviluppatore, la versione, i permessi richiesti per le varie API, l'icona, le lingue in cui è disponibile e molto altro.
 
 <<[Manifest d'esempio](code/sample_manifest.webapp)
 
-Sopra possiamo vedere il manifest di un'applicazione chiamata Memos[^promemoria]. Tra le altre cose descrive chi ha creato l'applicazione, quali icone usare, qual è il nome dell'applicazione, che file è usato per lanciare l'applicazione (in questo caso *index.html*), quali permessi d'accesso hardware richiede l'applicazione, ecc. Questo file è usato in Firefox OS per aggiungere l'applicazione alla schermata principale e per mostrare su Firefox Marketplace le informazioni dell'applicazione.
+Sopra possiamo vedere il manifest di un'applicazione chiamata Memos[^promemoria]. Tra le altre cose descrive chi ha creato l'applicazione, quali icone usare, qual è il nome dell'applicazione, quale file è usato per lanciare l'applicazione (in questo caso *index.html*), quali permessi d'accesso hardware richiede l'applicazione, ecc. Questo file è usato da Firefox OS per aggiungere l'applicazione alla schermata principale e per mostrare sul Firefox Marketplace le informazioni dell'applicazione.
 
 [^promemoria]: Questa applicazione di esempio per Firefox OS è disponibile su [Firefox Marketplace](https://marketplace.firefox.com/app/memos) e il [codice sorgente è su GitHub](https://github.com/soapdog/memos-for-firefoxos).
 
@@ -200,7 +200,7 @@ Sopra ho affermato che utilizzare AppCache può essere complicato (ma talvolta �
 
 In questo testo vedremo come realizzare applicazioni *packaged*, in quanto questo ci permetterà di esplorare tutte le possibilità offerte dalle WebAPI. In ogni caso la maggior parte di ciò che vedremo sui file manifest si applica anche alle *app hosted*. Per ulteriori informazioni sulla distribuzione delle *app hosted* consultare [la documentazione sulle *app hosted* nel Centro di sviluppo](https://marketplace.firefox.com/developers/docs/hosted).
 
-[^js-tools]: Esistono molti strumenti utili, come [Grunt](gruntjs.com), [Volo](http://volojs.org/), [Yeoman](http://yeoman.io/), [Bower](http://bower.io/). Questi strumenti si sovrappongono facilmente, è una questione di preferenza. (Mi piace Volo rispetto a Grunt perché i Volofiles sono più semplici da leggere).
+[^js-tools]: Esistono molti strumenti utili, come [Grunt](http://gruntjs.com), [Volo](http://volojs.org/), [Yeoman](http://yeoman.io/), [Bower](http://bower.io/). Questi strumenti si sovrappongono facilmente, è una questione di preferenza. (Mi piace Volo rispetto a Grunt perché i Volofiles sono più semplici da leggere).
 
 Ora che abbiamo trattato i due tipi di applicazioni supportate da Firefox OS, diamo un'occhiata ai diversi livelli di accesso che un'app può richiedere.
 

@@ -30,8 +30,11 @@ Riunendo il codice HTML, CSS, JavaScript e un file manifesto è già possibile a
 
 ### Il nostro primo manifest
 
-Come possiamo notare, il manifest è composto da una serie di campi chiave/valore, che descrivono le proprietà dell'applicazione.
-Il sistema richiede obbligatoriamente solo *name*, *description* e *icons*, il campo *launch_path* indica il collegamento al file da avviare (necessario se è di tipo *packaged*) e il campo *developer* che con le sue proprietà *name* e *url* definiscono, rispettivamente, nome e URL dello sviluppatore dell'applicazione (utili nel caso vogliate pubblicare la vostra app sul Mozilla Marketplace).
+Come possiamo notare, il manifest è composto da un elenco di informazioni che scriviamo separando il _nome_ dell'informazione dal suo _valore_ tramite il carattere ":", e separiamo ogni informazione con una ",", come per un elenco.
+
+#### Cosa mettere nel manifest
+
+È obbligatorio inserire *name*, *description* e *icons*; il campo *launch_path* indica il file da avviare (necessario se l'app è *packaged*) e il campo *developer* che con le sue proprietà *name* e *url* definiscono, rispettivamente, nome e URL dello sviluppatore dell'applicazione (utili nel caso vogliate pubblicare la vostra app sul Mozilla Marketplace).
 
 ### Le proprietà del manifest
 
@@ -188,7 +191,7 @@ Attualmente esistono due tipi di applicazioni Firefox OS: ospitate (*hosted*) e 
 
 W> Nota del traduttore: è sempre difficile rendere alcuni termini tecnici in italiano, nel sito di Firefox Marketplace è stato scelto di tradurre le *hosted app* in app ospitate e le *packaged app* in app pacchettizzate. Ciò nonostante nel mondo degli sviluppatori italiani si usano i termini *app hosted* e *app packaged*. Nel proseguo del testo verranno utilizzati entrambi i termini a discrezione dei localizzatori.
 
-* **App Hosted:** Sono ospitate su un server come i classici siti web. Questo significa che quando l'utente avvia un'applicazione hosted, il suo contenuto è caricato dal server remoto (o dalla cache, se disponibile).
+* **App Hosted:** Sono disponibili ad un indirizzo web come [www.mozilla.org](http://mozilla.org) esattamente come i classici siti web. Questo significa che quando l'utente avvia un'applicazione hosted, il suo contenuto è caricato dal server remoto (o dalla cache, se disponibile).
 * **App Packaged:** Sono distribuite come file zip e vengono salvate nel dispositivo al momento della loro installazione. Quando l'utente avvia un'app pacchettizzata, i suoi contenuti sono caricati da un file zip nel dispositivo anziché da un server remoto.
 
 Esistono vantaggi e svantaggi nell'utilizzo di entrambi i tipi. Da un lato le *app hosted* sono più facili da aggiornare, infatti è sufficiente aggiornare i file sul server web. Però è più complicato implementare il loro funzionamento in modalità non in linea in quanto richiede l'utilizzo del tanto discusso file [**appcache**](https://developer.mozilla.org/docs/HTML/Using_the_application_cache). Inoltre, le *hosted app* hanno delle limitazioni nell'uso di alcune WebAPI e dunque non è possibile implementare tutte le funzioni che si possono utilizzare in un'*app packaged*.

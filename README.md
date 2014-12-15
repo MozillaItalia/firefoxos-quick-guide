@@ -25,6 +25,7 @@ Per favore mantieni lo stile di scrittura coerente:
 ## Altre versioni
 
 Versione portoghese: [GitHub Repo](https://github.com/soapdog/guia-rapido-firefox-os/) e [Live book page](https://leanpub.com/guiarapidofirefoxos)
+
 Versione inglese: [GitHub Repo](https://github.com/soapdog/firefoxos-quick-guide/) e [Live book page](https://leanpub.com/quickguidefirefoxosdevelopment/)
 
 ## Licenza

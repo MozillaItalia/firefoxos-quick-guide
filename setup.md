@@ -58,6 +58,6 @@ Se adb non è presente nel computer, Firefox non potrà rilevare alcun dispositi
 
 ## Riassunto
 
-In questo capitolo abbiamo scoperto che tutto ciò di cui abbiamo bisogno per sviluppare *app per Firefox OS* è il browser Firefox (in versione desktop) con l'estensione *Firefox OS Simulator* presente (e un buon editor di testo).
+In questo capitolo abbiamo scoperto che tutto ciò di cui abbiamo bisogno per sviluppare *app per Firefox OS* è il browser Firefox per desktop (e un buon editor di testo).
 
 Ora che abbiamo configurato l'ambiente di sviluppo, siamo pronti per soffermarci su qualche concetto base prima di creare la nostra prima app.

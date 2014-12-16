@@ -47,11 +47,6 @@ Una web activities è un task richiamato da un'altra applicazione, che si appogg
 Volendo fare un'esempio, se voi sviluppate un applicazione che permette di condividere le vostre foto su di un sito, potreste implementare la web activities *share*; in questo modo, quando l'utente prova a condividere una foto dall'app galleria, apparirà anche la vostra applicazione tra quelle che possono svolgere questo compito.  
 La sintassi di questo campo è un po' complessa, per questo vi rimando alla pagina di documentazione su [MDN](https://developer.mozilla.org/en-US/docs/WebAPI/Web_Activities).
 
-**appcache_path**
-
-Questa proprietà vi consente di specificare il percorso del manifest.appcache, dovete specificarla solo se utilizzate AppCache all'interno della vostra applicazione.  
-AppCache è uno standard W3C che permette di mettere in cache alcuni file e molto altro per maggiori informazioni vi rimando alla documentazione su [MDN](https://developer.mozilla.org/it/docs/Web/HTML/utilizzare_application_cache).
-
 **chrome**
 
 Il campo *chrome* indica se la vostra applicazione fa uso dei pulsanti di navigazione predefiniti dal sistema come nell'immagine  
@@ -61,10 +56,6 @@ La sintassi della proprietà è la seguente:
 ```
 "chrome": { "navigation": true }
 ```
-
-**csp**
-
-Applica una "Content Security Policy" all'applicazione, per ulteriori informazioni vi rimando alla pagina di documentazione su [MDN](https://developer.mozilla.org/en-US/Apps/CSP)
 
 **default_locale**
 

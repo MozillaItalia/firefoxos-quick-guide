@@ -38,13 +38,13 @@ Come possiamo notare, il manifest è composto da un elenco di informazioni che s
 
 ### Le proprietà del manifest
 
-Il manifest supporta una marea di proprietà, perciò vediamo il funzionamento e l'utilità di ogni campo.
+Il manifest descrive una marea di proprietà utili, perciò vediamo il nome e l'utilità di ognuna.
 
 **activities**
 
-La proprietà *activities* specifica quali *Web Activities* supporta la nostra applicazione.  
-Una web activities è un task richiamato da un'altra applicazione, che si appoggia alla vostra per un determinato compito.
-Volendo fare un'esempio, se voi sviluppate un applicazione che permette di condividere le vostre foto su di un sito, potreste implementare la web activities *share*; in questo modo, quando l'utente prova a condividere una foto dall'app galleria, apparirà anche la vostra applicazione tra quelle che possono svolgere questo compito.  
+La proprietà *activities* specifica quali *Web Activities* supporta la nostra applicazione.
+Registrare la vostra applicazione come una "Web Activities" vi permette di rendere la vostra applicazione accessibile alle altre.
+Volendo fare un'esempio, se voi sviluppate un applicazione che permette di condividere le vostre foto su di un sito, potreste implementare la web activities *share*; in questo modo, quando l'utente prova a condividere una foto dall'app galleria, apparirà anche la vostra applicazione tra quelle che possono svolgere questo compito.
 La sintassi di questo campo è un po' complessa, per questo vi rimando alla pagina di documentazione su [MDN](https://developer.mozilla.org/en-US/docs/WebAPI/Web_Activities).
 
 **chrome**
@@ -59,7 +59,7 @@ La sintassi della proprietà è la seguente:
 
 **default_locale**
 
-Questo parametro è necessario quando è presente la proprietà *locales*, indica qual è la lingua predefinita dell'applicazione e quella che verrà usata se nel sistema è impostata una lingua non presente nella vostra app.  
+Questo parametro è necessario quando è presente anche la proprietà *locales* ed indica qual è la lingua predefinita dell'applicazione  ovvero quella che verrà usata se nel sistema è impostata una lingua per cui non avete traduzioni.
 
 Esempio per l'inglese
 ```
@@ -68,11 +68,11 @@ Esempio per l'inglese
 
 **description**
 
-La descrizione dell'applicazione (massimo 1024 caratteri), siate il più chiari e sintetici possibile perché questo è il tasto che verrà visualizzato sul Mozilla Marketplace (successivamente si può modificare).
+La descrizione dell'applicazione (massimo 1024 caratteri), siate il più chiari e sintetici possibile perché questo è il testo che verrà visualizzato sul Mozilla Marketplace (successivamente si può modificare).
 
 **developer**
 
-Abbiamo incontrato questa proprietà nel manifest di prova, indica chi è lo sviluppatore e qual è il suo sito web.
+Abbiamo incontrato questa proprietà nel manifest di prova, puoi indicare chi è lo sviluppatore e qual è il suo sito web.
 
 **fullscreen**
 
@@ -80,8 +80,8 @@ Se impostata a *true*, metterà la vostra applicazione a schermo intero (utile p
 
 **icons**
 
-Anche questa proprietà era presente nell'esempio, serve ad impostare le varie dimensioni delle icone dell'applicazione.  
-CI sono più versioni dela stessa icona a dimensioni diverse perchè a seconda dell'interfaccai o della schermata che mostra l'applicazione verrà usata quella più idonea.  
+Anche questa proprietà era presente nell'esempio e serve per far sapere quali risoluzioni dell'icona mettiamo a disposizione.
+Naturalmente è bene fornire la stessa icona con più risoluzioni, in modo che il dispositivo prenda quella adeguata; pensate a come sarebbe piccola l'icona pensata per il telefono rispetto a quelle del tablet o, ancora peggio, rispetto a quelle di uno schermo da 40 pollici.
 Alcune dimensioni sono obbligatorie per il Mozilla Marketplace.
 
 **installs_allowed_from**

@@ -49,7 +49,7 @@ La sintassi di questo campo è un po' complessa, per questo vi rimando alla pagi
 
 **chrome**
 
-Il campo *chrome* indica se la vostra applicazione fa uso dei pulsanti di navigazione predefiniti dal sistema come nell'immagine  
+Il campo *chrome* indica se la vostra applicazione fa uso dei pulsanti di navigazione predefiniti dal sistema come vediamo nell'immagine  
 ![chrome](images/originals/nav-both2.png)  
 *Nota*: tenete presente che questa funzionalità va utilizzata solo se non è possibile implementare una soluzione propria, poiché le linee guida per l'user experience prevedono l'inserimento di un tasto *back* da parte dell'applicazione.  
 La sintassi della proprietà è la seguente:
@@ -87,6 +87,7 @@ Alcune dimensioni sono obbligatorie per il Mozilla Marketplace.
 **installs_allowed_from**
 
 Indica una serie di siti a cui è permesso installare l'applicazione (questo campo è inutile se pubblicate la vostra app solamente nel Mozilla Marketplace).
+Se usate il vostro sito come base per la vostra applicazione allora dovete inserirlo in questo campo.
 
 **launch_path**
 
@@ -95,7 +96,8 @@ Questo campo indica il percorso di lancio dell'applicazione che deve essere rela
 
 **locales**
 
-Questa proprietà ci permette di impostare i dati come URL o description per le varie lingue in cui è rilasciata l'app.  
+Questa proprietà ci permette di impostare i dati come URL o description per le varie lingue in cui è rilasciata l'app.
+
 Esempio:
 ```
 "locales": {
@@ -116,7 +118,8 @@ Esempio:
 
 **messages**
 
-Indica quali messaggi del sistema la vostra app può leggere per eseguire del codice specifico.  
+Indica quali messaggi del sistema la vostra app può leggere per eseguire del codice specifico.
+
 Esempio:
 ```
 "messages": [
@@ -127,7 +130,7 @@ Esempio:
   { "alarm": "/facebook/fb_sync.html" }
 ]
 ```
-Come si può vedere, per esempio, con *telephony-new-call* allo scatenarsi di questo evento verrà aperta la pagina /dialer/index.html all'ancora #keyboard-view.
+Il campo **messages** così compilato permette, per esempio, di aprire la pagina `/dialer/index.html` all'ancora `#keyboard-view` quando l'evento *telephony-new-call* viene rilevato dal telefono.
 
 **name**
 
@@ -135,16 +138,17 @@ Indovinate? Il nome della vostra app!
 
 **orientation**
 
-Questa proprietà imposta l'orientamento predefinito dell'applicazione, i due valori ammessi sono "landscape" e "portrait" (predefinito).  
+Questa proprietà imposta l'orientamento predefinito dell'applicazione, i due valori ammessi sono "landscape" e "portrait" (predefinito). Lasciatela vuota o addirittura non mettetela se non vi interessa.
 
 **origin**
 
-Indica un'URL che l'applicazione può utilizzare al posto dell'UUID, è raro utilizzare questo valore.  
+Indica un'URL che l'applicazione può utilizzare al posto dell'UUID, è raro utilizzare questo valore.
 
 **permissions**
 
-Proprietà molto importante, permette di chiedere all'utente il permesso di utilizzare elementi specifici del telefono, come la geolocalizzazione.
-Esempio:  
+Proprietà chiave del manifest, permette di chiedere all'utente il permesso di utilizzare elementi specifici del telefono, come la geolocalizzazione, i contatti, ...
+
+Esempio:
 ```
 "permissions": {
   "contacts": {
@@ -156,7 +160,9 @@ Esempio:
   }
 }
 ```
-Come potete vedere richiede due permessi ossia: l'accesso all'elenco dei contatti in modalità lettura/creazione e la possibilità di usare la sveglia.  
+
+In questo caso abbiamo richiesto due permessi: l'accesso all'elenco dei contatti in modalità lettura/creazione e la possibilità di usare la sveglia.
+
 Inoltre bisogna fornire due ulteriori campi, un campo *description* in cui bisogna spiegare all'utente a cosa ci serve il permesso e un campo *access* opzionale in cui specificate il grado d'accesso.
 I valori possibili sono *readonly*, *readwrite*, *readcreate* e *createonly*.
 
@@ -171,30 +177,30 @@ Indica se la vostra app è *web*, *privileged* o *certified*. Le certified sono 
 
 **version**
 
-Il numero di versione della vostra app sotto forma di stringa.
+Il numero di versione della vostra app sotto forma di *stringa*.
 
-
-<<Important: Github fornisce tramite Github Pages il mime type giusto per il file manifest. Alcuni sviluppatori distribuiscono le proprie applicazioni hosted da Github, il vantaggio è che sono sempre aggiornate e finché si tratta di applicazioni semplici in JavaScript è una buona soluzione hosting.
+<<Important: Github fornisce tramite Github Pages il mime type giusto per il file manifest. Alcuni sviluppatori distribuiscono le proprie applicazioni hosted da Github, il vantaggio è che sono sempre aggiornate e finché si tratta di applicazioni semplici in JavaScript è una buona soluzione hosting. Vedi l'ultimo capitolo per approfondimenti.
 
 ## Tipi di Applicazioni
 
-Attualmente esistono due tipi di applicazioni Firefox OS: ospitate (*hosted*) e pacchettizzate (*packaged*) - forse in futuro saranno disponibili altri tipi di applicazioni (per esempio che consentiranno di personalizzare la tastiera o di creare altri servizi di sistema).
+Attualmente esistono due tipi di applicazioni Firefox OS che potete sviluppare: ospitate (*hosted*) e pacchettizzate (*packaged*) - forse in futuro saranno disponibili altri tipi di applicazioni (per esempio che consentiranno di personalizzare la tastiera o di creare altri servizi di sistema).
 
 W> Nota del traduttore: è sempre difficile rendere alcuni termini tecnici in italiano, nel sito di Firefox Marketplace è stato scelto di tradurre le *hosted app* in app ospitate e le *packaged app* in app pacchettizzate. Ciò nonostante nel mondo degli sviluppatori italiani si usano i termini *app hosted* e *app packaged*. Nel proseguo del testo verranno utilizzati entrambi i termini a discrezione dei localizzatori.
 
 * **App Hosted:** Sono disponibili ad un indirizzo web come [www.mozilla.org](http://mozilla.org) esattamente come i classici siti web. Questo significa che quando l'utente avvia un'applicazione hosted, il suo contenuto è caricato dal server remoto (o dalla cache, se disponibile).
 * **App Packaged:** Sono distribuite come file zip e vengono salvate nel dispositivo al momento della loro installazione. Quando l'utente avvia un'app pacchettizzata, i suoi contenuti sono caricati da un file zip nel dispositivo anziché da un server remoto.
 
-Esistono vantaggi e svantaggi nell'utilizzo di entrambi i tipi. Da un lato le *app hosted* sono più facili da aggiornare, infatti è sufficiente aggiornare i file sul server web. Però è più complicato implementare il loro funzionamento in modalità non in linea in quanto richiede l'utilizzo del tanto discusso file [**appcache**](https://developer.mozilla.org/docs/HTML/Using_the_application_cache). Inoltre, le *hosted app* hanno delle limitazioni nell'uso di alcune WebAPI e dunque non è possibile implementare tutte le funzioni che si possono utilizzare in un'*app packaged*.
-Dall'altro lato tutti i file di un'*app packaged* sono memorizzati localmente sul dispositivo - ciò significa che sono sempre disponibili quando l'utente non è collegato (e quindi non sarà necessario utilizzare AppCache). Hanno anche la possibilità di accedere a WebAPI sensibili per la sicurezza che non sono disponibili per le *app hosted*. Il loro aggiornamento può essere faticoso, perché sarà necessario caricare qualsiasi nuova versione su Firefox Marketplace - ciò significa far sostenere a ogni nuova versione dell'applicazione il processo di revisione che potrebbe richiedere un po' di tempo.
+Esistono vantaggi e svantaggi nell'utilizzo di entrambi i tipi. Da un lato le *app hosted* sono più facili da aggiornare, infatti è sufficiente cambiare i file sul server web. Però è più complicato implementare il loro funzionamento in modalità non in linea in quanto richiede l'utilizzo del tanto discusso file [**appcache**](https://developer.mozilla.org/docs/HTML/Using_the_application_cache). Inoltre, le *hosted app* hanno delle limitazioni nell'uso di alcune WebAPI e dunque non è possibile implementare tutte le funzioni che si possono utilizzare in un'*app packaged*.
+
+Dall'altro lato tutti i file di un'*app packaged* sono memorizzati localmente sul dispositivo - ciò significa che sono sempre disponibili quando l'utente non è collegato (e quindi non sarà necessario utilizzare AppCache). Hanno anche la possibilità di accedere a WebAPI sensibili per la sicurezza che non sono disponibili per le *app hosted*. Il loro aggiornamento può essere problematico, perché sarà necessario caricare qualsiasi nuova versione su Firefox Marketplace - ciò significa far sostenere a ogni nuova versione dell'applicazione il processo di revisione che potrebbe richiedere un po' di tempo.
 
 Quando si sceglie quale tipo di applicazione realizzare è necessario fare delle valutazioni: se si dovranno utilizzare delle WebAPI avanzate sarà necessario orientarsi verso un'*app packaged*. Se l'app che si sta progettando può funzionare senza accedere a servizi di sistema avanzati o funzionalità del dispositivo oltre a quelle già disponibili in un browser web, sarà necessaria un'*app hosted*. In caso non si disponga di un server per la distribuzione utilizzare il tipo *app packaged*.
 
-Sopra ho affermato che utilizzare AppCache può essere complicato (ma talvolta è indispensabile per alcune *app hosted*). Niente paura, esistono degli strumenti per semplificare la generazione di file AppCache e facilitare il processo di distribuzione[^js-tools].
+Sopra ho detto che utilizzare AppCache può essere complicato (ma talvolta è indispensabile per alcune *app hosted*). Niente paura, esistono degli strumenti per semplificare la generazione di file AppCache e facilitare il processo di distribuzione[^js-tools].
 
 In questo testo vedremo come realizzare applicazioni *packaged*, in quanto questo ci permetterà di esplorare tutte le possibilità offerte dalle WebAPI. In ogni caso la maggior parte di ciò che vedremo sui file manifest si applica anche alle *app hosted*. Per ulteriori informazioni sulla distribuzione delle *app hosted* consultare [la documentazione sulle *app hosted* nel Centro di sviluppo](https://marketplace.firefox.com/developers/docs/hosted).
 
-[^js-tools]: Esistono molti strumenti utili, come [Grunt](http://gruntjs.com), [Volo](http://volojs.org/), [Yeoman](http://yeoman.io/), [Bower](http://bower.io/). Questi strumenti si sovrappongono facilmente, è una questione di preferenza. (Mi piace Volo rispetto a Grunt perché i Volofiles sono più semplici da leggere).
+[^js-tools]: Esistono molti strumenti utili, come [Grunt](http://gruntjs.com), [Volo](http://volojs.org/), [Yeoman](http://yeoman.io/), [Bower](http://bower.io/). Questi strumenti sono molto spesso equivalenti nel risultato ed è una questione di preferenza. (Mi piace Volo rispetto a Grunt perché i Volofiles sono più semplici da leggere).
 
 Ora che abbiamo trattato i due tipi di applicazioni supportate da Firefox OS, diamo un'occhiata ai diversi livelli di accesso che un'app può richiedere.
 
@@ -204,7 +210,7 @@ Esistono tre livelli di sicurezza su Firefox OS - ogni livello fornisce un maggi
 
 * **Semplice (a.k.a. web):** questo è il livello predefinito di tutte le applicazioni. Questo livello si applica alle *app hosted* e alle *app packaged* che non dichiarano una proprietà `type` nel loro file manifesto. Queste applicazioni hanno un accesso alle comuni API dei browser - ma non hanno un accesso ad alcuna delle WebAPI Mozilla.
 * **Con privilegi:** questo tipo di applicazioni ha accesso a tutte le API disponibili nel browser Firefox, oltre a quelli aggiuntivi, come i contatti e gli allarmi di sistema. Solo **le packaged possono essere app con privilegi** ed il pacchetto deve essere firmato digitalmente dal Marketplace Firefox.
-* **Certificato:** per motivi di sicurezza, questo livello è permesso per le app realizzate direttamente da Mozilla e dai suoi partner (per esempio i fornitori dell'hardware, le compagnie di telecomunicazione, ecc…). Le applicazioni certificate hanno un accesso a tutte le API, come l'API Telephony e altro ancora. Un esempio di applicazione certificata in Firefox OS è il dialer.
+* **Certificato:** per motivi di sicurezza, questo livello è permesso per le app realizzate direttamente da Mozilla e dai suoi partner (per esempio i fornitori dell'hardware, le compagnie di telecomunicazione, ecc…). Le applicazioni certificate hanno un accesso a tutte le API, come l'API Telephony e altro ancora. Un esempio di applicazione certificata in Firefox OS è il telefono.
 
 Durante lo sviluppo è possibile accedere alle API con privilegi senza richiedere permessi speciali a Mozilla. In fase di distribuzione, però, sarà necessario caricare l'app sul Firefox Marketplace. A questo punto il codice viene controllato in un rigoroso processo di approvazione e se è tutto OK l'app sarà firmata digitalmente - questo garantirà agli utenti di Firefox OS che a questa applicazione è consentito accedere alle API sensibili.
 
@@ -212,11 +218,11 @@ Sulla [pagina delle WebAPI sul Mozilla Developer Network](https://developer.mozi
 
 ![Livello di accesso alle API](images/originals/webapi-access.png)
 
-Come si può vedere dall'immagine qui sopra, qualsiasi applicazione può accedere alle API *IndexedDB API e FileHandle API* ma solamente le app con privilegi possono accedere ai *Contacts API e Device Storage API*.
+Come si può vedere dall'immagine qui sopra, qualsiasi applicazione può accedere alle API *IndexedDB API e FileHandle API* ma solamente le app con privilegi possono accedere ai *Contacts API* e *Device Storage API*.
 
 ## WebAPI di Mozilla
 
-Firefox OS fornisce le API necessarie per sviluppare applicazioni con le stesse funzionalità delle applicazioni native sulle altre piattaforme. L'accesso hardware e dei servizi avviene attraverso le WebAPI. Per saperne di più sulle API disponibili nelle varie versioni di Firefox OS consultare [la pagina WebAPI nel Wiki Mozilla](https://wiki.mozilla.org/WebAPI).
+Firefox OS fornisce le API necessarie per sviluppare applicazioni con le stesse funzionalità delle applicazioni native sulle altre piattaforme. L'accesso al hardware ed ai servizi avviene attraverso le WebAPI. Per saperne di più sulle API disponibili nelle varie versioni di Firefox OS consultare [la pagina WebAPI nel Wiki Mozilla](https://wiki.mozilla.org/WebAPI).
 
 Analizzeremo alcuni esempi di codice per vedere come le API sono facili da utilizzare. Gli esempi non vanno presi come una documentazione completa sulle WebAPI, sono una piccola dimostrazione di come si possa accedere al dispositivo usando JavaScript.
 
@@ -237,13 +243,13 @@ Si immagini di avere una rete intranet aziendale e di voler sviluppare un'app pe
 
 <<[Salvare un contatto](code/webapi_samples/contact.js)
 
-Questa API crea un oggetto con i dati del contatto e lo salva nella rubrica telefonica senza bisogno di alcuna interazione da parte dell'utente. Poiché l'accesso ai contatti comporta implicazioni riguardo la privacy, questa API è disponibile per le *app con privilegi*. Il modello di questa API prevede l'utilizzo di due callback: *success* in caso di buona riuscita dell'operazione e *error* in caso contrario, ed è comunemente utilizzato da molte altre API.
+Questa API crea un oggetto con i dati del contatto e lo salva nella rubrica telefonica senza bisogno di alcuna interazione da parte dell'utente. Poiché l'accesso ai contatti comporta implicazioni riguardo la privacy, questa API è disponibile per le *app con privilegi*. Il modello di questa API prevede l'utilizzo di due callback ed è un approccio condiviso da molte altre API. Forniamo quindi due funzioni, *success* in caso di buona riuscita dell'operazione e *error* in caso contrario da eseguire una volta che si è risolta l'azione principale (in questo caso salvare un contatto).
 
 Per ulteriori informazioni su questa API consultare [la pagina dedicata alle *Contacts API* sul wiki Mozilla](https://wiki.mozilla.org/WebAPI/ContactsAPI).
 
 ### Esempio #3: Selezionare una immagine dalla fotocamera
 
-Si immagini di voler creare un'app che applichi delle decorazioni alle immagini. Sarà quindi necessario utilizzare un pulsante che permetta di scattare una foto con la fotocamera o scegliere l'immagine da una galleria.
+Si immagini di voler creare un'app che applichi delle decorazioni alle immagini, come una cornice o dei baffi. Sarà quindi necessario utilizzare un pulsante che permetta di scattare una foto con la fotocamera o scegliere l'immagine da una galleria.
 
 <<[Scegliere una foto](code/webapi_samples/pick.js)
 
@@ -253,6 +259,6 @@ Questo è un altro esempio di [WebActivity](https://hacks.mozilla.org/2013/01/in
 
 ## Riassunto
 
-In questo capitolo abbiamo visto che rispetto alle pagine web classiche, entrambi i tipi di applicazione per Firefox OS (hosted e packaged) si basano su un file manifest. Abbiamo visto anche che dal punto di vista della sicurezza le applicazioni packaged possono essere "con privilegi" o "certificate". Solo le app privilegiate e certificate possono accedere alle WebAPI di Mozilla. Le WebAPI non sono disponibili per le applicazioni hosted o le pagine web classiche.
+In questo capitolo abbiamo visto che rispetto alle pagine web classiche, entrambi i tipi di applicazione per Firefox OS (hosted e packaged) si basano su un file manifest. Abbiamo visto anche che dal punto di vista della sicurezza le applicazioni packaged possono essere **con privilegi** o **certificate**. Solo le app privilegiate e certificate possono accedere alle WebAPI di Mozilla. Le WebAPI non sono disponibili per le applicazioni hosted o le pagine web classiche.
 
 Adesso è giunta l'ora di sporcarsi le mani e creare un'applicazione.

@@ -78,26 +78,29 @@ il manifesto sarà così modificato
     
      "launch_path" : "/nomedelprogetto/index.html" 
      
-Per la corretta visualizzazione delle icone è necessario aggiornare anche il campo "icons"
-    "icons" : { 
-        "128" : "/nomedelprogetto/cartellaIcone/icona128.png",
-        "60" : "/nomedelprogetto/cartellaIcone/icona60.png" 
-        }
+Per la corretta visualizzazione delle icone è necessario aggiornare anche il campo "icons"  
+
+    ``"icons" : {``
+        ``"128" : "/nomedelprogetto/cartellaIcone/icona128.png",``
+        ``"60" : "/nomedelprogetto/cartellaIcone/icona60.png"``
+        ``}``
      
 Infine per caricare l'applicazione è necessario installare sul computer un software distribuito da github; Per Windows tale programma è disponibile con interfaccia grafica o tramite un terminale apposito (Git Power Shell), mentre per GNU/Linux è disponibile solo su terminale, questa guida per semplicità farà riferimento ai comandi da eseguire da terminale.
 
-Per iniziare è necessario clonare la repository sul proprio pc  
+Per iniziare è necessario clonare la repository sul proprio pc digitare: 
     $ git clone https://github.com/miousername/nomedelprogetto.git
     
 Ora bisogna sostituire il contenuto della cartella *nomedelprogetto* con i file che compongono la vostra applicazione -**ATTENZIONE: Solo i file, non la cartella che li contiene** -.  
 
 In seguito per aggiornare i file digitare:  
-    $ git add -A
+    
+    ``$ git add -A
     $ git commit -m "hosting app"
-    $ git push origin gh-pages
+    $ git push origin gh-pages``
     
 Inserite le vostre credenziali per avviare il caricamento dei file. Visitando l'indirizzo del vostro progetto ora vedrete anzichè la pagina generata automaticamente l'"Homepage" della vostra applicazione. 
 
+Ultima tappa è la pubblicazione sul Firefox Marketplace, selezionate "Hosted app" e inserite l'indirizzo del **manifesto** ossia: *http://miousername.github.io/nomedelprogetto/manifest.webapp*
 
 
 

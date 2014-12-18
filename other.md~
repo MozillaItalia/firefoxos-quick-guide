@@ -102,7 +102,7 @@ In seguito per aggiornare i file digitare:
     $ git commit -m "hosting app"
     $ git push origin gh-pages``
     
-Inserite le vostre credenziali per avviare il caricamento dei file. Visitando l'indirizzo del vostro progetto ora vedrete anzichè la pagina generata automaticamente l'"Homepage" della vostra applicazione. 
+Inserite le vostre credenziali per avviare il caricamento dei file. Visitando l'indirizzo del vostro progetto ora vedrete anzichè la pagina generata automaticamente l'*Homepage* della vostra applicazione. 
 
 Ultima tappa è la pubblicazione sul Firefox Marketplace, selezionate "Hosted app" e inserite l'indirizzo del **manifesto** ossia: ``http://miousername.github.io/nomedelprogetto/manifest.webapp``
 

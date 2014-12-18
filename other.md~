@@ -44,7 +44,7 @@ Attualmente sono disponibili:
 * [Layout (un contenitore)](http://mozbrick.github.io/docs/brick-layout.html)
 * [Action](http://mozbrick.github.io/docs/brick-action.html)
 * [Barra di schede](http://mozbrick.github.io/docs/brick-tabbar.html)
-* [Form](http://mozbrick.github.io/docs/brick-form.html)
+* [Form](http://mozbrick.github.io/docs/brick-form.html).
 * [Menu](http://mozbrick.github.io/docs/brick-menu.html)
 * [Storage-IndexdDB](http://mozbrick.github.io/docs/brick-storage-indexeddb.html)
 
@@ -53,7 +53,52 @@ Non è nell'interesse della guida approfondire questa libreria ma solo rendere a
 
 ##Hosting App su Github
 Github offre sui suoi server un servizio di hosting per pagine HTML, questo capitolo si tratterà di come sfruttare Github per distribuire la propria applicazione sul web. 
-Come prima cosa è necessario registrarsi su github
+Come prima cosa è necessario registrarsi su Github ed affettuare l'accesso. Nella schermata che troverete davanti (detta Dashboard) alla destra della vostra immagine di profilo c'è un icona a forma di "più" che permette di creare una repository.  
+Una repository può essere descritta semplicemente come una cartella che contiene un progetto e in cui vengono salvate tutte le modifiche effettuate dal momento in cui è stata creata. Questo permette di verificare tutte le linee di codice aggiunte o rimosse in ogni momento dello sviluppo  
+
+[immagine add Repo]
+
+Verrete indirizzati alla schermata di creazione della repository; qui dovrete inserire il nome della vostra applicazione e una breve descrizione della stessa, lasciando i restanti campi immodificati premete "create repository". La repository sarà quindi creata automaticamente e vi troverete nella pagina del progetto.
+
+[immagine createRepo]
+
+In questa nuova schermata è presente una barra sulla destra che permette di gestire il progetto, fate click su "Settings"[image settings] e scorrete fino alla sezione che ha per titolo "Github Pages" dove premere "Automatic Page Generator".
+
+[image gitpages]
+
+La pagina automatica che verrà creata servirà come base per l'applicazione, motivo per cui non dovremo perdere tempo a modificare i contenuti o a scegliere il layout: tutto questo sarà sostituito dalla applicazione. Nella prima pagina "New project site" fate click su "continue to layouts" senza modificare nulla e nella pagina di scelta del layout premete "publish page".  
+Github creerà quindi un sito per il vostro progetto che sarà visitabile da chiunque all'indirizzo: http://miousername.github.io/nomedelprogetto. Per comodità tornando nuovamente alla pagina "Settings" vi sarà indicato l'indirizzo corretto a cui è stato pubblicato il progetto. 
+Seguendo i passaggi sopra elencati il sito sarà così realizzato (titolo e sottotitolo dipenderanno dal nome e dalla descrizione):
+
+[immagine default page]
+
+Finalmente è quasi giunto il momento di caricare tutti i file, per far si che l'app sia effettivamente installabile occorre modificare il file "manifest.webapp". In particolare bisogna sostituire nel campo "launch_path" il nuovo indirizzo del vostro file index.html  
+Se ricordate l'indirizzo che avrà il vostro progetto sarà circa: http://miousername.github.io**/nomedelprogetto**,
+il manifesto sarà così modificato
+    
+     "launch_path" : "/nomedelprogetto/index.html" 
+     
+Per la corretta visualizzazione delle icone è necessario aggiornare anche il campo "icons"
+    "icons" : { 
+        "128" : "/nomedelprogetto/cartellaIcone/icona128.png",
+        "60" : "/nomedelprogetto/cartellaIcone/icona60.png" 
+        }
+     
+Infine per caricare l'applicazione è necessario installare sul computer un software distribuito da github; Per Windows tale programma è disponibile con interfaccia grafica o tramite un terminale apposito (Git Power Shell), mentre per GNU/Linux è disponibile solo su terminale, questa guida per semplicità farà riferimento ai comandi da eseguire da terminale.
+
+Per iniziare è necessario clonare la repository sul proprio pc  
+    $ git clone https://github.com/miousername/nomedelprogetto.git
+    
+Ora bisogna sostituire il contenuto della cartella *nomedelprogetto* con i file che compongono la vostra applicazione -**ATTENZIONE: Solo i file, non la cartella che li contiene** -.  
+
+In seguito per aggiornare i file digitare:  
+    $ git add -A
+    $ git commit -m "hosting app"
+    $ git push origin gh-pages
+    
+Inserite le vostre credenziali per avviare il caricamento dei file. Visitando l'indirizzo del vostro progetto ora vedrete anzichè la pagina generata automaticamente l'"Homepage" della vostra applicazione. 
+
+
 
 
 

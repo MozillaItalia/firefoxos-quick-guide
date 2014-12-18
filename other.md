@@ -56,15 +56,15 @@ Github offre sui suoi server un servizio di hosting per pagine HTML, questo capi
 Come prima cosa è necessario registrarsi su Github ed affettuare l'accesso. Nella schermata che troverete davanti (detta Dashboard) alla destra della vostra immagine di profilo c'è un icona a forma di "più" che permette di creare una repository.  
 Una repository può essere descritta semplicemente come una cartella che contiene un progetto e in cui vengono salvate tutte le modifiche effettuate dal momento in cui è stata creata. Questo permette di verificare tutte le linee di codice aggiunte o rimosse in ogni momento dello sviluppo  
 
-[!Alt text][addRepo]
+![aggiungi una repository][addRepo]
 
 Verrete indirizzati alla schermata di creazione della repository; qui dovrete inserire il nome della vostra applicazione e una breve descrizione della stessa, lasciando i restanti campi immodificati premete "create repository". La repository sarà quindi creata automaticamente e vi troverete nella pagina del progetto.
 
-[!Alt text][createRepo]
+![crea nuova repository][createRepo]
 
-In questa nuova schermata è presente una barra sulla destra che permette di gestire il progetto, fate click su "Settings"[!Alt text][settings] e scorrete fino alla sezione che ha per titolo "Github Pages" dove premere "Automatic Page Generator".
+In questa nuova schermata è presente una barra sulla destra che permette di gestire il progetto, fate click su "Settings"![settings][settings] e scorrete fino alla sezione che ha per titolo "Github Pages" dove premere "Automatic Page Generator".
 
-[!Alt text][gitpages]
+![genera pagina automatica][gitpages]
 
 La pagina automatica che verrà creata servirà come base per l'applicazione, motivo per cui non dovremo perdere tempo a modificare i contenuti o a scegliere il layout: tutto questo sarà sostituito dalla applicazione. Nella prima pagina "New project site" fate click su "continue to layouts" senza modificare nulla e nella pagina di scelta del layout premete "publish page".  
 Github creerà quindi un sito per il vostro progetto che sarà visitabile da chiunque all'indirizzo: http://miousername.github.io/nomedelprogetto. Per comodità tornando nuovamente alla pagina "Settings" vi sarà indicato l'indirizzo corretto a cui è stato pubblicato il progetto. 

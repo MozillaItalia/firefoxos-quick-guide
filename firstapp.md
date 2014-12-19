@@ -4,7 +4,7 @@
 
 In questo capitolo vedremo come realizzare un semplice **Notepad**, cioè un'applicazione per prendere appunti. Prima di concentrarci sul codice cerchiamo di studiare il funzionamento di questa applicazione.
 
-Essa si compone di tre schermate. La prima è la schermata principale in cui mettiamo l'elenco delle note già salvate. Se si fa clic su una nota (o se ne viene aggiunta una) viene aperta la schermata con i dettagli, nella quale è possibile modificare il titolo ed il testo della nota scelta. Ecco come vorremmo che si presentassero.
+La nostra idea è di avere di tre schermate. La prima è la schermata principale, la prima che l'utente vedrà, in cui presentiamo l'elenco delle note già salvate. Se si fa clic su una nota (o se ne viene aggiunta una) viene aperta la schermata con i dettagli, nella quale è possibile modificare il titolo ed il testo della nota scelta. Ecco come vorremmo che si presentassero.
 
 ![Memos, schermata di modifica](images/originals/memos-editing-screen.png)
 
@@ -12,7 +12,7 @@ Dalla parte superiore dello schermo è possibile cancellare una nota prescelta s
 
 ![Memos, finestra di conferma della cancellazione](images/originals/memos-delete-screen.png)
 
-Il codice sorgente di Memos è disponibile nel [Repository su Github](https://github.com/soapdog/memos-for-firefoxos) (è possibile anche scaricarlo come file [.zip](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip) ). Consiglio di scaricare i file, così sarà più semplice seguire la guida. Un'altra copia del codice sorgente è disponibile nella cartella dentro il [repository Github repository di questo testo](https://github.com/soapdog/firefoxos-quick-guide).
+Il codice sorgente di Memos è disponibile nel [Repository su Github](https://github.com/soapdog/memos-for-firefoxos) (è possibile anche scaricarlo come file [.zip](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip) ). Consiglio di scaricare i file, così sarà più semplice seguire la guida. Un'altra copia del codice sorgente è disponibile nella cartella nella [repository Github di questo libro](https://github.com/soapdog/firefoxos-quick-guide).
 
 Memos utilizza [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) per salvare le note e il toolkit [*Gaia Building Blocks*](http://buildingfirefoxos.com/building-blocks) per creare le interfacce. In un futuro aggiornamento il testo conterrà molte informazioni su *Gaia Building Blocks*, ma in questa prima versione mi limiterò ad utilizzarlo. Per ulteriori informazioni sull'argomento e per sapere quali interfacce vi sono integrate visitare i link appena segnalati.
 
@@ -20,7 +20,7 @@ Il primo passaggio è creare una cartella per l'applicazione di nome **memos**.
 
 ## Creare il manifesto dell'app
 
-Il file manifesto di Memos è molto semplice. Crea un file chiamato **manifest.webapp** nella cartella **memos**. I manifesti sono dei file [JSON](http://json.org) che descrivono un'applicazione per Firefox OS. In questo file è possibile trovare le informazioni sull'app, quali il nome, il nome dello sviluppatore, le icone utilizzate, il file che avvia l'app, quali API e con privilegi sono utilizzate e molto altro.
+Il file manifesto di Memos è molto semplice. Crea un file chiamato **manifest.webapp** nella cartella **memos**. I manifesti sono dei file in formato [JSON](http://json.org) che descrivono un'applicazione per Firefox OS. In questo file è possibile trovare le informazioni sull'app, quali il nome, il nome dello sviluppatore, le icone utilizzate, il file che avvia l'app, quali API e con privilegi sono utilizzate e molto altro.
 
 Qui di seguito è riportato il contenuto del file manifesto di **Memos**. Fate attenzione con il copia e incolla, perché è molto facile mettere una virgola nel posto sbagliato (o non metterla) e creare un file JSON non valido. Esistono molti strumenti per validare un file JSON, incluso uno specifico per validare i file manifesto delle app, lo puoi trovare online su [il marketplace](https://marketplace.firefox.com/developers/validator). Per ulteriori informazioni su questi file consultare la [pagina su MDN ](https://developer.mozilla.org/docs/Apps/Manifest).
 

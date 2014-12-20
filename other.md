@@ -95,10 +95,11 @@ Per iniziare è necessario clonare la repository sul proprio pc digitare:
     
     $ git clone https://github.com/miousername/nomedelprogetto.git
     
-Ora bisogna sostituire il contenuto della cartella *nomedelprogetto* con i file che compongono la vostra applicazione -**ATTENZIONE: Solo i file, non la cartella che li contiene** -.  
+Ora bisogna sostituire il contenuto della cartella *nomedelprogetto* con i file che compongono la vostra applicazione, questa operazione per semplicità può essere eseguita tramite il file manager.-**ATTENZIONE: Solo i file, non la cartella che li contiene** -.  
 
 In seguito per aggiornare i file digitare:  
     
+    $ cd nomedelprogetto
     $ git add -A
     $ git commit -m "hosting app"
     $ git push origin gh-pages

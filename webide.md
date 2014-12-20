@@ -4,7 +4,7 @@
 
 Abbiamo scaricato il simulatore [nel capitolo precedente riguardo l'ambiente di lavoro](#setup) e l'abbiamo usato nel [capitolo riguardo la prima applicazione](#firstapp). Ora è tempo di dare un'occhiata più approfondita alle funzionalità dell'App Manager e le funzionalità base.
 
-Per saperne di più, date un'occhiata [alla pagina Firefox OS: Usare l'App Manager](https://developer.mozilla.org/it/Firefox_OS/usare_l_app_Manager) su MDN.
+Per saperne di più, date un'occhiata [alla pagina Firefox OS: Usare l'App Manager][1] su MDN.
 
 W> Ricordati: se stai usando un dispositivo Firefox OS 1.1 o ancora più vecchio devi usare il Simulatore 1.1 e non l'App Manager. Questo simulatore è spiegato nel prossimo capitolo.
 
@@ -89,3 +89,5 @@ Adesso hai la sensazione di potere e spero che da questo punto del libro hai una
 Nel prossimo capitolo parleremo della vecchia versione del Simulatore di Firefox OS 1.1. Questo studio è necessario se si devono connettere dispositivi con Firefox OS 1.1. Il capitolo è molto simile a a questo. Attualmente è o stesso contenuto ma adattato per le differenti interfacce.
 
 Dopo il capitolo sul simulatore parleremo della distribuzione della tua applicazione.
+
+[1]: https://developer.mozilla.org/it/Firefox_OS/usare_l_app_Manager

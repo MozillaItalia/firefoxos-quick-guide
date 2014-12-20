@@ -1,6 +1,6 @@
 # Distribuire le app {#distribution}
 
-Ora che la nostra applicazione è pronta, abbiamo bisogno di trovare un modo per renderla disponibile ai nostri utenti. Nel [capitolo introduttivo](#introduction) avevo accennato che, diversamente da Apple, Mozilla non obbliga a utilizzare il proprio canale di distribuzione - lasciando ognuno libero di esprimere la propria creatività. In questo capitolo impareremo come distribuire la nostra app **al di fuori del canale ufficiale di [Firefox Marketplace](http://marketplace.firefox.com)**. 
+Ora che la nostra applicazione è pronta, abbiamo bisogno di trovare un modo per renderla disponibile ai nostri utenti. Nel [capitolo introduttivo](#introduction) avevo accennato che, diversamente da Apple, Mozilla non obbliga a utilizzare il proprio canale di distribuzione - lasciando ognuno libero di esprimere la propria creatività. In questo capitolo impareremo come distribuire la nostra app **al di fuori del canale ufficiale di [Firefox Marketplace][1]**. 
 
 A mio modesto avviso, non utilizzare il canale ufficiale Mozilla per distribuire un'app è conveniente in questi due casi:
 
@@ -15,7 +15,7 @@ Il processo di distribuzione delle app pacchettizzate e delle app ospitate è si
 
 Nell'esempio riportato qui sopra `manifestURL` riporta l'indirizzo del file manifesto. All'esecuzione di questo codice, il sistema chiederà all'utente se desidera installare l'app e, a seconda della risposta, richiamerà la callback appropriata: `success` in caso di risposta affermativa e `error` in caso contrario.
 
-Per ulteriori informazioni su questa API consultare [la pagina su MDN sull'installazione delle app](https://developer.mozilla.org/docs/Apps/JavaScript_API).
+Per ulteriori informazioni su questa API consultare [la pagina su MDN sull'installazione delle app][2].
 
 ## App pacchettizzate
 
@@ -29,6 +29,9 @@ W> Nota: ho il sospetto che l'installazione di app pacchettizzate da siti divers
 
 In questo capitolo sono stati trattati i metodi di distribuzione delle app alternativi al sito Firefox Marketplace grazie all'utilizzo della API di *Installazione e gestione* delle *app web aperte* o *Open Web Apps*.  
 Questa parte l'avevamo accennata con il boilerplate ma in questo capitolo abbiamo visto le differenze ed alcuni esempi d'uso alternativi.  
-Esistono molte altre routine disponibili, ad esempio per controllare se l'applicazione è installata (in questo modo sarà possibile nascondere il pulsante **Fai clic qui per installare**). Per ulteriori informazioni su queste API consultare [la pagina di MDN dedicata all'installazione delle app](https://developer.mozilla.org/docs/Apps/JavaScript_API) (sì, avete ragione, questo link non è nuovo, però ci sono informazioni importanti che dovete assolutamente conoscere).
+Esistono molte altre routine disponibili, ad esempio per controllare se l'applicazione è installata (in questo modo sarà possibile nascondere il pulsante **Fai clic qui per installare**). Per ulteriori informazioni su queste API consultare [la pagina di MDN dedicata all'installazione delle app][2] (sì, avete ragione, questo link non è nuovo, però ci sono informazioni importanti che dovete assolutamente conoscere).
 
 Nel prossimo capitolo impareremo come distribuire la nostra app attraverso il sito Marketplace Firefox.
+
+[1]: http://marketplace.firefox.com "Firefox Marketplace"
+[2]: https://developer.mozilla.org/docs/Apps/JavaScript_API

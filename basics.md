@@ -11,14 +11,14 @@ Osservando il quadro generale, un'applicazione Firefox OS non è altro che una p
 
 ## File manifesto dell'applicazione
 
-Il [manifesto](https://developer.mozilla.org/docs/Apps/Manifest) è un file [JSON](http://json.org) che contiene i **metadati** dell'applicazione. Questo file è chiamato **manifest.webapp** e viene posizionato accanto al classico file HTML **index.html**, nella stessa cartella.
+Il [manifesto][1] è un file [JSON][2] che contiene i **metadati** dell'applicazione. Questo file è chiamato **manifest.webapp** e viene posizionato accanto al classico file HTML **index.html**, nella stessa cartella.
 Questi metadati servono al sistema per sapere il nome dello sviluppatore, la versione, i permessi richiesti per le varie API, l'icona, le lingue in cui è disponibile e molto altro.
 
 <<[Manifest d'esempio](code/sample_manifest.webapp)
 
 Sopra possiamo vedere il manifest di un'applicazione chiamata Memos[^promemoria]. Tra le altre cose descrive chi ha creato l'applicazione, quali icone usare, qual è il nome dell'applicazione, quale file è usato per lanciare l'applicazione (in questo caso *index.html*), quali permessi d'accesso hardware richiede l'applicazione, ecc. Questo file è usato da Firefox OS per aggiungere l'applicazione alla schermata principale e per mostrare sul Firefox Marketplace le informazioni dell'applicazione.
 
-[^promemoria]: Questa applicazione di esempio per Firefox OS è disponibile su [Firefox Marketplace](https://marketplace.firefox.com/app/memos) e il [codice sorgente è su GitHub](https://github.com/soapdog/memos-for-firefoxos).
+[^promemoria]: Questa applicazione di esempio per Firefox OS è disponibile su [Firefox Marketplace][3] e il [codice sorgente è su GitHub][4].
 
 ![L'applicazione Memos vista su Firefox Marketplace](images/originals/memos-marketplace.png)
 
@@ -45,7 +45,7 @@ Il manifest descrive una marea di proprietà utili, perciò vediamo il nome e l'
 La proprietà *activities* specifica quali *Web Activities* supporta la nostra applicazione.
 Registrare la vostra applicazione come una "Web Activities" vi permette di rendere la vostra applicazione accessibile alle altre.
 Volendo fare un'esempio, se voi sviluppate un applicazione che permette di condividere le vostre foto su di un sito, potreste implementare la web activities *share*; in questo modo, quando l'utente prova a condividere una foto dall'app galleria, apparirà anche la vostra applicazione tra quelle che possono svolgere questo compito.
-La sintassi di questo campo è un po' complessa, per questo vi rimando alla pagina di documentazione su [MDN](https://developer.mozilla.org/en-US/docs/WebAPI/Web_Activities).
+La sintassi di questo campo è un po' complessa, per questo vi rimando alla pagina di documentazione su [MDN][5].
 
 **chrome**
 
@@ -187,10 +187,10 @@ Attualmente esistono due tipi di applicazioni Firefox OS che potete sviluppare: 
 
 W> Nota del traduttore: è sempre difficile rendere alcuni termini tecnici in italiano, nel sito di Firefox Marketplace è stato scelto di tradurre le *hosted app* in app ospitate e le *packaged app* in app pacchettizzate. Ciò nonostante nel mondo degli sviluppatori italiani si usano i termini *app hosted* e *app packaged*. Nel proseguo del testo verranno utilizzati entrambi i termini a discrezione dei localizzatori.
 
-* **App Hosted:** Sono disponibili ad un indirizzo web come [www.mozilla.org](http://mozilla.org) esattamente come i classici siti web. Questo significa che quando l'utente avvia un'applicazione hosted, il suo contenuto è caricato dal server remoto (o dalla cache, se disponibile).
+* **App Hosted:** Sono disponibili ad un indirizzo web come [www.mozilla.org][6] esattamente come i classici siti web. Questo significa che quando l'utente avvia un'applicazione hosted, il suo contenuto è caricato dal server remoto (o dalla cache, se disponibile).
 * **App Packaged:** Sono distribuite come file zip e vengono salvate nel dispositivo al momento della loro installazione. Quando l'utente avvia un'app pacchettizzata, i suoi contenuti sono caricati da un file zip nel dispositivo anziché da un server remoto.
 
-Esistono vantaggi e svantaggi nell'utilizzo di entrambi i tipi. Da un lato le *app hosted* sono più facili da aggiornare, infatti è sufficiente cambiare i file sul server web. Però è più complicato implementare il loro funzionamento in modalità non in linea in quanto richiede l'utilizzo del tanto discusso file [**appcache**](https://developer.mozilla.org/docs/HTML/Using_the_application_cache). Inoltre, le *hosted app* hanno delle limitazioni nell'uso di alcune WebAPI e dunque non è possibile implementare tutte le funzioni che si possono utilizzare in un'*app packaged*.
+Esistono vantaggi e svantaggi nell'utilizzo di entrambi i tipi. Da un lato le *app hosted* sono più facili da aggiornare, infatti è sufficiente cambiare i file sul server web. Però è più complicato implementare il loro funzionamento in modalità non in linea in quanto richiede l'utilizzo del tanto discusso file [**appcache**][7]. Inoltre, le *hosted app* hanno delle limitazioni nell'uso di alcune WebAPI e dunque non è possibile implementare tutte le funzioni che si possono utilizzare in un'*app packaged*.
 
 Dall'altro lato tutti i file di un'*app packaged* sono memorizzati localmente sul dispositivo - ciò significa che sono sempre disponibili quando l'utente non è collegato (e quindi non sarà necessario utilizzare AppCache). Hanno anche la possibilità di accedere a WebAPI sensibili per la sicurezza che non sono disponibili per le *app hosted*. Il loro aggiornamento può essere problematico, perché sarà necessario caricare qualsiasi nuova versione su Firefox Marketplace - ciò significa far sostenere a ogni nuova versione dell'applicazione il processo di revisione che potrebbe richiedere un po' di tempo.
 
@@ -198,9 +198,9 @@ Quando si sceglie quale tipo di applicazione realizzare è necessario fare delle
 
 Sopra ho detto che utilizzare AppCache può essere complicato (ma talvolta è indispensabile per alcune *app hosted*). Niente paura, esistono degli strumenti per semplificare la generazione di file AppCache e facilitare il processo di distribuzione[^js-tools].
 
-In questo testo vedremo come realizzare applicazioni *packaged*, in quanto questo ci permetterà di esplorare tutte le possibilità offerte dalle WebAPI. In ogni caso la maggior parte di ciò che vedremo sui file manifest si applica anche alle *app hosted*. Per ulteriori informazioni sulla distribuzione delle *app hosted* consultare [la documentazione sulle *app hosted* nel Centro di sviluppo](https://marketplace.firefox.com/developers/docs/hosted).
+In questo testo vedremo come realizzare applicazioni *packaged*, in quanto questo ci permetterà di esplorare tutte le possibilità offerte dalle WebAPI. In ogni caso la maggior parte di ciò che vedremo sui file manifest si applica anche alle *app hosted*. Per ulteriori informazioni sulla distribuzione delle *app hosted* consultare [la documentazione sulle *app hosted* nel Centro di sviluppo][8].
 
-[^js-tools]: Esistono molti strumenti utili, come [Grunt](http://gruntjs.com), [Volo](http://volojs.org/), [Yeoman](http://yeoman.io/), [Bower](http://bower.io/). Questi strumenti sono molto spesso equivalenti nel risultato ed è una questione di preferenza. (Mi piace Volo rispetto a Grunt perché i Volofiles sono più semplici da leggere).
+[^js-tools]: Esistono molti strumenti utili, come [Grunt][9], [Volo][10], [Yeoman][11], [Bower][12]. Questi strumenti sono molto spesso equivalenti nel risultato ed è una questione di preferenza. (Mi piace Volo rispetto a Grunt perché i Volofiles sono più semplici da leggere).
 
 Ora che abbiamo trattato i due tipi di applicazioni supportate da Firefox OS, diamo un'occhiata ai diversi livelli di accesso che un'app può richiedere.
 
@@ -214,7 +214,7 @@ Esistono tre livelli di sicurezza su Firefox OS - ogni livello fornisce un maggi
 
 Durante lo sviluppo è possibile accedere alle API con privilegi senza richiedere permessi speciali a Mozilla. In fase di distribuzione, però, sarà necessario caricare l'app sul Firefox Marketplace. A questo punto il codice viene controllato in un rigoroso processo di approvazione e se è tutto OK l'app sarà firmata digitalmente - questo garantirà agli utenti di Firefox OS che a questa applicazione è consentito accedere alle API sensibili.
 
-Sulla [pagina delle WebAPI sul Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/WebAPI) è possibile verificare quali API sono implementate sui vari dispositivi e controllare il livello di accesso necessario per utilizzare ciascuna API.
+Sulla [pagina delle WebAPI sul Mozilla Developer Network][13] è possibile verificare quali API sono implementate sui vari dispositivi e controllare il livello di accesso necessario per utilizzare ciascuna API.
 
 ![Livello di accesso alle API](images/originals/webapi-access.png)
 
@@ -222,7 +222,7 @@ Come si può vedere dall'immagine qui sopra, qualsiasi applicazione può acceder
 
 ## WebAPI di Mozilla
 
-Firefox OS fornisce le API necessarie per sviluppare applicazioni con le stesse funzionalità delle applicazioni native sulle altre piattaforme. L'accesso al hardware ed ai servizi avviene attraverso le WebAPI. Per saperne di più sulle API disponibili nelle varie versioni di Firefox OS consultare [la pagina WebAPI nel Wiki Mozilla](https://wiki.mozilla.org/WebAPI).
+Firefox OS fornisce le API necessarie per sviluppare applicazioni con le stesse funzionalità delle applicazioni native sulle altre piattaforme. L'accesso al hardware ed ai servizi avviene attraverso le WebAPI. Per saperne di più sulle API disponibili nelle varie versioni di Firefox OS consultare [la pagina WebAPI nel Wiki Mozilla][14].
 
 Analizzeremo alcuni esempi di codice per vedere come le API sono facili da utilizzare. Gli esempi non vanno presi come una documentazione completa sulle WebAPI, sono una piccola dimostrazione di come si possa accedere al dispositivo usando JavaScript.
 
@@ -235,7 +235,7 @@ Si immagini di avere un'applicazione che ha bisogno di usare il dialer con un nu
 Questo codice effettua una richiesta all'applicazione dialer per chiamare un numero predefinito. In realtà non partirà la chiamata, sarà necessario l'esplicita conferma dell'utente che dovrà toccare il tasto di chiamata per avviarla. La richiesta di un'azione esplicita dell'utente prima di avviare un'operazione è un modello molto comune: si tratta di un buon modello di sicurezza perché è richiesta un'esplicita conferma dell'utente prima di avviare un'operazione.
 Altre API possono effettuare chiamate senza una interazione dell'utente ma richiedono un livello d'accesso più elevato. Le applicazioni certificate possono effettuare chiamate senza interazione con l'utente. Le API usate nel codice sopra, chiamate "Web Activities", sono disponibili per tutte le applicazioni.
 
-Per maggiori informazioni sull'API Web Activities consultare  [questo post sul blog Mozilla](https://hacks.mozilla.org/2013/01/introducing-web-activities/).
+Per maggiori informazioni sull'API Web Activities consultare  [questo post sul blog Mozilla][15].
 
 ### Esempio #2: Memorizzare un contatto
 
@@ -245,7 +245,7 @@ Si immagini di avere una rete intranet aziendale e di voler sviluppare un'app pe
 
 Questa API crea un oggetto con i dati del contatto e lo salva nella rubrica telefonica senza bisogno di alcuna interazione da parte dell'utente. Poiché l'accesso ai contatti comporta implicazioni riguardo la privacy, questa API è disponibile per le *app con privilegi*. Il modello di questa API prevede l'utilizzo di due callback ed è un approccio condiviso da molte altre API. Forniamo quindi due funzioni, *success* in caso di buona riuscita dell'operazione e *error* in caso contrario da eseguire una volta che si è risolta l'azione principale (in questo caso salvare un contatto).
 
-Per ulteriori informazioni su questa API consultare [la pagina dedicata alle *Contacts API* sul wiki Mozilla](https://wiki.mozilla.org/WebAPI/ContactsAPI).
+Per ulteriori informazioni su questa API consultare [la pagina dedicata alle *Contacts API* sul wiki Mozilla][16].
 
 ### Esempio #3: Selezionare una immagine dalla fotocamera
 
@@ -253,7 +253,7 @@ Si immagini di voler creare un'app che applichi delle decorazioni alle immagini,
 
 <<[Scegliere una foto](code/webapi_samples/pick.js)
 
-Questo è un altro esempio di [WebActivity](https://hacks.mozilla.org/2013/01/introducing-web-activities/). Le funzioni (activity) dell'API WebActivities sono disponibili per tutte le applicazioni. In questo esempio specifico stiamo usando la *pick* activity passando il *MIME Types* dei file richiesti. Quando questo codice è eseguito, il sistema mostra una schermata all'utente chiedendo se vuole selezionare l'immagine da camera, galleria o sfondi. Se l'utente seleziona una immagine, la callback di successo viene invocata. Se l'utente annulla l'operazione, la callback di errore è eseguita. Nell'immagine sottostante, possiamo vedere la finestra di richiesta sul dispositivo:
+Questo è un altro esempio di [WebActivity][17]. Le funzioni (activity) dell'API WebActivities sono disponibili per tutte le applicazioni. In questo esempio specifico stiamo usando la *pick* activity passando il *MIME Types* dei file richiesti. Quando questo codice è eseguito, il sistema mostra una schermata all'utente chiedendo se vuole selezionare l'immagine da camera, galleria o sfondi. Se l'utente seleziona una immagine, la callback di successo viene invocata. Se l'utente annulla l'operazione, la callback di errore è eseguita. Nell'immagine sottostante, possiamo vedere la finestra di richiesta sul dispositivo:
 
 ![Esempio di *pick activity*](images/originals/pick_image.png)
 
@@ -262,3 +262,21 @@ Questo è un altro esempio di [WebActivity](https://hacks.mozilla.org/2013/01/in
 In questo capitolo abbiamo visto che rispetto alle pagine web classiche, entrambi i tipi di applicazione per Firefox OS (hosted e packaged) si basano su un file manifest. Abbiamo visto anche che dal punto di vista della sicurezza le applicazioni packaged possono essere **con privilegi** o **certificate**. Solo le app privilegiate e certificate possono accedere alle WebAPI di Mozilla. Le WebAPI non sono disponibili per le applicazioni hosted o le pagine web classiche.
 
 Adesso è giunta l'ora di sporcarsi le mani e creare un'applicazione.
+
+[1]: https://developer.mozilla.org/docs/Apps/Manifest
+[2]: http://json.org
+[3]: https://marketplace.firefox.com/app/memos
+[4]: https://github.com/soapdog/memos-for-firefoxos
+[5]: https://developer.mozilla.org/en-US/docs/WebAPI/Web_Activities
+[6]: http://mozilla.org
+[7]: https://developer.mozilla.org/docs/HTML/Using_the_application_cache
+[8]: https://marketplace.firefox.com/developers/docs/hosted
+[9]: http://gruntjs.com
+[10]: http://volojs.org/
+[11]: http://yeoman.io/
+[12]: http://bower.io/
+[13]: https://developer.mozilla.org/en-US/docs/WebAPI
+[14]: https://wiki.mozilla.org/WebAPI
+[15]: https://hacks.mozilla.org/2013/01/introducing-web-activities/
+[16]: https://wiki.mozilla.org/WebAPI/ContactsAPI
+[17]: https://hacks.mozilla.org/2013/01/introducing-web-activities/

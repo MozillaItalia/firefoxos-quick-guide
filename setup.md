@@ -10,15 +10,15 @@ I browser utilizzano diversi motori di rendering per mostrare le pagine web: Goo
 
 Per sviluppare e provare le applicazioni realizzate per Firefox OS abbiamo bisogno di:
 
- * Una versione recente di [Firefox desktop](http://getfirefox.com).
- * [Firefox OS Simulator](https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/) (scegli la versione che vuoi installare. Anche tutte). 
+ * Una versione recente di [Firefox desktop][1].
+ * [Firefox OS Simulator][2] (scegli la versione che vuoi installare. Anche tutte). 
  * (facoltativo) Un editor testuale per programmare[^editor].
  
-[^editor]: esistono molti buoni editor con diversi livelli di complessità e caratteristiche. Un editor molto diffuso, che mi sento di consigliare a chi non ha ancora trovato il suo preferito, è [SublimeText](http://sublimetext.com/). Personalmente, io utilizzo [WebStorm](http://www.jetbrains.com/webstorm/) che è un IDE completo per la realizzazione di web app.
+[^editor]: esistono molti buoni editor con diversi livelli di complessità e caratteristiche. Un editor molto diffuso, che mi sento di consigliare a chi non ha ancora trovato il suo preferito, è [SublimeText][3]. Personalmente, io utilizzo [WebStorm][4] che è un IDE completo per la realizzazione di web app.
   
 ## Configurazione del WebIde
 
-Se stai usando la versione attuale di Firefox (34 o successive) il WebIde è già integrato. WebIde da solo non basta, se non hai un disposititvo devi installare anche i simulatori per fare le prove. Mozilla ha una [documentazione completa a riguardo](https://developer.mozilla.org/it/Firefox_OS/usare_l_app_Manager) se vuoi approfondire l'argomento.  
+Se stai usando la versione attuale di Firefox (34 o successive) il WebIde è già integrato. WebIde da solo non basta, se non hai un disposititvo devi installare anche i simulatori per fare le prove. Mozilla ha una [documentazione completa a riguardo][5] se vuoi approfondire l'argomento.  
 
 WebIde può gestire più versioni di Firefox OS quindi puoi installare le versioni 1.3, 1.4 e 2.0 senza avere problemi di compatibilità, ricordati che più è alto il numero di versione e più tardi verrà rilasciata al pubblico.  
 
@@ -45,7 +45,7 @@ Fai clic su **Installa il simulatore** e seleziona la versione da installare fac
 Puoi usare il tuo dispositivo con Firefox OS per effettuare il debug delle tue applicazioni. Ecco come fare:
 
 * Installa `adb`[^adb]
-* Installa l'addon per Firefox [ADB Helper](https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/) per far comunicare Firefox con il tuo dispositivo
+* Installa l'addon per Firefox [ADB Helper][6] per far comunicare Firefox con il tuo dispositivo
 
 Se hai fatto tutto per bene e colleghi il tuo dispositivo al computer Firefox lo rileverà e verrà mostrati tra i dispositivi utilizzabili dal WebIde
 
@@ -61,3 +61,10 @@ Se adb non è presente nel computer, Firefox non potrà rilevare alcun dispositi
 In questo capitolo abbiamo scoperto che tutto ciò di cui abbiamo bisogno per sviluppare *app per Firefox OS* è il browser Firefox per desktop (e un buon editor di testo).
 
 Ora che abbiamo configurato l'ambiente di sviluppo, siamo pronti per soffermarci su qualche concetto base prima di creare la nostra prima app.
+
+[1]: http://getfirefox.com
+[2]: https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/
+[3]: http://sublimetext.com/
+[4]: http://www.jetbrains.com/webstorm/
+[5]: https://developer.mozilla.org/it/Firefox_OS/usare_l_app_Manager
+[6]: https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/

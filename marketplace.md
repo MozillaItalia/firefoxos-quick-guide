@@ -2,13 +2,13 @@
 
 ![Firefox Marketplace](images/originals/marketplace.png)
 
-[Firefox Marketplace](http://marketplace.firefox.com) è il negozio online dal quale è possibile scaricare o acquistare applicazioni per Firefox OS, Firefox e Firefox per Android. Questo è il principale canale di distribuzione per le app Firefox OS, tuttavia non è l'unica alternativa possibile. Se sei interessato a distribuire app esternamente al Marketplace, leggi il [capitolo precedente](#distribution).
+[Firefox Marketplace][1] è il negozio online dal quale è possibile scaricare o acquistare applicazioni per Firefox OS, Firefox e Firefox per Android. Questo è il principale canale di distribuzione per le app Firefox OS, tuttavia non è l'unica alternativa possibile. Se sei interessato a distribuire app esternamente al Marketplace, leggi il [capitolo precedente](#distribution).
 
-Per pubblicare un'app sul Marketplace è necessario effettuare l'identificazione tramite [Mozilla Persona](https://login.persona.org/about). Sarà sufficiente fare clic sul pulsante **Registrati** e seguire le istruzioni. Una volta effettuato l'accesso al Marketplace sarà possibile pubblicare l'app.
+Per pubblicare un'app sul Marketplace è necessario effettuare l'identificazione tramite [Mozilla Persona][2]. Sarà sufficiente fare clic sul pulsante **Registrati** e seguire le istruzioni. Una volta effettuato l'accesso al Marketplace sarà possibile pubblicare l'app.
 
 ## Operazioni che precedono l'ideazione di un'app
 
-Tutte le applicazioni pubblicate sul Marketplace sono sottoposte a un processo di verifica e devono essere approvate dai revisori del sito (non ci si preoccupi troppo, è meno pauroso di quanto sembri). Il processo di controllo delle app ospitate e delle app pacchettizzate semplici è più snello rispetto a quello delle app con privilegi, in quanto le prime utilizzano API meno sensibili. Prima di inviare un'app su Firefox Marketplace leggere attentamente [le linee guida per la revisione](https://developer.mozilla.org/it/Marketplace/criteri_revisione_marketplace). A mio avviso le parti più importanti sono:  
+Tutte le applicazioni pubblicate sul Marketplace sono sottoposte a un processo di verifica e devono essere approvate dai revisori del sito (non ci si preoccupi troppo, è meno pauroso di quanto sembri). Il processo di controllo delle app ospitate e delle app pacchettizzate semplici è più snello rispetto a quello delle app con privilegi, in quanto le prime utilizzano API meno sensibili. Prima di inviare un'app su Firefox Marketplace leggere attentamente [le linee guida per la revisione][3]. A mio avviso le parti più importanti sono:  
 
 * I dispositivi Firefox OS, contrariamente ai dispositivi Android e ai browser desktop, non hanno un pulsante **Indietro**. Nel caso in cui l'app rimandi a una pagina dalla quale non è possibile ritornare più indietro (in altre parole se l'utente nell'utilizzo dell'app arriva a un punto morto) l'app verrà rifiutata.
 * L'app deve avere un'icona di 60x60 pixel e una descrizione chiara del suo funzionamento.
@@ -31,7 +31,7 @@ Questo file *zip* è quello che dovremo pubblicare sul Marketplace.
 
 ## Pubblicazione dell'app sul Marketplace
 
-Ora che l'applicazione è pronta - e con la consapevolezza che dovrà soddisfare i criteri del Marketplace per essere approvata dai revisori - è tempo di pubblicarla sul Marketplace. Per farlo, ffare clic su **Le mie app** utilizzando il pulsante a forma di ingranaggio posizionato in alto nella pagina del Marketplace.
+Ora che l'applicazione è pronta - e con la consapevolezza che dovrà soddisfare i criteri del Marketplace per essere approvata dai revisori - è tempo di pubblicarla sul Marketplace. Per farlo, fare clic su **Le mie app** utilizzando il pulsante a forma di ingranaggio posizionato in alto nella pagina del Marketplace.
 
 ![Le mie app](images/originals/marketplace-my-submissions.png)
 
@@ -67,10 +67,10 @@ Dopo aver inserito in dettaglio le informazioni sull'app, il processo di caricam
 Arriveremo a un passaggio dedicato alla certificazione guidata dell'applicazione, passaggio in cui ci verrà chiesto di selezionare gli argomenti trattati se sono violenti, illeciti, se è un gioco ecc. In questo modo la nostra applicazione verrà certificata per la sua comparsa sui vari paesi a seconda proprio di questo passaggio obbligatorio.  
 Ora non ci resta che attendere l'approvazione da parte dei revisori del Marketplace. Complimenti, l'app ora è distribuita su Firefox Marketplace.
 
-Dalla [pagina di gestione delle app](https://marketplace.firefox.com/developers/submissions) sarà possibile verificare lo stato delle app caricate e, se lo si desidera, modificare le informazioni dell'app.  
+Dalla [pagina di gestione delle app][4] sarà possibile verificare lo stato delle app caricate e, se lo si desidera, modificare le informazioni dell'app.  
 Dalla pagina di gestione dell'app potremo anche vedere le statistiche di installazione, visita, supporto ecc.  
 
-Per ulteriori informazioni riguardo al caricamento delle app consultare [questo articolo del Centro di sviluppo di Firefox OS](https://marketplace.firefox.com/developers/docs/submission).  
+Per ulteriori informazioni riguardo al caricamento delle app consultare [questo articolo del Centro di sviluppo di Firefox OS][5].  
 
 ## Guide linea per il marketplace
 
@@ -86,14 +86,14 @@ Il recensore in caso di rifiuto dell'applicazione fornisce una spiegazione dei p
 
 ### Sicurezza
 
-Per maggiori informazioni, fate riferimento alla pagina dedicata [su MDN](https://wiki.mozilla.org/Apps/Security).  
+Per maggiori informazioni, fate riferimento alla pagina dedicata [su MDN][6].
 
-Il manifest deve essere fornito dallo stesso origin dell'applicazione quindi lo stesso dominio, deve essere fornito con il mime-type `application/x-web-app-manifest+json` e l'applicazione non deve contenere iframe.  
+Il manifest deve essere fornito dallo stesso origin dell'applicazione quindi lo stesso dominio, deve essere fornito con il mime-type `application/x-web-app-manifest+json` e l'applicazione non deve contenere iframe.
 Questo impedisce ad altre persone di fare applicazioni hosted il cui sito non è di loro gestione. 
 
 ## Privacy
 
-Per l'approvazione deve essere presentata una privacy policy ma non ci sono requisiti specifici sul formato o contenuto. Ecco un [template di esempio](https://github.com/flamsmark/privacy-policy-template) con del [materiale di riferimento e consigli](https://developer.mozilla.org/en-US/Marketplace/Publishing/Privacy_policies).
+Per l'approvazione deve essere presentata una privacy policy ma non ci sono requisiti specifici sul formato o contenuto. Ecco un [template di esempio][7] con del [materiale di riferimento e consigli][8].
 
 ## Contenuto
 
@@ -119,10 +119,23 @@ Complimenti! La propria nuova applicazione ora è su Firefox Marketplace e ci si
 
 
 =======
-Spero che la lettura di questa veloce guida sia stata piacevole. Ho in mente di aggiornare e ampliare spesso questa guida, quindi consiglio di tenere gli occhi aperti e iscriversi per ricevere le notizie sul suo aggiornamento. Se si è scaricato questo testo dal sito Leanpub non ci sono problemi: si riceverà automaticamente un'email che informerà di nuovi aggiornamenti. Se invece è stato scaricato da altri siti, il mio consiglio è quello di riscaricarlo da  [pagina ufficiale su Leanpub](http://leanpub.com/quickguidefirefoxosdevelopment) e registrare il proprio indirizzo email. Ovviamente è tutto gratuito e, no, non verranno  mai inviati messaggi di spam, promesso.
+Spero che la lettura di questa veloce guida sia stata piacevole. Ho in mente di aggiornare e ampliare spesso questa guida, quindi consiglio di tenere gli occhi aperti e iscriversi per ricevere le notizie sul suo aggiornamento. Se si è scaricato questo testo dal sito Leanpub non ci sono problemi: si riceverà automaticamente un'email che informerà di nuovi aggiornamenti. Se invece è stato scaricato da altri siti, il mio consiglio è quello di riscaricarlo da  [pagina ufficiale su Leanpub][9] e registrare il proprio indirizzo email. Ovviamente è tutto gratuito e, no, non verranno  mai inviati messaggi di spam, promesso.
 
-Invito tutti i lettori ad inviarmi le proprie opinioni su questo lavoro (in inglese). Questo testo è stato scritto nelle notti precedenti una conferenza tecnica, quindi si può intuire quanto io sia affezionato a questo progetto e quanto vorrei che avesse successo. È possibile inviare le proprie opinioni via Twitter al mio account [@soapdog](http://twitter.com/soapdog) o al mio indirizzo di posta elettronica [fxosquickguide@andregarzia.com](mailto:fxosquickguide@andregarzia.com).  Il mio sito web è [http://andregarzia.com](http://andregarzia.com).
+Invito tutti i lettori ad inviarmi le proprie opinioni su questo lavoro (in inglese). Questo testo è stato scritto nelle notti precedenti una conferenza tecnica, quindi si può intuire quanto io sia affezionato a questo progetto e quanto vorrei che avesse successo. È possibile inviare le proprie opinioni via Twitter al mio account [@soapdog][10] o al mio indirizzo di posta elettronica [fxosquickguide@andregarzia.com][11].  Il mio sito web è [http://andregarzia.com][12].
 
 Ora che si è entrati a far parte del gruppo di sviluppatori di app Firefox OS, il prossimo passo è quello di unirsi al gruppo più esteso della comunità Mozilla, aiutandoci a mantenere il Web libero e creato dagli utenti per gli utenti.  
-È possibile unirsi a noi visitando [http://www.mozilla.org/contribute/](http://www.mozilla.org/en-US/contribute/) e aiutare la crescita di Firefox OS.
+È possibile unirsi a noi visitando [http://www.mozilla.org/contribute/][13] e aiutare la crescita di Firefox OS.
 
+[1]: http://marketplace.firefox.com "Firefox Marketplace"
+[2]: https://login.persona.org/about "Mozilla Persona"
+[3]: https://developer.mozilla.org/it/Marketplace/criteri_revisione_marketplace "Linee guida della revisione"
+[4]: https://marketplace.firefox.com/developers/submissions "Le mie app"
+[5]: https://marketplace.firefox.com/developers/docs/submission "Documentazione Marketplace"
+[6]: https://wiki.mozilla.org/Apps/Security "Sicurezza"
+[7]: https://github.com/flamsmark/privacy-policy-template
+[8]: https://developer.mozilla.org/en-US/Marketplace/Publishing/Privacy_policies
+[9]: http://leanpub.com/quickguidefirefoxosdevelopment
+[10]: http://twitter.com/soapdog
+[11]: mailto:fxosquickguide@andregarzia.com
+[12]: http://andregarzia.com
+[13]: http://www.mozilla.org/en-US/contribute/

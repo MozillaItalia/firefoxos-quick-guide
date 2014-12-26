@@ -2,7 +2,7 @@
 
 Prima di sporcarci le mani con la nostra prima applicazione, vediamo di scoprire alcuni concetti base per lo sviluppo su Firefox OS. Nell'[introduzione](#introduction) abbiamo detto che le applicazioni Firefox OS, analogamente alle pagine web, sono basate su HTML5, tuttavia non abbiamo spiegato cosa rende le applicazioni per Firefox OS differenti dalle pagine web classiche. 
 
-Se utilizziamo le nostre conoscenze riguardo le altre piattaforme *mobile* (Android, iOS) possiamo osservare che le applicazioni native hanno delle caratteristiche ben definite:
+Se utilizziamo le nostre conoscenze riguardo le altre piattaforme *mobile* (Android o iOS per citare i più diffusi) possiamo osservare che le applicazioni native hanno delle caratteristiche ben definite:
 
 * Un nome e un'icona con cui l'utente lancia l'applicazione.
 * Accesso ai **servizi di sistema** (dati utente, notifiche) e **funzionalità hardware** (sensori).
@@ -11,7 +11,7 @@ Osservando il quadro generale, un'applicazione Firefox OS non è altro che una p
 
 ## File manifesto dell'applicazione
 
-Il [manifesto][1] è un file [JSON][2] che contiene i **metadati** dell'applicazione. Questo file è chiamato **manifest.webapp** e viene posizionato accanto al classico file HTML **index.html**, nella stessa cartella.
+Il [manifesto][1] è un file [JSON][2] obbligatorio che contiene i **metadati** dell'applicazione. Questo file è chiamato **manifest.webapp** e viene posizionato accanto al classico file HTML **index.html**, nella stessa cartella.
 Questi metadati servono al sistema per sapere il nome dello sviluppatore, la versione, i permessi richiesti per le varie API, l'icona, le lingue in cui è disponibile e molto altro.
 
 <<[Manifest d'esempio](code/sample_manifest.webapp)

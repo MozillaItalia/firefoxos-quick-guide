@@ -87,8 +87,8 @@ Accetto con piacere tutto l'aiuto per tradurre questo testo in lingue diverse (e
 
 ### Versione 0.3
 
-Aggiunto nuovo materiale come Brick, Firefox OS Boilerplate, ADB Helper ed il multilingua grazie a Daniele Scasciafratte, la sezione del Manifest invece è di Giammarco Di Lella.
-Include l'App Manager ed il materiale per la versione 1.1 di Firefox OS per la retrocompatibilità.
+Aggiunto nuovo materiale come Brick, Firefox OS Boilerplate, ADB Helper ed il multilingua grazie a Daniele Scasciafratte, la sezione del Manifest invece è di Giammarco Di Lella.  
+COn l'iauto di Edoardo Putti e Niccolo Cantù la guida è stata revisionata e sono stati aggiunti altri materiale non presenti nella versione originale.
 
 ### Versione 0.2
 

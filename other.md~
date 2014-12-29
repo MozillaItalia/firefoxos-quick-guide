@@ -89,7 +89,7 @@ Non è nell'interesse della guida approfondire questa libreria ma solo rendere a
 
 
 ##Hosting App su Github
-Github offre sui suoi server un servizio di web hosting, questo capitolo tratterà di come sfruttare Github per distribuire la propria applicazione hosted sulla rete. 
+Github offre sui suoi server un servizio di hosting per pagine HTML, questo capitolo si tratterà di come sfruttare Github per distribuire la propria applicazione sul web. 
 Come prima cosa è necessario registrarsi su Github ed affettuare l'accesso. Nella schermata che troverete davanti (detta *Dashboard*) alla destra della vostra immagine di profilo c'è un icona a forma di "più" che permette di creare una *repository*.  
 
 Una repository può essere descritta semplicemente come una cartella che contiene un progetto e in cui vengono salvate tutte le modifiche effettuate dal momento in cui è stata creata. Questo permette di verificare tutte le linee di codice aggiunte o rimosse in ogni momento dello sviluppo  

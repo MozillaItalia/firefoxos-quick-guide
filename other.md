@@ -102,7 +102,7 @@ Verrete indirizzati alla schermata di creazione della repository; qui dovrete in
 
 In questa nuova schermata è presente una barra sulla destra che permette di gestire il progetto, fate click su **Settings**  
 ![settings][settings]   
-e scorrete fino alla sezione che ha per titolo **Github Pages** dove premere **Automatic Page Generator**.
+e scorrete fino alla sezione che ha per titolo **Github Pages** dove troverete il pulsante **Automatic Page Generator**, premetelo.
 
 ![genera pagina automatica][gitpages]
 

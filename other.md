@@ -92,7 +92,7 @@ Non è nell'interesse della guida approfondire questa libreria ma solo rendere a
 Github offre sui suoi server un servizio di web hosting, questo capitolo tratterà di come sfruttare Github per distribuire la propria applicazione hosted sulla rete. 
 Come prima cosa è necessario registrarsi su Github ed affettuare l'accesso. Nella schermata che troverete davanti (detta *Dashboard*) alla destra della vostra immagine di profilo c'è un icona a forma di "più" che permette di creare una *repository*.  
 
-Una repository può essere descritta semplicemente come una cartella che contiene un progetto e in cui vengono salvate tutte le modifiche effettuate dal momento in cui è stata creata. Questo permette di verificare tutte le linee di codice aggiunte o rimosse in ogni momento dello sviluppo  
+Una repository può essere descritta semplicemente come una cartella che contiene un progetto e la storia dei suoi file da quando l'avete creata. Questo ci permette di tenere traccia delle modifiche ai file nel tempo.  
 
 ![aggiungi una repository][addRepo]
 
@@ -106,16 +106,16 @@ e scorrete fino alla sezione che ha per titolo **Github Pages** dove premere **A
 
 ![genera pagina automatica][gitpages]
 
-La pagina automatica che verrà creata servirà come base per l'applicazione, motivo per cui non dovremo perdere tempo a modificare i contenuti o a scegliere il layout: tutto questo sarà sostituito dalla applicazione. Nella prima pagina **New project site** fate click su **continue to layouts** senza modificare nulla e nella pagina di scelta del layout premete **publish page**.  
+La pagina che verrà creata servirà come base per l'applicazione, motivo per cui non dovremo perdere tempo a modificare i contenuti o a scegliere il layout: la pagina generata verrà scartata in favore della nostra applicazione. Nella prima pagina **New project site** fate click su **continue to layouts** senza modificare nulla e nella pagina di scelta del layout premete **publish page**.  
 
-Github creerà quindi un sito per il vostro progetto che sarà visitabile da chiunque all'indirizzo: ``http://miousername.github.io/nomedelprogetto``. Per comodità tornando nuovamente alla pagina **Settings** vi sarà indicato l'indirizzo corretto a cui è stato pubblicato il progetto. 
+Github creerà quindi un sito per il vostro progetto che sarà visitabile da chiunque all'indirizzo: ``http://miousername.github.io/nomedelprogetto``. Potete trovare l'indirizzo completo nella pagina Settings della vostra repository.
 Seguendo i passaggi sopra elencati il sito sarà così realizzato (titolo e sottotitolo dipenderanno dal nome e dalla descrizione):
 
 ![Alt text][defaultPage]
 
-Finalmente è quasi giunto il momento di caricare tutti i file, per far si che l'app sia effettivamente installabile occorre modificare il file "manifest.webapp". In particolare bisogna sostituire nel campo "launch_path" il nuovo indirizzo del vostro file index.html  
+Per far si che l'app sia effettivamente installabile occorre modificare il file "manifest.webapp". In particolare bisogna sostituire nel campo "launch_path" il nuovo indirizzo del vostro file index.html  
 Se ricordate l'indirizzo che avrà il vostro progetto sarà circa: ``http://miousername.github.io**/nomedelprogetto**``,
-il manifesto sarà così modificato
+il manifesto deve quindi essere così modificato
     
      "launch_path" : "/nomedelprogetto/index.html" 
      
@@ -126,9 +126,9 @@ Per la corretta visualizzazione delle icone è necessario aggiornare anche il ca
         "60" : "/nomedelprogetto/cartellaIcone/icona60.png"
         }
      
-Infine per caricare l'applicazione è necessario installare sul computer un software distribuito da github; Per Windows tale programma è disponibile con interfaccia grafica o tramite un terminale apposito (Git Power Shell), mentre per GNU/Linux è disponibile solo su terminale, questa guida per semplicità farà riferimento ai comandi da eseguire da terminale.
+Infine per caricare l'applicazione è necessario installare sul computer un software distribuito da Github; Per Windows tale programma è disponibile con interfaccia grafica o tramite un terminale apposito (Git Power Shell), mentre per GNU/Linux è disponibile solo su terminale, questa guida per semplicità farà riferimento ai comandi da eseguire da terminale.
 
-Per iniziare è necessario clonare la repository sul proprio pc digitare:   
+Per iniziare è necessario clonare la repository sul proprio pc digitando questi comandi nel terminale:    
     
     $ git clone https://github.com/miousername/nomedelprogetto.git
     
@@ -141,9 +141,9 @@ In seguito per aggiornare i file digitare:
     $ git commit -m "hosting app"
     $ git push origin gh-pages
     
-Inserite le vostre credenziali per avviare il caricamento dei file. Visitando l'indirizzo del vostro progetto ora vedrete anzichè la pagina generata automaticamente l'*Homepage* della vostra applicazione. 
+Inserite le vostre credenziali per avviare il caricamento dei file. Visitando l'indirizzo del vostro progetto ora vedrete anzichè la pagina generata automaticamente l'*Homepage* della vostra applicazione. **NOTA:Può capitare a volte che la modifica della pagina mostrata impieghi anche 30 minuti.**
 
-Ultima tappa è la pubblicazione sul Firefox Marketplace, selezionate "Hosted app" e inserite l'indirizzo del **manifesto** ossia: ``http://miousername.github.io/nomedelprogetto/manifest.webapp``
+Ultima tappa è la pubblicazione sul Firefox Marketplace. Accedete o registratevi al Firefox Marketplace come sviluppatori, nella pagina "Carica un'app" selezionate "Hosted app" e inserite l'indirizzo del **manifesto** ossia: ``http://miousername.github.io/nomedelprogetto/manifest.webapp``
 
 [addRepo]:images/originals/git-addRepo.png
 [createRepo]:images/originals/git-createRepo.png

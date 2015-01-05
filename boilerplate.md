@@ -135,7 +135,7 @@ Tra gli esempi disponibili abbiamo: verificare se l'applicazione è in primo pia
 
 ## Multilingua
 
-Nel [Boilerplate][2] appena visto è utilizzata una libreria javascript chiamata [webL10n][11]. Questa libreria è presente in Gaia ma si tratta di una versione modificata (questa è la versione presente nel boilerplate).  
+Nel [Boilerplate][2] appena visto è utilizzata una libreria JavaScript chiamata [webL10n][11]. Questa libreria è presente in Gaia ma si tratta di una versione modificata (questa è la versione presente nel boilerplate).  
 Il sistema riconosce in automatico la lingua utilizzata e carica le traduzioni appropriate nella vostra applicazione.
 
 Al caricamento del file JavaScript della libreria viene caricato un file .ini che contiene i riferimenti alle varie lingue disponibili dell'applicazione. Dopodiché la libreria carica il file della lingua utilizzata dal browser o del sistema. Diamo un'occhiata al codice prima di vedere come avviene la magia della localizzazione.  

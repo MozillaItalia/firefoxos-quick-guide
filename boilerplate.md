@@ -103,23 +103,29 @@ Non vedremo il codice nel dettaglio delle varie WebActivity, quindi rimando al f
 
 * Cercare file
 * Scattare una foto
+* Registrare un video
 * Avviare una telefonata
 * Mandare un SMS
 * Aggiungere un contatto
+* Modificare un contatto
 * Condividere un sito
-* Condividere una foto con un'applicazione
+* Condividere una foto sui social network
+* Condividere una foto via mail
 * Aprire un sito
 * Scrivere un'email (con l'applicazione di sistema)
 * Salvare un segnalibro
 * Aprire un video
+* Modificare le impostazioni del telefono
 
-Praticamente vi stiamo dicendo di togliere tutte queste funzionalità dalla vostra app, ve le diamo noi senza che voi dobbiate lavorarci.
+Praticamente vi stiamo dicendo di non pensare a come implementare tutte queste funzionalità dalla vostra app. Se volete ve le diamo noi senza che voi dobbiate lavorarci.
 
-Naturalmente l'importanza di questa idea non è limitata alle precedenti opzioni e basta, potete *registrare* la vostra WebActivity personalizzata nella vostra app per fare più o meno quello che vi pare, dal selezionare foto di gattini a prendere i contatti da una rubrica segreta o rendere disponibile uno lettore di codici a barre.
+Naturalmente l'importanza di questa idea non è limitata alle precedenti opzioni e basta, potete *registrare* la vostra WebActivity personalizzata nella vostra app per fare più o meno quello che vi pare, dal selezionare foto di gattini a prendere i contatti da una rubrica segreta o rendere disponibile un lettore di codici a barre.
+
++La lista completa delle WebActivity disponibili su Firefox OS la trovi [quì][15]
 
 ### WebAPI
 
-Questa sezione contiene sia codice (lo stesso file di prima) solo per Firefox OS ma anche un po' di HTML5 di recente standardizzazione. Abbiamo le notifiche, rotazione e accensione dello schermo che sono solo per Firefox OS mentre vibrazione, verifica della connessione (ne abbiamo parlato prima), geolocalizzazione, luce ambientale, prossimità, batteria sono API standard.
+Questa sezione del boilerplate contiene sia esempi esclusivi per Firefox OS ma anche alcuni esempi di tecnologie HTML5 di recente standardizzazione. Tra questi abbiamo le notifiche di sistema, il blocco della rotazione o dello spengimento dello schermo che sono solo per Firefox OS mentre vibrazione, verifica della connessione (ne abbiamo parlato prima), geolocalizzazione, quantità di luce ambientale, prossimità dell'utente allo schermo, accesso alla batteria sono invece API standard e quindi disponibili a chiunque abbia un browser moderno.
 
 ### API Privilegiate
 
@@ -167,3 +173,4 @@ Abbiamo visto anche la questione multilingua che è molto importante e di come s
 [12]: https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/locales/locales.ini
 [13]: https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/locales/en-US/manifest.properties
 [14]: https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/locales/en-US/app.properties
++[15]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Activities

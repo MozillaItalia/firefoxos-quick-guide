@@ -129,8 +129,9 @@ Questa sezione del boilerplate contiene sia esempi esclusivi per Firefox OS ma a
 
 ### API Privilegiate
 
-Queste API sono particolari e sono disponibili solo per le app privilegiate e sono quasi tutte standard HTML5. 
-C'è il codice per verificare se l'applicazione ha il focus, quindi se la scheda è aperta, ed accedere alle immagini. Questi sono standard HTML mentre selezionare i contatti e fare richieste XHR CrossDomain sono una peculiarità di Firefox OS.
+Queste API sono particolari e sono disponibili solo per le app privilegiate e sono quasi tutte standard HTML5.
+
+Tra gli esempi disponibili abbiamo: verificare se l'applicazione è in primo piano, accedere alle immagini sul dispositivo, effettuare una richiesta ad un server e prendere i contatti dal telefono. Questi esempi sono uno standard HTML5 mentre selezionare i contatti e fare richieste XHR CrossDomain sono una peculiarità di Firefox OS.
 
 ## Multilingua
 

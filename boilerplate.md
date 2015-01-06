@@ -135,30 +135,57 @@ Tra gli esempi disponibili abbiamo: verificare se l'applicazione è in primo pia
 
 ## Multilingua
 
-Nel [Boilerplate][2] appena visto è utilizzata una libreria JavaScript chiamata [webL10n][11]. Questa libreria è presente in Gaia ma si tratta di una versione modificata (questa è la versione presente nel boilerplate).  
-Il sistema riconosce in automatico la lingua utilizzata e carica le traduzioni appropriate nella vostra applicazione.
+Nel [Boilerplate][2] appena visto è utilizzata una libreria JavaScript chiamata [webL10n][11]. Questa libreria è presente in Gaia ma si tratta di una versione modificata (questa è la versione presente nel boilerplate).
 
-Al caricamento del file JavaScript della libreria viene caricato un file .ini che contiene i riferimenti alle varie lingue disponibili dell'applicazione. Dopodiché la libreria carica il file della lingua utilizzata dal browser o del sistema. Diamo un'occhiata al codice prima di vedere come avviene la magia della localizzazione.  
+Grazie a webL10n il sito riconosce in automatico la lingua utilizzata dal dispositivo e carica le traduzioni appropriate.
+
+Al caricamento del file JavaScript della libreria viene caricato il file **locales.ini** che contiene i riferimenti alle varie lingue disponibili dell'applicazione. Dopodiché se c'è la lingua utilizzata dal sistema provvede a sostituire i testi che gli abbiamo indicato alla creazione dell'app, se la lingua non è presente viene lasciata la versione base (dobbiamo indicarla noi).
+
+Diamo un'occhiata al codice prima di vedere come avviene la magia della localizzazione.
 
 `<link rel="resource" type="application/l10n" href="locales/locales.ini" />
 <script type="application/javascript" src="js/l10n.js"></script>`
 
-Con questo codice il boilerplate carica i file della lingua... ma come sa dove agire per cambiare il testo?  
-La libreria lo sà tramite degli attributi `data-l10n-id` ai tag di cui vogliamo la traduzione che deve contenere il nome di riferimento della stringa da mostrare.
+Con questo codice il boilerplate carica i file della lingua... ma come sa dove agire per cambiare il testo?
+La libreria si basa sugli attributi `data-l10n-id` che mettiamo agli elementi di cui vogliamo la traduzione che deve contenere il nome di riferimento della stringa da mostrare.
+
+Ecco un esempio per chiarire le idee.
+
+~~~~~
+<html>
+<head>
+  <script type="text/javascript" src="l10n.js"></script>
+  <link rel="prefetch" type="application/l10n" href="locales.ini" />
+</head>
+<body>
+  <button data-l10n-id="test" title="click me!">This is a test</button>
+</body>
+</html>
+~~~~~
+
+Il bottone ha una proprietà `data-l10n-id` con attributo *test*, questo vuol dire che se nel file **locales.ini** esiste una riga di testo simile a questa 
+
+~~~~~
+[it]
+test = Questo è un test
+test.title = Cliccami!
+~~~~~
+
+Il testo all'interno del bottone verrà sostituito dal testo `Questo è un test` nel caso io chieda la lingua italiana.
 
 ### File della lingua
 
-* locales.ini: [un esempio][12] che contiene i percorsi dei vari file di lingua con il loro codice di riconoscimento.
-* manifest.properties: [un esempio][13] che contiene la traduzione del manifest.
-* app.properties: [un esempio][14] che contiene la traduzione completa del boilerplate.
+* **locales.ini**: [un esempio][12] che contiene i percorsi dei vari file di lingua con il loro codice di riconoscimento.
+* **manifest.properties**: [un esempio][13] che contiene la traduzione del manifest.
+* **app.properties**: [un esempio][14] che contiene la traduzione completa del boilerplate.
 
-Come si può vedere è il classico file .ini `proprietà = testo` che viene elaborato da Javascript e caricato all'interno del tag contenente nell'attributo `data-l10n-id`.
+Come si può vedere è il classico file .ini `proprietà = testo` che viene elaborato da JavaScript e caricato all'interno del tag contenente nell'attributo `data-l10n-id`.
 
 ## Riassunto
 
 Abbiamo visto molte funzionalità di Firefox OS e delle Open Web Apps tramite un semplice ma completo boilerplate.
-Una citazione da fare è che le WebActivity ed alcune API hanno bisogno di essere dichiarate nel file manifest per poter essere utilizzate. 
-Abbiamo visto anche la questione multilingua che è molto importante e di come sia semplice integrare questa soluzione nella propria app.
+Ricordati che per poter utilizzare le WebActivity o alcune API hai bisogno dei permessi degli utenti e quinidi devi chiedere i permessi relativi compilando il file manifest accuratamente. 
+Abbiamo visto anche la questione multilingua che è molto importante e di come sia semplice integrare questa soluzione nel proprio lavoro.
 
 [1]: https://github.com/robnyman/Firefox-OS-Boilerplate-App "Boilerplate repository"
 [2]: http://robnyman.github.io/Firefox-OS-Boilerplate-App/ "Boilerplate app"

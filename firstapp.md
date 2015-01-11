@@ -82,7 +82,7 @@ La prima riga dichiara che il documento utilizza il formato HTML5. Dalla *linea 
 
 Adesso che abbiamo incluso i riferimenti a *Gaia Building Blocks* possiamo sfruttare il lavoro di Mozilla per creare un'applicazione a 5 stelle.
 
-Iniziamo a costruire le varie schermate. Come abbiamo detto prima, ogni schermata è racchiusa in una `<section>` all'interno del corpo (il tag `<body>`) del documento HTML. All'elemento '<body>' assegnamo un attributo *role* il cui valore deve essere *application*, in questo modo quando l'app verrà lanciata verranno utilizzati i fogli di stile di *Gaia Building Blocks* per definire l'aspetto dell'interfaccia. Scriviamo quindi `<body role="application">`. Adesso creiamo la prima schermata, quindi la prima '<section>', e dichiariamo il tag body come abbiamo detto prima.
+Iniziamo a costruire le varie schermate. Come abbiamo detto prima, ogni schermata è racchiusa in una `<section>` all'interno del corpo (il tag `<body>`) del documento HTML. All'elemento '<body>' assegnamo un attributo *role* il cui valore deve essere *application*, in questo modo quando l'app verrà lanciata verranno utilizzati i fogli di stile di *Gaia Building Blocks* per definire l'aspetto dell'interfaccia. Scriviamo quindi `<body role="application">`. Adesso creiamo la prima schermata, quindi la prima `<section>`, e dichiariamo il tag body come abbiamo detto prima.
 
 ~~~~~~~~
 <body role="application">

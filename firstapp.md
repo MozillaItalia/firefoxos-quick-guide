@@ -469,7 +469,7 @@ window.onload = function () {
 
 Ora che tutti i file sono pronti proviamo l'applicazione nel simulatore.
 
-## Provare l'applicazione sull'App manager
+## Provare l'applicazione col simulatore
 
 Prima di avviare l'applicazione nel simulatore è preferibile verificare che tutti i file siano al posto giusto altrimenti l'applicazione non funzionerà. Ecco quale dovrebbe essere il contenuto della cartella memos:
 
@@ -479,21 +479,25 @@ Se si ha il vago sospetto di aver commesso qualche errore è possibile verificar
 
 Tutto a posto? Bene, cominciamo.
 
-Per aprire la *Dashboard del Simulatore* fare clic nel menu **Sviluppo -> Gestore App**.
+Per aprire la *Dashboard del Simulatore* fare clic nel menu **Sviluppo -> WebIde **.
 
-![Apertura della Dashboard del simulatore](images/originals/locate-app-manager.png)
+![Apertura della Dashboard del simulatore](images/originals/locate-webide.png)
 
-, fare clic sul pulsante **Aggiungi app locale** e selezionare il file manifesto dell'applicazione.
+Fai clic sul pulsante **Apri app**, seleziona **Apri app pacchettizzata** e seleziona la cartella contenente il file manifesto dell'applicazione **Memos for Firefox Os**.
 
-![Aggiunta di una nuova applicazione](images/originals/app-manager-add-packaged-app.png)
+![Aggiunta di una nuova applicazione](images/originals/webide-add-project.png)
 
-Se tutto funziona come previsto, Memos apparirà nella lista applicazioni.
+Se tutto funziona come previsto Memos verrà aggiunta ai progetti del WebIde.
 
-![Memos mostrata nella Dashboard](images/originals/app-manager-showing-memos.png)
+![Memos mostrata nella Dashboard](images/originals/webide-app-loaded.png)
 
-Quando si aggiungerà una nuova applicazione, il simulatore verrà avviato con la nuova app in esecuzione. A questo punto è possibile provare tutte le funzionalità di Memos.
+Una volta aggiunta l'applicazione scegliamo la versione del simulatore che vogliamo usare e avviamola. Una volta avviato possiamo installare **Memos** premendo il bottone triangolare e sul simulatore verrà avviata la nostra app.
 
-![Memos installato nel Simulatore](images/originals/app-manager-updating-memos.png)
+![Il bottone triangolare da premere](images/originals/webide-buttons.png)
+
+A questo punto è possibile provare tutte le funzionalità di Memos.
+
+![Memos installato nel Simulatore](images/originals/memos-first-run.png)
 
 Congratulazioni! Abbiamo creato e provato la nostra prima applicazione. Non è un'applicazione complessa o rivoluzionaria - ma spero sia utile per capire il workflow di sviluppo di Firefox OS. Chi ha già visto e lavorato con il web ha di sicuro potuto notare che non è molto diverso dallo sviluppo web classico.  
 

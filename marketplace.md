@@ -6,24 +6,26 @@
 
 Per pubblicare un'app sul Marketplace è necessario effettuare l'identificazione tramite [Mozilla Persona][2]. Sarà sufficiente fare clic sul pulsante **Registrati** e seguire le istruzioni. Una volta effettuato l'accesso al Marketplace sarà possibile pubblicare l'app.
 
-## Operazioni che precedono l'ideazione di un'app
+## Passi che precedono l'ideazione di un'app
 
-Tutte le applicazioni pubblicate sul Marketplace sono sottoposte a un processo di verifica e devono essere approvate dai revisori del sito (non ci si preoccupi troppo, è meno pauroso di quanto sembri). Il processo di controllo delle app ospitate e delle app pacchettizzate semplici è più snello rispetto a quello delle app con privilegi, in quanto le prime utilizzano API meno sensibili. Prima di inviare un'app su Firefox Marketplace leggere attentamente [le linee guida per la revisione][3]. A mio avviso le parti più importanti sono:  
+Tutte le applicazioni pubblicate sul Marketplace sono sottoposte a un processo di revisione e devono essere approvate dai revisori del sito (non c'è bisogno di preoccuparsi, è meno pauroso di quanto sembri). Il processo di controllo delle app ospitate e delle app pacchettizzate semplici è più snello rispetto a quello delle app con privilegi, in quanto le prime utilizzano API meno sensibili. Prima di inviare un'app su Firefox Marketplace leggere attentamente [le linee guida per la revisione][3]. A mio avviso le parti più importanti sono:  
 
 * I dispositivi Firefox OS, contrariamente ai dispositivi Android e ai browser desktop, non hanno un pulsante **Indietro**. Nel caso in cui l'app rimandi a una pagina dalla quale non è possibile ritornare più indietro (in altre parole se l'utente nell'utilizzo dell'app arriva a un punto morto) l'app verrà rifiutata.
 * L'app deve avere un'icona di 60x60 pixel e una descrizione chiara del suo funzionamento.
 * L'app deve funzionare esattamente come riportato nella sua descrizione. Se nella descrizione si dichiarano delle caratteristiche e nell'utilizzo ne emergono delle altre, l'app verrà respinta.
-* Se l'app richiede un'autorizzazione particolare si è obbligati a farne uso nel codice sorgente. Dichiarare che si tratta di un'app con privilegi e non fare uso di alcuna API fra quelle riservate alle app con privilegi, porterà al rifiuto dell'app da parte dei revisori che chiederanno allo sviluppatore di ripubblicarla come app semplice. 
+* Se l'app richiede un'autorizzazione particolare si è obbligati a farne uso nel codice sorgente. Dichiarare che si tratta di un'app con privilegi e non fare uso di alcuna API fra quelle riservate alle app con privilegi, porterà al rifiuto dell'app da parte dei revisori che chiederanno allo sviluppatore di ripubblicarla come app semplice.
 * L'applicazione deve essere accompagnata da **un'informativa sulla privacy**.
 * I file manifesto dovrebbero essere distribuiti con il corretto *MIME type* e utilizzare lo stesso dominio di origine in caso di app ospitate.
 
 Alla pagina sopraindicata vengono discussi altri criteri di validità e altri potrebbero essere aggiunti in futuro senza un'esplicita comunicazione. Sarà utile impiegare bene il proprio tempo e leggere con attenzione quella pagina. Vedere la propria applicazione rifiutata per delle sciocchezze che richiedono poco sforzo per essere risolte è una gran perdita di tempo. È sempre meglio iniziare a fare le cose per bene sin dall'inizio (i revisori sono ben lieti di approvare delle buone app).
 
-## Operazioni preliminari prima della pubblicazione
+## Passi preliminari prima della pubblicazione
 
-I passaggi richiesti per la pubblicazione di un'app sul Marketplace variano a seconda che si tratti di un'*app hosted* o di un'app pacchettizzata. Nel caso di *app hosted*, è sufficiente che sia raggiungibile online e che il manifesto sia distribuito con il corretto *MIME type*. I file delle *app packaged* devono essere raccolti in un archivio compresso utilizzando il formato *zip* e richiedono qualche maggiore attenzione.  
+I passaggi richiesti per la pubblicazione di un'app sul Marketplace variano a seconda che si tratti di un'*app hosted* o di un'app pacchettizzata. Nel caso di *app hosted*, è sufficiente che sia raggiungibile online e che il manifesto sia distribuito con il corretto *MIME type*. I file delle *app packaged* devono essere raccolti in un archivio compresso utilizzando il formato *zip* e richiedono qualche maggiore attenzione.
 
-Un errore comune a molti sviluppatori è quello di selezionare la cartella che contiene i file dell'app e di comprimerla. Come risultato il file *zip* contiene una cartella che a sua volta contiene l'app vera e propria. Questo non è il modo corretto per creare l'archivio *zip* di un'applicazione Firefox OS. Il modo corretto di creare l'archivio *zip* consiste nel selezionare tutti i file e le cartelle dell'app in modo che il file manifesto sia nel *primo livello* dell'archivio. Su sistemi operativi Mac e Linux è possibile aprire il Terminale, navigare fino alla directory dell'app e eseguire il comando `zip -r myapp.zip *` per ottenere il risultato desiderato, come mostrato nella schermata sottostante.
+Un errore comune a molti sviluppatori è quello di selezionare la cartella che contiene i file dell'app e di comprimerla. Come risultato il file *zip* contiene una cartella che a sua volta contiene l'app vera e propria. Questo non è il modo corretto per creare l'archivio *zip* di un'applicazione Firefox OS.
+
+Il modo corretto di creare l'archivio *zip* consiste nel selezionare tutti i file e le cartelle dell'app in modo che il file manifesto sia nel *primo livello* dell'archivio. Su sistemi operativi Mac e Linux è possibile aprire il Terminale, navigare fino alla directory dell'app e eseguire il comando `zip -r myapp.zip *` per ottenere il risultato desiderato, come mostrato nella schermata sottostante.
 
 ![Modo corretto di comprimere i file da terminale](images/originals/marketplace-preparing-packaged-app.png)
 
@@ -61,6 +63,18 @@ Dalla schermata mostrata qui sopra, è possibile notare che l'app da me caricata
 
 Il passaggio successivo è denominato **Passaggio #3: dettagli** ed è quello in cui si dovranno inserire delle informazioni dettagliate sull'app, come categoria, testo descrittivo, qualche screenshot, ecc…
 
+### Come ottenere degli screenshots per il Marketplace
+
+Siccome non tutti abbiamo confidenza con i programmi di grafica ecco che il simulatore ci viene in soccorso e ci permette di fare gli screenshots senza tanta fatica.
+
+![Un click e via, ecco lo screenshot](images/originals/webide-screenshot.png)
+
+Basta scegliere **Runtime > Screenshot** perché venga salvata nella cartella **Immagini** del vostro computer la schermata che vedete al momento sul simulatore. Ecco la schermata che abbiamo salvato.
+
+![Lo screenshot preso precedentemente](images/originals/screenshot-result.png)
+
+## Le informazioni sulla nostra app
+
 ![Inserimento di informazioni dettagliate](images/originals/marketplace-step-3.png)
 
 Dopo aver inserito in dettaglio le informazioni sull'app, il processo di caricamento è completo.  
@@ -76,7 +90,7 @@ Per ulteriori informazioni riguardo al caricamento delle app consultare [questo 
 
 Le applicazioni quando sono inviate nel marketplace vengono controllate da tool automatici e testate da volontari di Mozilla. Questi volontari a loro volta sono sottoposti a dei test per verificare le loro conoscenze.  
 
-I criteri di accettazione dell'applicazione sono molteplici e passano dalla sicurezza, privacy, contenuto, funzionalità e usabilità.  
+I criteri di accettazione dell'applicazione sono molteplici e passano dalla sicurezza, privacy, contenuto, funzionalità e usabilità.
 
 Durante il processo di recensione verrà controllato il file manifest per la completezza delle informazioni quindi è molto importante che sia completo e preciso perché è uno dei primi motivi per cui l'app può essere bocciata. Per esempio specificando lingue disponibili che non lo sono, permessi documentati male, schermata mancante o descrizione incompleta.  
 
@@ -97,7 +111,7 @@ Per l'approvazione deve essere presentata una privacy policy ma non ci sono requ
 
 ## Contenuto
 
-Non deve contenere materiale pornografico, codice maligno o promozione di materiale illegale/gioco d'azzardo/servizi illegali. Potremmo dire: regole di buon senso!
+Non deve contenere materiale pornografico, codice maligno o promozione di materiale illegale/gioco d'azzardo/servizi illegali. Potremmo dire: regole del buon senso!
 
 ## Funzionalità
 

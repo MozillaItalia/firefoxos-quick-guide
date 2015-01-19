@@ -104,8 +104,7 @@ Il terzo è il pulsante che avvia la Console per il Debug[^scorciatoia]
 
 Dopo il clic su questo pulsante verrà aperta una schermata come questa:
 
-// TODO:  inserire immagine della console nel WebIde
-![Developer Tools connessi all'applicazione nel simulatore](images/originals/app-manager-dev-tools.png)
+![Developer Tools connessi all'applicazione nel simulatore](images/originals/webide-console.png)
 
 COn gli strumenti connessi all'applicazione puoi provare il tuo codice JavaScript, fare il debug del DOM, modificare lo stile, ecc... esattamente come se usassi gli strumenti per sviluppatori di Firefox.
 

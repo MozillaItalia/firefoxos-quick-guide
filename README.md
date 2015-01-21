@@ -23,6 +23,7 @@ Per favore mantieni lo stile di scrittura coerente:
 - è "web", non "Web", a meno che non sia scritto così nel nome di una tecnologia come in "WebSocket"
 - dopo un titolo, sezione, sottosezione si va a capo e si salta un rigo
 - inserisci uno spazio tra # ed il titolo quando scrivi un nuovo paragrafo
+- i nomi dei file vanno in grassetto, **index.html**
 
 ## Altre versioni
 

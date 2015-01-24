@@ -125,6 +125,34 @@ W> NOTA: Può capitare che a volte la modifica della pagina impieghi anche 30 mi
 
 Ultima tappa è la pubblicazione sul Firefox Marketplace. Accedete o registratevi al Firefox Marketplace come sviluppatori, nella pagina "Carica un'app" selezionate "Hosted app" e inserite l'indirizzo del **manifesto** ossia: `http://miousername.github.io/nomedelprogetto/manifest.webapp`
 
+### Concierge
+
+Tra gli strumenti a nostra disposizione se vogliamo pubblicare la nostra app come **hosted** c'è [**Concierge**][34], una libreria che si occupa di:
+
+* rilevare se la nostra app è installata
+* proporre l'installazione
+* creare un bottone di installazione semplice e di buon gusto
+
+Potete vedere la demo su [questa pagina][35].
+
+Per usare **Concierge** basta includere il suo file JavaScript, il file CSS e aggiungere il seguente codice alla nostra pagina su cui troviamo l'applicazione.
+```
+var install = new Concierge({
+    onSuccess: successCallback,
+    onError: errorCallback
+});
+
+function successCallback () {
+    console.log('App installed!');
+}
+
+function errorCallback (error) {
+    console.error('Concierge() error: ' + error);
+}
+```
+
+Questo è tutto, se vi doveste trovare in imbarazzo e non funzionasse controllate per bene di aver seguito tutti i passaggi elencati sulla [pagina del progetto][34].
+
 [addRepo]:images/originals/git-addRepo.png
 [createRepo]:images/originals/git-createRepo.png
 [settings]:images/originals/git-settings.png
@@ -152,8 +180,8 @@ Ultima tappa è la pubblicazione sul Firefox Marketplace. Accedete o registratev
 [19]: http://buildingfirefoxos.com/transitions/app-invokes-app.html
 [20]: http://buildingfirefoxos.com/downloads/
 [21]: http://www.w3.org/TR/2013/WD-components-intro-20130606/
-[22]: http://www.polymer-project.org/
-[23]: http://mozbrick.github.io/
+[22]: http://www.polymer-project.org/ "Polymer"
+[23]: http://mozbrick.github.io/ "MozBrick"
 [24]: http://mozbrick.github.io/docs/brick-appbar.html
 [25]: http://mozbrick.github.io/docs/brick-calendar.html
 [26]: http://mozbrick.github.io/docs/brick-deck.html
@@ -164,3 +192,5 @@ Ultima tappa è la pubblicazione sul Firefox Marketplace. Accedete o registratev
 [31]: http://mozbrick.github.io/docs/brick-form.html
 [32]: http://mozbrick.github.io/docs/brick-menu.html
 [33]: http://mozbrick.github.io/docs/brick-storage-indexeddb.html
+[34]: https://github.com/alexgibson/concierge "Concierge"
+[35]: http://alxgbsn.co.uk/concierge/ "Concierge Demo"

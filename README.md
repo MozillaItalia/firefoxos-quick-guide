@@ -8,22 +8,7 @@ Ancora non pronta
 
 ## Contributi
 
-Per contribuire alla versione inglese di questo libro usa i ticket e le richieste di pull.  
-Revisione da effettuare con `aspell`.
-
-### Stile, Stile, Stile
-
-Per favore mantieni lo stile di scrittura coerente:
-
-- Usa `*corsivo*` invece di `_corsivo_`
-- Usa `**grassetto**` invece di `__grassetto__`
-- `*` per elementi di una lista invece di `-`
-- usa `http://miosito.com` per intero quando aggiungi un link ma escludi `www`
-- Possibilmente inserisci gli url come un riferimento a fondo pagina, sopratutto se sono molto lunghi
-- è "web", non "Web", a meno che non sia scritto così nel nome di una tecnologia come in "WebSocket"
-- dopo un titolo, sezione, sottosezione si va a capo e si salta un rigo
-- inserisci uno spazio tra # ed il titolo quando scrivi un nuovo paragrafo
-- i nomi dei file vanno in grassetto, **index.html**
+Vedi [Come contribuire][5]
 
 ## Altre versioni
 
@@ -39,3 +24,4 @@ Questo libro è distribuito usando la licenza Creative Commons. Altre informazio
 [2]: https://leanpub.com/guiarapidofirefoxos "Libro portoghese su Leanpub"
 [3]: https://github.com/soapdog/firefoxos-quick-guide/ "Repo inglese"
 [4]: https://leanpub.com/quickguidefirefoxosdevelopment/ "Libro inglese su Leanpub"
+[5]: https://github.com/Mte90/firefoxos-quick-guide/blob/0.3/contribute.md

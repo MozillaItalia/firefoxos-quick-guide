@@ -153,6 +153,12 @@ function errorCallback (error) {
 
 Questo è tutto, se vi doveste trovare in imbarazzo e non funzionasse controllate per bene di aver seguito tutti i passaggi elencati sulla [pagina del progetto][34].
 
+### Firefox Developer Edition
+
+Per i 10 anni di Firefox, il browser indipendente che mette l'utente al centro, Mozilla ha fatto un enorme balzo in avanti verso la comunità degli sviluppatori web come noi (si, anche tu!). La versione [Firefox Developer Edition][36] include **TUTTI** gli strumenti su cui Mozilla lavora per aiutare gli sviluppatori web, compresi quelli ancora non inclusi nelle versioni generiche, ed è compatibile con i più nuovi standard.
+
+Se continuerai questo percorso da Web Developer non potrai fare a meno di sporcarti le mani e questi strumenti sono i migliori disponibili al momento!
+
 [addRepo]:images/originals/git-addRepo.png
 [createRepo]:images/originals/git-createRepo.png
 [settings]:images/originals/git-settings.png
@@ -194,3 +200,4 @@ Questo è tutto, se vi doveste trovare in imbarazzo e non funzionasse controllat
 [33]: http://mozbrick.github.io/docs/brick-storage-indexeddb.html
 [34]: https://github.com/alexgibson/concierge "Concierge"
 [35]: http://alxgbsn.co.uk/concierge/ "Concierge Demo"
+[36]: https://www.mozilla.org/it/firefox/developer/ "Firefox Developer Edition"

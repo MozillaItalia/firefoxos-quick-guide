@@ -81,7 +81,7 @@ Per avviare il simulatore dopo averlo installato basta sceglierlo dal menù che 
 
 Una volta che il WebIde mostra l'applicazione avvia il simulatore e premi il pulsante triangolare per installare l'applicazione ed avviarla sul simulatore.
 
-![I bottoni del WebIde](images/originals/webide-buttons.png)
+![I pulsanti del WebIde](images/originals/webide-buttons.png)
 
 L'icona dell'applicazione apparirà nella schermata principale del Simulatore dopo la fine dell'installazione. Fai clic sull'icona per lanciarla.
 

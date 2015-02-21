@@ -153,6 +153,7 @@ Indica un'URL che l'applicazione può utilizzare al posto dell'UUID, è raro uti
 Proprietà chiave del manifest, permette di chiedere all'utente il permesso di utilizzare elementi specifici del telefono, come la geolocalizzazione, i contatti, ...
 
 Esempio:
+
 ```
 "permissions": {
   "contacts": {

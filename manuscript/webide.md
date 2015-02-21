@@ -1,10 +1,11 @@
-# WebIde{#webide}
+# WebIde {#webide}
 
 ![Firefox OS Simulator Dashboard](images/originals/webide-startup.png)
 
 Abbiamo scaricato il simulatore [nel capitolo precedente riguardo l'ambiente di lavoro](#setup) e l'abbiamo usato nel [capitolo riguardo la prima applicazione](#firstapp). Ora è tempo di dare un'occhiata più approfondita al WebIde e le sue funzionalità base.
 
-Per saperne di più, date un'occhiata [alla pagina WebIde][1] su MDN.
+// c'è un link simile ma dedicato al WebIde?
+Per saperne di più, date un'occhiata [alla pagina Firefox OS: Usare l'App Manager][1] su MDN.
 
 W> Ricordati: se stai usando un dispositivo Firefox OS 1.1 o ancora più vecchio devi usare il Simulatore 1.1 e non l'App Manager. Questo simulatore è spiegato nel prossimo capitolo.
 
@@ -81,7 +82,7 @@ Per avviare il simulatore dopo averlo installato basta sceglierlo dal menù che 
 
 Una volta che il WebIde mostra l'applicazione avvia il simulatore e premi il pulsante triangolare per installare l'applicazione ed avviarla sul simulatore.
 
-![I pulsanti del WebIde](images/originals/webide-buttons.png)
+![I bottoni del WebIde](images/originals/webide-buttons.png)
 
 L'icona dell'applicazione apparirà nella schermata principale del Simulatore dopo la fine dell'installazione. Fai clic sull'icona per lanciarla.
 
@@ -152,4 +153,4 @@ Nel prossimo capitolo parleremo della vecchia versione del Simulatore di Firefox
 
 Dopo il capitolo sul simulatore parleremo della distribuzione della tua applicazione.
 
-[1]: https://developer.mozilla.org/it/docs/Tools/WebIDE
+[1]: https://developer.mozilla.org/it/Firefox_OS/usare_l_app_Manager

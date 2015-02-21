@@ -53,6 +53,7 @@ Il campo *chrome* indica se la vostra applicazione fa uso dei pulsanti di naviga
 ![chrome](images/originals/nav-both2.png)  
 *Nota*: tenete presente che questa funzionalità va utilizzata solo se non è possibile implementare una soluzione propria, poiché le linee guida per l'user experience prevedono l'inserimento di un tasto *back* da parte dell'applicazione.  
 La sintassi della proprietà è la seguente:
+
 ```
 "chrome": { "navigation": true }
 ```
@@ -62,6 +63,7 @@ La sintassi della proprietà è la seguente:
 Questo parametro è necessario quando è presente anche la proprietà *locales* ed indica qual è la lingua predefinita dell'applicazione  ovvero quella che verrà usata se nel sistema è impostata una lingua per cui non avete traduzioni.
 
 Esempio per l'inglese
+
 ```
 "default_locale": "en"
 ```
@@ -99,20 +101,21 @@ Questo campo indica il percorso di lancio dell'applicazione che deve essere rela
 Questa proprietà ci permette di impostare i dati come URL o description per le varie lingue in cui è rilasciata l'app.
 
 Esempio:
+
 ```
 "locales": {
-"es": {
-  "description": "¡Acción abierta emocionante del desarrollo del Web!",
-  "developer": {
-    "url": "http://es.mozillalabs.com/"
+  "es": {
+    "description": "¡Acción abierta emocionante del desarrollo del Web!",
+    "developer": {
+      "url": "http://es.mozillalabs.com/"
+    }
+  },
+  "it": {
+    "description": "Emozionati nello sviluppo libero del Web!",
+    "developer": {
+      "url": "http://it.mozillalabs.com/"
+    }
   }
-},
-"it": {
-  "description": "Emozionati nello sviluppo libero del Web!",
-  "developer": {
-    "url": "http://it.mozillalabs.com/"
-  }
-}
 }
 ```
 
@@ -121,6 +124,7 @@ Esempio:
 Indica quali messaggi del sistema la vostra app può leggere per eseguire del codice specifico.
 
 Esempio:
+
 ```
 "messages": [
   { "telephony-new-call": "/dialer/index.html#keyboard-view" },
@@ -179,7 +183,7 @@ Indica se la vostra app è *web*, *privileged* o *certified*. Le certified sono 
 
 Il numero di versione della vostra app sotto forma di *stringa*.
 
-<<Important: Github fornisce tramite Github Pages il mime type giusto per il file manifest. Alcuni sviluppatori distribuiscono le proprie applicazioni hosted da Github, il vantaggio è che sono sempre aggiornate e finché si tratta di applicazioni semplici in JavaScript è una buona soluzione hosting. Vedi l'ultimo capitolo per approfondimenti.
+T> Github fornisce tramite Github Pages il mime type giusto per il file manifest. Alcuni sviluppatori distribuiscono le proprie applicazioni hosted da Github, il vantaggio è che sono sempre aggiornate e finché si tratta di applicazioni semplici in JavaScript è una buona soluzione hosting. Vedi l'ultimo capitolo per approfondimenti.
 
 ## Tipi di Applicazioni
 

@@ -136,6 +136,7 @@ Tra gli strumenti a nostra disposizione se vogliamo pubblicare la nostra app com
 Potete vedere la demo su [questa pagina][35].
 
 Per usare **Concierge** basta includere il suo file JavaScript, il file CSS e aggiungere il seguente codice alla nostra pagina su cui troviamo l'applicazione.
+
 ```
 var install = new Concierge({
     onSuccess: successCallback,

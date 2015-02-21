@@ -12,7 +12,7 @@ Dalla parte superiore dello schermo è possibile cancellare una nota prescelta s
 
 ![Memos, finestra di conferma della cancellazione](images/originals/memos-delete-screen.png)
 
-Il codice sorgente di Memos è disponibile nel [Repository su Github][1] (è possibile anche scaricarlo come file [.zip][2] ). Consiglio di scaricare i file, così sarà più semplice seguire la guida. Un'altra copia del codice sorgente è disponibile nella cartella nella [repository Github di questo libro] [1].
+Il codice sorgente di Memos è disponibile nel [Repository su Github][1] (è possibile anche scaricarlo come file [.zip][2] ). Consiglio di scaricare i file, così sarà più semplice seguire la guida. Un'altra copia del codice sorgente è disponibile nella cartella nella [repository Github di questo libro][1].
 
 Memos utilizza [IndexedDB][3] per salvare le note e il toolkit [*Gaia Building Blocks*][4] per creare le interfacce. In un futuro aggiornamento il testo conterrà molte informazioni su *Gaia Building Blocks*, ma in questa prima versione mi limiterò ad utilizzarlo. Per ulteriori informazioni sull'argomento e per sapere quali interfacce vi sono integrate visitare i link appena segnalati.
 
@@ -22,7 +22,7 @@ Il primo passaggio è creare una cartella per l'applicazione di nome **memos**.
 
 Il file manifesto di Memos è molto semplice. Crea un file chiamato **manifest.webapp** nella cartella **memos**. I manifesti sono dei file in formato [JSON][5] che descrivono un'applicazione per Firefox OS. In questo file è possibile trovare le informazioni sull'app, quali il nome, il nome dello sviluppatore, le icone utilizzate, il file che avvia l'app, quali API e con privilegi sono utilizzate e molto altro.
 
-Qui di seguito è riportato il contenuto del file manifesto di **Memos**. Fate attenzione con il copia e incolla, perché è molto facile mettere una virgola nel posto sbagliato (o non metterla) e creare un file JSON non valido. Esistono molti strumenti per validare un file JSON, incluso uno specifico per validare i file manifesto delle app, lo puoi trovare online su [il marketplace][6]. Per ulteriori informazioni su questi file consultare la [pagina su MDN ][7].
+Qui di seguito è riportato il contenuto del file manifesto di **Memos**. Fate attenzione con il copia e incolla, perché è molto facile mettere una virgola nel posto sbagliato (o non metterla) e creare un file JSON non valido. Esistono molti strumenti per validare un file JSON, incluso uno specifico per validare i file manifesto delle app, lo puoi trovare online su [il marketplace][6]. Per ulteriori informazioni su questi file consultare la [pagina su MDN][7].
 
 <<[Memos manifest (*manifest.webapp*)](code/memos/manifest.webapp)
 
@@ -444,7 +444,7 @@ La funzione `refreshMemoList()` modifica il [DOM][11] della nostra applicazione 
 
 Queste sono le funzioni utilizzate dall'applicazione. Le uniche che mancano sono il gestore eventi e la chiamata iniziale di `refreshMemoList()`.
 
-~~~~~~~
+~~~~~~~~
 window.onload = function () {
     // elements that we're going to reuse in the code
     listView = document.getElementById("memo-list");
@@ -465,7 +465,7 @@ window.onload = function () {
     refreshMemoList();
 
 };
-~~~~~~~
+~~~~~~~~
 
 Ora che tutti i file sono pronti proviamo l'applicazione nel simulatore.
 
@@ -475,7 +475,7 @@ Prima di avviare l'applicazione nel simulatore è preferibile verificare che tut
 
 ![Lista dei file utilizzati da Memos](images/originals/memos-file-list.png)
 
-Se si ha il vago sospetto di aver commesso qualche errore è possibile verificarlo confrontando [il repository memos su github][1] (un'ulteriore copia del codice sorgente è disponibile  nella cartella **code** nel [repo del testo][12] ).
+Se si ha il vago sospetto di aver commesso qualche errore è possibile verificarlo confrontando [il repository memos su github][1] (un'ulteriore copia del codice sorgente è disponibile  nella cartella **code** nel [repo del testo][12]).
 
 Tutto a posto? Bene, cominciamo.
 

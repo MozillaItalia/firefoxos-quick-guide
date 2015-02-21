@@ -39,14 +39,12 @@ Il codice è presente in due versioni:
 
 Vediamo un attimo questi due codici:
 
-File webapp.js#L331 - window.navigator.connection
 ~~~~~~~~
 var connection = window.navigator.mozConnection,
 online = "<strong>Connected:</strong> " + (connection.bandwidth),
 metered = "<strong>Metered:</strong> " + connection.metered;
 ~~~~~~~~
 
-File offline.js#L15 - appCache
 ~~~~~~~~
 var appCache = window.applicationCache;
 appCache.onerror = function() {
@@ -59,7 +57,6 @@ appCache.onerror = function() {
 
 Installazione applicazione vuol dire utilizzare le Open Web Apps. Vediamo come funziona il codice di installazione e di verifica installazione. Prima di tutto verifichiamo se il sistema le supporta (con `navigator.mozApps`) dopo di che inseriamo dei test di successo o fallimento dell'installazione.
 
-File base.js#L4 - Installazione
 ~~~~~~~~
 if (navigator.mozApps) {
     var checkIfInstalled = navigator.mozApps.getSelf();
@@ -143,8 +140,10 @@ Al caricamento del file JavaScript della libreria viene caricato il file **local
 
 Diamo un'occhiata al codice prima di vedere come avviene la magia della localizzazione.
 
-`<link rel="resource" type="application/l10n" href="locales/locales.ini" />
-<script type="application/javascript" src="js/l10n.js"></script>`
+```
+<link rel="resource" type="application/l10n" href="locales/locales.ini" />
+<script type="application/javascript" src="js/l10n.js"></script>
+```
 
 Con questo codice il boilerplate carica i file della lingua... ma come sa dove agire per cambiare il testo?
 La libreria si basa sugli attributi `data-l10n-id` che mettiamo agli elementi di cui vogliamo la traduzione che deve contenere il nome di riferimento della stringa da mostrare.
@@ -201,4 +200,4 @@ Abbiamo visto anche la questione multilingua che è molto importante e di come s
 [12]: https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/locales/locales.ini
 [13]: https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/locales/en-US/manifest.properties
 [14]: https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/locales/en-US/app.properties
-+[15]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Activities
+[15]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Activities

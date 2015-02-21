@@ -1,4 +1,4 @@
-# WebIde{#web-ide}
+# WebIde{#webide}
 
 ![Firefox OS Simulator Dashboard](images/originals/webide-startup.png)
 

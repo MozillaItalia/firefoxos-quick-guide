@@ -131,13 +131,13 @@ Adesso che sappiamo quanto sia importante testare il proprio lavoro prima di con
 
 [^driver]: se lavori in ambiente Windows, altrimenti non ne hai bisogno
 
-Da adesso se hai installato l'addon per Firefox **ADB Helper** verrà segnalato al WebIde che esiste il tuo dispositivo e questo verrà aggoiunto sotto l'etichetta **Dispositivi USB**.
+Da adesso se hai installato l'addon per Firefox **ADB Helper** verrà segnalato al WebIde che esiste il tuo dispositivo e questo verrà aggiunto sotto l'etichetta **Dispositivi USB**.
 
 Puoi decidere di usare il tuo dispositivo al posto del simulatore, andando quindi ad installare la tua app su quello.
 
 Al primo collegamento tra dispositivo e WebIde apparirà un messaggio di avviso sul telefono;  dobbiamo dare il permesso al WebIde di agire sul telefono quindi scegliamo di *confermare il collegamento*.
 
-![Dispositivo connesso!](images/originals/app-manager-showing-connected-device.png)
+![Dispositivo connesso!](images/originals/webide-showing-connected-device.png)
 
 Una volta che la connessione è effettuata sarà possibile usare i pulsanti **Aggiorna** e **Debug** nel WebIde per aggiornare e fare il debug dell'applicazione sul dispositivo connesso come con il simulatore.
 

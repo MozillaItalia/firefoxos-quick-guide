@@ -510,7 +510,7 @@ In questo capitolo abbiamo creato la nostra prima applicazione per Firefox OS e 
 [1]: https://github.com/soapdog/memos-for-firefoxos
 [2]: https://github.com/soapdog/memos-for-firefoxos/archive/master.zip
 [3]: https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB
-[4]: http://buildingfirefoxos.com/building-blocks
+[4]: https://developer.mozilla.org/en-US/Apps/Design/Firefox_OS_building_blocks
 [5]: http://json.org
 [6]: https://marketplace.firefox.com/developers/validator
 [7]: https://developer.mozilla.org/docs/Apps/Manifest

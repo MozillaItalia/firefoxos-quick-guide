@@ -12,9 +12,9 @@ Dalla parte superiore dello schermo è possibile cancellare una nota prescelta s
 
 ![Memos, finestra di conferma della cancellazione](images/originals/memos-delete-screen.png)
 
-Il codice sorgente di Memos è disponibile nel [Repository su Github][] (è possibile anche scaricarlo come file [.zip][]). Consiglio di scaricare i file, così sarà più semplice seguire la guida. Un'altra copia del codice sorgente è disponibile nella cartella **code** della [repository Github di questo libro][].
+Il codice sorgente di Memos è disponibile nel [Repository su Github][1] (è possibile anche scaricarlo come file [.zip][2]). Consiglio di scaricare i file, così sarà più semplice seguire la guida. Un'altra copia del codice sorgente è disponibile nella cartella **code** della [repository Github di questo libro][1].
 
-Memos utilizza [IndexedDB][] per salvare le note e il toolkit [*Gaia Building Blocks*][] per creare le interfacce. In un futuro aggiornamento il testo conterrà molte informazioni su *Gaia Building Blocks*, ma in questa prima versione mi limiterò ad utilizzarlo. Per ulteriori informazioni sull'argomento e per sapere quali interfacce vi sono integrate visitare i link appena segnalati.
+Memos utilizza [IndexedDB][3] per salvare le note e il toolkit [*Gaia Building Blocks*][4] per creare le interfacce. In un futuro aggiornamento il testo conterrà molte informazioni su *Gaia Building Blocks*, ma in questa prima versione mi limiterò ad utilizzarlo. Per ulteriori informazioni sull'argomento e per sapere quali interfacce vi sono integrate visitare i link appena segnalati.
 
 Il primo passaggio è creare una cartella per l'applicazione di nome **memos**.
 

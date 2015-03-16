@@ -73,7 +73,7 @@ Per testare *sul campo* che tutto sia a posto avvia il simulatore, naviga fino a
 
 ## Avviare il simulatore
 
-Per avviare il simulatore dopo averlo installato basta sceglierlo dal menù che appare quando premi il pulsante **Scegli **, le versioni installate vengono elencate sotto l'etichetta **Simulatori** 
+Per avviare il simulatore dopo averlo installato basta sceglierlo dal menù che appare quando premi il pulsante **Scegli runtime**, le versioni installate vengono elencate sotto l'etichetta **Simulatori** 
 
 ![Le versioni del simulatore installate](images/originals/webide-runtime-select.png)
 

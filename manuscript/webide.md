@@ -4,7 +4,7 @@
 
 Abbiamo scaricato il simulatore [nel capitolo precedente riguardo l'ambiente di lavoro](#setup) e l'abbiamo usato nel [capitolo riguardo la prima applicazione](#firstapp). Ora è tempo di dare un'occhiata più approfondita al WebIde e le sue funzionalità base.
 
-Per saperne di più, date un'occhiata [alla pagina dedicata al WebIde](https://developer.mozilla.org/it/docs/Tools/WebIDE su MDN.
+Per saperne di più, date un'occhiata [alla pagina dedicata al WebIde][1] su MDN.
 
 W> Ricordati: se stai usando un dispositivo Firefox OS 1.1 o ancora più vecchio devi usare il Simulatore 1.1 e non l'App Manager. Questo simulatore è spiegato nel prossimo capitolo.
 

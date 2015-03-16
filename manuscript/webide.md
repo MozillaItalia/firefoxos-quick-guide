@@ -48,7 +48,7 @@ Per poter essere considerata come una app packaged una cartella ha bisogno di co
 
 Se tutto va a buon fine la tua app verrà caricata nel WebIde e vedrai una schermata come la seguente.
 
-// TODO: aggiungere schermata della app Memos nel WebIde
+![Memos è stata aggiunta al WebIde](images/originals/webide-memos.png)
 
 ### Aggiungere Applicazioni hosted
 

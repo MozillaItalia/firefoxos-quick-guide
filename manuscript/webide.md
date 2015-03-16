@@ -54,7 +54,7 @@ Se tutto va a buon fine la tua app verrà caricata nel WebIde e vedrai una scher
 
 ![](images/originals/webide-remote-project.png)
 
-Una volta premuto **Apri App Hosted** viene apera una finestra in cui puoi inserire l'indirizzo web a cui troviamo la tua applicazione, ovvero anche in questo caso l'indirizzo web in cui è disponibile il file **manifest.webapp**.
+Una volta premuto **Apri App Hosted** viene aperta una finestra in cui puoi inserire l'indirizzo web a cui troviamo la tua applicazione, ovvero anche in questo caso l'indirizzo web in cui è disponibile il file **manifest.webapp**.
 
 Per poter essere considerata come una app hoste un sito ha bisogno di un file **manifest.webapp** valido.
 

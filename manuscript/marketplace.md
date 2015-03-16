@@ -133,6 +133,7 @@ Complimenti! La propria nuova applicazione ora è su Firefox Marketplace e ci si
 
 
 =======
+
 Spero che la lettura di questa veloce guida sia stata piacevole. Ho in mente di aggiornare e ampliare spesso questa guida, quindi consiglio di tenere gli occhi aperti e iscriversi per ricevere le notizie sul suo aggiornamento. Se si è scaricato questo testo dal sito Leanpub non ci sono problemi: si riceverà automaticamente un'email che informerà di nuovi aggiornamenti. Se invece è stato scaricato da altri siti, il mio consiglio è quello di riscaricarlo da  [pagina ufficiale su Leanpub][9] e registrare il proprio indirizzo email. Ovviamente è tutto gratuito e, no, non verranno  mai inviati messaggi di spam, promesso.
 
 Invito tutti i lettori ad inviarmi le proprie opinioni su questo lavoro (in inglese). Questo testo è stato scritto nelle notti precedenti una conferenza tecnica, quindi si può intuire quanto io sia affezionato a questo progetto e quanto vorrei che avesse successo. È possibile inviare le proprie opinioni via Twitter al mio account [@soapdog][10] o al mio indirizzo di posta elettronica [fxosquickguide@andregarzia.com][11].  Il mio sito web è [http://andregarzia.com][12].

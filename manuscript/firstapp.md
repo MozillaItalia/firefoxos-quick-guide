@@ -12,7 +12,7 @@ Dalla parte superiore dello schermo è possibile cancellare una nota prescelta s
 
 ![Memos, finestra di conferma della cancellazione](images/originals/memos-delete-screen.png)
 
-Il codice sorgente di Memos è disponibile nel [Repository su Github](https://github.com/soapdog/memos-for-firefoxos) (è possibile anche scaricarlo come file [.zip][2]). Consiglio di scaricare i file, così sarà più semplice seguire la guida. Un'altra copia del codice sorgente è disponibile nella cartella **code** della [repository Github di questo libro][1].
+Il codice sorgente di Memos è disponibile nel [Repository su Github](https://github.com/soapdog/memos-for-firefoxos) (è possibile anche scaricarlo come file [.zip](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip)). Consiglio di scaricare i file, così sarà più semplice seguire la guida. Un'altra copia del codice sorgente è disponibile nella cartella **code** della [repository Github di questo libro](https://github.com/soapdog/memos-for-firefoxos).
 
 Memos utilizza [IndexedDB][3] per salvare le note e il toolkit [*Gaia Building Blocks*][4] per creare le interfacce. In un futuro aggiornamento il testo conterrà molte informazioni su *Gaia Building Blocks*, ma in questa prima versione mi limiterò ad utilizzarlo. Per ulteriori informazioni sull'argomento e per sapere quali interfacce vi sono integrate visitare i link appena segnalati.
 

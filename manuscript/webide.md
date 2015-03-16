@@ -58,8 +58,6 @@ Una volta premuto **Apri App Hosted** viene aperta una finestra in cui puoi inse
 
 Per poter essere considerata come una app hoste un sito ha bisogno di un file **manifest.webapp** valido.
 
-Se tutto va a buon fine la tua app verrà caricata nel WebIde e vedrai una schermata come la seguente.
-
 #### Problemi con le applicazioni hosted
 
 Se stai realizzando un'applicazione hosted dovrai provarla con un server web. Ci sono degli errori che sono caratteristici quando usiamo un server web, come servire il manifest con il *MIME type* sbagliato, problema che si conclude con l'impossibilità di installare l'app.

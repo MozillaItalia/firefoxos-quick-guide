@@ -69,12 +69,13 @@ Il contenuto in lingua inglese di questo testo si trova su [GitHub][11] ed è sc
 
 Il repository Git di questo testo in inglese è [https://github.com/soapdog/firefoxos-quick-guide][11].
 
-Il repository Git di questo testo in italiano è [https://github.com/Mte90/firefoxos-quick-guide][12].
+Il repository Git di questo testo in italiano è [https://github.com/MozillaItalia/firefoxos-quick-guide][12].
 
 ## Traduzioni
 
 Questo testo è stato scritto inizialmente in portoghese e successivamente tradotto in inglese da me.
-In un secondo tempo, Daniele lo ha tradotto in italiano. La traduzione italiana è stata aggiornata da *@gialloporpora* e controllata da *@Sara_t* e *@miki64*.
+In un secondo tempo, Daniele lo ha tradotto in italiano. La traduzione italiana è stata aggiornata da *@gialloporpora* e controllata da *@Sara_t* e *@miki64*.  
+La versione italiana ha del materiale inedito ma per maggiori informazioni fare riferimento allo storico versioni.
 Entrambe le versioni sono disponibili gratuitamente su internet:
 
 * [Portuguese Version][13]: Guia Rapido para Desenvolvimendo para Firefox OS.
@@ -88,7 +89,7 @@ Accetto con piacere tutto l'aiuto per tradurre questo testo in lingue diverse (e
 ### Versione 0.3
 
 Aggiunto nuovo materiale come Brick, Firefox OS Boilerplate, ADB Helper ed il multilingua grazie a Daniele Scasciafratte, la sezione del Manifest invece è di Giammarco Di Lella.  
-Con l’aiuto di Edoardo Putti e Niccolo Cantù la guida è stata revisionata ed è stato aggiunto materiale nuovo.
+Con l’aiuto di Edoardo Putti e Niccolo Cantù la guida è stata revisionata ed è stato aggiunto materiale nuovo rispetto all'originale inglese.
 
 ### Versione 0.2
 
@@ -113,6 +114,6 @@ Sto utilizzando [Leanpub][1] per scrivere il testo. Questo sistema mi permette d
 [9]: http://shop.oreilly.com/product/0636920027713.do
 [10]: http://shop.oreilly.com/product/0636920027713.do
 [11]: https://github.com/soapdog/firefoxos-quick-guide
-[12]: https://github.com/Mte90/firefoxos-quick-guide
+[12]: https://github.com/MozillaItalia/firefoxos-quick-guide
 [13]: http://leanpub.com/guiarapidofirefoxos
 [14]: http://braziljs.com.br/

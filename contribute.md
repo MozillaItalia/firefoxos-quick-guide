@@ -39,5 +39,5 @@ In questo modo verranno aggiunte le tue commit al nostro [Issue #22][4], permett
 
 [1]: https://help.github.com/articles/fork-a-repo/ "fork repo"
 [2]: https://help.github.com/articles/using-pull-requests/ "pull request"
-[3]: https://github.com/Mte90/firefoxos-quick-guide/issues "Issue tracker"
-[4]: https://github.com/Mte90/firefoxos-quick-guide/issues/22 "Issue #22"
+[3]: https://github.com/MozillaItalia/firefoxos-quick-guide/issues "Issue tracker"
+[4]: https://github.com/MozillaItalia/firefoxos-quick-guide/issues/22 "Issue #22"

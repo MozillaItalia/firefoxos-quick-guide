@@ -29,6 +29,6 @@ Questo libro è distribuito usando la licenza Creative Commons. Altre informazio
 [3]: https://github.com/soapdog/firefoxos-quick-guide/ "Repo inglese"
 [4]: https://leanpub.com/quickguidefirefoxosdevelopment/ "Libro inglese su Leanpub"
 [5]: https://leanpub.com/guidavelocesviluppofirefoxos "Libro italiano su LeanPub"
-[6]: https://github.com/Mte90/firefoxos-quick-guide/blob/0.3/contribute.md "Contribuisci"
+[6]: https://github.com/MozillaItalia/firefoxos-quick-guide/blob/master/contribute.md "Contribuisci"
 [7]: https://leanpub.com/guidavelocesviluppofirefoxos/feedback "FeedBack"
 [8]: https://leanpub.com/guidavelocesviluppofirefoxos/email_author/new "Contatta gli autori"

@@ -1,9 +1,9 @@
 ## Firefox OS Boilerplate App
 
 Il [boilerplate][1] di cui abbiamo letto in precedenza è un'applicazione dimostrativa con molti esempi basilari. Contiene un esempio per la maggior parte delle Web Activity, la questione multilingua, installazione dell'applicazione, API HTML5 e l'interfaccia grafica di Gaia realizzata con *Gaia Building Blocks*.  
-La parte interessante è che si trova su Github, quindi c'è anche una demo sempre aggiornata che puoi trovare [qui][2].
+La parte interessante è che si trova su Github, quindi c'è anche una demo sempre aggiornata che puoi trovare [online][2].
 
-Puoi provare il boilerplate nel tuo browser preferito ma se usi Chrome vedrai che nella console apparirà "Open Web Apps not supported" che vuol dire che non supporta questo standard proposto da Mozilla.
+Puoi provare il boilerplate nel tuo browser preferito ma se usi Chrome vedrai che nella console apparirà `Open Web Apps not supported` che vuol dire che non supporta questo standard proposto da Mozilla.
 
 Lo standard "Open Web App" consiste in un accesso hardware, installazione locale, storage offline, marketplace, API per i pagamenti e le ricevute, [Persona][3] per i login e il famoso manifest. Questo insieme di caratteristiche ed il manifesto di Mozilla formano le [Open Web Apps][4]!  
 Noi sviluppatori web speriamo che le Open Web Apps vengano supportate da altri browser e sistemi operativi in modo da semplificare il lavoro per noi e per una migliore esperienza utente.  
@@ -12,7 +12,7 @@ I prodotti di Mozilla che utilizzano Gecko supportano le Open Web Apps e in Fire
 
 Il boilerplate è un esempio per le Open Web Apps ([template][6]) più il supporto proprietario (al momento!) per Firefox OS.
 
-NB: Le API pensate ed integrate in Firefox OS sono proposte al W3C per una loro standardizzazione (come l'API per la batteria o la vibrazione che sono uno standard). Questo a ricordare che Mozilla lavora per la standardizzazione delle sue idee e non ha interesse a chiudersi. 
+A> Le API pensate ed integrate in Firefox OS sono proposte al W3C per una loro standardizzazione (come l'API per la batteria o la vibrazione che sono uno standard). Questo per ricordare che Mozilla lavora per la standardizzazione delle sue idee e non ha interesse a chiudersi. 
 
 Il boilerplate è diviso in tre sezioni ma io ne aggiungo una quarta per gli altri dettagli.
 

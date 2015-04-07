@@ -2,9 +2,9 @@
 
 ## Il motore Gecko
 
-I browser utilizzano diversi motori di rendering per mostrare le pagine web: Google Chrome e Opera utilizzano Blink (un fork di WebKit), Internet Explorer utilizza Trident, mentre Safari utilizza WebKit. Mozilla ha il suo motore, chiamato Gecko, che viene utilizzato da Firefox desktop, Firefox per Android e Firefox OS. Poiché questi prodotti usano lo stesso motore, è possibile sviluppare per Firefox OS utilizzando il browser Firefox desktop (con alcuni svantaggi[^engine]).
+I browser utilizzano diversi motori di rendering per mostrare le pagine web: Google Chrome e Opera utilizzano Blink (un fork di WebKit), Internet Explorer utilizza Trident, mentre Safari utilizza WebKit. Mozilla ha il suo motore, chiamato Gecko, che viene utilizzato da Firefox desktop, Firefox per Android e Firefox OS. Poiché questi progetti usano lo stesso motore, è possibile sviluppare per Firefox OS utilizzando il browser Firefox desktop (con alcuni svantaggi[^engine]).
 
-[^engine]: Nonostante i prodotti Mozilla utilizzino lo stesso motore di rendering, la versione di Gecko disponibile in Firefox OS è meno aggiornata rispetto a quella di Firefox desktop. Questo perché il ciclo di rilascio di Firefox OS è più lento rispetto a quello della versione Desktop. In pratica, questo vuol dire che alcune funzionalità non sono disponibili (o non funzionano come immaginato) quando si trasportano su Firefox OS - quindi è sempre importante verificare che la propria applicazione funzioni su un dispositivo Firefox OS. Inoltre, bisogna ricordarsi che gli utenti possono utilizzare versioni differenti di Firefox OS, quindi alcune potrebbero non avere tutte le funzionalità richieste. È importante fornire sempre un'alternativa in caso alcune di queste funzionalità non siano disponibili.
+[^engine]: Nonostante i prodotti Mozilla utilizzino lo stesso motore di rendering, la versione di Gecko disponibile in Firefox OS è meno aggiornata rispetto a quella di Firefox desktop. Questo perché il ciclo di rilascio di Firefox OS è più lento rispetto a quello della versione Desktop. In pratica, questo vuol dire che alcune funzionalità non sono disponibili (o non funzionano come immaginato) quando si provano su Firefox OS - quindi è sempre importante verificare che la propria applicazione funzioni su un dispositivo Firefox OS. Inoltre, bisogna ricordarsi che gli utenti possono utilizzare versioni differenti di Firefox OS, quindi alcune potrebbero non avere tutte le funzionalità richieste. È importante fornire sempre un'alternativa in caso alcune di queste funzionalità non siano disponibili.
 
 ## Di che cosa abbiamo bisogno?
 
@@ -47,7 +47,7 @@ Puoi usare il tuo dispositivo con Firefox OS per effettuare il debug delle tue a
 * Installa `adb`[^adb]
 * Installa l'addon per Firefox [ADB Helper][6] per far comunicare Firefox con il tuo dispositivo
 
-Se hai fatto tutto per bene e colleghi il tuo dispositivo al computer Firefox lo rileverà e verrà mostrati tra i dispositivi utilizzabili dal WebIde
+Se hai fatto tutto per bene e colleghi il tuo dispositivo al computer, Firefox lo rileverà e verrà mostrato tra i dispositivi utilizzabili dal WebIde
 
 ![Senza e con ADB helper](images/originals/adb_helper.png)
 

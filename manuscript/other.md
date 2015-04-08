@@ -31,9 +31,9 @@ Non è finita qui ci sono anche le [transizioni][19] e per chi lavora con Photos
 
 ## Web Components
 
-I Web Components sono una tecnologia emergente che è attualmente nello stato di [Working Draft][21] dal W3C ma viene già supportata da Chrome e Firefox.
+I Web Components sono una tecnologia emergente che è attualmente nello stato di [Working Draft][21] dal W3C ma già supportata da Chrome e Firefox.
 
-La caratteristica principale di questa nuova tecnologia è la **personalizzazione** di HTML, possiamo creare dei nuovi tag, definendone il comportamento, e questi verranno aggiunti alla nostra su richiesta.
+La caratteristica principale di questa nuova tecnologia è la **personalizzazione** di HTML, possiamo creare dei nuovi tag, definendone il comportamento, e questi verranno aggiunti alla nostra pagina.
 
 Questa idea permette di avere ad esempio un tag `<map>` per visualizzare una mappa tramite Google Maps o OpenStreetMap, un tag `<calendar>` per permettere all'utente di scegliere un giorno dal calendario, `<qr>` o `<barcode>` per mostrare un codice qr o un codice a barre personalizzati, etc, etc...
 
@@ -49,7 +49,7 @@ Attualmente sono disponibili in Brick i seguenti componenti, che potete già uti
 * [FlipBox][27] - per avere fronte e retro di una schermata, come un foglio
 * [Layout (un contenitore)][28] - comodo per isolare parti di una schermata
 * [Action][29] - hai bisogno di controllare cosa succede?
-* [Barra delle schede][30] - 10 chat in 10 schede giusto?
+* [Barra delle schede][30] - la classica barra delle schede
 * [Form][31] - nome, cognome e indirizzo? Eccoti servito
 * [Menu][32] - vi serve un menu?
 * [Storage-IndexdDB][33] - per conservare informazioni sul dispositivo dell'utente
@@ -62,21 +62,23 @@ Non è nell'interesse della guida approfondire questa libreria ma solo pubbliciz
 
 Github offre sui suoi server un servizio di web hosting, questa sezione tratterà di come sfruttare Github per distribuire la propria applicazione sulla rete.
 
-Come prima cosa è necessario registrarsi su Github ed affettuare l'accesso. Nella schermata che troverete davanti (detta *Dashboard*) alla destra della vostra immagine di profilo c'è un icona a forma di "più" che permette di creare una *repository*.  
+Come prima cosa è necessario registrarsi su Github ed affettuare l'accesso. Nella schermata che troverete davanti (detta *Dashboard*) alla destra della vostra immagine di profilo c'è un icona "+" che permette di creare una *repository*.  
 
-Una repository può essere descritta semplicemente come una cartella che contiene un progetto e la storia dei suoi file da quando l'avete creata. Questo ci permette di tenere traccia delle modifiche ai file nel tempo.  
+Un repository può essere descritto semplicemente come una cartella che contiene un progetto e la storia dei suoi file da quando l'avete creato. Questo ci permette di tenere traccia delle modifiche ai file nel tempo.  
 
-![aggiungi una repository][addRepo]
+![Aggiungi un repository][addRepo]
 
 Verrete indirizzati alla schermata di creazione della repository; qui dovrete inserire il nome della vostra applicazione e una breve descrizione della stessa, lasciando i restanti campi immodificati premete **create repository**. La repository sarà quindi creata automaticamente e vi troverete nella pagina del progetto.
 
-![crea nuova repository][createRepo]
+![Crea un nuovo repository][createRepo]
 
-In questa nuova schermata è presente una barra sulla destra che permette di gestire il progetto, fate click su **Settings**  
-![settings][settings]   
-e scorrete fino alla sezione che ha per titolo **Github Pages** dove troverete il pulsante **Automatic Page Generator**, premetelo.
+In questa nuova schermata è presente una barra sulla destra che permette di gestire il progetto, fate click su **Settings**.  
 
-![genera pagina automatica][gitpages]
+![Impostazioni][settings]  
+
+Scorrete fino alla sezione che ha per titolo **Github Pages** dove troverete il pulsante **Automatic Page Generator**, premetelo. In questo modo verrà generato il ramo **gh-pages** con del contenuto già pronto ideale per questo esempio. 
+
+![Genera il ramo gh-pages automaticamente][gitpages]
 
 La pagina che verrà creata servirà come base per l'applicazione, motivo per cui non dovremo perdere tempo a modificare i contenuti o a scegliere il layout: la pagina generata verrà scartata in favore della nostra applicazione.
 
@@ -123,7 +125,7 @@ Inserite le vostre credenziali per avviare il caricamento dei file. Una volta fi
 
 W> NOTA: Può capitare che a volte la modifica della pagina impieghi anche 30 minuti, nel caso pazientate.
 
-Ultima tappa è la pubblicazione sul Firefox Marketplace. Accedete o registratevi al Firefox Marketplace come sviluppatori, nella pagina "Carica un'app" selezionate "Hosted app" e inserite l'indirizzo del **manifesto** ossia: `http://miousername.github.io/nomedelprogetto/manifest.webapp`
+Ultima tappa è la pubblicazione sul Firefox Marketplace. Accedete o registratevi al Firefox Marketplace come sviluppatori, nella pagina **Carica un'app** selezionate **Hosted app** e inserite l'indirizzo del **manifesto** ossia: `http://miousername.github.io/nomedelprogetto/manifest.webapp`
 
 ### Concierge
 

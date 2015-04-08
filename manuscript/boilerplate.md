@@ -37,7 +37,7 @@ Il codice è presente in due versioni:
 * Uno dei tanti pulsanti che usa [l'API diretta][8] fornisce due informazioni: la banda disponibile in MB (0 se è offline, infinity se sconosciuta o solitamente la linea fissa) e se la connessione è a consumo.   
 * Con AppCache per sapere se si utilizza l'applicazione in modalità offline, nel boilerplate è utilizzato per mostrare il pallino verde se si è online.  
 
-Vediamo uquindi questi due codici:
+Vediamo quindi questi due codici:
 
 ~~~~~~~~
 var connection = window.navigator.mozConnection,
@@ -170,7 +170,7 @@ test = Questo è un test
 test.title = Cliccami!
 ~~~~~
 
-Il testo all'interno del bottone verrà sostituito dal testo `Questo è un test` nel caso io chieda la lingua italiana. Esistono anche librerie più potenti realizzate sempre da Mozilla come [l20n][12] che è più avanzata rispetto a quella contenuta nel boilerplate.
+Il testo all'interno del bottone verrà sostituito dal testo `Questo è un test` nel caso io chieda la lingua italiana. Esistono anche librerie più avanzate realizzate sempre da Mozilla come [l20n][12] che ha più funzionalità rispetto a quella contenuta nel boilerplate.
 
 ### File della lingua
 

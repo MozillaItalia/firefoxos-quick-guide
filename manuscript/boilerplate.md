@@ -183,8 +183,8 @@ Come si può vedere è il classico file .ini `proprietà = testo` che viene elab
 ## Riassunto
 
 Abbiamo visto molte funzionalità di Firefox OS e delle Open Web Apps tramite un semplice ma completo boilerplate.
-Ricordati che per poter utilizzare le WebActivity o alcune API hai bisogno dei permessi degli utenti e quinidi devi chiedere i permessi relativi compilando il file manifest accuratamente. 
-Abbiamo visto anche la questione multilingua che è molto importante e di come sia semplice integrare questa soluzione nel proprio lavoro.
+Ricordati che per poter utilizzare le WebActivity o alcune API hai bisogno dei permessi degli utenti e quindi devi chiedere i permessi relativi compilando il file manifest accuratamente. 
+Abbiamo visto anche la questione multilingua che è molto importante e di come sia semplice integrare questa soluzione nei propri progetti.
 
 [1]: https://github.com/robnyman/Firefox-OS-Boilerplate-App "Boilerplate repository"
 [2]: http://robnyman.github.io/Firefox-OS-Boilerplate-App/ "Boilerplate app"

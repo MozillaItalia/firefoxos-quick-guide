@@ -7,7 +7,7 @@ A mio modesto avviso, non utilizzare il canale ufficiale Mozilla per distribuire
  1. Si sta sviluppando un'app per uso interno aziendale o per una ristretta cerchia di utenti. Pubblicandola su Firefox Marketplace, l'app sarà disponibile a chiunque e si renderà necessario implementare un sistema di autenticazione per consentire l'utilizzo solo agli utenti autorizzati. Ad esempio, nelle prime versioni dell'app *Evernote* era richiesta l'identificazione sui loro server prima di poterla utilizzare.
  2. Si dispone già di un grosso bacino d'utenza che è possibile sfruttare per distribuire l'app. Un esempio potrebbe essere un giornale, come il *Financial Times*, che può limitarsi a rendere disponibile l'app sul proprio sito per raggiungere la quasi totalità dei propri utenti. È bene ricordare che è possibile distribuire l'app sia su Firefox Marketplace, sia su un canale esterno, in questo modo sarà possibile sfruttare il canale di marketing preesistente e utilizzare Firefox Marketplace per raggiungere nuovi utenti.
 
-Il processo di distribuzione delle app **packaged** e delle app **hosted** è simile, anche se utilizzano delle funzioni differenti. Ecco perché tratterò i due casi separatamente. Indipendentemente dal fatto che l'app sia pacchettizzata o ospitata, il procedimento è più o meno lo stesso: sarà necessario rendere disponibile un pulsante o un link nella pagina, denominato **Fai clic per installare l'app**, o utilizzare un particolare URL che quando aperto attiva l'esecuzione della routine di installazione. In entrambi i casi, all'utente finale verrà presentata una finestra di dialogo in cui gli verrà chiesto di confermare l'installazione.
+Il processo di distribuzione delle app **packaged** e delle app **hosted** è simile, anche se utilizzano delle funzioni differenti. Ecco perché tratterò i due casi separatamente. Indipendentemente dal fatto che l'app sia pacchettizzata o ospitata, il procedimento è più o meno lo stesso: sarà necessario rendere disponibile un pulsante o un link nella pagina, denominato **Fai clic per installare l'app**, o utilizzare un particolare URL che quando aperto attiva l'esecuzione della routine di installazione. In entrambi i casi, all'utente finale verrà presentata una finestra di dialogo nativa in cui gli verrà chiesto di confermare l'installazione.
 
 ## App hosted
 
@@ -15,7 +15,7 @@ Nel caso la vostra app sia disponibile sul web sotto forma di un sito come facci
 
 Ecco che quì arriva in soccorso Firefox ed una WebApi. Grazie a questo strumento possiamo chiedere all'utente di installare il nostro lavoro quando viene visitata la nostra pagina.
 
-<<[Code for hosted app installation](code/distribution/hosted_apps_distribution.js)
+<<[Codice per l'installazione di app hosted](code/distribution/hosted_apps_distribution.js)
 
 Nell'esempio riportato qui sopra `manifestURL` riporta l'indirizzo del file **manifest**. All'esecuzione di questo codice, il sistema chiederà all'utente se desidera installare l'app e, a seconda della risposta, richiamerà la callback appropriata: `success` in caso di risposta affermativa e `error` in caso contrario.
 
@@ -25,9 +25,7 @@ Per ulteriori informazioni su questa API consultare [la pagina su MDN sull'insta
 
 L'installazione di app pacchettizzate funziona in modo analogo, però in questo caso anziché utilizzare la funzione `mozApps.install()` utilizzeremo `mozApps.installPackage()`, come mostrato nel codice d'esempio riportato qui di seguito.
 
-<<[Code for packaged app installation](code/distribution/packaged_apps_distribution.js)
-
-W> Nota: ho il sospetto che l'installazione di app pacchettizzate da siti diversi da Firefox Marketplace non sia consentita nella versione 1.0.1 di Firefox OS. Nonostante l'API sia documentata, non ho mai provato di persona, quindi se qualche lettore ha l'opportunità di verificare questa mia supposizione, lo prego gentilmente di contattarmi affinché possa aggiornare questo testo.
+<<[Codice per l'installazione di app packaged](code/distribution/packaged_apps_distribution.js)
 
 ## Riassunto
 

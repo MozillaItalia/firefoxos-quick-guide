@@ -16,7 +16,7 @@ Questi metadati servono al sistema per sapere il nome dello sviluppatore, la ver
 
 <<[Manifest d'esempio](code/sample_manifest.webapp)
 
-Sopra possiamo vedere il manifest di un'applicazione chiamata Memos[^promemoria]. Tra le altre cose descrive chi ha creato l'applicazione, quali icone usare, qual è il nome dell'applicazione, quale file è usato per lanciare l'applicazione (in questo caso *index.html*), quali permessi d'accesso hardware richiede l'applicazione, ecc. Questo file è usato da Firefox OS per aggiungere l'applicazione alla schermata principale e per mostrare sul Firefox Marketplace le informazioni dell'applicazione.
+Sopra possiamo vedere il manifest di un'applicazione chiamata Memos[^promemoria]. Tra le altre cose descrive chi ha creato l'applicazione, quali icone usare, qual è il nome dell'applicazione, quale file è usato per lanciare l'applicazione (in questo caso *index.html*), quali permessi d'accesso hardware richiede l'applicazione, ecc. Questo file è usato da Firefox OS e dalle Open Web Apps per aggiungere l'applicazione alla schermata principale e per mostrare sul Firefox Marketplace le informazioni dell'applicazione.
 
 [^promemoria]: Questa applicazione di esempio per Firefox OS è disponibile su [Firefox Marketplace][3] e il [codice sorgente è su GitHub][4].
 
@@ -38,14 +38,14 @@ Come possiamo notare, il manifest è composto da un elenco di informazioni che s
 
 ### Le proprietà del manifest
 
-Il manifest descrive una marea di proprietà utili, perciò vediamo il nome e l'utilità di ognuna.
+Il manifest descrive molte proprietà utili, perciò vediamo il nome e l'utilità di ognuna.
 
 **activities**
 
 La proprietà *activities* specifica quali *Web Activities* supporta la nostra applicazione.
 Registrare la vostra applicazione come una "Web Activities" vi permette di rendere la vostra applicazione accessibile alle altre.
 Volendo fare un'esempio, se voi sviluppate un applicazione che permette di condividere le vostre foto su di un sito, potreste implementare la web activities *share*; in questo modo, quando l'utente prova a condividere una foto dall'app galleria, apparirà anche la vostra applicazione tra quelle che possono svolgere questo compito.
-La sintassi di questo campo è un po' complessa, per questo vi rimando alla pagina di documentazione su [MDN][5].
+La sintassi di questo campo è un po' complessa, per questo ti rimando alla pagina di documentazione su [MDN][5].
 
 **chrome**
 
@@ -60,7 +60,7 @@ La sintassi della proprietà è la seguente:
 
 **default_locale**
 
-Questo parametro è necessario quando è presente anche la proprietà *locales* ed indica qual è la lingua predefinita dell'applicazione  ovvero quella che verrà usata se nel sistema è impostata una lingua per cui non avete traduzioni.
+Questo parametro è necessario quando è presente anche la proprietà *locales* ed indica qual è la lingua predefinita dell'applicazione, ovvero quella che verrà usata se nel sistema è impostata una lingua per cui non avete traduzioni.
 
 Esempio per l'inglese
 
@@ -70,7 +70,7 @@ Esempio per l'inglese
 
 **description**
 
-La descrizione dell'applicazione (massimo 1024 caratteri), siate il più chiari e sintetici possibile perché questo è il testo che verrà visualizzato sul Mozilla Marketplace (successivamente si può modificare).
+La descrizione dell'applicazione (massimo 1024 caratteri), siate il più chiari e sintetici possibile perché questo è il testo che verrà visualizzato sul Firefox Marketplace (successivamente si può modificare sul portale).
 
 **developer**
 
@@ -78,13 +78,13 @@ Abbiamo incontrato questa proprietà nel manifest di prova, puoi indicare chi è
 
 **fullscreen**
 
-Se impostata a *true*, metterà la vostra applicazione a schermo intero (utile per i giochi) nscondendo la barra delle notifiche.
+Se impostata a *true*, metterà la vostra applicazione a schermo intero (utile per i giochi) nascondendo la barra delle notifiche.
 
 **icons**
 
 Anche questa proprietà era presente nell'esempio e serve per far sapere quali risoluzioni dell'icona mettiamo a disposizione.
 Naturalmente è bene fornire la stessa icona con più risoluzioni, in modo che il dispositivo prenda quella adeguata; pensate a come sarebbe piccola l'icona pensata per il telefono rispetto a quelle del tablet o, ancora peggio, rispetto a quelle di uno schermo da 40 pollici.
-Alcune dimensioni sono obbligatorie per il Mozilla Marketplace.
+Alcune dimensioni sono obbligatorie per il Firefox Marketplace.
 
 **installs_allowed_from**
 
@@ -178,13 +178,13 @@ Richiede un campo *from* di input e uno *to* di elaborazione.
 
 **type**
 
-Indica se la vostra app è *web*, *privileged* o *certified*. Le certified sono particolari e la loro certificazione avviene solo tramite il Mozilla Marketplace o tramite il debug remoto.
+Indica se la vostra app è *web*, *privileged* o *certified*. Le certified sono particolari e la loro certificazione avviene solo tramite il Firefox Marketplace o tramite il debug remoto.
 
 **version**
 
 Il numero di versione della vostra app sotto forma di *stringa*.
 
-T> Github fornisce tramite Github Pages il mime type giusto per il file manifest. Alcuni sviluppatori distribuiscono le proprie applicazioni hosted da Github, il vantaggio è che sono sempre aggiornate e finché si tratta di applicazioni semplici in JavaScript è una buona soluzione hosting. Vedi l'ultimo capitolo per approfondimenti.
+T> Github fornisce tramite GitHub Pages il mime type giusto per il file manifest. Alcuni sviluppatori distribuiscono le proprie applicazioni hosted da Github, il vantaggio è che sono sempre aggiornate e finché si tratta di applicazioni semplici in JavaScript è una buona soluzione di hosting. Vedi l'ultimo capitolo per approfondimenti.
 
 ## Tipi di Applicazioni
 
@@ -213,11 +213,11 @@ Ora che abbiamo trattato i due tipi di applicazioni supportate da Firefox OS, di
 
 Esistono tre livelli di sicurezza su Firefox OS - ogni livello fornisce un maggiore accesso alle API rispetto a quello precedente.
 
-* **Semplice (a.k.a. web):** questo è il livello predefinito di tutte le applicazioni. Questo livello si applica alle *app hosted* e alle *app packaged* che non dichiarano una proprietà `type` nel loro file manifesto. Queste applicazioni hanno un accesso alle comuni API dei browser - ma non hanno un accesso ad alcuna delle WebAPI Mozilla.
+* **Semplice (a.k.a. web):** questo è il livello predefinito di tutte le applicazioni. Questo livello si applica alle *app hosted* e alle *app packaged* che non dichiarano una proprietà `type` nel loro file manifesto. Queste applicazioni hanno un accesso alle comuni API dei browser - ma non hanno un accesso ad alcuna delle WebAPI specifiche di Firefox OS.
 * **Con privilegi:** questo tipo di applicazioni ha accesso a tutte le API disponibili nel browser Firefox, oltre a quelli aggiuntivi, come i contatti e gli allarmi di sistema. Solo **le packaged possono essere app con privilegi** ed il pacchetto deve essere firmato digitalmente dal Marketplace Firefox.
 * **Certificato:** per motivi di sicurezza, questo livello è permesso per le app realizzate direttamente da Mozilla e dai suoi partner (per esempio i fornitori dell'hardware, le compagnie di telecomunicazione, ecc…). Le applicazioni certificate hanno un accesso a tutte le API, come l'API Telephony e altro ancora. Un esempio di applicazione certificata in Firefox OS è il telefono.
 
-Durante lo sviluppo è possibile accedere alle API con privilegi senza richiedere permessi speciali a Mozilla. In fase di distribuzione, però, sarà necessario caricare l'app sul Firefox Marketplace. A questo punto il codice viene controllato in un rigoroso processo di approvazione e se è tutto OK l'app sarà firmata digitalmente - questo garantirà agli utenti di Firefox OS che a questa applicazione è consentito accedere alle API sensibili.
+Durante lo sviluppo è possibile accedere alle API con privilegi senza richiedere permessi speciali a Mozilla. In fase di distribuzione, però, sarà necessario caricare l'app sul Firefox Marketplace. A questo punto il codice viene controllato in un rigoroso processo di approvazione e se è tutto corretto l'app sarà firmata digitalmente - questo garantirà agli utenti di Firefox OS che a questa applicazione è consentito accedere alle API sensibili.
 
 Sulla [pagina delle WebAPI sul Mozilla Developer Network][13] è possibile verificare quali API sono implementate sui vari dispositivi e controllare il livello di accesso necessario per utilizzare ciascuna API.
 
@@ -227,7 +227,7 @@ Come si può vedere dall'immagine qui sopra, qualsiasi applicazione può acceder
 
 ## WebAPI di Mozilla
 
-Firefox OS fornisce le API necessarie per sviluppare applicazioni con le stesse funzionalità delle applicazioni native sulle altre piattaforme. L'accesso al hardware ed ai servizi avviene attraverso le WebAPI. Per saperne di più sulle API disponibili nelle varie versioni di Firefox OS consultare [la pagina WebAPI nel Wiki Mozilla][14].
+Firefox OS fornisce le API necessarie per sviluppare applicazioni con le stesse funzionalità delle applicazioni native sulle altre piattaforme. L'accesso a questo hardware ed ai servizi avviene attraverso le WebAPI. Per saperne di più sulle API disponibili nelle varie versioni di Firefox OS consultare [la pagina WebAPI nel Wiki Mozilla][14].
 
 Analizzeremo alcuni esempi di codice per vedere come le API sono facili da utilizzare. Gli esempi non vanno presi come una documentazione completa sulle WebAPI, sono una piccola dimostrazione di come si possa accedere al dispositivo usando JavaScript.
 
@@ -238,7 +238,7 @@ Si immagini di avere un'applicazione che ha bisogno di usare il dialer con un nu
 <<[Invia un numero di telefono al dialer](code/webapi_samples/dial.js)
 
 Questo codice effettua una richiesta all'applicazione dialer per chiamare un numero predefinito. In realtà non partirà la chiamata, sarà necessario l'esplicita conferma dell'utente che dovrà toccare il tasto di chiamata per avviarla. La richiesta di un'azione esplicita dell'utente prima di avviare un'operazione è un modello molto comune: si tratta di un buon modello di sicurezza perché è richiesta un'esplicita conferma dell'utente prima di avviare un'operazione.
-Altre API possono effettuare chiamate senza una interazione dell'utente ma richiedono un livello d'accesso più elevato. Le applicazioni certificate possono effettuare chiamate senza interazione con l'utente. Le API usate nel codice sopra, chiamate "Web Activities", sono disponibili per tutte le applicazioni.
+Altre API possono effettuare chiamate senza una interazione dell'utente ma richiedono un livello d'accesso più elevato, infatti le applicazioni certificate possono effettuare chiamate senza interazione con l'utente. Le API usate nel codice sopra, chiamate "Web Activities", sono disponibili per tutte le applicazioni.
 
 Per maggiori informazioni sull'API Web Activities consultare  [questo post sul blog Mozilla][15].
 
@@ -248,7 +248,7 @@ Si immagini di avere una rete intranet aziendale e di voler sviluppare un'app pe
 
 <<[Salvare un contatto](code/webapi_samples/contact.js)
 
-Questa API crea un oggetto con i dati del contatto e lo salva nella rubrica telefonica senza bisogno di alcuna interazione da parte dell'utente. Poiché l'accesso ai contatti comporta implicazioni riguardo la privacy, questa API è disponibile per le *app con privilegi*. Il modello di questa API prevede l'utilizzo di due callback ed è un approccio condiviso da molte altre API. Forniamo quindi due funzioni, *success* in caso di buona riuscita dell'operazione e *error* in caso contrario da eseguire una volta che si è risolta l'azione principale (in questo caso salvare un contatto).
+Questa API crea un oggetto con i dati del contatto e lo salva nella rubrica telefonica senza bisogno di alcuna interazione da parte dell'utente. Poiché l'accesso ai contatti comporta implicazioni riguardo la privacy, questa API è disponibile per le *app con privilegi*. Il modello di questa API prevede l'utilizzo di due callback ed è un approccio condiviso da molte altre API. Forniamo quindi due funzioni, *success* in caso di buona riuscita dell'operazione e *error* in caso contrario. Queste callback vengono eseguite una solta volta durante o dopo l'azione principale (in questo caso al salvataggio di un contatto).
 
 Per ulteriori informazioni su questa API consultare [la pagina dedicata alle *Contacts API* sul wiki Mozilla][16].
 
@@ -264,7 +264,7 @@ Questo è un altro esempio di [WebActivity][17]. Le funzioni (activity) dell'API
 
 ## Riassunto
 
-In questo capitolo abbiamo visto che rispetto alle pagine web classiche, entrambi i tipi di applicazione per Firefox OS (hosted e packaged) si basano su un file manifest. Abbiamo visto anche che dal punto di vista della sicurezza le applicazioni packaged possono essere **con privilegi** o **certificate**. Solo le app privilegiate e certificate possono accedere alle WebAPI di Mozilla. Le WebAPI non sono disponibili per le applicazioni hosted o le pagine web classiche.
+In questo capitolo abbiamo visto che rispetto alle pagine web classiche, entrambi i tipi di applicazione per Firefox OS (hosted e packaged) si basano su un file manifest. Abbiamo visto anche che dal punto di vista della sicurezza le applicazioni packaged possono essere **con privilegi** o **certificate**. Solo le app privilegiate e certificate possono accedere alle WebAPI specifiche di Firefox OS. Le WebAPI non sono disponibili per le applicazioni hosted o le pagine web classiche.
 
 Adesso è giunta l'ora di sporcarsi le mani e creare un'applicazione.
 

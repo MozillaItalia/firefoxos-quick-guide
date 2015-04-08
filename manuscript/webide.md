@@ -38,7 +38,7 @@ Il secondo è un modello per un'app di tipo **privileged**, quindi per forza una
 
 ### Aggiungere Applicazioni packaged 
 
-![](images/originals/webide-local-project.png)
+![La finestra per selezionare la cartella dell'applicazione](images/originals/webide-local-project.png)
 
 Abbiamo già parlato di applicazioni packaged durante [la creazione della nostra prima applicazione](#firstapp), adesso è ora di provarla.
 
@@ -52,7 +52,7 @@ Se tutto va a buon fine la tua app verrà caricata nel WebIde e vedrai una scher
 
 ### Aggiungere Applicazioni hosted
 
-![](images/originals/webide-remote-project.png)
+![La finestra per inserire la URL del file manifest.webapp](images/originals/webide-remote-project.png)
 
 Una volta premuto **Apri App Hosted** viene aperta una finestra in cui puoi inserire l'indirizzo web a cui troviamo la tua applicazione, ovvero anche in questo caso l'indirizzo web in cui è disponibile il file **manifest.webapp**.
 

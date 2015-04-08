@@ -6,7 +6,7 @@ Abbiamo scaricato il simulatore [nel capitolo precedente riguardo l'ambiente di 
 
 Per saperne di più, date un'occhiata [alla pagina dedicata al WebIde][1] su MDN.
 
-W> Ricordati: se stai usando un dispositivo Firefox OS 1.1 o ancora più vecchio devi usare il Simulatore 1.1 e non l'App Manager. Questo simulatore è spiegato nel prossimo capitolo.
+W> Ricordati: se stai usando un dispositivo Firefox OS 1.1 devi usare il Simulatore 1.1 e non l'App Manager. Questo simulatore è spiegato nel prossimo capitolo.
 
 ## Aggiungere Applicazioni
 
@@ -42,7 +42,7 @@ Il secondo è un modello per un'app di tipo **privileged**, quindi per forza una
 
 Abbiamo già parlato di applicazioni packaged durante [la creazione della nostra prima applicazione](#firstapp), adesso è ora di provarla.
 
-Una volta premuto **Apri App Packaged** viene apera una finestra da cui poter scegliere la cartella che contiene i file che ci interessano.
+Una volta premuto **Apri App Packaged** viene aperta una finestra da cui poter scegliere la cartella che contiene i file che ci interessano.
 
 Per poter essere considerata come una app packaged una cartella ha bisogno di contenere un file **manifest.webapp** valido.
 
@@ -56,7 +56,7 @@ Se tutto va a buon fine la tua app verrà caricata nel WebIde e vedrai una scher
 
 Una volta premuto **Apri App Hosted** viene aperta una finestra in cui puoi inserire l'indirizzo web a cui troviamo la tua applicazione, ovvero anche in questo caso l'indirizzo web in cui è disponibile il file **manifest.webapp**.
 
-Per poter essere considerata come una app hoste un sito ha bisogno di un file **manifest.webapp** valido.
+Per poter essere considerata come una app hosted un sito ha bisogno di un file **manifest.webapp** valido.
 
 #### Problemi con le applicazioni hosted
 
@@ -68,10 +68,9 @@ Molte delle applicazioni hosted non sono applicazioni realizzate specificatament
 
 Per testare *sul campo* che tutto sia a posto avvia il simulatore, naviga fino al tuo sito tramite il browser del simulatore e controlla che il simulatore ti segnali che la pagina è una Open Web App installabile.
 
-
 ## Avviare il simulatore
 
-Per avviare il simulatore dopo averlo installato basta sceglierlo dal menù che appare quando premi il pulsante **Scegli runtime**, le versioni installate vengono elencate sotto l'etichetta **Simulatori** 
+Per avviare il simulatore dopo averlo installato basta sceglierlo dal menù che appare quando premi il pulsante **Scegli runtime**, le versioni installate vengono elencate sotto l'etichetta **Simulatori**.
 
 ![Le versioni del simulatore installate](images/originals/webide-runtime-select.png)
 
@@ -91,9 +90,7 @@ Ogni volta che si cambiano i file e si vuole provare nel simulatore le modifiche
 
 ## Debug
 
-Dopo che l'applicazione sarà installata nel simulatore potremo fare il debug it facendo clic sul pulsante **Debug** del WebIde, il pulsante è il cerchio con due righe verticali all'interno. Verrà aperta la **Console JavaScript** relativa all'applicazione.
-
-Il terzo è il pulsante che avvia la Console per il Debug[^scorciatoia]
+Dopo che l'applicazione sarà installata nel simulatore potremo fare il debug facendo clic sul pulsante **Debug**[^scorciatoia] del WebIde, il pulsante è il cerchio con due righe verticali all'interno. Verrà aperta la **Console JavaScript** relativa all'applicazione.
 
 [^scorciatoia]: Alternativamente puoi premere il pulsante **F12** della tua tastiera per aprire e chiudere la console del WebIde
 
@@ -103,7 +100,7 @@ Dopo il clic su questo pulsante verrà aperta una schermata come questa:
 
 ![Developer Tools connessi all'applicazione nel simulatore](images/originals/webide-console.png)
 
-COn gli strumenti connessi all'applicazione puoi provare il tuo codice JavaScript, fare il debug del DOM, modificare lo stile, ecc... esattamente come se usassi gli strumenti per sviluppatori di Firefox.
+Con gli strumenti connessi all'applicazione puoi provare il tuo codice JavaScript, fare il debug del DOM, modificare lo stile, ecc... esattamente come se usassi gli strumenti per sviluppatori di Firefox.
 
 Una volta che l'applicazione è avviata sul simulatore è tempo di provarla su di un dispositivo reale.
 

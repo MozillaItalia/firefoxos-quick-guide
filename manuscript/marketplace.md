@@ -65,7 +65,7 @@ Il passaggio successivo è denominato **Passaggio #3: dettagli** ed è quello in
 
 ### Come ottenere degli screenshots per il Marketplace
 
-Siccome non tutti abbiamo confidenza con i programmi di grafica ecco che il simulatore ci viene in soccorso e ci permette di fare gli screenshots senza tanta fatica.
+Siccome non tutti abbiamo confidenza con i programmi di grafica ecco che il WebIDE ci viene in soccorso e ci permette di fare gli screenshots senza tanta fatica.
 
 ![Un click e via, ecco lo screenshot](images/originals/webide-screenshot.png)
 
@@ -131,12 +131,9 @@ Inserisci dei bei screenshot dell'applicazione che sono una vetrina del tuo lavo
 
 Complimenti! La propria nuova applicazione ora è su Firefox Marketplace e ci si sta apprestando a esplorare un nuovissimo tipo di mercato.
 
+Spero che la lettura di questa veloce guida sia stata piacevole. Ho in mente di aggiornare e ampliare spesso questa guida, quindi consiglio di tenere gli occhi aperti e iscriversi per ricevere le notizie sul suo aggiornamento. Se si è scaricato questo testo dal sito Leanpub non ci sono problemi: si riceverà automaticamente un'email che informerà di nuovi aggiornamenti. Se invece è stato scaricato da altri siti, il mio consiglio è quello di riscaricarlo dalla [pagina ufficiale della versione italiana su Leanpub][9] e registrare il proprio indirizzo email. Ovviamente è tutto gratuito e, no, non verranno  mai inviati messaggi di spam, promesso.
 
-=======
-
-Spero che la lettura di questa veloce guida sia stata piacevole. Ho in mente di aggiornare e ampliare spesso questa guida, quindi consiglio di tenere gli occhi aperti e iscriversi per ricevere le notizie sul suo aggiornamento. Se si è scaricato questo testo dal sito Leanpub non ci sono problemi: si riceverà automaticamente un'email che informerà di nuovi aggiornamenti. Se invece è stato scaricato da altri siti, il mio consiglio è quello di riscaricarlo da  [pagina ufficiale su Leanpub][9] e registrare il proprio indirizzo email. Ovviamente è tutto gratuito e, no, non verranno  mai inviati messaggi di spam, promesso.
-
-Invito tutti i lettori ad inviarmi le proprie opinioni su questo lavoro (in inglese). Questo testo è stato scritto nelle notti precedenti una conferenza tecnica, quindi si può intuire quanto io sia affezionato a questo progetto e quanto vorrei che avesse successo. È possibile inviare le proprie opinioni via Twitter al mio account [@soapdog][10] o al mio indirizzo di posta elettronica [fxosquickguide@andregarzia.com][11].  Il mio sito web è [http://andregarzia.com][12].
+Invito tutti i lettori ad inviarmi le proprie opinioni su questo lavoro (in inglese). Questo testo è stato scritto nelle notti precedenti una conferenza tecnica, quindi si può intuire quanto io sia affezionato a questo progetto e quanto vorrei che avesse successo. È possibile inviare le proprie opinioni via Twitter al mio account [@soapdog][10] o al mio indirizzo di posta elettronica [fxosquickguide@andregarzia.com][11].  Il mio sito web è [http://andregarzia.com][12]. Per la versione italiana fare riferimento anche al [repository su GitHub][13] che ricordo contiene materiale inedito rispetto alla versione originale ed inglese.
 
 Ora che si è entrati a far parte del gruppo di sviluppatori di app Firefox OS, il prossimo passo è quello di unirsi al gruppo più esteso della comunità Mozilla, aiutandoci a mantenere il Web libero e creato dagli utenti per gli utenti.  
 È possibile unirsi a noi visitando [http://www.mozilla.org/contribute/][13] e aiutare la crescita di Firefox OS.
@@ -149,8 +146,9 @@ Ora che si è entrati a far parte del gruppo di sviluppatori di app Firefox OS, 
 [6]: https://wiki.mozilla.org/Apps/Security "Sicurezza"
 [7]: https://github.com/flamsmark/privacy-policy-template
 [8]: https://developer.mozilla.org/en-US/Marketplace/Publishing/Privacy_policies
-[9]: http://leanpub.com/quickguidefirefoxosdevelopment
+[9]: https://leanpub.com/guidavelocesviluppofirefoxos
 [10]: http://twitter.com/soapdog
 [11]: mailto:fxosquickguide@andregarzia.com
 [12]: http://andregarzia.com
-[13]: http://www.mozilla.org/en-US/contribute/
+[13]: https://github.com/MozillaItalia/firefoxos-quick-guide
+[14]: http://www.mozilla.org/en-US/contribute/

@@ -188,8 +188,8 @@ Se continuerai questo percorso da Web Developer non potrai fare a meno di sporca
 [18]: http://buildingfirefoxos.com/building-blocks/value-selector.html
 [19]: http://buildingfirefoxos.com/transitions/app-invokes-app.html
 [20]: http://buildingfirefoxos.com/downloads/
-[21]: http://www.w3.org/TR/2013/WD-components-intro-20130606/
-[22]: http://www.polymer-project.org/ "Polymer"
+[21]: http://w3.org/TR/2013/WD-components-intro-20130606/
+[22]: http://polymer-project.org/ "Polymer"
 [23]: http://mozbrick.github.io/ "MozBrick"
 [24]: http://mozbrick.github.io/docs/brick-appbar.html
 [25]: http://mozbrick.github.io/docs/brick-calendar.html
@@ -203,4 +203,4 @@ Se continuerai questo percorso da Web Developer non potrai fare a meno di sporca
 [33]: http://mozbrick.github.io/docs/brick-storage-indexeddb.html
 [34]: https://github.com/alexgibson/concierge "Concierge"
 [35]: http://alxgbsn.co.uk/concierge/ "Concierge Demo"
-[36]: https://www.mozilla.org/it/firefox/developer/ "Firefox Developer Edition"
+[36]: https://mozilla.org/it/firefox/developer/ "Firefox Developer Edition"

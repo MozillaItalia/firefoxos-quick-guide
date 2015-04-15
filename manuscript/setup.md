@@ -65,6 +65,6 @@ Ora che abbiamo configurato l'ambiente di sviluppo, siamo pronti per soffermarci
 [1]: http://getfirefox.com
 [2]: https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/
 [3]: http://sublimetext.com/
-[4]: http://www.jetbrains.com/webstorm/
+[4]: http://jetbrains.com/webstorm/
 [5]: https://developer.mozilla.org/it/Firefox_OS/usare_l_app_Manager
 [6]: https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/

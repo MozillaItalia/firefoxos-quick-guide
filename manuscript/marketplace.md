@@ -151,4 +151,4 @@ Ora che si è entrati a far parte del gruppo di sviluppatori di app Firefox OS, 
 [11]: mailto:fxosquickguide@andregarzia.com
 [12]: http://andregarzia.com
 [13]: https://github.com/MozillaItalia/firefoxos-quick-guide
-[14]: http://www.mozilla.org/en-US/contribute/
+[14]: http://mozilla.org/en-US/contribute/

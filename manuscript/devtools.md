@@ -57,8 +57,8 @@ In questo capitolo sono stati descritti in maniera sintetica gli strumenti di sv
 [2]: https://developer.mozilla.org/en-US/docs/Tools "Dev Tools su MDN"
 [3]: https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries "Media Queries su MDN"
 [4]: http://it.wikipedia.org/wiki/Risoluzione_%28grafica%29 "Risoluzione grafica su Wikipedia"
-[5]: http://www.abookapart.com/products/responsive-web-design
-[6]: http://www.abookapart.com/products/mobile-first
+[5]: http://abookapart.com/products/responsive-web-design
+[6]: http://abookapart.com/products/mobile-first
 [7]: https://developer.mozilla.org/en-US/docs/Web/API/console
 [8]: https://developer.mozilla.org/en-US/docs/Tools/Style_Editor
 [9]: https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor

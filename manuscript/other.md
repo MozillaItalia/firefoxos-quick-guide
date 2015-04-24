@@ -54,7 +54,7 @@ Attualmente sono disponibili in Brick i seguenti componenti, che potete già uti
 * [Menu][32] - vi serve un menu?
 * [Storage-IndexdDB][33] - per conservare informazioni sul dispositivo dell'utente
 
-Per mostrare l'uso di questi componenti, Daniele ha realizzato un boilerplate di nome [Brickly](http://mte90.github.io/Brickly) che potete studiare per prendere confidenza con i Web Components.
+Per mostrare l'uso di questi componenti, Daniele ha realizzato un boilerplate di nome [Brickly][37] che potete studiare per prendere confidenza con i Web Components.
 
 Non è nell'interesse della guida approfondire questa libreria ma solo pubblicizzare questo materiale già disponibile all'uso.
 
@@ -188,8 +188,8 @@ Se continuerai questo percorso da Web Developer non potrai fare a meno di sporca
 [18]: http://buildingfirefoxos.com/building-blocks/value-selector.html
 [19]: http://buildingfirefoxos.com/transitions/app-invokes-app.html
 [20]: http://buildingfirefoxos.com/downloads/
-[21]: http://www.w3.org/TR/2013/WD-components-intro-20130606/
-[22]: http://www.polymer-project.org/ "Polymer"
+[21]: http://w3.org/TR/2013/WD-components-intro-20130606/
+[22]: http://polymer-project.org/ "Polymer"
 [23]: http://mozbrick.github.io/ "MozBrick"
 [24]: http://mozbrick.github.io/docs/brick-appbar.html
 [25]: http://mozbrick.github.io/docs/brick-calendar.html
@@ -203,4 +203,5 @@ Se continuerai questo percorso da Web Developer non potrai fare a meno di sporca
 [33]: http://mozbrick.github.io/docs/brick-storage-indexeddb.html
 [34]: https://github.com/alexgibson/concierge "Concierge"
 [35]: http://alxgbsn.co.uk/concierge/ "Concierge Demo"
-[36]: https://www.mozilla.org/it/firefox/developer/ "Firefox Developer Edition"
+[36]: https://mozilla.org/it/firefox/developer/ "Firefox Developer Edition"
+[37]: http://mte90.github.io/Brickly

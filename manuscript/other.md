@@ -54,7 +54,7 @@ Attualmente sono disponibili in Brick i seguenti componenti, che potete già uti
 * [Menu][32] - vi serve un menu?
 * [Storage-IndexdDB][33] - per conservare informazioni sul dispositivo dell'utente
 
-Per mostrare l'uso di questi componenti, Daniele ha realizzato un boilerplate di nome [Brickly](http://mte90.github.io/Brickly) che potete studiare per prendere confidenza con i Web Components.
+Per mostrare l'uso di questi componenti, Daniele ha realizzato un boilerplate di nome [Brickly][37] che potete studiare per prendere confidenza con i Web Components.
 
 Non è nell'interesse della guida approfondire questa libreria ma solo pubblicizzare questo materiale già disponibile all'uso.
 
@@ -204,3 +204,4 @@ Se continuerai questo percorso da Web Developer non potrai fare a meno di sporca
 [34]: https://github.com/alexgibson/concierge "Concierge"
 [35]: http://alxgbsn.co.uk/concierge/ "Concierge Demo"
 [36]: https://mozilla.org/it/firefox/developer/ "Firefox Developer Edition"
+[37]: http://mte90.github.io/Brickly

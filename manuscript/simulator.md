@@ -2,7 +2,7 @@
 
 ![Gestore App](images/originals/simulator-dashboard.png)  
 
-W>Attenzione: Questo capitolo è presente solo per una compatibilità per i dispositivi con Firefox OS 1.1. Il metodo attuale per provare e fare il debug delle applicazioni è il **WebIde** di cui abbiamo parlto nel capitolo precedente. Il contenuto di questo capitolo è per quelle persone che devono provare le applicazioni sulla versione 1.1 di Firefox OS.
+W>Attenzione: Questo capitolo è presente solo per una compatibilità per i dispositivi con Firefox OS 1.1. Il metodo attuale per provare e fare il debug delle applicazioni è il **WebIde** di cui abbiamo parlato nel capitolo precedente. Il contenuto di questo capitolo è per quelle persone che devono provare le applicazioni sulla versione 1.1 di Firefox OS.
 
 W>Attenzione: Se stai usando **Firefox 29 o successive** e dispositivi con **Firefox OS 1.1 o precedenti** hai bisogno di un'altra versione del **Simulatore Firefox OS 1.1** che non è disponibile nell'add-ons marketplace. Questa versione è una **BETA** ma al momento non ci sono alternative. Puoi scaricarla per [Mac OS X][1], [Linux][2] o [Windows][3]. Scarica il file xpi e caricalo in Firefox e segui le istruzioni. Se vuoi seguire la questione del supporto per il **simulatore Firefox OS 1.1** su **Firefox 29** dai un'occhiata alla [bug request #1001590][4].  
 
@@ -30,9 +30,7 @@ Ogni volta che l'app verrà aggiornata sarà necessario fare clic sul pulsante *
 
 ### Aggiungere applicazioni hosted
 
-Se si sta sviluppando un'applicazione hosted è necessario provarla utilizzando un server web. Non utilizzare il metodo descritto in precedenza con le *app hosted* in quanto alcuni errori potrebbero non essere rilevati, ad esempio un MIME Type non valido del file manifesto. Si noti che il simulatore non segnala errori, anche di una certa rilevanza come, appunto, un MIME Type non valido, ma è importante verificare che tutto funzioni se si vuole pubblicare l'app su Firefox Marketplace.
-
-La maggior parte delle applicazioni *hosted* non sono realizzate specificatamente per Firefox OS, si tratta piuttosto di veri e propri siti web che sfruttano il design responsive per adattarsi a più dispositivi e risoluzioni. Solitamente queste app web funzionano grazie a un complesso back end che deve essere in esecuzione per consentire un loro corretto funzionamento ed è proprio per questo motivo che si rende necessario verificarne il funzionamento con un vero server web per assicurarsi che tutto funzioni correttamente.
+Se si sta sviluppando un'applicazione hosted è necessario provarla utilizzando un server web. Non utilizzare il metodo descritto in precedenza con le *app hosted* in quanto alcuni errori potrebbero non essere rilevati, ad esempio un MIME Type non valido del file manifesto. 
 
 Per caricare un'*app hosted* nel simulatore, inserire nella casella di testo, nel box in basso a sinistra, l'URL completa del manifesto dell'app e fare clic sul pulsante **+**.
 
@@ -58,15 +56,7 @@ Quando l'app risulterà funzionante nel simulatore, sarà tempo di provarla su u
 
 ## Provare l'applicazione su un dispositivo reale
 
-Niente può sostituire il testing su un dispositivo reale. Nel simulatore i test vengono effettuati facendo clic con un mouse su uno schermo di computer, mentre con un dispositivo reale i test si effettuano toccando uno touchscreen e premendo con le dita dei pulsanti reali. Un'esperienza utente e sviluppatore completamente diversa.
-
-Per sottolineare l'importanza di effettuare dei test su un dispositivo reale, racconterò un fatto personale. Alcuni anni fa Raphael Eckhardt  (il designer della copertina di questo testo) e io stavamo realizzando un puzzle game simile a  Bejeweled. Il nostro gioco consisteva nel trascinare e posizionare dei pezzi su una tavola e funzionava abbastanza bene sul simulatore. 
-
-Quando abbiamo provato il gioco su un telefono reale ci siamo resi conto che i componenti del gioco non erano ottimizzati per la piattaforma *mobile*: quando posizionavamo la mano sullo schermo tutto scompariva dietro la mano. Inoltre i componenti di gioco erano troppo piccoli per le dita, quindi gli utenti non potevano rendersi conto di quello che stavano facendo, in poche parole l'interfaccia non era un granché. Il problema era che noi avevamo effettuato i nostri test utilizzando il mouse e il puntatore del mouse è molto piccolo. Quando abbiamo provato con le nostre dita "cicciotelle" ci siamo resi conto che dovevamo rielaborare l'interfaccia.  
-
-Per evitare di avere un'esperienza così frustrante è indispensabile verificare sempre l'app su un dispositivo reale… O ancora meglio su qualunque dispositivo si abbia a disposizione. Effettuare dei buoni test su dei semplici prototipi è molto importante per non dover perdere tempo e denaro a rimodificare tutto ogni volta.
-
-Inoltre, nel caso si risiedesse in un paese in cui i dispositivi Firefox OS sono già in commercio, è possibile acquistare direttamente un dispositivo per l'utente finale. Un'altra soluzione è sostituire Android con Firefox OS su alcuni dispositivi (alcuni dispositivi lo supportano!) ma, a meno di non essere esperti e disposti a perdere del tempo con l'hacking, non è una cosa che mi sento di consigliare.
+Fare riferimento alla sezione del capitole precedente su questo argomento.
 
 ## Connessione con un dispositivo Firefox OS
 
@@ -84,15 +74,7 @@ Nell'immagine sottostante è possibile vedere la finestra di richiesta permessi:
 
 Con l'applicazione in esecuzione nel dispositivo è possibile usare il *remote debugging* per aprire un'istanza della **Console JavaScript** collegata con l'app in modo da effettuare il debug.  
 
-Nel Gestore App, facendo clic su **Dispositivo** si apre una schermata con le informazioni del dispositivo collegato o del simulatore.  
-
-![Applicazioni del dispositivo!](images/originals/simulator-device.png)  
-
 Da questo dispositivo si possono debuggare le applicazioni installate tra cui anche quelle di sistema.  
-
-![Tabella dei permessi!](images/originals/simulator-device-permission.png) 
-
-In questa tabella c'è un riassunto dei permessi utilizzabili nel manifest a seconda del tipo di applicazione che abbiamo visto qualche pagina fa.
 
 ## Riassunto
 

@@ -89,7 +89,7 @@ Accetto con piacere tutto l'aiuto per tradurre questo testo in lingue diverse (e
 ### Versione 0.3
 
 Aggiunto nuovo materiale come Brick, Firefox OS Boilerplate, ADB Helper ed il multilingua grazie a Daniele Scasciafratte, la sezione del Manifest invece è di Giammarco Di Lella.  
-Con l’aiuto di Edoardo Putti e Niccolo Cantù la guida è stata revisionata ed è stato aggiunto materiale nuovo rispetto all'originale inglese.
+Con l’aiuto di Edoardo Putti, Niccolo Cantù e Aronne Brivio la guida è stata revisionata, corretta ed è stato aggiunto materiale nuovo rispetto all'originale inglese.
 
 ### Versione 0.2
 

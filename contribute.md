@@ -19,6 +19,7 @@ Per favore mantieni lo stile di scrittura coerente:
 - inserisci uno spazio tra # ed il titolo quando scrivi un nuovo paragrafo
 - i nomi dei file vanno in grassetto, **index.html**
 - la scrittura corretta è "JavaScript"
+- **NON CAMBIARE I LINK, L'ORDINE DEI LINK E NON SPOSTARLI** un [panda rosso][5] muore ogni volta che succede
 
 ### Contenuti
 
@@ -41,3 +42,4 @@ In questo modo verranno aggiunte le tue commit al nostro [Issue #22][4], permett
 [2]: https://help.github.com/articles/using-pull-requests/ "pull request"
 [3]: https://github.com/MozillaItalia/firefoxos-quick-guide/issues "Issue tracker"
 [4]: https://github.com/MozillaItalia/firefoxos-quick-guide/issues/22 "Issue #22"
+[5]: http://www-archive.mozilla.org/projects/firefox/firefox-name-faq.html

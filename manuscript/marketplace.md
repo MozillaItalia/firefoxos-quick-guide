@@ -1,4 +1,4 @@
-# Firefox Marketplace
+# Firefox Marketplace {#marketplace}
 
 ![Firefox Marketplace](images/originals/marketplace.png)
 

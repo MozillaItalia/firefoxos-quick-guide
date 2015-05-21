@@ -1,4 +1,4 @@
-## Firefox OS Boilerplate App
+## Firefox OS Boilerplate App {#boilerplate}
 
 Il [boilerplate][1] di cui abbiamo letto in precedenza è un'applicazione dimostrativa con molti esempi basilari. Contiene un esempio per la maggior parte delle Web Activity, la questione multilingua, installazione dell'applicazione, API HTML5 e l'interfaccia grafica di Gaia realizzata con *Gaia Building Blocks*.  
 La parte interessante è che si trova su Github, quindi c'è anche una demo sempre aggiornata che puoi trovare [online][2].

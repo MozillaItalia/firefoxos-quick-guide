@@ -1,4 +1,4 @@
-# Concetti Base {#concepts}
+# Concetti Base {#basics}
 
 Prima di sporcarci le mani con la nostra prima applicazione, vediamo di scoprire alcuni concetti base per lo sviluppo su Firefox OS. Nell'[introduzione](#introduction) abbiamo detto che le applicazioni Firefox OS, analogamente alle pagine web, sono basate su HTML5, tuttavia non abbiamo spiegato cosa rende le applicazioni per Firefox OS differenti dalle pagine web classiche. 
 

@@ -1,4 +1,4 @@
-# Strumenti per sviluppatori {#developertools}
+# Strumenti per sviluppatori {#devtools}
 
 Il browser Firefox mette a disposizione molti strumenti per consentire agli sviluppatori di eseguire il proprio lavoro al meglio. Molte persone continuano a usare l'estensione [Firebug][1] senza aver realizzato che ora Firefox ha degli strumenti di sviluppo integrati che possono sostituirlo (anche la versione 3 di Firebug si integrerà con gli strumenti nativi).
 

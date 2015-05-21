@@ -1,4 +1,4 @@
-# Altro
+# Altro {#other}
 
 In questo capitolo vedremo in modo veloce alcune tecnologie che ci possono essere utili nello sviluppo per Firefox OS.
 

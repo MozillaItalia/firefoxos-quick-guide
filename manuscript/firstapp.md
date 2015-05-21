@@ -14,15 +14,15 @@ Dalla parte inferiore dello schermo è possibile cancellare una nota prescelta s
 
 Il codice sorgente di Memos è disponibile nel [Repository su Github][1] (è possibile anche scaricarlo come [file .zip][2] ). Consiglio di scaricare i file, così sarà più semplice seguire la guida. Un'altra copia del codice sorgente è disponibile nella cartella **code** della [repository Github di questo libro][13].
 
-Memos utilizza [IndexedDB][4] per salvare le note e il toolkit [*Gaia Building Blocks*][14] per creare le interfacce. In un futuro aggiornamento il testo conterrà molte informazioni su *Gaia Building Blocks*, ma in questa prima versione mi limiterò ad utilizzarlo. Per ulteriori informazioni sull'argomento e per sapere quali interfacce vi sono integrate visitare i link appena segnalati.
+Memos utilizza [IndexedDB][3] per salvare le note e il toolkit [*Gaia Building Blocks*][4] per creare le interfacce. In un futuro aggiornamento il testo conterrà molte informazioni su *Gaia Building Blocks*, ma in questa prima versione mi limiterò ad utilizzarlo. Per ulteriori informazioni sull'argomento e per sapere quali interfacce vi sono integrate visitare i link appena segnalati.
 
 Il primo passaggio è creare una cartella per l'applicazione di nome **memos**.
 
 ## Creare il manifesto dell'app
 
-Il file manifesto di Memos è molto semplice. Crea un file chiamato **manifest.webapp** nella cartella **memos**. I manifesti sono dei file in formato [JSON][6] che descrivono un'applicazione per Firefox OS di cui abbiamo già parlato nel precedente capitolo.
+Il file manifesto di Memos è molto semplice. Crea un file chiamato **manifest.webapp** nella cartella **memos**. I manifesti sono dei file in formato [JSON][5] che descrivono un'applicazione per Firefox OS di cui abbiamo già parlato nel precedente capitolo.
 
-Qui di seguito è riportato il contenuto del file manifesto di **Memos**. Fate attenzione con il copia e incolla, perché è molto facile mettere una virgola nel posto sbagliato (o non metterla) e creare un file JSON non valido. Esistono molti strumenti per validare un file JSON, incluso uno specifico per validare i file manifesto delle app, lo puoi trovare online su [il marketplace][7]. Per ulteriori informazioni su questi file consultare la [pagina su MDN][8].
+Qui di seguito è riportato il contenuto del file manifesto di **Memos**. Fate attenzione con il copia e incolla, perché è molto facile mettere una virgola nel posto sbagliato (o non metterla) e creare un file JSON non valido. Esistono molti strumenti per validare un file JSON, incluso uno specifico per validare i file manifesto delle app, lo puoi trovare online su [il marketplace][6]. Per ulteriori informazioni su questi file consultare la [pagina su MDN][7].
 
 <<[Memos manifest (*manifest.webapp*)](code/memos/manifest.webapp)
 
@@ -45,7 +45,7 @@ Ora che il file manifesto è pronto, passiamo al codice HTML.
 
 ## Scriviamo il codice HTML
 
-Prima di iniziare a lavorare sul codice HTML facciamo una breve panoramica su [Gaia Building Blocks][14], una raccolta di codici CSS e JavaScript che rispettano il layout degli elementi d'interfaccia nativi di Firefox OS e che possiamo riutilizzare per creare l'interfaccia della nostra applicazione.
+Prima di iniziare a lavorare sul codice HTML facciamo una breve panoramica su [Gaia Building Blocks][4], una raccolta di codici CSS e JavaScript che rispettano il layout degli elementi d'interfaccia nativi di Firefox OS e che possiamo riutilizzare per creare l'interfaccia della nostra applicazione.
 
 Come nelle pagine web, non è richiesto l'uso del *look and feel* di Firefox OS nella propria applicazione. Utilizzare o meno *Gaia Building Blocks* è una scelta personale - e le buone applicazioni dovrebbero sapersi distinguere per uno stile e un'esperienza utente proprie. La cosa importante da capire è che un'applicazione non subirà alcun tipo di pregiudizio o penalità su Firefox Marketplace se non utilizza lo stile di Gaia. Personalmente, non essendo un bravo designer, preferisco ricorrere a degli *UI toolkit* già pronti piuttosto che creare uno stile personale per le app.
 
@@ -177,7 +177,7 @@ Entrambi i file devono essere posizionati nella cartella **js** che troviamo acc
 
 ### model.js
 
-Utilizzeremo [IndexedDB][4] per salvare le note nel dispositivo. Avendo chiesto i permessi *storage* nel file manifesto possiamo salvare quante note vogliamo - però non dobbiamo abusarne!
+Utilizzeremo [IndexedDB][3] per salvare le note nel dispositivo. Avendo chiesto i permessi *storage* nel file manifesto possiamo salvare quante note vogliamo - però non dobbiamo abusarne!
 
 Infatti i dispositivi Firefox OS solitamente non hanno molta memoria da dedicare alle app e il loro contenuto (le note nel nostro caso) ed è sempre meglio essere consapevoli di quali dati vengono memorizzati, inoltre gli utenti daranno un voto negativo a un'applicazione se consumerà troppa memoria senza motivo. Memorizzare troppo materiale porta a problemi di prestazioni e l'app risulterà lenta e poco reattiva. Al momento del caricamento su Firefox Marketplace, sarà necessario indicare nel modulo diretto ai revisori il motivo per cui l'app necessita di accesso illimitato alla memoria per il suo funzionamento, se non lo segnalate vi verrà esplicitamente richiesto dai revisori. Nel caso non siate in grado di giustificare tale richiesta, i revisori respingeranno l'app, che quindi non verrà pubblicata sul portale.
 
@@ -299,7 +299,7 @@ function deleteMemo(inId, inCallback) {
 
 In questo blocco di codice abbiamo creato un costruttore che produce nuove note con alcuni campi già inizializzati. Dopodiché abbiamo implementato le altre funzioni per la presentazione, il salvataggio e la cancellazione delle note. Molte di queste funzioni richiedono che sia passato un parametro chiamato `inCallback`. Questo parametro è esso stesso una funzione che  verrà invocata al termine della funzione chiamante. Questo è necessario per la natura asincrona di IndexedDB. Tutte le callback hanno la medesima struttura di chiamata `callback(error, value)`, con due parametri in ingresso, in cui uno dei due assumerà il valore `null` a seconda del risultato della funzione chiamante.
 
-A> Poiché è un testo per principianti ho scelto di non usare le [*Promises*][10] perché non tutti potrebbero capirle. Consiglio di usare questi concetti per avere un codice più pulito e facile da mantenere.
+A> Poiché è un testo per principianti ho scelto di non usare le [*Promises*][9] perché non tutti potrebbero capirle. Consiglio di usare questi concetti per avere un codice più pulito e facile da mantenere.
 
 Ora che l'archiviazione delle note e le funzioni di modifica sono state implementate, lavoriamo alla struttura logica dell'applicazione nel file **app.js**.
 
@@ -359,7 +359,7 @@ All'inizio vengono dichiarate alcune variabili globali (bleah :-P!) per mantener
 
 Le funzioni `showMemoDetail()` e `displayMemo()` lavorano in coppia. La prima carica la nota selezionata in `currentMemo` e modifica il CSS degli elementi mostrati nella schermata di modifica. La seconda prende il contenuto della variabile `currentMemo` e mostra la nota a schermo. Potremmo mettere il codice nella stessa funzione ma averlo separato permette di divertirci di più con nuove implementazioni.
 
-La funzione `shareMemo()` utilizza una [WebActivity][11] per aprire il programma predefinito per la posta elettronica con il contenuto della nota selezionata.
+La funzione `shareMemo()` utilizza una [WebActivity][10] per aprire il programma predefinito per la posta elettronica con il contenuto della nota selezionata.
 
 La funzione `textChanged()` prende il contenuto dei campi e lo inserisce nell'oggetto `currentMemo` che salva la nota. Questo perché avremo un'applicazione con auto-salvataggio. Tutte le modifiche al contenuto o al titolo invocheranno la funzione che salverà in IndexedDB.
 
@@ -442,7 +442,7 @@ function refreshMemoList() {
 }
 ~~~~~~~~
 
-La funzione `refreshMemoList()` modifica il [DOM][12] della nostra applicazione aggiornando l'elenco delle note. Sarebbe più facile usare alcuni sistemi di _templating_ come [handlebars][14] o [underscore][15] ma quest'applicazione contiene solo *vanilla javascript* quindi faremo tutto a mano.
+La funzione `refreshMemoList()` modifica il [DOM][11] della nostra applicazione aggiornando l'elenco delle note. Sarebbe più facile usare alcuni sistemi di _templating_ come [handlebars][14] o [underscore][15] ma quest'applicazione contiene solo *vanilla javascript* quindi faremo tutto a mano.
 
 Queste sono le funzioni utilizzate dall'applicazione. Le uniche che mancano sono il gestore eventi e la chiamata iniziale di `refreshMemoList()`.
 
@@ -477,7 +477,7 @@ Prima di avviare l'applicazione nel simulatore è preferibile verificare che tut
 
 ![Lista dei file utilizzati da Memos](images/originals/memos-file-list.png)
 
-Se si ha il vago sospetto di aver commesso qualche errore è possibile verificarlo confrontando [il repository memos su github][1] (un'ulteriore copia del codice sorgente è disponibile  nella cartella **code** nel [repo del testo][3]).
+Se si ha il vago sospetto di aver commesso qualche errore è possibile verificarlo confrontando [il repository memos su github][1] (un'ulteriore copia del codice sorgente è disponibile  nella cartella **code** nel [repo del testo][12]).
 
 Tutto a posto? Bene, cominciamo.
 
@@ -493,9 +493,9 @@ Se tutto funziona come previsto Memos verrà aggiunta ai progetti del WebIde.
 
 ![Memos mostrata nella Dashboard](images/originals/webide-app-loaded.png)
 
-Una volta aggiunta l'applicazione scegliamo la versione del simulatore che vogliamo usare e avviamola. Una volta avviato possiamo installare **Memos** premendo il bottone triangolare e sul simulatore verrà avviata la nostra app.
+Una volta aggiunta l'applicazione scegliamo la versione del simulatore che vogliamo usare e avviamola. Una volta avviato possiamo installare **Memos** premendo il pulsante triangolare e sul simulatore verrà avviata la nostra app.
 
-![Il bottone triangolare da premere](images/originals/webide-buttons.png)
+![Il pulsante triangolare da premere](images/originals/webide-buttons.png)
 
 A questo punto è possibile provare tutte le funzionalità di Memos.
 
@@ -522,4 +522,5 @@ In questo capitolo abbiamo creato la nostra prima applicazione per Firefox OS e 
 [11]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
 [12]: https://github.com/soapdog/guia-rapido-firefox-os
 [13]: https://github.com/MozillaItalia/firefoxos-quick-guide
-[14]: https://developer.mozilla.org/en-US/Apps/Design/Firefox_OS_building_blocks
+[14]: https://handlebarsjs.com/
+[15]: https://underscorejs.org/

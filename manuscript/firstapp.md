@@ -14,7 +14,7 @@ Dalla parte inferiore dello schermo è possibile cancellare una nota prescelta s
 
 Il codice sorgente di Memos è disponibile nel [Repository su Github][1] (è possibile anche scaricarlo come [file .zip][2] ). Consiglio di scaricare i file, così sarà più semplice seguire la guida. Un'altra copia del codice sorgente è disponibile nella cartella **code** della [repository Github di questo libro][13].
 
-Memos utilizza [IndexedDB][4] per salvare le note e il toolkit [*Gaia Building Blocks*][5] per creare le interfacce. In un futuro aggiornamento il testo conterrà molte informazioni su *Gaia Building Blocks*, ma in questa prima versione mi limiterò ad utilizzarlo. Per ulteriori informazioni sull'argomento e per sapere quali interfacce vi sono integrate visitare i link appena segnalati.
+Memos utilizza [IndexedDB][4] per salvare le note e il toolkit [*Gaia Building Blocks*][14] per creare le interfacce. In un futuro aggiornamento il testo conterrà molte informazioni su *Gaia Building Blocks*, ma in questa prima versione mi limiterò ad utilizzarlo. Per ulteriori informazioni sull'argomento e per sapere quali interfacce vi sono integrate visitare i link appena segnalati.
 
 Il primo passaggio è creare una cartella per l'applicazione di nome **memos**.
 
@@ -39,13 +39,13 @@ Analizziamo i campi di questo file manifesto:
 
 La parte più interessante di questo file manifesto è la richiesta per i permessi di *storage* per poter utilizzare IndexedDB senza alcun limite di spazio disco[^storage-permission](con questi permessi possiamo salvare le note che vogliamo - anche se dobbiamo fare attenzione a non usare troppo spazio sul disco dell'utente!).
 
-[^storage-permission]: Per saperne di più su questa autorizzazione leggi [la pagina MDN sui permessi][9].
+[^storage-permission]: Per saperne di più su questa autorizzazione leggi [la pagina MDN sui permessi][8].
 
 Ora che il file manifesto è pronto, passiamo al codice HTML.
 
 ## Scriviamo il codice HTML
 
-Prima di iniziare a lavorare sul codice HTML facciamo una breve panoramica su [Gaia Building Blocks][5], una raccolta di codici CSS e JavaScript che rispettano il layout degli elementi d'interfaccia nativi di Firefox OS e che possiamo riutilizzare per creare l'interfaccia della nostra applicazione.
+Prima di iniziare a lavorare sul codice HTML facciamo una breve panoramica su [Gaia Building Blocks][14], una raccolta di codici CSS e JavaScript che rispettano il layout degli elementi d'interfaccia nativi di Firefox OS e che possiamo riutilizzare per creare l'interfaccia della nostra applicazione.
 
 Come nelle pagine web, non è richiesto l'uso del *look and feel* di Firefox OS nella propria applicazione. Utilizzare o meno *Gaia Building Blocks* è una scelta personale - e le buone applicazioni dovrebbero sapersi distinguere per uno stile e un'esperienza utente proprie. La cosa importante da capire è che un'applicazione non subirà alcun tipo di pregiudizio o penalità su Firefox Marketplace se non utilizza lo stile di Gaia. Personalmente, non essendo un bravo designer, preferisco ricorrere a degli *UI toolkit* già pronti piuttosto che creare uno stile personale per le app.
 
@@ -522,3 +522,4 @@ In questo capitolo abbiamo creato la nostra prima applicazione per Firefox OS e 
 [11]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
 [12]: https://github.com/soapdog/guia-rapido-firefox-os
 [13]: https://github.com/MozillaItalia/firefoxos-quick-guide
+[14]: https://developer.mozilla.org/en-US/Apps/Design/Firefox_OS_building_blocks

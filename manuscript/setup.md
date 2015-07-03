@@ -11,7 +11,7 @@ I browser utilizzano diversi motori di rendering per mostrare le pagine web: Goo
 Per sviluppare e provare le applicazioni realizzate per Firefox OS abbiamo bisogno di:
 
  * Una versione recente di [Firefox desktop][1].
- * [Firefox OS Simulator][2] (scegli la versione che vuoi installare. Anche tutte). 
+ * [Firefox OS Simulator][2] (scegli la versione che vuoi installare. Anche tutte. Ti consigliamo le versioni 1.3, 1.4 e 2.0). 
  * (facoltativo) Un editor testuale per programmare[^editor].
  
 [^editor]: esistono molti buoni editor con diversi livelli di complessità e caratteristiche. Un editor molto diffuso, che mi sento di consigliare a chi non ha ancora trovato il suo preferito, è [SublimeText][3]. Personalmente, io utilizzo [WebStorm][4] che è un IDE completo per la realizzazione di web app.
@@ -19,8 +19,6 @@ Per sviluppare e provare le applicazioni realizzate per Firefox OS abbiamo bisog
 ## Configurazione del WebIde
 
 Se stai usando la versione attuale di Firefox (34 o successive) il WebIde è già integrato. WebIde da solo non basta, se non hai un disposititvo devi installare anche i simulatori per fare le prove. Mozilla ha una [documentazione completa a riguardo][5] se vuoi approfondire l'argomento.  
-
-WebIde può gestire più versioni di Firefox OS quindi puoi installare le versioni 1.3, 1.4 e 2.0 senza avere problemi di compatibilità, ricordati che più è alto il numero di versione e più tardi verrà rilasciata al pubblico.  
 
 Adesso è il momento di vedere come funziona WebIde. Clicca su **Strumenti -> Web Developer -> WebIde**.
 
@@ -34,7 +32,7 @@ La finestra è ancora vuota e noi adesso andiamo ad installare i simulatori sul 
 
 ![La barra degli strumenti di WebIde](images/originals/webide-detail-toolbar.png)
 
-Nella barra degli strumenti abbiamo il pulsante **Seleziona ...**, fai click per scegliere o installare una particolare versione del simulatore.
+Nella barra degli strumenti abbiamo il pulsante **Seleziona ...**, fai click per scegliere o installare una particolare versione del simulatore. WebIde può gestire più versioni di Firefox OS quindi ti consigliamo di installare le versioni 1.3, 1.4 e 2.0 di Firefox OS Simulator senza avere problemi di compatibilità, ricordati che più è alto il numero di versione e più tardi verrà rilasciata al pubblico.
 
 ![Il menù del simulatore con le varie opzioni](images/originals/webide-runtime-select.png)
 

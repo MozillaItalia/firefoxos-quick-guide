@@ -143,7 +143,7 @@ Adesso abbiamo a disposisizione un ambiente di sviluppo completo con cui possiam
 
 Arrivati a questo punto avrai la sensazione di aver capito come stanno andando le cose, quali sono gli strumenti che ti servono e come dovrebbe procedere il tuo lavoro quando vuoi realizzare una app per Firefox OS.
 
-Nel prossimo capitolo parleremo della vecchia versione del Simulatore di Firefox OS 1.1. Questo studio è necessario se si devono connettere dispositivi con Firefox OS 1.1. Il capitolo è molto simile a a questo infatti i contenuti sono gli stessi ma cambiano le interfacce degli strumenti.
+Nel prossimo capitolo parleremo della vecchia versione del Simulatore di Firefox OS 1.1. Questo studio è necessario se si devono connettere dispositivi con Firefox OS 1.1. Il capitolo è molto simile a questo infatti i contenuti sono gli stessi ma cambiano le interfacce degli strumenti.
 
 Dopo il capitolo sul simulatore parleremo della distribuzione della tua applicazione.
 

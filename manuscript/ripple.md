@@ -32,7 +32,7 @@ Oltre ai vari dispositivi "Generic" troviamo anche numerosi dispositivi reali, t
 
 ![Ripple Platforms](images/originals/ripple-platforms.png)
 
-Sotto al pannello Devices troviamo il pannello Platforms, che ci permette di impostare il framework (e la sua relativa versione) che stiamo usando per lo sviluppo della nostra webapp, così da adattare l'emulatore al comportamento del framework stesso. Se stiamo sviluppando senza alcun framework possiamo selezionare l'opzione "mobile web".
+Sotto al pannello Devices troviamo il pannello Platforms, che ci permette di impostare il framework (e la sua relativa versione) che stiamo usando per lo sviluppo della nostra webapp, così da adattare l'emulatore al comportamento del framework stesso. Se stiamo sviluppando senza alcun framework possiamo selezionare l'opzione "mobile web". Quest'ultima opzione va selezionata anche quando si sviluppa per Firefox OS
 
 ###Information
 
@@ -59,6 +59,11 @@ E' il pannello delle impostazioni generali dell'emulatore.
 Da questo pannello possiamo simulare l'interazione con i sensori GPS del dispositivo.
 Possiamo simulare la nostra posizione sia inserendo manualmente tutte le coordinate, sia scegliendo la nostra posizione direttamente su una mappa, sia caricare un file [GPX][3] che si preoccuperà per noi di simulare la nostra posizione.
 
+##Note sullo sviluppo per Firefox OS
+
+Dato che Ripple non supporta le API di Firefox OS è consigliato aggiungere al proprio progetto la libreria [moz-polyfills][4]
+
 [1]: http://ripple.incubator.apache.org/
 [2]: https://www.npmjs.com/package/ripple-emulator
 [3]: https://en.wikipedia.org/wiki/GPS_Exchange_Format
+[4]: https://github.com/Mte90/moz-polyfills

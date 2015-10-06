@@ -166,16 +166,17 @@ Se continuerai questo percorso da Web Developer non potrai fare a meno di sporca
 
 ![Ripple Emulator](images/originals/ripple.png)
 
-[Ripple Emulator][38] è un tool di sviluppo per mobile nato come integrazione di Google Chrome, diventato poi uno strumento completamente stand-alone e compatibile con qualsiasi tipo di browser.
+[Ripple Emulator][38] è uno strume di sviluppo per mobile nato come integrazione di Google Chrome, diventato poi uno strumento completamente indipendente e compatibile con qualsiasi tipo di browser.
 
 Ripple Emulator può essere installato via [npm][39] digitando da terminale:
 
 >$ sudo npm install -g ripple-emulator
 
 e una volta installato può essere lanciato nei modi che seguono:
+
 >$ ripple-emulate --path percorso/della/webapp
 
-per progetti stand-alone, mentre per progetti remoti:
+per progetti stand-alone, mentre per progetti online:
 
 >$ ripple emulate --remote http:// webapp .dominio
 
@@ -183,7 +184,7 @@ per progetti stand-alone, mentre per progetti remoti:
 
 Ripple Emulator offre un supporto completo al debug di applicazioni web orientate al mondo mobile, offrendo al contempo un'interfaccia semplice e  intuitiva.
 
-Le varie features sono accessibili dai pannelli laterali dell'interfaccia, analizziamoli uno ad uno:
+Le varie caratteristiche sono accessibili dai pannelli laterali dell'interfaccia, analizziamoli uno ad uno:
 
 ###Devices
 
@@ -196,7 +197,7 @@ Oltre ai vari dispositivi "Generic" troviamo anche numerosi dispositivi reali, t
 
 ![Ripple Platforms](images/originals/ripple-platforms.png)
 
-Sotto al pannello Devices troviamo il pannello Platforms, che ci permette di impostare il framework (e la sua relativa versione) che stiamo usando per lo sviluppo della nostra webapp, così da adattare l'emulatore al comportamento del framework stesso. Se stiamo sviluppando senza alcun framework possiamo selezionare l'opzione "mobile web". Quest'ultima opzione va selezionata anche quando si sviluppa per Firefox OS
+Sotto al pannello Devices troviamo il pannello Platforms, che ci permette di impostare il framework (e la sua relativa versione) che stiamo usando per lo sviluppo della nostra webapp. Se stiamo sviluppando senza alcun framework possiamo selezionare l'opzione "mobile web". Quest'ultima opzione va selezionata anche quando si sviluppa per Firefox OS
 
 ###Information
 

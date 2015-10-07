@@ -76,7 +76,7 @@ In questa nuova schermata è presente una barra sulla destra che permette di ges
 
 ![Impostazioni][settings]  
 
-Scorrete fino alla sezione che ha per titolo **Github Pages** dove troverete il pulsante **Automatic Page Generator**, premetelo. In questo modo verrà generato il ramo **gh-pages** con del contenuto già pronto ideale per questo esempio. 
+Scorrete fino alla sezione che ha per titolo **Github Pages** dove troverete il pulsante **Automatic Page Generator**, premetelo. In questo modo verrà generato il ramo **gh-pages** con del contenuto già pronto ideale per questo esempio.
 
 ![Genera il ramo gh-pages automaticamente][gitpages]
 
@@ -91,24 +91,24 @@ Github creerà quindi un sito per il vostro progetto che sarà visitabile da chi
 Per far si che l'app sia effettivamente installabile occorre modificare il file **manifest.webapp**. In particolare bisogna sostituire nel campo "launch_path" il nuovo indirizzo del vostro file **index.html**.
 
 Se ricordate l'indirizzo che avrà il vostro progetto sarà circa: `http://miousername.github.io/nomedelprogetto`, il manifesto deve quindi essere così modificato.
-    
-     "launch_path" : "/nomedelprogetto/index.html" 
-     
+
+     "launch_path" : "/nomedelprogetto/index.html"
+
 Per la corretta visualizzazione delle icone è necessario aggiornare anche il campo "icons"
 
     "icons" : {
         "128" : "/nomedelprogetto/cartellaIcone/icona128.png",
         "60" : "/nomedelprogetto/cartellaIcone/icona60.png"
         }
-     
+
 Infine per caricare l'applicazione è necessario installare sul computer un software distribuito da Github.
 
 Per Windows tale programma è disponibile con interfaccia grafica o tramite un terminale apposito (Git Power Shell), mentre per GNU/Linux è disponibile solo su terminale, questa guida per semplicità farà riferimento ai comandi da eseguire da terminale.
 
-Per iniziare è necessario clonare la repository sul proprio pc digitando questi comandi nel terminale:    
-    
+Per iniziare è necessario clonare la repository sul proprio pc digitando questi comandi nel terminale:
+
     $ git clone https://github.com/miousername/nomedelprogetto.git
-    
+
 Ora bisogna sostituire il contenuto della cartella **nomedelprogetto** con i file che compongono la vostra applicazione, questa operazione per semplicità può essere eseguita tramite il file manager.
 
 W> Attenzione: Dovete copiare solamente i file, non la cartella che li contiene
@@ -119,7 +119,7 @@ Quindi per aggiornare i file su GitHub digitare:
     $ git add -A
     $ git commit -m "hosting app"
     $ git push origin gh-pages
-    
+
 
 Inserite le vostre credenziali per avviare il caricamento dei file. Una volta finito il caricamento visitando l'indirizzo del vostro progetto vedrete anzichè la pagina generata automaticamente l'*Homepage* della vostra applicazione.
 
@@ -161,6 +161,72 @@ Questo è tutto, se vi doveste trovare in imbarazzo e non funzionasse controllat
 Per i 10 anni di Firefox, il browser indipendente che mette l'utente al centro, Mozilla ha fatto un enorme balzo in avanti verso la comunità degli sviluppatori web come noi (si, anche tu!). La versione [Firefox Developer Edition][36] include **TUTTI** gli strumenti su cui Mozilla lavora per aiutare gli sviluppatori web, compresi quelli ancora non inclusi nelle versioni generiche, ed è compatibile con i più nuovi standard.
 
 Se continuerai questo percorso da Web Developer non potrai fare a meno di sporcarti le mani e questi strumenti sono i migliori disponibili al momento!
+
+## Ripple Emulator
+
+![Ripple Emulator](images/originals/ripple.png)
+
+[Ripple Emulator][38] è uno strumento di sviluppo per mobile nato come integrazione di Google Chrome, diventato poi uno strumento completamente indipendente e compatibile con qualsiasi tipo di browser.
+
+Ripple Emulator può essere installato via [npm][39] digitando da terminale:
+
+>$ sudo npm install -g ripple-emulator
+
+e una volta installato può essere lanciato nei modi che seguono:
+
+>$ ripple-emulate --path percorso/della/webapp
+
+per progetti stand-alone, mentre per progetti online:
+
+>$ ripple emulate --remote http:// webapp .dominio
+
+## Caratteristiche principali
+
+Ripple Emulator offre un supporto completo al debug di applicazioni web orientate al mondo mobile, offrendo al contempo un'interfaccia semplice e  intuitiva.
+
+Le varie caratteristiche sono accessibili dai pannelli laterali dell'interfaccia, analizziamoli uno ad uno:
+
+###Devices
+
+![Ripple Devices](images/originals/ripple-devices.png)
+
+Il primo pannello che incontriamo è il pannello Devices, che ci permette di scegliere il dispositivo su cui vogliamo testare il nostro applicativo e l'orientazione dello schermo.
+Oltre ai vari dispositivi "Generic" troviamo anche numerosi dispositivi reali, tra i quali molti sono della famiglia Google Nexus, oltre a devices Apple e BlackBerry. Come si può vedere dalla foto il tutto è molto intuitivo.
+
+###Platforms
+
+![Ripple Platforms](images/originals/ripple-platforms.png)
+
+Sotto al pannello Devices troviamo il pannello Platforms, che ci permette di impostare il framework (e la sua relativa versione) che stiamo usando per lo sviluppo della nostra webapp. Se stiamo sviluppando senza alcun framework possiamo selezionare l'opzione "mobile web". Quest'ultima opzione va selezionata anche quando si sviluppa per Firefox OS
+
+###Information
+
+![Ripple Information](images/originals/ripple-information.png)
+
+Il pannello Information riassume tutte le impostazioni con cui abbiamo settato il nostro emulatore, dispositivo sul quale si testa (risoluzione, framework), e sul browser in cui si sta facendo girare l'emulatore.
+
+###Accelerometer
+
+![Ripple Accelerometer](images/originals/ripple-accelerometer.png)
+
+Tramite questo pannello possiamo simulare gli eventi legati all'accelerometro del dispositivo, si possono decidere l'accelerazione e l'inclinazione lungo ogni asse, oltre a dare il comando shake che simulerà un'agitazione lungo l'asse x. In più si può draggare il disegno del dispositivo presente nel pannello muovendolo direttamente nel modo voluto.
+
+###Settings
+
+![Ripple Settings](images/originals/ripple-settings.png)
+
+E' il pannello delle impostazioni generali dell'emulatore.
+
+###Geolocation
+
+![Ripple Geolocation](images/originals/ripple-geolocation.png)
+
+Da questo pannello possiamo simulare l'interazione con i sensori GPS del dispositivo.
+Possiamo simulare la nostra posizione sia inserendo manualmente tutte le coordinate, sia scegliendo la nostra posizione direttamente su una mappa, sia caricare un file [GPX][40] che si preoccuperà per noi di simulare la nostra posizione.
+
+##Note sullo sviluppo per Firefox OS
+
+Dato che Ripple non supporta le API di Firefox OS è consigliato aggiungere al proprio progetto la libreria [moz-polyfills][41]
 
 [addRepo]:images/originals/git-addRepo.png
 [createRepo]:images/originals/git-createRepo.png
@@ -205,3 +271,7 @@ Se continuerai questo percorso da Web Developer non potrai fare a meno di sporca
 [35]: http://alxgbsn.co.uk/concierge/ "Concierge Demo"
 [36]: https://mozilla.org/it/firefox/developer/ "Firefox Developer Edition"
 [37]: http://mte90.github.io/Brickly
+[38]: http://ripple.incubator.apache.org/
+[39]: https://www.npmjs.com/package/ripple-emulator
+[40]: https://en.wikipedia.org/wiki/GPS_Exchange_Format
+[41]: https://github.com/Mte90/moz-polyfills

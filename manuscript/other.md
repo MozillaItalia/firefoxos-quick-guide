@@ -166,7 +166,7 @@ Se continuerai questo percorso da Web Developer non potrai fare a meno di sporca
 
 ![Ripple Emulator](images/originals/ripple.png)
 
-[Ripple Emulator][38] è uno strume di sviluppo per mobile nato come integrazione di Google Chrome, diventato poi uno strumento completamente indipendente e compatibile con qualsiasi tipo di browser.
+[Ripple Emulator][38] è uno strumento di sviluppo per mobile nato come integrazione di Google Chrome, diventato poi uno strumento completamente indipendente e compatibile con qualsiasi tipo di browser.
 
 Ripple Emulator può essere installato via [npm][39] digitando da terminale:
 
